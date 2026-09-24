@@ -1,1 +1,2 @@
 2026-09-24T20:49:59-03:00 flashed out/twrp-katyusha-20260924-2046.img to recovery_a (readback de6f7bdb...c89 OK)
+2026-09-24T20:52:56-03:00 TWRP #1 result: boots, display OK, touch NOT working, USB NOT detected
