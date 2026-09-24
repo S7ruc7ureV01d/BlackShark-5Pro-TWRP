@@ -39,3 +39,14 @@ adb push backups/stock/partitions/recovery_a.img /data/local/tmp/
 adb shell su -c 'dd if=/data/local/tmp/recovery_a.img of=/dev/block/by-name/recovery_a bs=4M && sync'
 ```
 Always verify with `sha256sum` against `backups/stock/SHA256SUMS` before flashing.
+
+## Known issue: USB link instability (2026-09-24)
+
+During the initial dump the adb connection dropped twice (during `modem_b` and
+`opcust`). Host kernel log: `usb 2-4: device not accepting address, error -71`
+(EPROTO), i.e. a physical-layer problem (cable/port/hub), not the phone.
+No bad data was kept: partial `.part` files are discarded and every stored
+image passed sha256 verification. The script now retries automatically.
+
+**Fix the USB link before any `fastboot flash`**: a drop mid-flash can leave
+a partition half-written.
