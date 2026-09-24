@@ -1,0 +1,101 @@
+Minimum libavb version:   1.0
+Header Block:             256 bytes
+Authentication Block:     576 bytes
+Auxiliary Block:          5760 bytes
+Public key (sha1):        2597c218aae470a130f61162feaae70afd97f011
+Algorithm:                SHA256_RSA4096
+Rollback Index:           0
+Flags:                    0
+Rollback Index Location:  0
+Release String:           'avbtool 1.2.0'
+Descriptors:
+    Chain Partition descriptor:
+      Partition Name:          recovery
+      Rollback Index Location: 1
+      Public key (sha1):       2597c218aae470a130f61162feaae70afd97f011
+      Flags:                   0
+    Chain Partition descriptor:
+      Partition Name:          vbmeta_system
+      Rollback Index Location: 2
+      Public key (sha1):       cdbb77177f731920bbe0a0f94f84d9038ae0617d
+      Flags:                   0
+    Prop: com.android.build.vendor.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys'
+    Prop: com.android.build.vendor.os_version -> '12'
+    Prop: com.android.build.vendor.security_patch -> '2022-06-01'
+    Prop: com.android.build.vendor.security_patch -> '2022-06-01'
+    Prop: com.android.build.vendor_boot.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys'
+    Prop: com.android.build.boot.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys'
+    Prop: com.android.build.boot.os_version -> '12'
+    Prop: com.android.build.boot.security_patch -> '2022-06-01'
+    Prop: com.android.build.boot.security_patch -> '2022-06-01'
+    Prop: com.android.build.odm.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys'
+    Prop: com.android.build.odm.os_version -> '12'
+    Prop: com.android.build.vendor_dlkm.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys'
+    Prop: com.android.build.vendor_dlkm.os_version -> '12'
+    Prop: com.android.build.dtbo.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys'
+    Hash descriptor:
+      Image Size:            50348032 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        boot
+      Salt:                  f7084678cee3e1cda468477f954caf9e8c8cb1338e8635ae102be5f528e72976
+      Digest:                b4ecaa6acb3605c82802f541fc522a12348beec7b9c3740fd28617184b0ee836
+      Flags:                 0
+    Hash descriptor:
+      Image Size:            14151486 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        dtbo
+      Salt:                  4b08bfac34126c00274398b26361584a1e0f5dd0d983670f67056cb675a056a8
+      Digest:                d54e4b5a01414e57e179fe4149b59ccf869dbd845b1aa87dcd77c19be151f22b
+      Flags:                 0
+    Hash descriptor:
+      Image Size:            18423808 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        vendor_boot
+      Salt:                  d5a59c12050cb375684f082a2f496295e4a2f36eba6956b89f987d2d1b09576a
+      Digest:                7bce2a985dc24c2602ecb75076b80b05633af26d83cf5a2c9dceb58d68034b47
+      Flags:                 0
+    Hashtree descriptor:
+      Version of dm-verity:  1
+      Image Size:            544768 bytes
+      Tree Offset:           544768
+      Tree Size:             12288 bytes
+      Data Block Size:       4096 bytes
+      Hash Block Size:       4096 bytes
+      FEC num roots:         2
+      FEC offset:            557056
+      FEC size:              8192 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        odm
+      Salt:                  57d04a2d3b9189aac79383d0816147e557252df0d4174dd1c79b59adc64e01f9
+      Root Digest:           e685dc04a1dc9a71c7cb413f7be3623a5abadda1c34ead0d71c9dd264927d4bf
+      Flags:                 0
+    Hashtree descriptor:
+      Version of dm-verity:  1
+      Image Size:            1502683136 bytes
+      Tree Offset:           1502683136
+      Tree Size:             11841536 bytes
+      Data Block Size:       4096 bytes
+      Hash Block Size:       4096 bytes
+      FEC num roots:         2
+      FEC offset:            1514524672
+      FEC size:              11976704 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        vendor
+      Salt:                  57d04a2d3b9189aac79383d0816147e557252df0d4174dd1c79b59adc64e01f9
+      Root Digest:           8502f97eadc5b32d719e1879717a8e553f75027e1fd8c63d27eac1e0224388a2
+      Flags:                 0
+    Hashtree descriptor:
+      Version of dm-verity:  1
+      Image Size:            26210304 bytes
+      Tree Offset:           26210304
+      Tree Size:             208896 bytes
+      Data Block Size:       4096 bytes
+      Hash Block Size:       4096 bytes
+      FEC num roots:         2
+      FEC offset:            26419200
+      FEC size:              212992 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        vendor_dlkm
+      Salt:                  57d04a2d3b9189aac79383d0816147e557252df0d4174dd1c79b59adc64e01f9
+      Root Digest:           cb8b008b9fb09ace122d54703fa6334bd851e36e8e1627ce8f4b33d5855e87ef
+      Flags:                 0

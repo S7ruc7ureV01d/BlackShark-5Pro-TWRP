@@ -1,0 +1,14 @@
+# Raw partition dumps and extracted images: large and contain device-unique
+# data (IMEI/EFS in modemst*/fsg/fsc, calibration in persist). Never push.
+backups/**/*.img
+backups/**/*.bin
+backups/**/*.part
+backups/extracted/
+
+# Upstream tool checkouts (fetched by tools/fetch_tools.sh)
+tools/mkbootimg/
+tools/avb/
+
+# Build outputs
+out/
+*.zip

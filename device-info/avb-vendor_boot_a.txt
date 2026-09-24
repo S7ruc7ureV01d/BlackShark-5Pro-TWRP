@@ -1,0 +1,24 @@
+Footer version:           1.0
+Image size:               100663296 bytes
+Original image size:      18423808 bytes
+VBMeta offset:            18423808
+VBMeta size:              640 bytes
+--
+Minimum libavb version:   1.0
+Header Block:             256 bytes
+Authentication Block:     0 bytes
+Auxiliary Block:          384 bytes
+Algorithm:                NONE
+Rollback Index:           0
+Flags:                    0
+Rollback Index Location:  0
+Release String:           'avbtool 1.2.0'
+Descriptors:
+    Hash descriptor:
+      Image Size:            18423808 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        vendor_boot
+      Salt:                  fb76d715d79f3dd75f55d89981c4d69830f72e0ca14f3392c2c4e819834ec8c4
+      Digest:                bb0bb5e15d7ffb29d580fd37492baa586c0a89f5335805b5b96796cb1d28942c
+      Flags:                 0
+    Prop: com.android.build.vendor_boot.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2206170OS00MP1/V11.0.4.0.JOYUI:user/release-keys'

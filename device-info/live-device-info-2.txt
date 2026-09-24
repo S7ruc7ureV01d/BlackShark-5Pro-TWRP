@@ -1,0 +1,270 @@
+### vendor fstabs
+-rw-r--r--  1 root root      2100 2008-12-31 22:00 charger_fw_fstab.qti
+-rw-r--r--  1 root root      6904 2008-12-31 22:00 fstab.qcom
+--- /vendor/etc/fstab.qcom
+system                                                  /system                ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+system                                                  /system                erofs   ro                                                   wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+system_ext                                              /system_ext            ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
+system_ext                                              /system_ext            erofs   ro                                                   wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
+product                                                 /product               ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
+product                                                 /product               erofs   ro                                                   wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
+vendor                                                  /vendor                ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
+vendor                                                  /vendor                erofs   ro                                                   wait,slotselect,avb,logical,first_stage_mount
+vendor_dlkm                                             /vendor_dlkm           ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
+vendor_dlkm                                             /vendor_dlkm           erofs   ro                                                   wait,slotselect,avb,logical,first_stage_mount
+odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
+odm                                                     /odm                   erofs   ro                                                   wait,slotselect,avb,logical,first_stage_mount
+/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
+/dev/block/bootdevice/by-name/persist                   /mnt/vendor/persist    ext4    noatime,nosuid,nodev,barrier=1                       wait
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt,quota,usrquota,grpquota,prjquota    latemount,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,metadata_encryption=aes-256-xts:wrappedkey_v0,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
+/dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
+/devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1       vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
+/devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*   /storage/usbotg        vfat    nosuid,nodev                                         wait,voldmanaged=usbotg:auto
+/dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt   vfat    ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait,slotselect
+/dev/block/bootdevice/by-name/dsp                       /vendor/dsp            ext4    ro,nosuid,nodev,barrier=1                            wait,slotselect
+/dev/block/bootdevice/by-name/vm-bootsys                /vendor/vm-system      ext4    ro,nosuid,nodev,barrier=1                            wait,slotselect
+/dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware    vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait,slotselect
+/dev/block/bootdevice/by-name/qmcs                      /mnt/vendor/qmcs       vfat    noatime,nosuid,nodev,context=u:object_r:vendor_qmcs_file:s0   wait,check,formattable
+/dev/block/bootdevice/by-name/junklog                   /junk                  ext4    noatime,nosuid,nodev,barrier=1                       wait
+### vendor HALs (security)
+android.hardware.gatekeeper@1.0-service-qti
+android.hardware.keymaster@4.0-service-qti
+android.hardware.keymaster@4.0-strongbox-service-qti
+android.hardware.keymaster@4.1-service-qti
+android.hardware.security.keymint-service-qti
+vendor.qti.hardware.qseecom@1.0-service
+vendor.qti.hardware.secureprocessor@1.0
+qseecomd
+ssgtzd
+[init.svc.gatekeeper-1-0]: [running]
+[init.svc.gatekeeperd]: [running]
+[init.svc.qseecom-service]: [running]
+[init.svc.vendor-qti-media-c2-hal-1-0]: [running]
+[init.svc.vendor-qti-media-c2audio-hal-1-0]: [running]
+[init.svc.vendor-sensor-sh]: [stopped]
+[init.svc.vendor.adsprpcd]: [running]
+[init.svc.vendor.agm-1-0]: [running]
+[init.svc.vendor.atfwd]: [stopped]
+[init.svc.vendor.atrace-hal-1-0]: [running]
+[init.svc.vendor.audio-hal]: [running]
+[init.svc.vendor.audioadsprpcd_audiopd]: [running]
+[init.svc.vendor.bluetooth-1-0-qti]: [running]
+[init.svc.vendor.boot-hal-1-2]: [running]
+[init.svc.vendor.bslogd.start]: [1]
+[init.svc.vendor.camera-provider-2-7]: [running]
+[init.svc.vendor.capabilityconfigstore]: [running]
+[init.svc.vendor.cas-hal-1-2]: [running]
+[init.svc.vendor.cdsprpcd]: [running]
+[init.svc.vendor.cld-hal-1-0]: [running]
+[init.svc.vendor.cnd]: [running]
+[init.svc.vendor.diag-router]: [running]
+[init.svc.vendor.displayfeature-hal-1-0]: [running]
+[init.svc.vendor.dpmd]: [running]
+[init.svc.vendor.drm-clearkey-hal-1-4]: [running]
+[init.svc.vendor.drm-widevine-hal-1-4]: [running]
+[init.svc.vendor.dspservice]: [running]
+[init.svc.vendor.dumpstate-1-1]: [running]
+[init.svc.vendor.fps_hal]: [running]
+[init.svc.vendor.ims_rtp_daemon]: [running]
+[init.svc.vendor.imsdaemon]: [running]
+[init.svc.vendor.ipacm]: [running]
+[init.svc.vendor.ipacm-diag]: [running]
+[init.svc.vendor.keymaster-4-1]: [running]
+[init.svc.vendor.keymint-qti]: [running]
+[init.svc.vendor.limits-hal]: [running]
+[init.svc.vendor.lowi]: [running]
+[init.svc.vendor.mdm_launcher]: [stopped]
+[init.svc.vendor.media.omx]: [running]
+[init.svc.vendor.mfidoca]: [running]
+[init.svc.vendor.misys]: [running]
+[init.svc.vendor.misys@2.0]: [running]
+[init.svc.vendor.misys@3.0]: [running]
+[init.svc.vendor.mlipay-1-1]: [running]
+[init.svc.vendor.modemManager]: [stopped]
+[init.svc.vendor.modprobe]: [stopped]
+[init.svc.vendor.msm_irqbalance]: [running]
+[init.svc.vendor.mstatdaemon]: [running]
+[init.svc.vendor.mtdservice-1-3]: [running]
+[init.svc.vendor.mutualex]: [stopped]
+[init.svc.vendor.netmgrd]: [running]
+[init.svc.vendor.nv_mac]: [stopped]
+[init.svc.vendor.pd_mapper]: [running]
+[init.svc.vendor.per_mgr]: [running]
+[init.svc.vendor.per_proxy]: [running]
+[init.svc.vendor.port-bridge]: [running]
+[init.svc.vendor.power]: [running]
+[init.svc.vendor.qcc-trd]: [running]
+[init.svc.vendor.qconfig]: [running]
+[init.svc.vendor.qcrild]: [running]
+[init.svc.vendor.qcrild2]: [running]
+[init.svc.vendor.qesdk-mgr]: [running]
+[init.svc.vendor.qmipriod]: [running]
+[init.svc.vendor.qrtr-ns]: [running]
+[init.svc.vendor.qseecomd]: [running]
+[init.svc.vendor.qti.hardware.display.allocator]: [running]
+[init.svc.vendor.qti.hardware.display.composer]: [running]
+[init.svc.vendor.qti.light]: [running]
+[init.svc.vendor.rmt_storage]: [running]
+[init.svc.vendor.sensors]: [running]
+[init.svc.vendor.sensors-hal-2-1-multihal]: [running]
+[init.svc.vendor.sensors.qesdk]: [stopped]
+[init.svc.vendor.sensors.qti]: [running]
+[init.svc.vendor.servicetracker-1-2]: [running]
+[init.svc.vendor.shsusrd]: [running]
+[init.svc.vendor.ssgtzd]: [running]
+[init.svc.vendor.tftp_server]: [running]
+[init.svc.vendor.tidaservice-1-2]: [running]
+[init.svc.vendor.trustedui-1-0]: [running]
+[init.svc.vendor.usb-hal-1-2]: [running]
+[init.svc.vendor.vppservice]: [running]
+[init.svc.vendor.vsimservice]: [running]
+[init.svc.vendor.wifi_hal_legacy]: [running]
+[init.svc.vendor.xiaomi.cit.bluetooth]: [running]
+[init.svc.vendor.xiaomi.cit.wifi]: [running]
+[init.svc.vendor.xiaomi.sensor.communicate]: [running]
+[init.svc_debug_pid.gatekeeper-1-0]: [1453]
+[init.svc_debug_pid.gatekeeperd]: [2860]
+[init.svc_debug_pid.qseecom-service]: [911]
+[init.svc_debug_pid.vendor.keymaster-4-1]: [908]
+[init.svc_debug_pid.vendor.keymint-qti]: [909]
+[init.svc_debug_pid.vendor.qseecomd]: [910]
+[ro.boot.keymaster]: [1]
+[ro.boottime.gatekeeper-1-0]: [5339640414]
+[ro.boottime.gatekeeperd]: [10140746037]
+[ro.boottime.qseecom-service]: [3004907810]
+[ro.boottime.vendor.keymaster-4-1]: [2997604217]
+[ro.boottime.vendor.keymint-qti]: [2999103956]
+[ro.boottime.vendor.qseecomd]: [3002906508]
+[ro.keymaster.brn]: [Android]
+[ro.keymaster.mod]: [AOSP on ARM64]
+[ro.keymaster.xxx.release]: [12]
+[ro.keymaster.xxx.security_patch]: [2022-06-01]
+[ro.keymaster.xxx.vbmeta_state]: [unlocked]
+[ro.keymaster.xxx.verifiedbootstate]: [orange]
+[vendor.gatekeeper.disable_spu]: [true]
+### vendor build.prop
+ro.product.vendor.brand=blackshark
+ro.product.vendor.device=katyusha
+ro.product.vendor.manufacturer=blackshark
+ro.product.vendor.model=SHARK KTUS-A0
+ro.product.vendor.cert=
+ro.product.vendor.name=KTUS-A0
+ro.product.vendor.marketname=
+ro.vendor.build.date=Wed Aug 10 01:09:30 CST 2022
+ro.vendor.build.date.utc=1660064970
+ro.vendor.build.fingerprint=blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys
+ro.vendor.build.id=KTUS2208100OS00MP2
+ro.vendor.build.tags=release-keys
+ro.vendor.build.type=user
+ro.vendor.build.version.incremental=bs.20220810.0032
+ro.vendor.build.version.release=12
+ro.vendor.build.version.release_or_codename=12
+ro.vendor.build.version.sdk=31
+ro.vendor.build.security_patch=2022-06-01
+### soc devices
+1c00000.qcom,pcie
+1c08000.qcom,pcie
+1d84000.ufshc
+a600000.ssusb
+soc:blackshark_nvme
+### dm / md
+Personalities : [raid0] 
+unused devices: <none>
+/sys/block/dm-0 odm_a sda31 
+/sys/block/dm-1 product_a sda31 
+/sys/block/dm-10 com.android.crashrecovery loop42 
+/sys/block/dm-11 com.android.art loop47 
+/sys/block/dm-12 com.android.ipsec loop46 
+/sys/block/dm-13 com.android.ondevicepersonalization loop40 
+/sys/block/dm-14 com.android.configinfrastructure loop19 
+/sys/block/dm-15 com.android.tethering loop20 
+/sys/block/dm-16 com.android.media.swcodec loop41 
+/sys/block/dm-17 com.android.uprobestats loop39 
+/sys/block/dm-18 com.android.adbd loop38 
+/sys/block/dm-2 system_a sda31 
+/sys/block/dm-20 com.android.media loop34 
+/sys/block/dm-25 com.android.profiling loop33 
+/sys/block/dm-26 com.android.extservices loop36 
+/sys/block/dm-27 com.android.uwb loop37 
+/sys/block/dm-28 com.android.mediaprovider loop7 
+/sys/block/dm-29 com.android.adservices loop32 
+/sys/block/dm-3 system_ext_a sda31 
+/sys/block/dm-33 com.android.appsearch loop31 
+/sys/block/dm-35 com.android.resolv loop30 
+/sys/block/dm-38 com.android.conscrypt loop29 
+/sys/block/dm-4 vendor_a sda31 
+/sys/block/dm-41 com.android.wifi loop28 
+/sys/block/dm-45 com.android.permission loop27 
+/sys/block/dm-49 userdata sda41 
+/sys/block/dm-5 vendor_dlkm_a sda31 
+/sys/block/dm-6 com.android.neuralnetworks loop44 
+/sys/block/dm-7 com.android.cellbroadcast loop45 
+/sys/block/dm-8 com.android.nfcservices loop43 
+/sys/block/dm-9 com.android.scheduling loop23 
+### touch
+touch_dev
+[    2.501002] modprobe: Loading module /vendor/lib/modules/xiaomi_touch.ko with args ''
+[    2.504026] xiaomi_touch_probe enter
+[    2.504056] xiaomi_touch_probe: kernel base:-517058789376, phy base:34844508160
+[    2.504060] xiaomi_touch_parse_dt touch,name:xiaomi-touch
+[    2.504196] xiaomi_touch_probe over
+[    2.504694] modprobe: Loaded kernel module /vendor/lib/modules/xiaomi_touch.ko
+[    2.505902] modprobe: Loading module /vendor/lib/modules/xiaomi_touch.ko with args ''
+[    2.513731] modprobe: Loading module /vendor/lib/modules/touch_aw8680x.ko with args ''
+[    2.514011] modprobe: Loading module /vendor/lib/modules/touch_aw8680x.ko with args ''
+[    2.515498] modprobe: Loaded kernel module /vendor/lib/modules/touch_aw8680x.ko
+[    2.519520] modprobe: Loading module /vendor/lib/modules/hbp_touch.ko with args ''
+[    2.529989] modprobe: Loading module /vendor/lib/modules/xiaomi_touch.ko with args ''
+[    2.530273] modprobe: Loading module /vendor/lib/modules/synaptics_tcm2.ko with args ''
+[    2.538968] [STS][warning] syna_dev_module_init: product = katyusha,not init syna_tcm driver
+[    2.539441] [FTS_HT/I]fts_ht_probe:Touch Screen(SPI BUS) driver prboe...
+[    2.540375] modprobe: Loaded kernel module /vendor/lib/modules/synaptics_tcm2.ko
+[    2.698550] Modules linked in: goodix_health gh_irq_lend coresight_csr gh_mem_notifier coresight_tpda(+) coresight_cti(+) qcom_q6v5_pas(+) coresight_remote_etm coresight ep_pcie_drv qcedev_mod(+) binder_gki sdhci_msm qcom_pil_info qce50 tz_log qdss_bridge mhi_dev_net leds_qti_flash bt_fm_slim usb_f_qdss qcom_lpm qcom_edac usb_bam btpower leds_qti_tri_led extend_reclaim(C) ddr_cdev qti_battery_charger leds_aw2023 raid0 usb_f_gsi dm_cache_smq sps_drv ipa_fmwk dm_cache_brd qcom_cpufreq_hw_debug dm_cache slimbus dm_persistent_data qcom_spmi_temp_alarm qti_qmi_sensor_v2 dm_bio_prison qti_cpufreq_cdev qti_userspace_cdev qti_qmi_cdev cpu_hotplug mi_thermal_interface policy_engine bcl_pmic5 qcom_tsens bcl_soc md_mod cpu_voltage_cooling synx_driver sdpm_clk msm_lmh_dcvs qti_devfreq_cdev aw8697_haptic ir_spi usb_f_diag qcom_ipc_lite i3c_master_msm_geni fpc1552 usb_f_ccid lvstest goodix_fod synaptics_tcm2 atmel_mxt_ts qcom_pon hbp_touch(+) pm8941_pwrkey cnss2(+) i2c_msm_geni(+)
+[    2.698698] touch_aw8680x cs_press ehset qcom_q6v5 pressure xiaomi_touch f_fs_ipc_log dwc3_msm spmi_glink_debug cnss_utils asix usb_f_cdev spmi_pmic_arb_debug radio_i2c_rtc6226_qca heye ssusb_redriver_nb7vpq904m msm_sharedmem phy_msm_ssusb_qmp spi_msm_geni zram ax88179_178a nvme perf_helper cnss_plat_ipc_qmi_svc lt9611uxc cnss_nl phy_msm_snps_hs cnss_prealloc nfc_i2c memlat nvme_core icnss2 smcinvoke_mod sg hdcp_qseecom frpc_adsprpc msm_rng rdbg wlan_firmware_service cdsprm phy_qcom_emu mhi_cntrl_qcom fsa4480_i2c mhi_dev_uci spcom qcom_i2c_pmic hyp_core_ctl qcom_esoc ucsi_glink mhi_dev_dtr altmode_glink plh_scmi mhi_dev_netdev msm_show_epoch charger_ulog_glink qti_battery_debug sys_pm_vx rimps_log qti_adc_tm qcom_logbuf_vendor_hooks thermal_pause guestvm_loader hung_task_enh qcom_iommu_debug mhi msm_ext_display qpnp_amoled_regulator eud glink_pkt qseecom_mod glink_probe qcom_soc_wdt qsee_ipc_irq_bridge soc_sleep_stats rq_stats core_hang_detect panel_event_notifier
+[    2.747407] Modules linked in: stm_core gh_virtio_backend mhi_dev_drv goodix_health gh_irq_lend qcom_vadc_common slim_qcom_ngd_ctrl(+) coresight_csr gh_mem_notifier coresight_tpda coresight_cti(+) qcom_q6v5_pas(+) coresight_remote_etm coresight ep_pcie_drv qcedev_mod(+) binder_gki sdhci_msm qcom_pil_info qce50 tz_log qdss_bridge mhi_dev_net leds_qti_flash bt_fm_slim usb_f_qdss qcom_lpm qcom_edac usb_bam btpower leds_qti_tri_led extend_reclaim(C) ddr_cdev qti_battery_charger leds_aw2023 raid0 usb_f_gsi dm_cache_smq sps_drv ipa_fmwk dm_cache_brd qcom_cpufreq_hw_debug dm_cache slimbus dm_persistent_data qcom_spmi_temp_alarm qti_qmi_sensor_v2 dm_bio_prison qti_cpufreq_cdev qti_userspace_cdev qti_qmi_cdev cpu_hotplug mi_thermal_interface policy_engine bcl_pmic5 qcom_tsens bcl_soc md_mod cpu_voltage_cooling synx_driver sdpm_clk msm_lmh_dcvs qti_devfreq_cdev aw8697_haptic ir_spi usb_f_diag qcom_ipc_lite i3c_master_msm_geni fpc1552 usb_f_ccid lvstest goodix_fod synaptics_tcm2
+[    2.747552] atmel_mxt_ts qcom_pon hbp_touch(+) pm8941_pwrkey cnss2(+) i2c_msm_geni(+) touch_aw8680x cs_press ehset qcom_q6v5 pressure xiaomi_touch f_fs_ipc_log dwc3_msm spmi_glink_debug cnss_utils asix usb_f_cdev spmi_pmic_arb_debug radio_i2c_rtc6226_qca heye ssusb_redriver_nb7vpq904m msm_sharedmem phy_msm_ssusb_qmp spi_msm_geni zram ax88179_178a nvme perf_helper cnss_plat_ipc_qmi_svc lt9611uxc cnss_nl phy_msm_snps_hs cnss_prealloc nfc_i2c memlat nvme_core icnss2 smcinvoke_mod sg hdcp_qseecom frpc_adsprpc msm_rng rdbg wlan_firmware_service cdsprm phy_qcom_emu mhi_cntrl_qcom fsa4480_i2c mhi_dev_uci spcom qcom_i2c_pmic hyp_core_ctl qcom_esoc ucsi_glink mhi_dev_dtr altmode_glink plh_scmi mhi_dev_netdev msm_show_epoch charger_ulog_glink qti_battery_debug sys_pm_vx rimps_log qti_adc_tm qcom_logbuf_vendor_hooks thermal_pause guestvm_loader hung_task_enh qcom_iommu_debug mhi msm_ext_display qpnp_amoled_regulator eud glink_pkt qseecom_mod glink_probe qcom_soc_wdt
+[    2.768029] qti_qmi_sensor_v2 dm_bio_prison qti_cpufreq_cdev qti_userspace_cdev qti_qmi_cdev cpu_hotplug mi_thermal_interface policy_engine bcl_pmic5 qcom_tsens bcl_soc md_mod cpu_voltage_cooling synx_driver sdpm_clk msm_lmh_dcvs qti_devfreq_cdev aw8697_haptic ir_spi usb_f_diag qcom_ipc_lite i3c_master_msm_geni fpc1552 usb_f_ccid lvstest goodix_fod synaptics_tcm2 atmel_mxt_ts qcom_pon hbp_touch(+) pm8941_pwrkey cnss2(+) i2c_msm_geni(+) touch_aw8680x cs_press ehset qcom_q6v5 pressure xiaomi_touch f_fs_ipc_log dwc3_msm spmi_glink_debug cnss_utils asix usb_f_cdev spmi_pmic_arb_debug radio_i2c_rtc6226_qca heye ssusb_redriver_nb7vpq904m msm_sharedmem phy_msm_ssusb_qmp spi_msm_geni zram ax88179_178a nvme perf_helper cnss_plat_ipc_qmi_svc lt9611uxc cnss_nl phy_msm_snps_hs cnss_prealloc nfc_i2c memlat nvme_core icnss2 smcinvoke_mod sg hdcp_qseecom frpc_adsprpc msm_rng rdbg wlan_firmware_service cdsprm phy_qcom_emu mhi_cntrl_qcom fsa4480_i2c mhi_dev_uci spcom qcom_i2c_pmic
+[    2.784767] xiaomitouch_register_modedata
+[    2.784776] [FTS_HT/I]fts_ht_probe:Touch Screen(SPI BUS) HT driver prboe successfully
+[    2.784873] fts_ht spi0.0: Direct firmware load for focaltech_ts_fw_hbp_k3.bin failed with error -2
+[    2.784881] fts_ht spi0.0: Falling back to sysfs fallback for: focaltech_ts_fw_hbp_k3.bin
+[    2.814083] modprobe: Loaded kernel module /vendor/lib/modules/hbp_touch.ko
+[    2.957873] mi_thermal_interface policy_engine bcl_pmic5 qcom_tsens bcl_soc md_mod cpu_voltage_cooling synx_driver sdpm_clk msm_lmh_dcvs qti_devfreq_cdev aw8697_haptic ir_spi usb_f_diag qcom_ipc_lite i3c_master_msm_geni fpc1552 usb_f_ccid lvstest goodix_fod synaptics_tcm2 atmel_mxt_ts qcom_pon hbp_touch pm8941_pwrkey cnss2 i2c_msm_geni touch_aw8680x cs_press ehset qcom_q6v5 pressure xiaomi_touch f_fs_ipc_log dwc3_msm spmi_glink_debug cnss_utils asix usb_f_cdev spmi_pmic_arb_debug radio_i2c_rtc6226_qca heye ssusb_redriver_nb7vpq904m msm_sharedmem phy_msm_ssusb_qmp spi_msm_geni zram ax88179_178a nvme perf_helper cnss_plat_ipc_qmi_svc lt9611uxc cnss_nl phy_msm_snps_hs cnss_prealloc nfc_i2c memlat nvme_core icnss2 smcinvoke_mod sg hdcp_qseecom frpc_adsprpc msm_rng rdbg wlan_firmware_service cdsprm phy_qcom_emu mhi_cntrl_qcom fsa4480_i2c mhi_dev_uci spcom qcom_i2c_pmic hyp_core_ctl qcom_esoc ucsi_glink mhi_dev_dtr altmode_glink plh_scmi mhi_dev_netdev msm_show_epoch
+[    2.964263] mi_thermal_interface policy_engine bcl_pmic5 qcom_tsens bcl_soc md_mod cpu_voltage_cooling synx_driver sdpm_clk msm_lmh_dcvs qti_devfreq_cdev aw8697_haptic ir_spi usb_f_diag qcom_ipc_lite i3c_master_msm_geni fpc1552 usb_f_ccid lvstest goodix_fod synaptics_tcm2 atmel_mxt_ts qcom_pon hbp_touch pm8941_pwrkey cnss2 i2c_msm_geni touch_aw8680x cs_press ehset qcom_q6v5 pressure xiaomi_touch f_fs_ipc_log dwc3_msm spmi_glink_debug cnss_utils asix usb_f_cdev spmi_pmic_arb_debug radio_i2c_rtc6226_qca heye ssusb_redriver_nb7vpq904m msm_sharedmem phy_msm_ssusb_qmp spi_msm_geni zram ax88179_178a nvme perf_helper cnss_plat_ipc_qmi_svc lt9611uxc cnss_nl phy_msm_snps_hs cnss_prealloc nfc_i2c memlat nvme_core icnss2 smcinvoke_mod sg hdcp_qseecom frpc_adsprpc msm_rng rdbg wlan_firmware_service cdsprm phy_qcom_emu mhi_cntrl_qcom fsa4480_i2c mhi_dev_uci spcom qcom_i2c_pmic hyp_core_ctl qcom_esoc ucsi_glink mhi_dev_dtr altmode_glink plh_scmi mhi_dev_netdev msm_show_epoch
+[    3.186701] ueventd: firmware: loading 'focaltech_ts_fw_hbp_k3.bin' for '/devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/firmware/focaltech_ts_fw_hbp_k3.bin'
+[    3.187747] ueventd: found /vendor/firmware/focaltech_ts_fw_hbp_k3.bin for /devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/firmware/focaltech_ts_fw_hbp_k3.bin
+### ueventd / firmware for touch
+107_crawl_P_RTP.bin
+129_firearmsAwm_P_RTP.bin
+2201_HpjyAWM_P_RTP.bin
+aw8680x_flash_app.bin
+aw8680x_sram.bin
+aw8697_haptic.bin
+aw8697_rtp_1.bin
+synaptics_ts_fw_m3.img
+### vendor_dlkm modules
+304
+304
+### decrypt related
+key
+mode
+per_boot_ref
+ref
+key
+### vendor manifest keymint
+/vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
+/vendor/etc/vintf/manifest_taro.xml
+        <name>android.hardware.security.keymint</name>
+        <fqname>IKeyMintDevice/default</fqname>
+    </hal>
+     <hal format="aidl">
+--
+        <name>android.hardware.security.keymint</name>
+        <fqname>IRemotelyProvisionedComponent/default</fqname>
+    </hal>
+</manifest>
+### rescue/cache
+/dev/block/by-name/rescue: UUID="076a44ae-5872-40e1-b738-519876de41ed" TYPE="ext4" 
+/dev/block/by-name/cust: LABEL="cust" UUID="358d3157-aeb4-4fa5-b6e0-c25291c406ea" TYPE="ext4" 
+/dev/block/by-name/junklog: UUID="9e91722d-805d-45d7-9e80-51e442f6e874" TYPE="ext4" 
+### sd card

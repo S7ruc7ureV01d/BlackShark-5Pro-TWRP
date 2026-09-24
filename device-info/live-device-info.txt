@@ -1,0 +1,271 @@
+### lsmod (touch/drm/usb)
+msm_drm              2859008  26 
+msm_mmrm               53248  4 camera,msm_drm,msm_eva,msm_video
+goodix_health          40960  0 
+gh_irq_lend            20480  1 msm_drm
+gh_mem_notifier        16384  1 msm_drm
+qti_battery_charger   147456  1 leds_qti_flash
+goodix_fod             32768  0 
+synaptics_tcm2        225280  0 
+atmel_mxt_ts           45056  0 
+hbp_touch             212992  0 
+touch_aw8680x          81920  1 hbp_touch
+cs_press               73728  2 hbp_touch,touch_aw8680x
+pressure               24576  1 hbp_touch
+xiaomi_touch           49152  2 synaptics_tcm2,hbp_touch
+dwc3_msm              143360  4 msm_drm,usb_f_qdss,usb_f_gsi
+spmi_glink_debug       16384  0 
+heye                   81920  7 qca6490,msm_drm,qti_battery_charger,hbp_touch,touch_aw8680x,cs_press,qcom_q6v5
+ssusb_redriver_nb7vpq904m    36864  1 dwc3_msm
+hdcp_qseecom           32768  1 msm_drm
+fsa4480_i2c            16384  3 machine_dlkm,mbhc_dlkm,msm_drm
+ucsi_glink             28672  2 ssusb_redriver_nb7vpq904m,fsa4480_i2c
+altmode_glink          24576  1 msm_drm
+charger_ulog_glink     20480  0 
+qti_battery_debug      24576  0 
+msm_ext_display        16384  2 msm_drm,hdmi_dlkm,[permanent]
+glink_pkt              36864  2 
+glink_probe            16384  0 
+panel_event_notifier    16384  9 msm_drm,qti_amoled_ecm,qti_battery_charger,mi_thermal_interface,synaptics_tcm2,atmel_mxt_ts,hbp_touch,touch_aw8680x,cs_press
+qcom_glink_spss        20480  2 glink_probe,qcom_spss
+pmic_glink             24576  6 qti_battery_charger,spmi_glink_debug,ucsi_glink,altmode_glink,charger_ulog_glink,qti_battery_debug
+pdr_interface          24576  5 q6_pdr_dlkm,slim_qcom_ngd_ctrl,icnss2,frpc_adsprpc,pmic_glink
+rproc_qcom_common      40960  13 ipam,q6_notifier_dlkm,slim_qcom_ngd_ctrl,qcom_q6v5_pas,icnss2,frpc_adsprpc,qsee_ipc_irq_bridge,spss_utils,qcom_spss,qcom_sysmon,pmic_glink,microdump_collector,pci_msm_drv
+qcom_glink_smem        16384  2 glink_probe,rproc_qcom_common
+qcom_glink             49152  5 glink_probe,qcom_spss,qcom_glink_spss,rproc_qcom_common,qcom_glink_smem
+hwid                   20480  3 synaptics_tcm2,hbp_touch,cnss2
+spmi_pmic_arb          49152  1 msm_drm
+qcom_iommu_util        77824  4 camera,msm_drm,qcom_iommu_debug,arm_smmu
+pinctrl_msm            61440  99 msm_drm,wcd_core_dlkm,i3c_master_msm_geni,pinctrl_diwali,pinctrl_cape,pinctrl_waipio
+msm_dma_iommu_mapping    28672  2 msm_drm,qcom_dma_heaps
+llcc_qcom              28672  5 camera,msm_drm,msm_eva,msm_video,msm_kgsl
+gh_rm_drv              57344  9 msm_drm,qrtr_gunyah,gh_virtio_backend,gh_irq_lend,gh_mem_notifier,hyp_core_ctl,guestvm_loader,hvc_gunyah,mem_buf_dev
+gh_msgq                24576  3 msm_drm,mem_buf,gh_rm_drv
+clk_qcom              212992  15 msm_mmrm,dwc3_msm,videocc_waipio,camcc_waipio,gpucc_waipio,camcc_diwali,debugcc_waipio,videocc_diwali,gpucc_diwali,msm_kgsl,gcc_diwali,dispcc_waipio,dispcc_diwali,gcc_waipio,clk_dummy
+qcom_rpmh              53248  5 msm_drm,dcvs_fp,rpmh_regulator,icc_bcm_voter,clk_rpmh,[permanent]
+qcom_ipc_logging       40960  55 ipa_clientsm,ipanetm,rndisipam,ipam,audio_pkt_dlkm,rmnet_ctl,gsim,snd_usb_audio_qmi,mhi_dev_drv,slim_qcom_ngd_ctrl,ep_pcie_drv,mhi_dev_net,usb_f_qdss,usb_f_gsi,sps_drv,bcl_pmic5,qcom_tsens,i3c_master_msm_geni,cnss2,i2c_msm_geni,f_fs_ipc_log,dwc3_msm,spi_msm_geni,cnss_plat_ipc_qmi_svc,nfc_i2c,icnss2,mhi_cntrl_qcom,mhi_dev_uci,spcom,qcom_esoc,ucsi_glink,mhi_dev_dtr,altmode_glink,mhi_dev_netdev,charger_ulog_glink,rimps_log,mhi,glink_pkt,glink_probe,qsee_ipc_irq_bridge,pmic_pon_log,smp2p,pci_msm_drv,pci_edma,gpi,qcom_glink,msm_qmp,qcom_aoss,ufs_qcom,qrtr,ns,msm_geni_serial,msm_geni_se,qcom_pdc,qcom_rpmh,[permanent]
+qcom_scm              118784  28 camera,ipam,msm_drm,msm_eva,msm_video,coresight_tpdm,qcom_q6v5_pas,sdhci_msm,tz_log,phy_msm_snps_hs,smcinvoke_mod,guestvm_loader,eud,qseecom_mod,core_hang_detect,qcom_spss,qcom_cpuss_sleep_stats,msm_kgsl,mdt_loader,arm_smmu,ufs_qcom,qcom_dload_mode,pinctrl_msm,memory_dump_v2,secure_buffer,crypto_qti_hwkm,qcom_pdc,qcom_wdt_core
+smem                   24576  17 ipam,qcom_q6v5,rdbg,soc_sleep_stats,qcom_glink_spss,adsp_sleepmon,smp2p,microdump_collector,sysmon_subsystem_stats,subsystem_sleep_stats,rproc_qcom_common,qcom_smd,qcom_glink_smem,mi_power,msm_qmp,socinfo,minidump
+### input devices
+N: Name="slide-keys-shark_up"
+H: Handlers=event0 
+N: Name="slide-keys-shark_down"
+H: Handlers=event1 
+N: Name="slide-keys-click-up"
+H: Handlers=event2 cpufreq 
+N: Name="slide-keys-click-down"
+H: Handlers=event3 cpufreq 
+N: Name="gpio-keys"
+H: Handlers=event4 cpufreq 
+N: Name="pmic_pwrkey"
+H: Handlers=event5 cpufreq 
+N: Name="pmic_resin"
+H: Handlers=event6 cpufreq 
+N: Name="pmic_pwrkey_bark"
+H: Handlers=event7 cpufreq 
+N: Name="pmic_pwrkey_resin_bark"
+H: Handlers=event8 cpufreq 
+N: Name="ht,input"
+H: Handlers=event9 cpufreq kgsl 
+N: Name="awinic_haptic"
+H: Handlers=event10 
+N: Name="waipio-mtp-snd-card Headset Jack"
+H: Handlers=event11 
+N: Name="waipio-mtp-snd-card Button Jack"
+H: Handlers=event12 cpufreq 
+N: Name="uinput-fpc"
+H: Handlers=event13 cpufreq 
+### display
+Physical size: 1080x2400
+Physical density: 440
+Physical size: 1080x2400
+Physical density: 440
+1080x2400x120cmd
+1080x2400x144cmd
+1080x2400x90cmd
+1080x2400x60cmd
+5120x2560
+5120x2160
+2160x5120
+4096x2160
+4096x2160
+2560x1600
+card0
+card0-DP-1
+card0-DSI-1
+card0-Virtual-1
+renderD128
+sde-crtc-0
+sde-crtc-1
+sde-crtc-2
+sde-crtc-3
+sde-crtc-4
+ttm
+version
+stack_depot_disable=on kasan.stacktrace=off kvm-arm.mode=protected cgroup_disable=pressure cgroup.memory=nokmem console=ttyMSM0,115200n8 kpti=0 kernel.panic_on_rcu_stall=1 swiotlb=noforce loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat service_locator.enable=1 msm_rtb.filter=0x237 allow_mismatched_32bit_el0 cpufreq.default_governor=performance pelt=8 kasan=off rcupdate.rcu_expedited=1 rcu_nocbs=0-7 irqaffinity=0-3 ftrace_dump_on_oops pstore.compress=none fsa4480_i2c.async_probe=1 can.stats_timer=0 video=vfb:640x400,bpp=32,memsize=3072000 bootconfig buildvariant=user  bootinfo.pureason=0x40080 bootinfo.pdreason=0x2 hwid.hwid_value=1638400 hwid.project=3 hwid.build_adc=39212 hwid.project_adc=4483 msm_drm.dsi_display0=qcom,mdss_dsi_k3_38_08_0a_mp_dsc_cmd: msm_drm.oled_wp=01f402090903010401d0020e024c027d rootwait ro init=/init block2mtd.block2mtd=/dev/block/sda16,2097152 mtdoops.mtddev=0 mtdoops.record_size=2097152 mtdoops.dump_oops=0 printk.always_kmsg_dump=1 log_buf_len=2M loglevel=6 msm_geni_serial.bs_console_enable=0
+
+androidboot.hardware = "qcom"
+androidboot.hardware.sku = "unknown"
+androidboot.memcg = "1"
+androidboot.usbcontroller = "a600000.dwc3"
+androidboot.chargeinit = "0x0"
+androidboot.bootdevice = "1d84000.ufshc"
+androidboot.boot_devices = "soc/1d84000.ufshc"
+androidboot.serialno = "<SERIAL-REDACTED>"
+androidboot.ramdump = "disable"
+androidboot.sharkcasc = "false"
+androidboot.hw_boardname = "katyusha"
+androidboot.secureboot = "1"
+androidboot.dp = "0x0"
+androidboot.bootreason = "0-normal-keypad"
+androidboot.hwversion = "3.19.0"
+androidboot.hwc = "GL"
+androidboot.hwlevel = "MP"
+androidboot.product.hardware.sku = "unknown"
+androidboot.camera.config = "n"
+androidboot.cpuid = "<CPUID-REDACTED>"
+androidboot.baseband = "msm"
+androidboot.oled_wp = "01f402090903010401d0020e024c027d"
+androidboot.dtbo_idx = "26"
+androidboot.dtb_idx = "4"
+androidboot.force_normal_boot = "1"
+androidboot.fstab_suffix = "default"
+androidboot.fstabtype = "raid"
+androidboot.dmcacheswitch = "enable"
+androidboot.verifiedbootstate = "orange"
+androidboot.keymaster = "1"
+androidboot.slot_suffix = "_a"
+### backlight
+panel0-backlight
+4095
+0
+### battery
+battery
+ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1
+usb
+wireless
+52
+### thermal/cpu temp zone names
+/sys/class/thermal/thermal_zone49 cpu-0-0
+/sys/class/thermal/thermal_zone87 skin_therm
+/sys/class/thermal/thermal_zone89 xo_therm
+/sys/class/thermal/thermal_zone91 battery
+### usb
+a600000.dwc3
+dummy_udc.0
+a600000.dwc3
+a600000.dwc3
+peripheral
+port0
+port0-partner
+### super metadata
+Slot 0:
+Metadata version: 10.2
+Metadata size: 1304 bytes
+Metadata max size: 65536 bytes
+Metadata slot count: 3
+Header flags: virtual_ab_device
+Partition table:
+------------------------
+  Name: odm_a
+  Group: qti_dynamic_partitions_a
+  Attributes: readonly
+  Extents:
+    0 .. 34543 linear super 2048
+------------------------
+  Name: odm_b
+  Group: qti_dynamic_partitions_b
+  Attributes: readonly
+  Extents:
+------------------------
+  Name: product_a
+  Group: qti_dynamic_partitions_a
+  Attributes: readonly
+  Extents:
+    0 .. 1023 linear super 36864
+    1024 .. 2203063 linear super 11780096
+------------------------
+  Name: product_b
+  Group: qti_dynamic_partitions_b
+  Attributes: readonly
+  Extents:
+------------------------
+  Name: system_a
+  Group: qti_dynamic_partitions_a
+  Attributes: readonly
+  Extents:
+    0 .. 3465215 linear super 2240512
+    3465216 .. 5667839 linear super 37888
+    5667840 .. 7416759 linear super 5705728
+------------------------
+  Name: system_b
+  Group: qti_dynamic_partitions_b
+  Attributes: readonly
+  Extents:
+------------------------
+  Name: system_ext_a
+  Group: qti_dynamic_partitions_a
+  Attributes: readonly
+  Extents:
+    0 .. 808959 linear super 7495680
+------------------------
+  Name: system_ext_b
+  Group: qti_dynamic_partitions_b
+  Attributes: readonly
+  Extents:
+------------------------
+  Name: vendor_a
+  Group: qti_dynamic_partitions_a
+  Attributes: readonly
+  Extents:
+    0 .. 3015447 linear super 8304640
+------------------------
+  Name: vendor_b
+  Group: qti_dynamic_partitions_b
+  Attributes: readonly
+  Extents:
+------------------------
+  Name: vendor_dlkm_a
+  Group: qti_dynamic_partitions_a
+  Attributes: readonly
+  Extents:
+    0 .. 85471 linear super 11321344
+------------------------
+  Name: vendor_dlkm_b
+  Group: qti_dynamic_partitions_b
+  Attributes: readonly
+  Extents:
+------------------------
+Super partition layout:
+------------------------
+super: 2048 .. 36592: odm_a (34544 sectors)
+### mounts
+/dev/block/by-name/metadata /metadata ext4 rw,seclabel,nosuid,nodev,noatime,discard 0 0
+/dev/block/dm-4 /vendor erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0
+/dev/block/dm-5 /vendor_dlkm erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0
+/dev/block/dm-0 /odm erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0
+/dev/block/sda22 /mnt/vendor/persist ext4 rw,seclabel,nosuid,nodev,noatime 0 0
+/dev/block/dm-49 /data f2fs rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,usrquota,grpquota,prjquota,inlinecrypt,alloc_mode=default,checkpoint_merge,fsync_mode=nobarrier 0 0
+### vendor keymint/keymaster/gatekeeper HALs
+/system/bin/sh: gatekeeper: inaccessible or not found
+/system/bin/sh: qsee: inaccessible or not found
+/system/bin/sh: secure: inaccessible or not found
+/system/bin/sh: weaver: inaccessible or not found
+/system/bin/sh: keymaster: inaccessible or not found
+/system/bin/sh: keymaster: inaccessible or not found
+/system/bin/sh: ssgtzd: inaccessible or not found
+/system/bin/sh: hwservicemanager: inaccessible or not found
+/system/bin/sh: keymaster: inaccessible or not found
+/system/bin/sh: qseecom: inaccessible or not found
+/system/bin/sh: gatekeeper: inaccessible or not found
+/system/bin/sh: weaver: inaccessible or not found
+### vendor fstab
+/vendor/etc/fstab.qcom
+### vendor build
+/system/bin/sh: ro.build.version.incremental /vendor/build.prop: inaccessible or not found
+/system/bin/sh: ro.product.vendor: inaccessible or not found
+### selinux
+Enforcing
+### sdcard slot / storage
+/system/bin/sh: ufshc: inaccessible or not found
+/system/bin/sh: ssusb: inaccessible or not found

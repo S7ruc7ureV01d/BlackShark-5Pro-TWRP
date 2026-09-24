@@ -1,0 +1,11 @@
+adsp_loader_dlkm.ko
+gpr_dlkm.ko
+md-mod.ko
+nvme-core.ko
+nvme.ko
+pci-msm-drv.ko
+q6_notifier_dlkm.ko
+q6_pdr_dlkm.ko
+raid0.ko
+snd_event_dlkm.ko
+spf_core_dlkm.ko

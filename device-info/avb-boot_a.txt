@@ -1,0 +1,27 @@
+Footer version:           1.0
+Image size:               201326592 bytes
+Original image size:      50196480 bytes
+VBMeta offset:            50196480
+VBMeta size:              896 bytes
+--
+Minimum libavb version:   1.0
+Header Block:             256 bytes
+Authentication Block:     0 bytes
+Auxiliary Block:          640 bytes
+Algorithm:                NONE
+Rollback Index:           0
+Flags:                    0
+Rollback Index Location:  0
+Release String:           'avbtool 1.2.0'
+Descriptors:
+    Hash descriptor:
+      Image Size:            50348032 bytes
+      Hash Algorithm:        sha256
+      Partition Name:        boot
+      Salt:                  f7084678cee3e1cda468477f954caf9e8c8cb1338e8635ae102be5f528e72976
+      Digest:                b4ecaa6acb3605c82802f541fc522a12348beec7b9c3740fd28617184b0ee836
+      Flags:                 0
+    Prop: com.android.build.boot.fingerprint -> 'blackshark/KTUS-H0/katyusha:12/KTUS2208100OS00MP2/V11.0.4.0.JOYUI:user/release-keys'
+    Prop: com.android.build.boot.os_version -> '12'
+    Prop: com.android.build.boot.security_patch -> '2022-06-01'
+    Prop: com.android.build.boot.security_patch -> '2022-06-01'
