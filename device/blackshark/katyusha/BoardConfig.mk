@@ -147,7 +147,6 @@ TW_HAS_EDL_MODE := true
 TW_EXCLUDE_APEX := true
 TW_NO_SCREEN_BLANK := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
-TW_INPUT_BLACKLIST := "hbtp_vm\x0auinput-fpc"
 TW_DEVICE_VERSION := katyusha-1
 
 # Debug
