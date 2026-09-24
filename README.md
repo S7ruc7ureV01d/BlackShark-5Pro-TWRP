@@ -15,6 +15,7 @@ TWRP recovery for the **Xiaomi Black Shark 5 Pro** (`katyusha`, SM8450).
 - [docs/DEVICE_ANALYSIS.md](docs/DEVICE_ANALYSIS.md) — hardware, boot chain, AVB, encryption, stock recovery
 - [docs/BACKUPS.md](docs/BACKUPS.md) — backup layout and restore procedure
 - [docs/DECISIONS.md](docs/DECISIONS.md) — decisions log
+- [docs/BUILD.md](docs/BUILD.md) — build environment and source sync
 - `device-info/` — raw data captured from the device
 
 ## Safety rules

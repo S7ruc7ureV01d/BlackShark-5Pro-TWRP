@@ -12,3 +12,4 @@ tools/avb/
 # Build outputs
 out/
 *.zip
+tools/repo
