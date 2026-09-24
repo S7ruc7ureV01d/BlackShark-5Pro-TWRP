@@ -37,3 +37,14 @@ on fs
     wait /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
     wait /sys/class/power_supply/battery
+
+# DEBUG ONLY (remove when touch/USB work): persist diagnostics to the rescue partition
+service twrp_dbg /system/bin/sh /system/bin/twrp_dbg.sh
+    user root
+    group root
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
+
+on boot
+    start twrp_dbg
