@@ -50,3 +50,7 @@ image passed sha256 verification. The script now retries automatically.
 
 **Fix the USB link before any `fastboot flash`**: a drop mid-flash can leave
 a partition half-written.
+
+**Resolved:** after swapping the USB cable the remaining 38 partitions dumped with no
+retries. Final state: 137/137 partitions (all by-name except `super`/`userdata`),
+7.5 GB, every image re-verified with `sha256sum -c SHA256SUMS`.
