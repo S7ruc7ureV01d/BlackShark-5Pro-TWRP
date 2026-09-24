@@ -1,0 +1,83 @@
+### mounts system/product/system_ext
+/dev/block/dm-2 / ext4 ro,seclabel,relatime,discard 0 0
+system_a: /dev/block/mapper/system_a: LABEL="/" UUID="aedb952d-8aef-59a7-89c2-2a6cd0a39c05" TYPE="ext4" 
+product_a: 
+system_ext_a: 
+### boot HAL
+android.hardware.boot@1.0-impl-1.2-qti.so
+libGPTEE_vendor.so
+libboot_control_qti.so
+android.hardware.boot@1.2-service
+    <hal format="hidl">
+        <name>android.hardware.boot</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::IBootControl/default</fqname>
+    </hal>
+</manifest>
+### touch firmware
+-rw-r--r--  1 root root    30684 2008-12-31 22:00 aw8680x_flash_app.bin
+-rw-r--r--  1 root root     3396 2008-12-31 22:00 aw8680x_sram.bin
+-rw-r--r--  1 root root    84384 2008-12-31 22:00 focaltech_ts_fw_hbp_k3.bin
+-rw-r--r--  1 root root   100712 2008-12-31 22:00 focaltech_ts_katyusha_fw.bin
+### ueventd firmware dirs
+firmware_directories /etc/firmware/ /odm/firmware/ /vendor/firmware/ /firmware/image/ /vendor/firmware_mnt/image/
+### touch sysfs
+total 0
+lrwxrwxrwx 1 root root 0 2026-09-24 19:55 event0 -> ../../devices/platform/soc/soc:slide_gpio_keys_shark_up/input/input52/event0
+lrwxrwxrwx 1 root root 0 2026-09-24 19:55 event1 -> ../../devices/platform/soc/soc:slide_gpio_keys_shark_down/input/input53/event1
+    <none>
+add device 5: /dev/input/event9
+  name:     "ht,input"
+  events:
+    KEY (0001): KEY_WAKEUP            BTN_TOUCH             KEY_GOTO             
+    ABS (0003): ABS_MT_SLOT           : value 0, min 0, max 9, fuzz 0, flat 0, resolution 0
+                ABS_MT_TOUCH_MAJOR    : value 0, min 0, max 255, fuzz 0, flat 0, resolution 0
+                ABS_MT_POSITION_X     : value 0, min 0, max 17279, fuzz 0, flat 0, resolution 0
+                ABS_MT_POSITION_Y     : value 0, min 0, max 38399, fuzz 0, flat 0, resolution 0
+                ABS_MT_TRACKING_ID    : value 0, min 0, max 65535, fuzz 0, flat 0, resolution 0
+                ABS_MT_PRESSURE       : value 0, min 0, max 255, fuzz 0, flat 0, resolution 0
+### usb gadget
+accessory.gs2
+audio_source.gs3
+ccid.ccid
+cser.dun.0
+cser.dun.2
+cser.nmea.1
+diag.diag
+diag.diag_mdm
+diag.diag_mdm2
+ffs.adb
+ffs.diag
+ffs.diag_mdm
+ffs.diag_mdm2
+ffs.mtp
+ffs.ptp
+gsi.dpl
+gsi.rmnet
+gsi.rndis
+mass_storage.0
+midi.gs5
+ncm.0
+qdss.qdss
+qdss.qdss_mdm
+qdss.qdss_sw
+rndis.rndis
+uac2.0
+### graphics
+connected
+blue
+blue1
+blue2
+green
+green1
+green2
+led:flash_0
+led:flash_1
+led:flash_2
+led:flash_3
+### recovery rc on vendor
+android.hardware.keymaster@4.1-service-qti.rc
+android.hardware.security.keymint-service-qti.rc
+qseecomd.rc
+vendor.qti.hardware.qseecom@1.0-service.rc
+vendor_flash_recovery.rc

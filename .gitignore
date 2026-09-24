@@ -13,3 +13,6 @@ tools/avb/
 out/
 *.zip
 tools/repo
+
+# Stock kernel extracted for build only (tools/extract_prebuilt_kernel.sh)
+device/blackshark/katyusha/prebuilt/kernel
