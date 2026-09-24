@@ -2,7 +2,7 @@
 
 TWRP recovery for the **Xiaomi Black Shark 5 Pro** (`katyusha`, SM8450).
 
-**Status:** Phase 1 complete — all 137 stock partitions backed up and verified (7.5 GB, local only); device analysed. Next: TWRP device tree.
+**Status:** First TWRP image built and verified on the host; not flashed yet. See docs/TESTING.md.
 
 ## Goals
 - Boot reliably from the dedicated `recovery_a` partition (ramdisk-only image, stock GKI kernel)
@@ -16,6 +16,7 @@ TWRP recovery for the **Xiaomi Black Shark 5 Pro** (`katyusha`, SM8450).
 - [docs/BACKUPS.md](docs/BACKUPS.md) — backup layout and restore procedure
 - [docs/DECISIONS.md](docs/DECISIONS.md) — decisions log
 - [docs/BUILD.md](docs/BUILD.md) — build environment and source sync
+- [docs/TESTING.md](docs/TESTING.md) — flash procedure, rollback, test checklist
 - `device-info/` — raw data captured from the device
 
 ## Safety rules
