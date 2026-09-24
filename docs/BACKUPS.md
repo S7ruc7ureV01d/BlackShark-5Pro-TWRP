@@ -54,3 +54,9 @@ a partition half-written.
 **Resolved:** after swapping the USB cable the remaining 38 partitions dumped with no
 retries. Final state: 137/137 partitions (all by-name except `super`/`userdata`),
 7.5 GB, every image re-verified with `sha256sum -c SHA256SUMS`.
+
+**Recurred 2026-09-24 ~19:24** on a different cable *and* host port (`usb 1-1.2`, EHCI):
+continuous re-enumeration (10-38 attempts/min, `error -71`, host "attempt power cycle"),
+starting ~20 min after the backup finished with no adb activity. Two cables + two ports
+points at the phone side (USB-C port debris/wear, or phone state) rather than the host.
+Must be resolved before any flashing.
