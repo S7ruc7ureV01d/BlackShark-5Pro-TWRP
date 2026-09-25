@@ -58,6 +58,11 @@ on boot
     mkdir /data/vendor 0771 root root
     mkdir /data/vendor/syna 0770 system system
     start hwservicemanager
+    # Boot control for slot switching. The VINTF fragments declare the boot HAL over
+    # hwbinder, so TWRP's IBootControl::getService() needs this service running. It
+    # loads the QTI impl (/vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2-qti.so)
+    # via passthrough; verified live on build #6.
+    start boot-hal-1-2
     wait /dev/ht_input 10
     chmod 0666 /dev/ht_input
     chown system system /dev/ht_input
