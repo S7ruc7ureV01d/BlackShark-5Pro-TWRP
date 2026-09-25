@@ -123,3 +123,12 @@ See `docs/BACKUPS.md`.
   KeyMint `KMKD` blob) is rejected in TWRP with INVALID_KEY_BLOB (-33). Since the
   environment matches, the remaining suspect is the APPLICATION_ID vold derives
   (SHA512 of prefix || secdiscardable) or an OEM change in stock vold.
+* The vold metadata KEK has **ROLLBACK_RESISTANCE**. A throwaway rollback-resistant key
+  generated in stock is usable in stock but rejected in TWRP with INVALID_KEY_BLOB (-33),
+  while a plain key works in both. The vold APPLICATION_ID derivation is correct (stock
+  accepts it). Using an RR key in stock updates a TrustZone GP-SFS file under
+  `/mnt/vendor/persist/data/`; in TWRP the TA rejects the key before any storage write,
+  even with qseecom dma_heap perms, RPMB node owner (`/dev/0:0:0:49476`), persist mounted at
+  `/mnt/vendor/persist` and `gpfspath_oem_config.xml` all matching stock.
+  => TrustZone treats rollback-resistant keys differently in this recovery boot. Root cause
+  not yet identified (no TZ logs on production firmware).

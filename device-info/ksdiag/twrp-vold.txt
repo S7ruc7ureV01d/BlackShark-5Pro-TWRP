@@ -1,0 +1,15 @@
+listeners=true keymint=running ks2=running
+metadata mounted
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob
+6452669a0cbe062785d0eefddd54abc69f1d724233e7c8227a1600717f6deb4f  /metadata/vold/metadata_encryption/key/encrypted_key
+keymaster_key_blob 200 bytes, secdiscardable 16384 bytes, encrypted_key 274 bytes
+begin DECRYPT with vold APPLICATION_ID: FAILED service-specific error -33
+begin DECRYPT without APPLICATION_ID: FAILED service-specific error -33
+--- control: fresh test key in TWRP
+generateKey: OK (security level TEE)
+  TEE        OS_VERSION         = 120000
+  TEE        OS_PATCHLEVEL      = 202206
+  TEE        VENDOR_PATCHLEVEL  = 20220601
+  TEE        BOOT_PATCHLEVEL    = 20220501
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob
+6452669a0cbe062785d0eefddd54abc69f1d724233e7c8227a1600717f6deb4f  /metadata/vold/metadata_encryption/key/encrypted_key

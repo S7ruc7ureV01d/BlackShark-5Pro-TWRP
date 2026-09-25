@@ -6,6 +6,7 @@ cc_binary {
         "libbinder_ndk",
         "android.system.keystore2-V1-ndk_platform",
         "android.hardware.security.keymint-V1-ndk_platform",
+        "libcrypto",
     ],
     cflags: ["-Wall", "-Werror"],
 }

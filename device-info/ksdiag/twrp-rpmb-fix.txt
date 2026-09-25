@@ -1,0 +1,9 @@
+crw------- 1 system root 240,   1 1970-04-20 18:01 /dev/0:0:0:49476
+=== rollback-resistant stock key:
+createOperation: FAILED service-specific error -33
+=== vold metadata KEK (read-only begin):
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob
+keymaster_key_blob 200 bytes, secdiscardable 16384 bytes, encrypted_key 274 bytes
+begin DECRYPT with vold APPLICATION_ID: FAILED service-specific error -33
+begin DECRYPT without APPLICATION_ID: FAILED service-specific error -33
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob

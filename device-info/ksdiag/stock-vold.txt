@@ -1,0 +1,7 @@
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob
+6452669a0cbe062785d0eefddd54abc69f1d724233e7c8227a1600717f6deb4f  /metadata/vold/metadata_encryption/key/encrypted_key
+keymaster_key_blob 200 bytes, secdiscardable 16384 bytes, encrypted_key 274 bytes
+begin DECRYPT with vold APPLICATION_ID: OK (begin accepted)
+begin DECRYPT without APPLICATION_ID: FAILED service-specific error -33
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob
+6452669a0cbe062785d0eefddd54abc69f1d724233e7c8227a1600717f6deb4f  /metadata/vold/metadata_encryption/key/encrypted_key

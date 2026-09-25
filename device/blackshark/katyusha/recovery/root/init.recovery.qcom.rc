@@ -115,6 +115,15 @@ on fs
     chmod 0444 /dev/dma_heap/qcom,qseecom-ta
     chown system system /dev/dma_heap/qcom,system
     chmod 0444 /dev/dma_heap/qcom,system
+    # UFS RPMB well-known LUN (stock vendor ueventd: 0600 system system); used by the
+    # qseecomd RPMB listener for TrustZone anti-replay storage.
+    chown system system /dev/0:0:0:49476
+    chmod 0600 /dev/0:0:0:49476
+    # TrustZone GP secure file system lives on persist (see /vendor/etc/gpfspath_oem_config.xml);
+    # stock mounts persist here before vold touches the metadata key.
+    mkdir /mnt/vendor 0755 root root
+    mkdir /mnt/vendor/persist 0771 root system
+    mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist noatime nosuid nodev
 
 service vendor.keymint-qti /system/bin/android.hardware.security.keymint-service-qti
     user root

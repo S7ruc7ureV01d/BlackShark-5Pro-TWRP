@@ -1,0 +1,6 @@
+=== plain stock key:
+createOperation: OK - blob from /tmp/ks_stock.blob is usable here
+=== rollback-resistant stock key:
+createOperation: FAILED service-specific error -33
+=== with persist at /mnt/vendor/persist, restarted stack:
+createOperation: FAILED service-specific error -33

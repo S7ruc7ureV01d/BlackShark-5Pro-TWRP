@@ -1,0 +1,38 @@
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob
+=== vold metadata KEK characteristics
+getKeyCharacteristics: OK
+  TEE        PURPOSE            = 0
+  TEE        PURPOSE            = 1
+  TEE        ALGORITHM          = 32
+  TEE        KEY_SIZE           = 256
+  TEE        BLOCK_MODE         = 32
+  TEE        tag 0x20000006       = (type 3)
+  TEE        MIN_MAC_LENGTH     = 128
+  TEE        ROLLBACK_RESISTANCE = true
+  TEE        NO_AUTH_REQUIRED   = true
+  TEE        ORIGIN             = 0
+  TEE        OS_VERSION         = 120000
+  TEE        OS_PATCHLEVEL      = 202206
+  TEE        VENDOR_PATCHLEVEL  = 20220601
+  TEE        BOOT_PATCHLEVEL    = 20220501
+=== throwaway RR key
+generateKey: OK (security level TEE)
+authorizations:
+  TEE        PURPOSE            = 0
+  TEE        PURPOSE            = 1
+  TEE        ALGORITHM          = 32
+  TEE        KEY_SIZE           = 256
+  TEE        BLOCK_MODE         = 32
+  TEE        tag 0x20000006       = (type 3)
+  TEE        MIN_MAC_LENGTH     = 128
+  TEE        ROLLBACK_RESISTANCE = true
+  TEE        NO_AUTH_REQUIRED   = true
+  TEE        ORIGIN             = 0
+  TEE        OS_VERSION         = 120000
+  TEE        OS_PATCHLEVEL      = 202206
+  TEE        VENDOR_PATCHLEVEL  = 20220601
+  TEE        BOOT_PATCHLEVEL    = 20220501
+  SOFTWARE   tag 0x300001f5       = 0
+blob (200 bytes) saved to /data/local/tmp/ks_rr.blob
+createOperation: OK - blob from /data/local/tmp/ks_rr.blob is usable here
+ee913d5e7e4ac58794e42eb4b33c21f237955ac8222244ab7ac6bc5b0039c377  /metadata/vold/metadata_encryption/key/keymaster_key_blob
