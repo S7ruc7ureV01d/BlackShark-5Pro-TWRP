@@ -57,3 +57,8 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.device=katyusha \
     ro.build.product=katyusha
+
+# FBE decryption services/scripts (device/qcom/twrp-common)
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe

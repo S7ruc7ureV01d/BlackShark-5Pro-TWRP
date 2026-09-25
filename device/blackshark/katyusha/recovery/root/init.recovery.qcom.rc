@@ -4,6 +4,8 @@
 # vendor_boot ramdisk (lib/modules/modules.load.recovery); the audio DSP modules below
 # are shipped in this ramdisk exactly as in stock recovery.
 
+import /init.recovery.qcom_decrypt.rc
+
 on early-init
     insmod /vendor/lib/modules/q6_pdr_dlkm.ko
     insmod /vendor/lib/modules/q6_notifier_dlkm.ko
@@ -89,3 +91,38 @@ on boot
     write /sys/devices/platform/soc/988000.i2c/i2c-5/5-0045/leds/blue2/brightness 255
     write /sys/devices/platform/soc/890000.i2c/i2c-4/4-0045/leds/green1/brightness 100
     write /sys/devices/platform/soc/988000.i2c/i2c-5/5-0045/leds/green2/brightness 100
+
+# ---- FBE decryption (phase 2) ----
+# qseecomd, keymaster 4.1 and gatekeeper services come from device/qcom/twrp-common
+# (qcom_decrypt / qcom_decrypt_fbe). Stock also runs KeyMint (AIDL) and the QSEECom
+# HAL; TWRP's vold talks to KeyMint through keystore2, so add those here. Vendor
+# binaries live in /system/bin and their libraries in /vendor/lib64 (twrp-common layout).
+on init
+    setprop vendor.gatekeeper.disable_spu true
+
+on fs
+    chmod 0666 /dev/smcinvoke
+    chown system drmrpc /dev/smcinvoke
+
+service vendor.keymint-qti /system/bin/android.hardware.security.keymint-service-qti
+    user root
+    group root drmrpc
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib
+    disabled
+    seclabel u:r:recovery:s0
+
+service vendor.qseecom-service /system/bin/vendor.qti.hardware.qseecom@1.0-service
+    user root
+    group root drmrpc
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib
+    disabled
+    seclabel u:r:recovery:s0
+
+# qseecomd registers its listeners (RPMB, secure storage, ...) and then sets this prop.
+on property:vendor.sys.listeners.registered=true
+    start vendor.qseecom-service
+    start vendor.keymint-qti
+
+on property:twrp.all.users.decrypted=true
+    stop vendor.keymint-qti
+    stop vendor.qseecom-service

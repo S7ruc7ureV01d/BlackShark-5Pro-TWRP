@@ -111,18 +111,22 @@ BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
-# Security patch / version (high values avoid keymaster rollback refusal)
-PLATFORM_SECURITY_PATCH := 2099-12-31
-VENDOR_SECURITY_PATCH := 2022-06-01
-PLATFORM_VERSION := 99.87.36
+# Security patch / version
+# MUST match stock (boot.img header: 12.0.0 / 2022-06). On Qualcomm the bootloader passes
+# the booted image's os_version/os_patch_level to TrustZone. If recovery claimed a newer
+# level, KeyMint would report the FBE keys as needing an upgrade; an upgraded key blob
+# written by recovery would be unusable by stock Android (rollback) => permanent data loss.
+PLATFORM_VERSION := 12
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
-BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
+PLATFORM_SECURITY_PATCH := 2022-06-01
+VENDOR_SECURITY_PATCH := 2022-06-01
+BOOT_SECURITY_PATCH := 2022-06-01
 
-# Encryption: deferred to phase 2 (see docs/DECISIONS.md)
-# TW_INCLUDE_CRYPTO := true
-# TW_INCLUDE_CRYPTO_FBE := true
-# TW_INCLUDE_FBE_METADATA_DECRYPT := true
-# BOARD_USES_QCOM_FBE_DECRYPTION := true
+# Encryption (FBE v2 + metadata encryption, HW-wrapped keys) - phase 2
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
 TW_USE_FSCRYPT_POLICY := 2
 
 # TWRP

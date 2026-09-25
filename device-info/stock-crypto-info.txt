@@ -1,0 +1,184 @@
+### mounts
+/dev/block/by-name/metadata /metadata ext4 rw,seclabel,nosuid,nodev,noatime,discard 0 0
+/dev/block/dm-3 /system_ext erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0
+/dev/block/dm-1 /product erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0
+/dev/block/dm-4 /vendor erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0
+/dev/block/dm-0 /odm erofs ro,seclabel,relatime,user_xattr,acl,cache_strategy=readaround 0 0
+/dev/block/dm-6 /data f2fs rw,lazytime,seclabel,nosuid,nodev,noatime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,extent_cache,mode=adaptive,active_logs=6,reserve_root=32768,resuid=0,resgid=1065,usrquota,grpquota,prjquota,inlinecrypt,alloc_mode=default,checkpoint_merge,fsync_mode=nobarrier 0 0
+### fstab userdata/metadata
+/dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard                         wait,check,formattable,first_stage_mount
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt,quota,usrquota,grpquota,prjquota    latemount,wait,check,formattable,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0,keydirectory=/metadata/vold/metadata_encryption,metadata_encryption=aes-256-xts:wrappedkey_v0,quota,reservedsize=128M,sysfs_path=/sys/devices/platform/soc/1d84000.ufshc,checkpoint=fs
+### crypto props
+[init.svc.gatekeeper-1-0]: [running]
+[init.svc.gatekeeperd]: [running]
+[init.svc.keystore2]: [running]
+[init.svc.qseecom-service]: [running]
+[init.svc.vendor.keymaster-4-1]: [running]
+[init.svc.vendor.keymint-qti]: [running]
+[init.svc.vendor.qseecomd]: [running]
+[init.svc.vold]: [running]
+[init.svc_debug_pid.gatekeeper-1-0]: [915]
+[init.svc_debug_pid.gatekeeperd]: [2103]
+[init.svc_debug_pid.keystore2]: [912]
+[init.svc_debug_pid.qseecom-service]: [846]
+[init.svc_debug_pid.vendor.keymaster-4-1]: [843]
+[init.svc_debug_pid.vendor.keymint-qti]: [844]
+[init.svc_debug_pid.vendor.qseecomd]: [845]
+[init.svc_debug_pid.vold]: [847]
+[keystore.boot_level]: [1000000000]
+[keystore.crash_count]: [0]
+[ro.boot.keymaster]: [1]
+[ro.boottime.gatekeeper-1-0]: [3529978383]
+[ro.boottime.gatekeeperd]: [7062340465]
+[ro.boottime.keystore2]: [3526848331]
+[ro.boottime.qseecom-service]: [3268599842]
+[ro.boottime.vendor.keymaster-4-1]: [3262999217]
+[ro.boottime.vendor.keymint-qti]: [3264280310]
+[ro.boottime.vendor.qseecomd]: [3267198019]
+[ro.boottime.vold]: [3277883123]
+[ro.crypto.metadata.enabled]: [true]
+[ro.crypto.state]: [encrypted]
+[ro.crypto.type]: [file]
+[ro.crypto.uses_fs_ioc_add_encryption_key]: [true]
+[ro.vendor.qti.va_aosp.support]: [1]
+[ro.vendor.qti.va_odm.support]: [1]
+[vendor.gatekeeper.disable_spu]: [true]
+[vold.has_adoptable]: [1]
+[vold.has_compress]: [0]
+[vold.has_quota]: [1]
+[vold.has_reserved]: [1]
+[vold.post_fs_data_done]: [1]
+### security services running
+  269 system       u:r:servicemanager:s0          servicemanager
+  270 system       u:r:hwservicemanager:s0        hwservicemanager
+  271 system       u:r:vndservicemanager:s0       vndservicemanager /dev/vndbinder
+  391 root         u:r:kernel:s0                  [qseecom-unreg-l]
+  403 root         u:r:kernel:s0                  [qseecom-unload-]
+  843 system       u:r:vendor_hal_keymaster_qti:s0 android.hardware.keymaster@4.1-service-qti
+  844 system       u:r:vendor_hal_keymint_qti:s0  android.hardware.security.keymint-service-qti
+  845 system       u:r:tee:s0                     qseecomd
+  846 system       u:r:vendor_hal_qseecom_default:s0 vendor.qti.hardware.qseecom@1.0-service
+  847 root         u:r:vold:s0                    vold --blkid_context=u:r:blkid:s0 --blkid_untrusted_context=u:r:blkid_untrusted:s0 --fsck_context=u:r:fsck:s0 --fsck_untrusted_context=u:r:fsck_untrusted:s0
+  912 keystore     u:r:keystore:s0                keystore2 /data/misc/keystore
+  915 system       u:r:vendor_hal_gatekeeper_qti:s0 android.hardware.gatekeeper@1.0-service-qti
+ 1148 system       u:r:vendor_ssgtzd:s0           ssgtzd
+ 1335 system       u:r:vendor_hal_secureprocessor_qti:s0 vendor.qti.hardware.secureprocessor@1.0
+ 2103 system       u:r:gatekeeperd:s0             gatekeeperd /data/misc/gatekeeper
+ 3910 secure_element u:r:secure_element:s0:c44,c260,c512,c768 com.android.se
+ 6176 system       u:r:system_app:s0              com.qualcomm.qti.services.secureui:sui_service
+### vendor security binaries
+-rwxr-xr-x 1 root shell  15392 2008-12-31 22:00 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+-rwxr-xr-x 1 root shell  23984 2008-12-31 22:00 /vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+-rwxr-xr-x 1 root shell  23992 2008-12-31 22:00 /vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
+-rwxr-xr-x 1 root shell  24056 2008-12-31 22:00 /vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
+-rwxr-xr-x 1 root shell  36840 2008-12-31 22:00 /vendor/bin/hw/android.hardware.security.keymint-service-qti
+-rwxr-xr-x 1 root shell  15264 2008-12-31 22:00 /vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
+-rwxr-xr-x 1 root shell  41192 2008-12-31 22:00 /vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
+-rwxr-xr-x 1 root shell  28464 2008-12-31 22:00 /vendor/bin/qseecomd
+-rwxr-xr-x 1 root shell 155976 2008-12-31 22:00 /vendor/bin/ssgtzd
+### vendor init rcs
+android.hardware.gatekeeper@1.0-service-qti.rc
+android.hardware.keymaster@4.1-service-qti.rc
+android.hardware.security.keymint-service-qti.rc
+qseecomd.rc
+ssgtzd.rc
+vendor.qti.hardware.qseecom@1.0-service.rc
+vendor.qti.hardware.secureprocessor@1.0.rc
+vendor.qti.hardware.trustedui@1.0-service-qti.rc
+### vintf security HALs
+/vendor/etc/vintf/manifest/android.hardware.security.keymint-service-qti.xml
+/vendor/etc/vintf/manifest_taro.xml
+### vold / keystore data layout
+/data/misc/vold/user_keys:
+total 12
+drwx------ 4 root root 3452 2022-08-09 14:09 .
+drwx------ 3 root root 3452 1970-04-20 18:35 ..
+drwx------ 3 root root 3452 1970-04-20 18:35 ce
+drwx------ 4 root root 3452 1970-04-20 18:35 de
+
+/data/unencrypted:
+total 17
+drwx------  4 root   root   3452 1970-04-20 18:35 .
+drwxrwx--x 60 system system 4096 2026-09-24 23:08 ..
+drwx------  2 root   root   3452 1970-04-20 18:35 key
+drwx------  2 root   root   3452 1970-04-20 18:35 key_back
+-rw-------  1 root   root     62 1970-04-20 18:45 mode
+-rw-------  1 root   root     16 1970-04-20 18:45 per_boot_ref
+-rw-------  1 root   root     16 1970-04-20 18:45 ref
+
+/metadata/vold/metadata_encryption:
+total 16
+drwx------ 4 root root 4096 1970-04-20 18:34 .
+drwx------ 3 root root 4096 1970-04-20 18:34 ..
+drwx------ 2 root root 4096 1970-04-20 18:34 key
+drwx------ 2 root root 4096 1970-04-20 18:34 key_back
+0000000000000000.handle
+dfce55d924c826c5.metrics
+dfce55d924c826c5.pwd
+dfce55d924c826c5.secdis
+dfce55d924c826c5.spblob
+persistent.sqlite
+timestamp
+vpnprofilestore.sqlite
+-rw------- 1 keystore keystore 110592 2026-09-24 23:11 /data/misc/keystore/persistent.sqlite
+### firmware images for TEE apps
+gptauuid.xml
+hdcp1.b00
+hdcp1.b01
+hdcp1.b02
+hdcp1.b03
+hdcp1.b04
+hdcp1.b05
+hdcp1.b06
+hdcp1.b07
+hdcp1.b08
+hdcp1.mdt
+hdcp2p2.b00
+hdcp2p2.b01
+hdcp2p2.b02
+hdcp2p2.b03
+hdcp2p2.b04
+hdcp2p2.b05
+hdcp2p2.b06
+hdcp2p2.b07
+hdcp2p2.b08
+hdcp2p2.mdt
+hdcpsrm.b00
+hdcpsrm.b01
+hdcpsrm.b02
+hdcpsrm.b03
+hdcpsrm.b04
+hdcpsrm.b05
+hdcpsrm.b06
+hdcpsrm.b07
+hdcpsrm.b08
+### modules
+qcedev_mod            323584  0 
+tz_log                 32768  0 
+qce50                 106496  1 qcedev_mod
+sps_drv               225280  3 coresight_tmc,qce50,usb_bam
+hdcp_qseecom           32768  1 msm_drm
+wlan_firmware_service    69632  2 cnss2,icnss2,[permanent]
+smcinvoke_mod         167936  19 
+qseecom_mod           421888  32 hdcp_qseecom,smcinvoke_mod
+qmi_helpers            28672  15 ipam,rmnet_core,coresight_remote_etm,slim_qcom_ngd_ctrl,snd_usb_audio_qmi,qti_qmi_cdev,qti_qmi_sensor_v2,cnss2,icnss2,cnss_plat_ipc_qmi_svc,wlan_firmware_service,msm_memshare,heap_mem_ext_v01,qcom_sysmon,pdr_interface
+ufshcd_crypto_qti      20480  1 ufs_qcom
+mem_buf_dev           102400  10 camera,msm_eva,msm_video,qcedev_mod,frpc_adsprpc,smcinvoke_mod,qseecom_mod,msm_kgsl,mem_buf,qcom_dma_heaps
+crypto_qti_common      36864  4 sdhci_msm,ufs_qcom,ufshcd_crypto_qti,cqhci
+crypto_qti_hwkm        20480  1 crypto_qti_common
+hwkm                   24576  1 crypto_qti_hwkm
+tmecom_intf            28672  1 hwkm
+qcom_scm              118784  28 msm_drm,camera,msm_eva,ipam,msm_video,coresight_tpdm,qcom_q6v5_pas,tz_log,sdhci_msm,phy_msm_snps_hs,guestvm_loader,smcinvoke_mod,eud,qcom_spss,core_hang_detect,qseecom_mod,qcom_cpuss_sleep_stats,msm_kgsl,mdt_loader,arm_smmu,ufs_qcom,qcom_dload_mode,pinctrl_msm,memory_dump_v2,secure_buffer,crypto_qti_hwkm,qcom_pdc,qcom_wdt_core
+### dm-default-key
+/sys/block/dm-6 userdata
+### lockscreen
+ls: /data/system/gatekeeper.*: No such file or directory
+-rw-rw---- 1 system system 20480 2026-09-24 23:08 /data/system/locksettings.db
+
+/data/system_de/0/spblob:
+total 38
+drwx------ 2 system system  3452 2026-09-24 23:09 .
+drwxrwx--- 5 system system  3452 2026-09-24 23:03 ..
+-rw------- 1 system system    58 2022-08-09 14:09 0000000000000000.handle
+-rw------- 1 system system    72 2022-08-09 14:09 dfce55d924c826c5.metrics
+-rw------- 1 system system    89 2022-08-09 14:09 dfce55d924c826c5.pwd
