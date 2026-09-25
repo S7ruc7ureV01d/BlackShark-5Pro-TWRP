@@ -1,0 +1,910 @@
+### getenforce
+Enforcing
+### lsmod
+Module                  Size  Used by
+adsp_loader_dlkm       16384  0 
+spf_core_dlkm          24576  1 adsp_loader_dlkm
+gpr_dlkm               24576  1 spf_core_dlkm
+snd_event_dlkm         16384  1 gpr_dlkm
+q6_notifier_dlkm       28672  1 gpr_dlkm
+q6_pdr_dlkm            16384  1 q6_notifier_dlkm
+msm_drm              2859008  4 
+msm_mmrm               53248  1 msm_drm
+qrtr_gunyah            20480  0 
+qrtr_mhi               20480  0 
+qrtr_smd               16384  0 
+xt_IPR                 20480  0 
+snd_usb_audio_qmi      45056  0 
+stm_ftrace             16384  0 
+stm_console            16384  0 
+stm_p_ost              16384  0 
+stm_p_basic            16384  0 
+coresight_hwevent      20480  0 
+coresight_tgu          24576  0 [permanent]
+coresight_remote_etm    16384  0 
+coresight_dummy        16384  0 
+coresight_tpdm        114688  0 
+coresight_tpda         32768  0 
+coresight_cti          77824  0 
+coresight_stm          36864  0 
+stm_core               45056  5 stm_ftrace,stm_console,stm_p_ost,stm_p_basic,coresight_stm
+coresight_replicator    28672  0 
+coresight_funnel       28672  0 
+coresight_tmc         106496  0 
+coresight_csr          36864  2 coresight_hwevent,coresight_tmc
+coresight              69632  12 coresight_hwevent,coresight_tgu,coresight_remote_etm,coresight_dummy,coresight_tpdm,coresight_tpda,coresight_cti,coresight_stm,coresight_replicator,coresight_funnel,coresight_tmc,coresight_csr
+qti_amoled_ecm         20480  0 
+hwmon                  45056  1 qti_amoled_ecm
+slim_qcom_ngd_ctrl     57344  0 
+sharkutil              16384  0 
+migt                   94208  0 
+millet_oem_cgroup      16384  0 [permanent]
+millet_sig             16384  0 [permanent]
+millet_binder          28672  0 [permanent]
+millet_hs              16384  0 
+millet_pkg             20480  0 
+millet_core            28672  4 millet_sig,millet_binder,millet_hs,millet_pkg,[permanent]
+binder_gki             16384  1 millet_binder,[permanent]
+icc_test               16384  0 
+goodix_health          40960  0 
+qcom_spmi_adc5         40960  0 
+qcom_vadc_common       24576  1 qcom_spmi_adc5
+gh_virtio_backend      57344  0 
+gh_mem_notifier        16384  1 msm_drm
+gh_irq_lend            20480  1 msm_drm
+qcom_q6v5_pas          45056  2 
+qcom_pil_info          20480  1 qcom_q6v5_pas
+mhi_dev_drv           266240  0 
+mhi_dev_net            28672  1 mhi_dev_drv
+ep_pcie_drv           192512  1 mhi_dev_drv
+extend_reclaim         16384  0 
+qcedev_mod            323584  0 
+qce50                 106496  1 qcedev_mod
+tz_log                 32768  0 
+leds_aw2023            36864  0 
+leds_qti_tri_led       20480  0 
+leds_qti_flash         36864  0 
+sdhci_msm             110592  0 
+qcom_lpm               61440  0 [permanent]
+qcom_cpufreq_hw_debug    20480  0 
+qcom_edac              16384  0 
+bt_fm_slim             24576  0 
+slimbus                36864  2 slim_qcom_ngd_ctrl,bt_fm_slim
+btpower                32768  1 bt_fm_slim
+dm_cache_smq           69632  0 
+dm_cache               98304  1 dm_cache_smq
+dm_cache_brd           16384  0 
+dm_persistent_data    131072  1 dm_cache
+dm_bio_prison          32768  1 dm_cache
+raid0                  28672  0 
+md_mod                299008  1 raid0
+mi_thermal_interface    24576  0 
+qti_devfreq_cdev       16384  0 
+qti_cpufreq_cdev       16384  0 
+qti_userspace_cdev     16384  0 
+ddr_cdev               16384  0 
+sdpm_clk               20480  0 
+policy_engine          20480  0 
+cpu_voltage_cooling    16384  0 
+msm_lmh_dcvs           20480  0 [permanent]
+bcl_soc                16384  0 
+bcl_pmic5              20480  0 
+cpu_hotplug            16384  0 
+qti_qmi_cdev           24576  0 
+qti_qmi_sensor_v2      28672  0 
+qcom_spmi_temp_alarm    16384  0 
+qcom_tsens             53248  0 
+qti_battery_charger   147456  1 leds_qti_flash
+qcom_pon               16384  0 
+radio_i2c_rtc6226_qca    61440  0 
+synx_driver            81920  0 
+qcom_ipc_lite          16384  1 synx_driver
+ir_spi                 24576  0 
+i3c_master_msm_geni    49152  0 
+i2c_msm_geni           40960  0 
+fpc1552                24576  0 
+goodix_fod             32768  0 
+aw8697_haptic         450560  0 
+pm8941_pwrkey          16384  0 
+synaptics_tcm2        225280  0 
+hbp_touch             212992  0 
+xiaomi_touch           49152  2 synaptics_tcm2,hbp_touch
+focaltech_touch       299008  0 
+pressure               24576  2 hbp_touch,focaltech_touch
+touch_aw8680x          81920  2 hbp_touch,focaltech_touch
+cs_press               73728  3 hbp_touch,focaltech_touch,touch_aw8680x
+atmel_mxt_ts           45056  0 
+f_fs_ipc_log           36864  0 
+usb_f_gsi              86016  0 
+ipa_fmwk              122880  2 mhi_dev_drv,usb_f_gsi
+usb_f_cdev             45056  0 
+usb_f_ccid             36864  0 
+usb_f_diag             40960  0 
+lvstest                20480  0 
+ehset                  16384  0 
+phy_qcom_emu           20480  0 
+msm_sharedmem          16384  0 
+ax88179_178a           40960  0 
+asix                   65536  0 
+cnss_prealloc          16384  0 
+cnss_nl                20480  0 
+cnss_utils             28672  0 
+cnss2                 466944  0 
+cnss_plat_ipc_qmi_svc    36864  1 cnss2
+qcom_q6v5              24576  2 qcom_q6v5_pas,cnss2
+heye                   81920  6 msm_drm,qti_battery_charger,hbp_touch,touch_aw8680x,cs_press,qcom_q6v5
+spmi_glink_debug       16384  0 
+spmi_pmic_arb_debug    20480  0 
+spi_msm_geni           49152  0 
+nvme                   65536  0 
+nvme_core             135168  1 nvme
+sg                     98304  0 
+nfc_i2c                49152  0 
+qcom_i2c_pmic          24576  0 
+perf_helper           614400  0 
+hdcp_qseecom           32768  1 msm_drm
+zram                   65536  0 
+lt9611uxc              45056  0 
+qcom_iommu_debug       53248  0 
+rdbg                   28672  0 
+frpc_adsprpc          524288  0 
+msm_rng                20480  0 
+hvc_gunyah             24576  0 
+qpnp_amoled_regulator    20480  0 
+qcom_pm8008_regulator    32768  0 
+hung_task_enh          20480  0 
+qcom_sync_file         28672  0 
+panel_event_notifier    16384  10 msm_drm,qti_amoled_ecm,mi_thermal_interface,qti_battery_charger,synaptics_tcm2,hbp_touch,focaltech_touch,touch_aw8680x,cs_press,atmel_mxt_ts
+qcom_logbuf_vendor_hooks    16384  0 
+memlat                 45056  0 
+qdss_bridge            32768  0 
+usb_f_qdss             32768  2 coresight_tmc,qdss_bridge
+usb_bam               126976  2 coresight_tmc,usb_f_qdss
+sps_drv               225280  3 coresight_tmc,qce50,usb_bam
+dwc3_msm              143360  4 msm_drm,usb_f_gsi,usb_f_qdss
+phy_msm_ssusb_qmp      28672  3 
+phy_msm_snps_hs        28672  2 
+ssusb_redriver_nb7vpq904m    36864  1 dwc3_msm
+plh_scmi               16384  0 
+plh_vendor             16384  1 
+rimps_log              16384  0 [permanent]
+icnss2                176128  0 
+wlan_firmware_service    69632  2 cnss2,icnss2,[permanent]
+qti_adc_tm             45056  1 icnss2
+msm_ext_display        16384  1 msm_drm,[permanent]
+sys_pm_vx              20480  0 
+qcom_soc_wdt           20480  0 
+hyp_core_ctl           45056  0 [permanent]
+thermal_pause          20480  1 hyp_core_ctl
+guestvm_loader         24576  0 
+eud                    32768  0 
+msm_show_epoch         16384  0 [permanent]
+fsa4480_i2c            16384  1 msm_drm
+ucsi_glink             28672  2 ssusb_redriver_nb7vpq904m,fsa4480_i2c
+cdsprm                 36864  0 
+spcom                  81920  0 
+spss_utils             40960  0 
+qcom_spss              28672  1 spss_utils
+pmic_pon_log           20480  0 
+altmode_glink          24576  1 msm_drm
+charger_ulog_glink     20480  0 
+qti_battery_debug      24576  0 
+pmic_glink             24576  6 qti_battery_charger,spmi_glink_debug,ucsi_glink,altmode_glink,charger_ulog_glink,qti_battery_debug
+glink_probe            16384  0 
+qcom_glink_spss        20480  2 qcom_spss,glink_probe
+glink_pkt              36864  0 
+sensors_ssc            20480  0 
+smp2p_sleepstate       16384  0 [permanent]
+microdump_collector    16384  0 
+smcinvoke_mod         167936  0 
+qseecom_mod           421888  2 hdcp_qseecom,smcinvoke_mod
+dcc_v2                 49152  0 
+rq_stats               16384  0 
+soc_sleep_stats        32768  0 
+core_hang_detect       16384  0 
+qsee_ipc_irq_bridge    20480  0 
+sysmon_subsystem_stats    20480  0 
+adsp_sleepmon          36864  0 
+subsystem_sleep_stats    24576  0 
+smp2p                  28672  0 
+boot_stats             20480  0 
+msm_memshare           20480  0 
+heap_mem_ext_v01       16384  1 msm_memshare
+pdr_interface          24576  5 q6_pdr_dlkm,slim_qcom_ngd_ctrl,frpc_adsprpc,icnss2,pmic_glink
+qcom_ramdump           16384  3 cnss2,frpc_adsprpc,microdump_collector
+cdsp_loader            16384  0 
+qcom_cpuss_sleep_stats    24576  0 
+pci_edma               36864  1 ep_pcie_drv
+gpi                    69632  4 
+bam_dma                36864  0 
+videocc_diwali         24576  0 
+gpucc_diwali           28672  0 
+debugcc_waipio         32768  0 [permanent]
+gpucc_waipio           32768  9 
+videocc_waipio         24576  0 
+camcc_diwali           81920  0 
+camcc_waipio           94208  0 
+pwm_qti_lpg            40960  3 
+qpnp_pbs               16384  1 pwm_qti_lpg
+pinctrl_spmi_mpp       24576  0 
+pinctrl_spmi_gpio      36864  4 
+phy_qcom_ufs_qmp_14nm    20480  0 
+phy_qcom_ufs_qmp_v3    24576  0 
+phy_qcom_ufs_qmp_v4_lahaina    24576  0 
+mhi_dev_netdev         36864  0 
+mhi_dev_uci            32768  0 
+mhi_dev_dtr            20480  1 mhi_dev_uci
+mhi_cntrl_qcom         49152  0 
+qcom_esoc              94208  1 mhi_cntrl_qcom
+qcom_sysmon            28672  4 qcom_q6v5_pas,qcom_q6v5,qcom_spss,qcom_esoc
+qmi_helpers            28672  13 snd_usb_audio_qmi,coresight_remote_etm,slim_qcom_ngd_ctrl,qti_qmi_cdev,qti_qmi_sensor_v2,cnss2,cnss_plat_ipc_qmi_svc,icnss2,wlan_firmware_service,msm_memshare,heap_mem_ext_v01,pdr_interface,qcom_sysmon
+mhi                   147456  7 qrtr_mhi,cnss2,qdss_bridge,mhi_dev_netdev,mhi_dev_uci,mhi_dev_dtr,mhi_cntrl_qcom
+pci_msm_drv           241664  4 cnss2,nvme,mhi_cntrl_qcom,mhi
+rproc_qcom_common      40960  12 q6_notifier_dlkm,slim_qcom_ngd_ctrl,qcom_q6v5_pas,frpc_adsprpc,icnss2,spss_utils,qcom_spss,pmic_glink,microdump_collector,qsee_ipc_irq_bridge,qcom_sysmon,pci_msm_drv
+qcom_smd               32768  1 rproc_qcom_common
+qcom_glink_smem        16384  2 glink_probe,rproc_qcom_common
+qcom_glink             49152  5 qcom_spss,glink_probe,qcom_glink_spss,rproc_qcom_common,qcom_glink_smem
+msm_show_resume_irq    20480  0 [permanent]
+lzo_rle                16384  0 
+lzo                    16384  0 
+zsmalloc               57344  1 zram
+msm_sysstats           28672  0 
+msm_kgsl             1806336  1 msm_sysstats
+nvmem_qfprom           20480  0 
+msm_performance        53248  2 plh_scmi,msm_kgsl,[permanent]
+mdt_loader             16384  4 qcom_q6v5_pas,guestvm_loader,qcom_spss,msm_kgsl
+c1dcvs_scmi            20480  0 
+c1dcvs_vendor          16384  1 
+qcom_rimps             20480  2 
+mi_power               36864  2 soc_sleep_stats,subsystem_sleep_stats
+msm_qmp                32768  5 
+qcom_aoss              32768  104 qcom_q6v5_pas,msm_qmp
+mi_memory              32768  0 
+hwid                   20480  3 synaptics_tcm2,hbp_touch,cnss2
+arm_smmu              176128  40 
+ufs_qcom             5414912  4 
+ufshcd_crypto_qti      20480  1 ufs_qcom
+stub_regulator         16384  0 
+socinfo                32768  1 icnss2
+rtc_pm8xxx             16384  1 
+qrtr                   49152  69 qrtr_gunyah,qrtr_mhi,qrtr_smd
+qnoc_diwali           159744  0 
+spmi_pmic_arb          49152  1 msm_drm
+qcom_spmi_pmic         20480  0 
+regmap_spmi            16384  1 qcom_spmi_pmic
+qti_regmap_debugfs     28672  3 qcom_i2c_pmic,fsa4480_i2c,qcom_spmi_pmic
+qcom_pmu_lib           36864  2 memlat,msm_performance
+qcom_llcc_pmu          24576  1 qcom_pmu_lib
+qcom_iommu_util        77824  3 msm_drm,qcom_iommu_debug,arm_smmu
+qcom_gic_intr_routing    28672  0 [permanent]
+qcom_dload_mode        20480  0 
+pinctrl_diwali         86016  0 
+pinctrl_cape          106496  0 
+phy_qcom_ufs_qmp_v4_waipio    24576  1 
+phy_qcom_ufs           28672  5 phy_qcom_ufs_qmp_14nm,phy_qcom_ufs_qmp_v3,phy_qcom_ufs_qmp_v4_lahaina,ufs_qcom,phy_qcom_ufs_qmp_v4_waipio
+phy_generic            16384  0 
+nvmem_qcom_spmi_sdam    16384  7 
+ns                     40960  1 qrtr
+msm_rtb                20480  0 
+msm_geni_serial        81920  0 
+msm_geni_se            57344  4 i3c_master_msm_geni,i2c_msm_geni,spi_msm_geni,msm_geni_serial
+reboot_mode            16384  1 qcom_pon
+qti_fixed_regulator    16384  0 
+qnoc_waipio           180224  0 
+qnoc_qos               16384  2 qnoc_diwali,qnoc_waipio
+pinctrl_waipio        106496  22 
+pinctrl_msm            61440  78 msm_drm,i3c_master_msm_geni,pinctrl_diwali,pinctrl_cape,pinctrl_waipio
+memory_dump_v2         20480  1 cnss2
+mem_hooks              16384  0 
+mem_buf                40960  0 
+qcom_dma_heaps         57344  1 mem_buf,[permanent]
+msm_dma_iommu_mapping    28672  2 msm_drm,qcom_dma_heaps
+mem_buf_dev           102400  7 qcedev_mod,frpc_adsprpc,smcinvoke_mod,qseecom_mod,msm_kgsl,mem_buf,qcom_dma_heaps
+secure_buffer          40960  9 qrtr_gunyah,gh_virtio_backend,msm_sharedmem,frpc_adsprpc,msm_memshare,msm_kgsl,arm_smmu,qcom_dma_heaps,mem_buf_dev
+mac80211             1368064  0 
+llcc_qcom              28672  2 msm_drm,msm_kgsl
+kryo_arm64_edac        16384  0 
+iommu_logger           16384  1 arm_smmu
+gh_rm_drv              57344  9 msm_drm,qrtr_gunyah,gh_virtio_backend,gh_mem_notifier,gh_irq_lend,hvc_gunyah,hyp_core_ctl,guestvm_loader,mem_buf_dev
+gh_msgq                24576  3 msm_drm,mem_buf,gh_rm_drv
+gh_dbl                 24576  2 qrtr_gunyah,gh_rm_drv
+gh_ctrl                16384  0 
+gh_arm_drv             16384  1 gh_rm_drv
+gcc_diwali             81920  0 
+dispcc_waipio          61440  29 
+dispcc_diwali          61440  0 
+cqhci                  53248  1 sdhci_msm
+crypto_qti_common      36864  4 sdhci_msm,ufs_qcom,ufshcd_crypto_qti,cqhci
+crypto_qti_hwkm        20480  1 crypto_qti_common
+hwkm                   24576  1 crypto_qti_hwkm
+tmecom_intf            28672  1 hwkm
+cfg80211             1351680  1 mac80211
+sched_walt            397312  5 migt,qcom_lpm,hyp_core_ctl,thermal_pause,msm_performance,[permanent]
+turbo_sched           110592  1 sched_walt
+mi_schedule            73728  3 migt,sched_walt,turbo_sched
+qcom_cpufreq_hw        28672  1 sched_walt
+bwmon                  61440  0 
+qcom_dcvs              69632  3 memlat,msm_kgsl,bwmon
+dcvs_fp                16384  1 qcom_dcvs
+rpmh_regulator         32768  99 
+qcom_pdc               28672  0 
+qcom_ipcc              20480  7 
+icc_rpmh               24576  2 qnoc_diwali,qnoc_waipio
+icc_debug              16384  1 icc_rpmh
+icc_bcm_voter          16384  1 icc_rpmh
+gcc_waipio            106496  131 
+clk_dummy              16384  2 debugcc_waipio,gcc_waipio
+clk_qcom              212992  15 msm_mmrm,dwc3_msm,videocc_diwali,gpucc_diwali,debugcc_waipio,gpucc_waipio,videocc_waipio,camcc_diwali,camcc_waipio,msm_kgsl,gcc_diwali,dispcc_waipio,dispcc_diwali,gcc_waipio,clk_dummy
+gdsc_regulator         24576  12 clk_qcom
+proxy_consumer         16384  3 qti_fixed_regulator,rpmh_regulator,gdsc_regulator
+debug_regulator        40960  6 qpnp_amoled_regulator,qcom_pm8008_regulator,stub_regulator,qti_fixed_regulator,rpmh_regulator,gdsc_regulator
+clk_rpmh               45056  24 
+qcom_rpmh              53248  5 msm_drm,dcvs_fp,rpmh_regulator,icc_bcm_voter,clk_rpmh,[permanent]
+cmd_db                 16384  8 cnss2,icnss2,msm_kgsl,dcvs_fp,rpmh_regulator,icc_rpmh,clk_rpmh,qcom_rpmh,[permanent]
+qcom_ipc_logging       40960  48 snd_usb_audio_qmi,slim_qcom_ngd_ctrl,mhi_dev_drv,mhi_dev_net,ep_pcie_drv,bcl_pmic5,qcom_tsens,i3c_master_msm_geni,i2c_msm_geni,f_fs_ipc_log,usb_f_gsi,cnss2,cnss_plat_ipc_qmi_svc,spi_msm_geni,nfc_i2c,usb_f_qdss,sps_drv,dwc3_msm,rimps_log,icnss2,ucsi_glink,spcom,pmic_pon_log,altmode_glink,charger_ulog_glink,glink_probe,glink_pkt,qsee_ipc_irq_bridge,smp2p,pci_edma,gpi,mhi_dev_netdev,mhi_dev_uci,mhi_dev_dtr,mhi_cntrl_qcom,qcom_esoc,mhi,pci_msm_drv,qcom_glink,msm_qmp,qcom_aoss,ufs_qcom,qrtr,ns,msm_geni_serial,msm_geni_se,qcom_pdc,qcom_rpmh,[permanent]
+qcom_cpu_vendor_hooks    20480  0 
+gh_virt_wdt            16384  0 
+qcom_wdt_core          32768  2 qcom_soc_wdt,gh_virt_wdt
+qcom_reboot_reason     16384  4 pm8941_pwrkey,nvme,ufs_qcom,qcom_wdt_core
+qcom_scm              118784  24 msm_drm,coresight_tpdm,qcom_q6v5_pas,tz_log,sdhci_msm,phy_msm_snps_hs,guestvm_loader,eud,qcom_spss,smcinvoke_mod,qseecom_mod,core_hang_detect,qcom_cpuss_sleep_stats,msm_kgsl,mdt_loader,arm_smmu,ufs_qcom,qcom_dload_mode,pinctrl_msm,memory_dump_v2,secure_buffer,crypto_qti_hwkm,qcom_pdc,qcom_wdt_core
+minidump             1134592  10 cnss2,frpc_adsprpc,qcom_logbuf_vendor_hooks,dcc_v2,msm_kgsl,qcom_dload_mode,msm_rtb,memory_dump_v2,qcom_ipc_logging,qcom_wdt_core
+smem                   24576  16 qcom_q6v5,rdbg,qcom_glink_spss,microdump_collector,soc_sleep_stats,sysmon_subsystem_stats,adsp_sleepmon,subsystem_sleep_stats,smp2p,rproc_qcom_common,qcom_smd,qcom_glink_smem,mi_power,msm_qmp,socinfo,minidump
+qcom_hwspinlock        16384  1 
+### input
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="slide-keys-shark_up"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/soc/soc:slide_gpio_keys_shark_up/input/input52
+U: Uniq=
+H: Handlers=event0 
+B: PROP=0
+B: EV=21
+B: SW=800
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="slide-keys-shark_down"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/soc/soc:slide_gpio_keys_shark_down/input/input53
+U: Uniq=
+H: Handlers=event1 
+B: PROP=0
+B: EV=21
+B: SW=1000
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="slide-keys-click-up"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/soc/soc:slide_gpio_keys_click_up/input/input54
+U: Uniq=
+H: Handlers=event2 cpufreq 
+B: PROP=0
+B: EV=3
+B: KEY=800000000000000
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="slide-keys-click-down"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/soc/soc:slide_gpio_keys_click_down/input/input55
+U: Uniq=
+H: Handlers=event3 cpufreq 
+B: PROP=0
+B: EV=3
+B: KEY=1000000000000000
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="gpio-keys"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/soc/soc:gpio_keys/input/input56
+U: Uniq=
+H: Handlers=event4 cpufreq 
+B: PROP=0
+B: EV=3
+B: KEY=8000000000000 0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="ht,input"
+P: Phys=
+S: Sysfs=/devices/virtual/input/input57
+U: Uniq=
+H: Handlers=event5 cpufreq kgsl sde 
+B: PROP=2
+B: EV=b
+B: KEY=400000400 0 0 8000 0 0
+B: ABS=661800000000000
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="awinic_haptic"
+P: Phys=
+S: Sysfs=/devices/platform/soc/884000.i2c/i2c-3/3-005a/input/input58
+U: Uniq=
+H: Handlers=event6 
+B: PROP=0
+B: EV=200001
+B: FF=120070000 0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="pmic_pwrkey"
+P: Phys=pmic_pwrkey/input0
+S: Sysfs=/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey/input/input59
+U: Uniq=
+H: Handlers=event7 cpufreq 
+B: PROP=0
+B: EV=3
+B: KEY=10000000000000 0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="pmic_resin"
+P: Phys=pmic_resin/input0
+S: Sysfs=/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:resin/input/input60
+U: Uniq=
+H: Handlers=event8 cpufreq 
+B: PROP=0
+B: EV=3
+B: KEY=4000000000000 0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="pmic_pwrkey_bark"
+P: Phys=pmic_pwrkey_bark/input0
+S: Sysfs=/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey-bark/input/input61
+U: Uniq=
+H: Handlers=event9 cpufreq 
+B: PROP=0
+B: EV=3
+B: KEY=10000000000000 0
+
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="pmic_pwrkey_resin_bark"
+P: Phys=pmic_pwrkey_resin_bark/input0
+S: Sysfs=/devices/platform/soc/c42d000.qcom,spmi/spmi-0/0-00/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey-resin-bark/input/input62
+U: Uniq=
+H: Handlers=event10 cpufreq 
+B: PROP=0
+B: EV=3
+B: KEY=10000000000000 0
+
+### udc
+total 0
+lrwxrwxrwx 1 root root 0 2026-09-24 19:10 a600000.dwc3 -> ../../devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3
+lrwxrwxrwx 1 root root 0 2026-09-24 19:10 dummy_udc.0 -> ../../devices/platform/dummy_udc.0/udc/dummy_udc.0
+not attached
+not attached
+### gadget
+
+/config/usb_gadget/g1/configs:
+total 0
+drwxrwxrwx 3 shell shell 0 2026-09-24 19:11 b.1
+
+/config/usb_gadget/g1/configs/b.1:
+total 0
+-rw-r--r-- 1 root root 4096 2026-09-24 19:12 MaxPower
+-rw-r--r-- 1 root root 4096 2026-09-24 19:12 bmAttributes
+drwxr-xr-x 3 root root    0 1970-04-20 14:46 strings
+
+/config/usb_gadget/g1/configs/b.1/strings:
+total 0
+drwxrwx--- 2 shell shell 0 2026-09-24 19:11 0x409
+
+/config/usb_gadget/g1/configs/b.1/strings/0x409:
+total 0
+-rw-r--r-- 1 root root 4096 2026-09-24 19:10 configuration
+### dwc3 mode
+peripheral
+### role
+device
+### typec
+port0
+port0-partner
+host [device]
+source [sink]
+### boot_adsp
+cat: /sys/kernel/boot_adsp/boot: Permission denied
+### remoteproc
+/sys/class/remoteproc/remoteproc0 188101c.remoteproc-spss offline
+/sys/class/remoteproc/remoteproc1 3000000.remoteproc-adsp running
+/sys/class/remoteproc/remoteproc2 32300000.remoteproc-cdsp offline
+/sys/class/remoteproc/remoteproc3 2400000.remoteproc-slpi offline
+/sys/class/remoteproc/remoteproc4 4080000.remoteproc-mss offline
+### power_supply
+battery
+ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1
+usb
+wireless
+70
+### firmware
+ls: /etc/firmware: No such file or directory
+/vendor/firmware:
+total 185264
+-r--r----- 1 system system   889524 2022-06-13 20:17 Data.msc
+-r--r----- 1 system system      852 2022-06-13 21:49 adsp.b00
+-r--r----- 1 system system     6440 2022-06-13 21:49 adsp.b01
+-r--r----- 1 system system  3218596 2022-06-13 21:49 adsp.b02
+-r--r----- 1 system system    25360 2022-06-13 21:49 adsp.b03
+-r--r----- 1 system system    34632 2022-06-13 21:49 adsp.b04
+-r--r----- 1 system system   504128 2022-06-13 21:49 adsp.b05
+-r--r----- 1 system system      220 2022-06-13 21:49 adsp.b06
+-r--r----- 1 system system     4892 2022-06-13 21:49 adsp.b07
+-r--r----- 1 system system  2193128 2022-06-13 21:49 adsp.b08
+-r--r----- 1 system system   155656 2022-06-13 21:49 adsp.b09
+-r--r----- 1 system system    58800 2022-06-13 21:49 adsp.b10
+-r--r----- 1 system system   132000 2022-06-13 21:49 adsp.b11
+-r--r----- 1 system system    80288 2022-06-13 21:49 adsp.b12
+-r--r----- 1 system system  2637956 2022-06-13 21:49 adsp.b13
+-r--r----- 1 system system   104124 2022-06-13 21:49 adsp.b14
+-r--r----- 1 system system      280 2022-06-13 21:49 adsp.b15
+-r--r----- 1 system system   379460 2022-06-13 21:49 adsp.b16
+-r--r----- 1 system system  8339708 2022-06-13 21:49 adsp.b17
+-r--r----- 1 system system   356360 2022-06-13 21:49 adsp.b18
+-r--r----- 1 system system     1088 2022-06-13 21:49 adsp.b19
+-r--r----- 1 system system   914300 2022-06-13 21:49 adsp.b20
+-r--r----- 1 system system    54816 2022-06-13 21:49 adsp.b21
+-r--r----- 1 system system   705788 2022-06-13 21:49 adsp.b22
+-r--r----- 1 system system     4172 2022-06-13 21:49 adsp.b24
+-r--r----- 1 system system     5024 2022-06-13 21:49 adsp.mdt
+-r--r----- 1 system system      513 2022-06-13 20:39 adspr.jsn
+-r--r----- 1 system system      703 2022-06-13 20:39 adspua.jsn
+-r--r----- 1 system system  5470128 2022-06-13 20:17 amss.bin
+-r--r----- 1 system system  5287936 2022-06-13 20:17 amss20.bin
+-r--r----- 1 system system      516 2022-06-13 20:39 battmgr.jsn
+-r--r----- 1 system system    59976 2022-06-13 20:17 bd_ktus.elf
+-r--r----- 1 system system    59844 2022-06-13 20:17 bd_ktusgf.elf
+-r--r----- 1 system system    59976 2022-06-13 20:17 bd_ktusgfgl.elf
+-r--r----- 1 system system    59976 2022-06-13 20:17 bd_ktusgl.elf
+-r--r----- 1 system system    59868 2022-06-13 20:17 bd_l1.elf
+-r--r----- 1 system system    60012 2022-06-13 20:17 bd_l10.elf
+### spi / touch
+spi0.0
+total 0
+drwxr-xr-x 2 root root 0 2026-09-24 19:10 fts_ht
+drwxr-xr-x 2 root root 0 2026-09-24 19:10 fts_ts
+drwxr-xr-x 2 root root 0 2026-09-24 19:10 ir-spi
+### mounts
+rootfs / rootfs rw,seclabel,size=5435576k,nr_inodes=1358894 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,size=5693848k,nr_inodes=1423462,mode=755 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600,ptmxmode=000 0 0
+proc /proc proc rw,relatime,gid=3009,hidepid=invisible 0 0
+sysfs /sys sysfs rw,seclabel,relatime 0 0
+selinuxfs /sys/fs/selinux selinuxfs rw,relatime 0 0
+tmpfs /mnt tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,size=5693848k,nr_inodes=1423462,mode=755,gid=1000 0 0
+tmpfs /apex tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,size=5693848k,nr_inodes=1423462,mode=755 0 0
+tmpfs /linkerconfig tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,size=5693848k,nr_inodes=1423462,mode=755 0 0
+tmpfs /mnt/installer tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,size=5693848k,nr_inodes=1423462,mode=755,gid=1000 0 0
+tmpfs /mnt/androidwritable tmpfs rw,seclabel,nosuid,nodev,noexec,relatime,size=5693848k,nr_inodes=1423462,mode=755,gid=1000 0 0
+none /dev/blkio cgroup rw,nosuid,nodev,noexec,relatime,blkio 0 0
+none /dev/cg2_bpf cgroup2 rw,nosuid,nodev,noexec,relatime 0 0
+none /dev/cpuctl cgroup rw,nosuid,nodev,noexec,relatime,cpu 0 0
+none /acct cgroup rw,nosuid,nodev,noexec,relatime,cpuacct 0 0
+none /dev/cpuset cgroup rw,nosuid,nodev,noexec,relatime,cpuset,noprefix,release_agent=/sbin/cpuset_release_agent 0 0
+none /dev/memcg cgroup rw,nosuid,nodev,noexec,relatime,memory 0 0
+tmpfs /tmp tmpfs rw,seclabel,relatime,size=5693848k,nr_inodes=1423462 0 0
+binder /dev/binderfs binder rw,relatime,max=1048576,stats=global 0 0
+none /config configfs rw,relatime 0 0
+pstore /sys/fs/pstore pstore rw,seclabel,relatime 0 0
+adb /dev/usb-ffs/adb functionfs rw,relatime 0 0
+fastboot /dev/usb-ffs/fastboot functionfs rw,relatime 0 0
+/dev/block/bootdevice/by-name/modem_a /vendor/firmware_mnt vfat ro,relatime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro 0 0
+/dev/block/bootdevice/by-name/modem_a /vendor/firmware vfat ro,relatime,uid=1000,gid=1000,fmask=0337,dmask=0227,codepage=437,iocharset=iso8859-1,shortname=lower,errors=remount-ro 0 0
+/dev/block/by-name/rescue /dbg ext4 rw,seclabel,nosuid,nodev,relatime 0 0
+### ps
+USER           PID  PPID     VSZ    RSS WCHAN            ADDR S NAME                       
+root             1     0 10930368  9344 do_epoll_wait       0 S init
+root             2     0       0      0 kthreadd            0 S [kthreadd]
+root             3     2       0      0 rescuer_thread      0 I [rcu_gp]
+root             4     2       0      0 rescuer_thread      0 I [rcu_par_gp]
+root             5     2       0      0 worker_thread       0 I [kworker/0:0-events]
+root             6     2       0      0 worker_thread       0 I [kworker/0:0H-events_highpri]
+root             7     2       0      0 worker_thread       0 I [kworker/u16:0-ufs_clkscaling_0]
+root             8     2       0      0 rescuer_thread      0 I [mm_percpu_wq]
+root             9     2       0      0 worker_thread       0 I [kworker/u16:1-ufs_clkscaling_0]
+root            10     2       0      0 rcu_tasks_kthread   0 S [rcu_tasks_kthre]
+root            11     2       0      0 rcu_tasks_kthread   0 S [rcu_tasks_trace]
+root            12     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/0]
+root            13     2       0      0 rcu_gp_fqs_loop     0 I [rcu_preempt]
+root            14     2       0      0 nocb_gp_wait        0 S [rcuog/0]
+root            15     2       0      0 nocb_cb_wait        0 S [rcuop/0]
+root            16     2       0      0 smpboot_thread_fn   0 S [migration/0]
+root            17     2       0      0 smpboot_thread_fn   0 S [cpuhp/0]
+root            18     2       0      0 smpboot_thread_fn   0 S [cpuhp/1]
+root            19     2       0      0 smpboot_thread_fn   0 S [migration/1]
+root            20     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/1]
+root            21     2       0      0 worker_thread       0 I [kworker/1:0-mm_percpu_wq]
+root            22     2       0      0 worker_thread       0 I [kworker/1:0H-events_highpri]
+root            23     2       0      0 nocb_cb_wait        0 S [rcuop/1]
+root            24     2       0      0 smpboot_thread_fn   0 S [cpuhp/2]
+root            25     2       0      0 smpboot_thread_fn   0 S [migration/2]
+root            26     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/2]
+root            27     2       0      0 worker_thread       0 I [kworker/2:0-mm_percpu_wq]
+root            28     2       0      0 worker_thread       0 I [kworker/2:0H-events_highpri]
+root            29     2       0      0 nocb_cb_wait        0 S [rcuop/2]
+root            30     2       0      0 smpboot_thread_fn   0 S [cpuhp/3]
+root            31     2       0      0 smpboot_thread_fn   0 S [migration/3]
+root            32     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/3]
+root            33     2       0      0 worker_thread       0 I [kworker/3:0-mm_percpu_wq]
+root            34     2       0      0 worker_thread       0 I [kworker/3:0H-events_highpri]
+root            35     2       0      0 nocb_cb_wait        0 S [rcuop/3]
+root            36     2       0      0 smpboot_thread_fn   0 S [cpuhp/4]
+root            37     2       0      0 smpboot_thread_fn   0 S [migration/4]
+root            38     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/4]
+root            39     2       0      0 worker_thread       0 I [kworker/4:0-rcu_gp]
+root            40     2       0      0 worker_thread       0 I [kworker/4:0H-events_highpri]
+root            41     2       0      0 nocb_gp_wait        0 S [rcuog/4]
+root            42     2       0      0 nocb_cb_wait        0 S [rcuop/4]
+root            43     2       0      0 smpboot_thread_fn   0 S [cpuhp/5]
+root            44     2       0      0 smpboot_thread_fn   0 S [migration/5]
+root            45     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/5]
+root            46     2       0      0 worker_thread       0 I [kworker/5:0-events]
+root            47     2       0      0 worker_thread       0 I [kworker/5:0H-events_highpri]
+root            48     2       0      0 nocb_cb_wait        0 S [rcuop/5]
+root            49     2       0      0 smpboot_thread_fn   0 S [cpuhp/6]
+root            50     2       0      0 smpboot_thread_fn   0 S [migration/6]
+root            51     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/6]
+root            52     2       0      0 worker_thread       0 I [kworker/6:0-events]
+root            53     2       0      0 worker_thread       0 I [kworker/6:0H-events_highpri]
+root            54     2       0      0 nocb_cb_wait        0 S [rcuop/6]
+root            55     2       0      0 smpboot_thread_fn   0 S [cpuhp/7]
+root            56     2       0      0 smpboot_thread_fn   0 S [migration/7]
+root            57     2       0      0 smpboot_thread_fn   0 S [ksoftirqd/7]
+root            58     2       0      0 worker_thread       0 I [kworker/7:0-events]
+root            59     2       0      0 worker_thread       0 I [kworker/7:0H-events_highpri]
+root            60     2       0      0 nocb_cb_wait        0 S [rcuop/7]
+root            61     2       0      0 rescuer_thread      0 I [netns]
+root            62     2       0      0 worker_thread       0 I [kworker/7:1-rcu_gp]
+root            63     2       0      0 worker_thread       0 I [kworker/0:1-events]
+root            64     2       0      0 worker_thread       0 I [kworker/1:1-mm_percpu_wq]
+root            65     2       0      0 worker_thread       0 I [kworker/5:1-rcu_gp]
+root            66     2       0      0 worker_thread       0 I [kworker/4:1-events]
+root            67     2       0      0 worker_thread       0 I [kworker/6:1-events]
+root            68     2       0      0 worker_thread       0 I [kworker/2:1-mm_percpu_wq]
+root            69     2       0      0 worker_thread       0 I [kworker/3:1-mm_percpu_wq]
+root            70     2       0      0 kauditd_thread      0 S [kauditd]
+root            71     2       0      0 watchdog            0 S [khungtaskd]
+root            72     2       0      0 oom_reaper          0 S [oom_reaper]
+root            73     2       0      0 rescuer_thread      0 I [writeback]
+root            74     2       0      0 kcompactd           0 S [kcompactd0]
+root            75     2       0      0 khugepaged          0 S [khugepaged]
+root           119     2       0      0 rescuer_thread      0 I [kblockd]
+root           120     2       0      0 rescuer_thread      0 I [blkcg_punt_bio]
+root           121     2       0      0 rescuer_thread      0 I [edac-poller]
+root           122     2       0      0 worker_thread       0 I [kworker/7:2-events]
+root           123     2       0      0 rescuer_thread      0 I [devfreq_wq]
+root           124     2       0      0 kthread_worker_fn   0 S [watchdogd]
+root           125     2       0      0 worker_thread       0 I [kworker/7:1H-kblockd]
+root           146     2       0      0 kswapd_try_to_sleep 0 S [kswapd0]
+root           147     2       0      0 worker_thread       0 I [kworker/u17:0-ufs_clk_gating_0]
+root           149     2       0      0 deferred_free_thread 0 S [dmabuf-deferred]
+root           150     2       0      0 rescuer_thread      0 I [uas]
+root           151     2       0      0 rescuer_thread      0 I [dm_bufio_cache]
+root           152     2       0      0 rescuer_thread      0 I [ipv6_addrconf]
+root           153     2       0      0 rfcomm_run          0 S [krfcommd]
+root           154     2       0      0 qcom_wdt_kthread    0 S [gh-watchdog]
+root           155     2       0      0 worker_thread       0 I [kworker/u16:2-events_unbound]
+root           156     2       0      0 irq_wait_for_interrupt 0 S [irq/15-dcvsh-ir]
+root           157     2       0      0 worker_thread       0 I [kworker/6:2-events]
+root           158     2       0      0 irq_wait_for_interrupt 0 S [irq/16-dcvsh-ir]
+root           159     2       0      0 irq_wait_for_interrupt 0 S [irq/17-dcvsh-ir]
+root           160     2       0      0 worker_thread       0 I [kworker/6:1H-kblockd]
+root           163     2       0      0 rescuer_thread      0 I [cfg80211]
+root           164     2       0      0 try_core_ctl        0 S [core_ctl]
+root           165     2       0      0 gh_msgq_recv        0 S [gh_rm_recv_task]
+root           166     2       0      0 worker_thread       0 I [kworker/7:3-events]
+root           167     2       0      0 system_heap_refill_worker 0 S [qcom,system-poo]
+root           168     2       0      0 worker_thread       0 I [kworker/4:1H-kblockd]
+root           169     2       0      0 gh_msgq_recv        0 S [mem_buf_rcvr]
+root           170     2       0      0 worker_thread       0 I [kworker/5:2-rcu_gp]
+root           171     2       0      0 worker_thread       0 I [kworker/5:3-events]
+root           172     2       0      0 rescuer_thread      0 I [bwmon_wq]
+root           173     2       0      0 irq_wait_for_interrupt 0 S [irq/34-190b6400]
+root           174     2       0      0 irq_wait_for_interrupt 0 S [irq/35-19091000]
+root           175     2       0      0 kthread_worker_fn   0 S [qrtr_ns]
+root           176     2       0      0 irq_wait_for_interrupt 0 S [irq/110-arm-smm]
+root           177     2       0      0 irq_wait_for_interrupt 0 S [irq/111-arm-smm]
+root           178     2       0      0 irq_wait_for_interrupt 0 S [irq/112-arm-smm]
+root           179     2       0      0 irq_wait_for_interrupt 0 S [irq/113-arm-smm]
+root           180     2       0      0 irq_wait_for_interrupt 0 S [irq/115-arm-smm]
+root           181     2       0      0 scsi_error_handler  0 S [scsi_eh_0]
+root           182     2       0      0 rescuer_thread      0 I [scsi_tmf_0]
+root           183     2       0      0 rescuer_thread      0 I [qc_ufs_qos_swq]
+root           184     2       0      0 rescuer_thread      0 I [ufs_eh_wq_0]
+root           185     2       0      0 rescuer_thread      0 I [ufs_clk_gating_]
+root           186     2       0      0 rescuer_thread      0 I [ufs_clkscaling_]
+root           187     2       0      0 irq_wait_for_interrupt 0 S [irq/294-qcom,qm]
+root           188     2       0      0 events_notify_userspace 0 S [msm_perf:events]
+root           189     2       0      0 rescuer_thread      0 I [kgsl-workqueue]
+root           190     2       0      0 rescuer_thread      0 I [kgsl-mementry]
+root           195     2       0      0 rescuer_thread      0 I [mpcie_wq]
+root           196     2       0      0 irq_wait_for_interrupt 0 S [irq/210-int_glo]
+root           197     2       0      0 irq_wait_for_interrupt 0 S [irq/215-int_glo]
+root           198     2       0      0 worker_thread       0 I [kworker/u16:3-ufs_clkscaling_0]
+root           199     2       0      0 irq_wait_for_interrupt 0 S [irq/84-arm-smmu]
+root           200     2       0      0 irq_wait_for_interrupt 0 S [irq/87-arm-smmu]
+root           201     2       0      0 rescuer_thread      0 I [kgsl-events]
+root           202     2       0      0 irq_wait_for_interrupt 0 S [irq/85-arm-smmu]
+root           203     2       0      0 irq_wait_for_interrupt 0 S [irq/86-arm-smmu]
+root           204     2       0      0 irq_wait_for_interrupt 0 S [irq/88-arm-smmu]
+root           205     2       0      0 rescuer_thread      0 I [kgsl_devfreq_wq]
+root           206     2       0      0 kthread_worker_fn   0 S [kgsl_dispatcher]
+root           207     2       0      0 irq_wait_for_interrupt 0 S [irq/116-arm-smm]
+root           208     2       0      0 irq_wait_for_interrupt 0 S [irq/117-arm-smm]
+root           209     2       0      0 irq_wait_for_interrupt 0 S [irq/118-arm-smm]
+root           210     2       0      0 rescuer_thread      0 I [mem_share_svc]
+root           211     2       0      0 irq_wait_for_interrupt 0 S [irq/299-smp2p]
+root           212     2       0      0 irq_wait_for_interrupt 0 S [irq/300-smp2p]
+root           213     2       0      0 irq_wait_for_interrupt 0 S [irq/301-smp2p]
+root           214     2       0      0 irq_wait_for_interrupt 0 S [irq/302-smp2p]
+root           215     2       0      0 adspsleepmon_worker 0 S [adspsleepmon-wo]
+root           216     2       0      0 rescuer_thread      0 I [rq_stats]
+root           217     2       0      0 __qseecom_unregister_listener_kthread_func 0 S [qseecom-unreg-l]
+root           218     2       0      0 __qseecom_unload_app_kthread_func 0 S [qseecom-unload-]
+root           219     2       0      0 worker_thread       0 I [kworker/4:2-events]
+root           220     2       0      0 rescuer_thread      0 I [pmic_glink_rx]
+root           221     2       0      0 rescuer_thread      0 I [pdr_notifier_wq]
+root           222     2       0      0 rescuer_thread      0 I [pmic_glink_rx]
+root           223     2       0      0 irq_wait_for_interrupt 0 S [irq/25-generic-]
+root           224     2       0      0 process_cdsp_request_thread 0 S [cdsprm-wq]
+root           225     2       0      0 rescuer_thread      0 I [cdsprm-wq-delay]
+root           226     2       0      0 worker_thread       0 I [kworker/6:3]
+root           227     2       0      0 worker_thread       0 I [kworker/0:1H-events_highpri]
+root           228     2       0      0 worker_thread       0 I [kworker/1:1H-events_highpri]
+root           229     2       0      0 worker_thread       0 I [kworker/2:1H-events_highpri]
+root           230     2       0      0 worker_thread       0 I [kworker/3:1H-events_highpri]
+root           231     2       0      0 worker_thread       0 I [kworker/5:1H-kblockd]
+root           232     2       0      0 hyp_core_ctl_thread 0 S [hyp_core_ctl]
+root           233     2       0      0 rescuer_thread      0 I [rimps_wq]
+root           234     2       0      0 irq_wait_for_interrupt 0 S [irq/306-pwr_eve]
+root           235     2       0      0 irq_wait_for_interrupt 0 S [irq/307-dp_hs_p]
+root           236     2       0      0 irq_wait_for_interrupt 0 S [irq/308-dm_hs_p]
+root           237     2       0      0 irq_wait_for_interrupt 0 S [irq/309-ss_phy_]
+root           238     2       0      0 worker_thread       0 I [kworker/7:4-events]
+root           239     2       0      0 rescuer_thread      0 I [memlat_wq]
+root           240     2       0      0 khvcd               0 S [khvcd]
+root           241     2       0      0 add_hwgenerator_randomness 0 S [hwrng]
+root           243     2       0      0 rescuer_thread      0 I [pdr_notifier_wq]
+root           244     2       0      0 rescuer_thread      0 I [pdr_notifier_wq]
+root           245     2       0      0 irq_wait_for_interrupt 0 S [irq/119-arm-smm]
+root           246     2       0      0 irq_wait_for_interrupt 0 S [irq/120-arm-smm]
+root           247     2       0      0 irq_wait_for_interrupt 0 S [irq/121-arm-smm]
+root           248     2       0      0 irq_wait_for_interrupt 0 S [irq/122-arm-smm]
+root           249     2       0      0 irq_wait_for_interrupt 0 S [irq/123-arm-smm]
+root           250     2       0      0 irq_wait_for_interrupt 0 S [irq/124-arm-smm]
+root           251     2       0      0 irq_wait_for_interrupt 0 S [irq/125-arm-smm]
+root           252     2       0      0 irq_wait_for_interrupt 0 S [irq/126-arm-smm]
+root           253     2       0      0 irq_wait_for_interrupt 0 S [irq/127-arm-smm]
+root           254     2       0      0 irq_wait_for_interrupt 0 S [irq/128-arm-smm]
+root           255     2       0      0 irq_wait_for_interrupt 0 S [irq/129-arm-smm]
+root           256     2       0      0 irq_wait_for_interrupt 0 S [irq/130-arm-smm]
+root           257     2       0      0 irq_wait_for_interrupt 0 S [irq/131-arm-smm]
+root           258     2       0      0 irq_wait_for_interrupt 0 S [irq/132-arm-smm]
+root           259     2       0      0 irq_wait_for_interrupt 0 S [irq/133-arm-smm]
+root           260     2       0      0 irq_wait_for_interrupt 0 S [irq/134-arm-smm]
+root           261     2       0      0 irq_wait_for_interrupt 0 S [irq/135-arm-smm]
+root           262     2       0      0 irq_wait_for_interrupt 0 S [irq/136-arm-smm]
+root           263     2       0      0 irq_wait_for_interrupt 0 S [irq/137-arm-smm]
+root           264     2       0      0 rescuer_thread      0 I [nvme-wq]
+root           265     2       0      0 rescuer_thread      0 I [nvme-reset-wq]
+root           266     2       0      0 rescuer_thread      0 I [nvme-delete-wq]
+root           267     2       0      0 worker_thread       0 I [kworker/u16:4-ufs_clkscaling_0]
+root           268     2       0      0 worker_thread       0 I [kworker/u16:5-memlat_wq]
+root           269     2       0      0 worker_thread       0 I [kworker/u16:6-mi_sched]
+root           270     2       0      0 worker_thread       0 I [kworker/u16:7-mi_sched]
+root           271     2       0      0 worker_thread       0 I [kworker/u17:1]
+root           272     2       0      0 kthread_worker_fn   0 S [spi0]
+root           273     2       0      0 __hawkeye_govern_thread 0 S [hawkeye_govern]
+root           274     2       0      0 irq_wait_for_interrupt 0 S [irq/138-arm-smm]
+root           275     2       0      0 rescuer_thread      0 I [k_ipa_usb]
+root           276     2       0      0 rescuer_thread      0 I [fts_wq]
+root           277     2       0      0 irq_wait_for_interrupt 0 S [irq/345-fts_ht]
+root           278     2       0      0 rescuer_thread      0 I [fts_wq]
+root           279     2       0      0 rescuer_thread      0 I [cs_force_wq]
+root           280     2       0      0 irq_wait_for_interrupt 0 S [irq/347-aw86907]
+root           281     2       0      0 rescuer_thread      0 I [aw86907_vibrato]
+root           282     2       0      0 irq_wait_for_interrupt 0 S [irq/348-pmic_pw]
+root           283     2       0      0 irq_wait_for_interrupt 0 S [irq/349-pmic_re]
+root           284     2       0      0 irq_wait_for_interrupt 0 S [irq/350-pmic_pw]
+root           285     2       0      0 irq_wait_for_interrupt 0 S [irq/351-pmic_pw]
+root           286     2       0      0 irq_wait_for_interrupt 0 S [irq/223-c263000]
+root           287     2       0      0 irq_wait_for_interrupt 0 S [irq/224-c263000]
+root           288     2       0      0 irq_wait_for_interrupt 0 S [irq/225-c265000]
+root           289     2       0      0 irq_wait_for_interrupt 0 S [irq/226-c265000]
+root           290     2       0      0 irq_wait_for_interrupt 0 S [irq/274-qcom,te]
+root           291     2       0      0 irq_wait_for_interrupt 0 S [irq/289-qcom,te]
+root           292     2       0      0 irq_wait_for_interrupt 0 S [irq/291-qcom,te]
+root           293     2       0      0 irq_wait_for_interrupt 0 S [irq/275-bcl-lvl]
+root           294     2       0      0 irq_wait_for_interrupt 0 S [irq/276-bcl-lvl]
+root           295     2       0      0 irq_wait_for_interrupt 0 S [irq/277-bcl-lvl]
+root           296     2       0      0 irq_wait_for_interrupt 0 S [irq/282-bcl-lvl]
+root           297     2       0      0 irq_wait_for_interrupt 0 S [irq/283-bcl-lvl]
+root           298     2       0      0 irq_wait_for_interrupt 0 S [irq/284-bcl-lvl]
+root           299     2       0      0 irq_wait_for_interrupt 0 S [irq/227-635000.]
+root           300     2       0      0 irq_wait_for_interrupt 0 S [irq/228-637000.]
+root           301     2       0      0 rescuer_thread      0 I [screen_state_wq]
+root           302     2       0      0 rescuer_thread      0 I [md]
+root           303     2       0      0 irq_wait_for_interrupt 0 S [irq/280-flash_a]
+root           304     2       0      0 irq_wait_for_interrupt 0 S [irq/279-flash_a]
+root           305     2       0      0 irq_wait_for_interrupt 0 S [irq/278-flash_f]
+root           306     2       0      0 irq_wait_for_interrupt 0 S [irq/139-arm-smm]
+root           307     2       0      0 irq_wait_for_interrupt 0 S [irq/140-arm-smm]
+root           308     2       0      0 irq_wait_for_interrupt 0 S [irq/141-arm-smm]
+root           309     2       0      0 irq_wait_for_interrupt 0 S [irq/352-q6v5 wd]
+root           310     2       0      0 irq_wait_for_interrupt 0 S [irq/23-q6v5 wdo]
+root           311     2       0      0 irq_wait_for_interrupt 0 S [irq/361-q6v5 wd]
+root           312     2       0      0 irq_wait_for_interrupt 0 S [irq/24-q6v5 wdo]
+root           313     2       0      0 irq_wait_for_interrupt 0 S [irq/281-qcom,te]
+root           314     2       0      0 migt_hardwork       0 S [migt_thread]
+root           315     2       0      0 rescuer_thread      0 I [shark_power_wq]
+root           316     2       0      0 rescuer_thread      0 I [pdr_notifier_wq]
+root           317     2       0      0 rescuer_thread      0 I [ngd_master]
+root           321     2       0      0 irq_wait_for_interrupt 0 S [irq/142-arm-smm]
+root           322     2       0      0 rescuer_thread      0 I [byte-cntr]
+root           323     2       0      0 irq_wait_for_interrupt 0 S [irq/143-arm-smm]
+root           324     2       0      0 irq_wait_for_interrupt 0 S [irq/271-thresho]
+root           325     2       0      0 irq_wait_for_interrupt 0 S [irq/273-qcom,te]
+root           371     2       0      0 rescuer_thread      0 I [uaudio_svc]
+root           372     2       0      0 irq_wait_for_interrupt 0 S [irq/144-arm-smm]
+root           385     2       0      0 irq_wait_for_interrupt 0 S [irq/114-arm-smm]
+root           386     2       0      0 irq_wait_for_interrupt 0 S [irq/145-arm-smm]
+root           402     2       0      0 rescuer_thread      0 I [dsi_post_cmd_tx]
+root           403     2       0      0 irq_wait_for_interrupt 0 S [irq/286-ecm-sda]
+root           404     2       0      0 irq_wait_for_interrupt 0 S [irq/287-ecm-sda]
+root           405     2       0      0 irq_wait_for_interrupt 0 S [irq/288-ecm-sda]
+root           406     2       0      0 rescuer_thread      0 I [dsi_post_cmd_tx]
+root           407     2       0      0 rescuer_thread      0 I [drm_dp]
+root           408     2       0      0 kthread_worker_fn   0 S [disp_feature:0]
+root           409     2       0      0 irq_wait_for_interrupt 0 S [irq/371-esd_err]
+root           410     2       0      0 rescuer_thread      0 I [sdm_dp_audio_no]
+root           411     2       0      0 rescuer_thread      0 I [hdcp_1x_1]
+root           412     2       0      0 sde_hdcp_2x_main    0 D [hdcp_2x]
+root           413     2       0      0 dp_hdcp2p2_main     0 D [dp_hdcp2p2]
+root           414     2       0      0 kthread_worker_fn   0 S [crtc_commit:153]
+root           415     2       0      0 kthread_worker_fn   0 S [crtc_event:153]
+root           416     2       0      0 kthread_worker_fn   0 S [crtc_commit:217]
+root           417     2       0      0 kthread_worker_fn   0 S [crtc_event:217]
+root           418     2       0      0 kthread_worker_fn   0 S [crtc_commit:226]
+root           419     2       0      0 kthread_worker_fn   0 S [crtc_event:226]
+root           420     2       0      0 kthread_worker_fn   0 S [crtc_commit:235]
+root           421     2       0      0 kthread_worker_fn   0 S [crtc_event:235]
+root           422     2       0      0 kthread_worker_fn   0 S [crtc_commit:244]
+root           423     2       0      0 kthread_worker_fn   0 S [crtc_event:244]
+root           424     2       0      0 kthread_worker_fn   0 S [pp_event]
+root           425     2       0      0 kthread_worker_fn   0 S [card0-crtc0]
+root           426     2       0      0 kthread_worker_fn   0 S [card0-crtc1]
+root           427     2       0      0 kthread_worker_fn   0 S [card0-crtc2]
+root           428     2       0      0 kthread_worker_fn   0 S [card0-crtc3]
+root           429     2       0      0 kthread_worker_fn   0 S [card0-crtc4]
+root           431     1 10858368  6536 do_sys_poll         0 S init
+root           432     1 10864532  7784 do_sys_poll         0 S ueventd
+root           442     1 10929460  4808 __do_sys_rt_sigsuspend 0 S logd
+root           446     1 10839036  5380 do_epoll_wait       0 S hwservicemanager
+root           447     1 10852608  4020 do_epoll_wait       0 S vndservicemanager
+root           474     2       0      0 kthread_worker_fn   0 S [glink_adsp]
+root           475     2       0      0 irq_wait_for_interrupt 0 S [irq/374-glink-n]
+root           476     2       0      0 kthread_worker_fn   0 S [qrtr_rx]
+root           477     2       0      0 worker_thread       0 I [kworker/0:2-events]
+root           478     2       0      0 rescuer_thread      0 I [pdr_notifier_wq]
+root           480     2       0      0 worker_thread       0 I [kworker/0:3-events]
+root           481     1 11027076 46316 do_sys_poll         0 S recovery
+root           483     1 10790292  3088 __do_sys_rt_sigsuspend 0 S sh
+root           484     2       0      0 worker_thread       0 I [kworker/0:4-events]
+root           486     2       0      0 worker_thread       0 I [kworker/0:5]
+root           488     2       0      0 irq_wait_for_interrupt 0 S [irq/146-arm-smm]
+root           493     2       0      0 worker_thread       0 I [kworker/0:6]
+root           499     2       0      0 kjournald2          0 S [jbd2/sda39-8]
+root           500     2       0      0 rescuer_thread      0 I [ext4-rsv-conver]
+root           503     2       0      0 rescuer_thread      0 I [kdmflush]
+root           504     2       0      0 rescuer_thread      0 I [kdmflush]
+root           505     2       0      0 rescuer_thread      0 I [kdmflush]
+root           506     2       0      0 rescuer_thread      0 I [kdmflush]
+root           507     2       0      0 rescuer_thread      0 I [kdmflush]
+root           508     2       0      0 rescuer_thread      0 I [kdmflush]
+root           509     2       0      0 rescuer_thread      0 I [usb_bam_wq]
+root           517     2       0      0 rescuer_thread      0 I [dsi_err_workq]
+root           530   481       0      0 0                   0 Z [recovery]
+root           531     1 10926324  5576 do_epoll_wait       0 S adbd
+root           537   481       0      0 0                   0 Z [pigz]
+root           631     2       0      0 worker_thread       0 I [kworker/7:5]
+root           921   483 10817468  4428 0                   0 R ps
+### by-name
+ALIGN_TO_128K_1
+ALIGN_TO_128K_2
+abl_a
+abl_b
+acs
+lrwxrwxrwx 1 root root 37 1970-04-20 14:46 /dev/block/bootdevice -> /dev/block/platform/soc/1d84000.ufshc

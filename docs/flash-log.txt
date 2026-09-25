@@ -1,2 +1,4 @@
 2026-09-24T20:49:59-03:00 flashed out/twrp-katyusha-20260924-2046.img to recovery_a (readback de6f7bdb...c89 OK)
 2026-09-24T20:52:56-03:00 TWRP #1 result: boots, display OK, touch NOT working, USB NOT detected
+2026-09-24T21:10:10-03:00 flashed out/twrp-katyusha-20260924-2108-debug.img to recovery_a (readback 1b665097...fbd OK)
+2026-09-24T21:18:35-03:00 TWRP #3 (2108-debug) result: display OK, battery shows 100 (sysfs=70), no touch, no USB; logs in device-info/twrp-boot-3

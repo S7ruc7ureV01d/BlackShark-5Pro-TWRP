@@ -134,6 +134,9 @@ TW_DEFAULT_BRIGHTNESS := 1200
 TW_FRAMERATE := 60
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone49/temp"
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
+# Read capacity/status from sysfs; the default path asks the health HAL, which does
+# not exist in recovery, and falls back to a hard-coded 100%.
+TW_USE_LEGACY_BATTERY_SERVICES := true
 TW_EXTRA_LANGUAGES := true
 TW_DEFAULT_LANGUAGE := en
 TW_INCLUDE_NTFS_3G := true
@@ -146,6 +149,7 @@ TW_USE_TOOLBOX := true
 TW_HAS_EDL_MODE := true
 TW_EXCLUDE_APEX := true
 TW_NO_SCREEN_BLANK := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TW_DEVICE_VERSION := katyusha-1
 
