@@ -29,3 +29,4 @@ Sync output goes to `~/Projects/twrp-12.1/sync.log`.
 | RAM | 15 GB (tight for AOSP; may need swap or `-j` reduction) |
 | Disk | ~173 GB free on `/` before sync |
 | Python | 3.14 |
+- Decryption is experimental and off by default. Build with `KATYUSHA_DECRYPT=true tools/build.sh` to include it.

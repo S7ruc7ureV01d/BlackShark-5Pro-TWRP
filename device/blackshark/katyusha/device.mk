@@ -58,7 +58,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.device=katyusha \
     ro.build.product=katyusha
 
-# FBE decryption services/scripts (device/qcom/twrp-common)
+# FBE decryption (experimental, off by default): build with KATYUSHA_DECRYPT=true
+ifeq ($(KATYUSHA_DECRYPT),true)
 PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/decrypt/init.recovery.katyusha_decrypt.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.katyusha_decrypt.rc
+endif

@@ -4,7 +4,8 @@
 # vendor_boot ramdisk (lib/modules/modules.load.recovery); the audio DSP modules below
 # are shipped in this ramdisk exactly as in stock recovery.
 
-import /init.recovery.qcom_decrypt.rc
+# FBE decryption setup; only present when built with KATYUSHA_DECRYPT=true (see decrypt/).
+import /init.recovery.katyusha_decrypt.rc
 
 on early-init
     insmod /vendor/lib/modules/q6_pdr_dlkm.ko
@@ -92,58 +93,17 @@ on boot
     write /sys/devices/platform/soc/890000.i2c/i2c-4/4-0045/leds/green1/brightness 100
     write /sys/devices/platform/soc/988000.i2c/i2c-5/5-0045/leds/green2/brightness 100
 
-# ---- FBE decryption (phase 2) ----
-# qseecomd, keymaster 4.1 and gatekeeper services come from device/qcom/twrp-common
-# (qcom_decrypt / qcom_decrypt_fbe). Stock also runs KeyMint (AIDL) and the QSEECom
-# HAL; TWRP's vold talks to KeyMint through keystore2, so add those here. Vendor
-# binaries live in /system/bin and their libraries in /vendor/lib64 (twrp-common layout).
-on init
-    setprop vendor.gatekeeper.disable_spu true
-    # verbose prepdecrypt logging in recovery.log (phase 2 bring-up)
-    setprop prepdecrypt.loglevel 2
-
-on fs
-    chmod 0666 /dev/smcinvoke
-    chown system drmrpc /dev/smcinvoke
-    # Stock vendor ueventd.rc: /dev/dma_heap/qcom,* 0444 system system. TWRP's ueventd
-    # leaves them 0600 root, so qseecomd (drops to system) cannot allocate listener
-    # buffers ("MapDmabufHeapNameToIonHeap() failed, name [qcom,qseecom]") and the RPMB /
-    # secure-storage listeners never start. Verified live on build #9.
-    chown system system /dev/dma_heap/qcom,qseecom
-    chmod 0444 /dev/dma_heap/qcom,qseecom
-    chown system system /dev/dma_heap/qcom,qseecom-ta
-    chmod 0444 /dev/dma_heap/qcom,qseecom-ta
-    chown system system /dev/dma_heap/qcom,system
-    chmod 0444 /dev/dma_heap/qcom,system
-    # UFS RPMB well-known LUN (stock vendor ueventd: 0600 system system); used by the
-    # qseecomd RPMB listener for TrustZone anti-replay storage.
-    chown system system /dev/0:0:0:49476
-    chmod 0600 /dev/0:0:0:49476
-    # TrustZone GP secure file system lives on persist (see /vendor/etc/gpfspath_oem_config.xml);
-    # stock mounts persist here before vold touches the metadata key.
-    mkdir /mnt/vendor 0755 root root
-    mkdir /mnt/vendor/persist 0771 root system
-    mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist noatime nosuid nodev
-
-service vendor.keymint-qti /system/bin/android.hardware.security.keymint-service-qti
+# Cosmetic: animate the back RGB light while TWRP runs an operation (flash, backup,
+# restore, image flash, wipe, sideload). Runs as its own low-priority process and only
+# writes LED sysfs files; it never interacts with TWRP, so a failure here cannot affect
+# an operation. See /system/bin/led_fx.sh.
+service vendor.led_fx /system/bin/sh /system/bin/led_fx.sh
     user root
-    group root drmrpc
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib
+    group root
     disabled
+    oneshot
+    priority 19
     seclabel u:r:recovery:s0
 
-service vendor.qseecom-service /system/bin/vendor.qti.hardware.qseecom@1.0-service
-    user root
-    group root drmrpc
-    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib
-    disabled
-    seclabel u:r:recovery:s0
-
-# qseecomd registers its listeners (RPMB, secure storage, ...) and then sets this prop.
-on property:vendor.sys.listeners.registered=true
-    start vendor.qseecom-service
-    start vendor.keymint-qti
-
-on property:twrp.all.users.decrypted=true
-    stop vendor.keymint-qti
-    stop vendor.qseecom-service
+on boot
+    start vendor.led_fx

@@ -21,3 +21,5 @@ More details in [docs/](docs/).
 
 ## Disclaimer
 This project was built with the help of AI (Claude Code). The released build was tested on real hardware. Use at your own risk.
+
+I'm not responsible for your emmc chip corrupting itself because you did a userdata backup 5000 times, your phone exploding, melting or in any other form deconstructing itself during a Magisk flash or your bootloader locking itself because it felt like it.

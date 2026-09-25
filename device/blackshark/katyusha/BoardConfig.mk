@@ -122,11 +122,14 @@ PLATFORM_SECURITY_PATCH := 2022-06-01
 VENDOR_SECURITY_PATCH := 2022-06-01
 BOOT_SECURITY_PATCH := 2022-06-01
 
-# Encryption (FBE v2 + metadata encryption, HW-wrapped keys) - phase 2
+# Encryption (FBE v2 + metadata encryption, HW-wrapped keys) - experimental, off by default.
+# Does not decrypt yet (see docs/DEVICE_ANALYSIS.md). Build with KATYUSHA_DECRYPT=true to include it.
+ifeq ($(KATYUSHA_DECRYPT),true)
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
+endif
 TW_USE_FSCRYPT_POLICY := 2
 
 # TWRP
@@ -155,7 +158,7 @@ TW_EXCLUDE_APEX := true
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
-TW_DEVICE_VERSION := katyusha-1
+TW_DEVICE_VERSION := By S7ruc7ure V01d
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
