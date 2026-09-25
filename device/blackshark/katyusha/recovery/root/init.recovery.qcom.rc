@@ -99,6 +99,8 @@ on boot
 # binaries live in /system/bin and their libraries in /vendor/lib64 (twrp-common layout).
 on init
     setprop vendor.gatekeeper.disable_spu true
+    # verbose prepdecrypt logging in recovery.log (phase 2 bring-up)
+    setprop prepdecrypt.loglevel 2
 
 on fs
     chmod 0666 /dev/smcinvoke

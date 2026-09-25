@@ -1,0 +1,24 @@
+<!--
+    Minimal framework VINTF manifest for recovery. Once a device manifest exists,
+    libhidl/hwservicemanager resolve transports strictly from VINTF, so the HIDL service
+    manager itself must be declared; otherwise IServiceManager::getService() returns null
+    and keystore2 aborts in km_compat ("Failed to get ServiceManager"), breaking FBE
+    decryption. Entries match AOSP system/libhidl's framework manifest.
+-->
+<manifest version="2.0" type="framework">
+    <hal format="hidl">
+        <name>android.hidl.manager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.2::IServiceManager/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hidl.token</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::ITokenManager/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hidl.memory</name>
+        <transport arch="32+64">passthrough</transport>
+        <fqname>@1.0::IMapper/ashmem</fqname>
+    </hal>
+</manifest>

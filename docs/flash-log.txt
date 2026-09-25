@@ -12,3 +12,5 @@
 2026-09-24T22:30:42-03:00 TWRP #7: sideload OK (USB returns), GUI Install Image -> recovery_a OK
 2026-09-24T22:32:04-03:00 TWRP #7: reboot to system OK; recovery_a still 59fe7d28 after Android boot
 2026-09-24T22:42:13-03:00 TWRP #7: screen timeout OK, OTG backup+restore OK (byte-identical), MTP protocol OK / no storage without /data
+2026-09-24T23:41:49-03:00 flashed out/twrp-katyusha-20260924-2337.img to recovery_a (readback 735bb36a OK) - phase 2 decrypt test on stock MP2
+2026-09-24T23:47:15-03:00 TWRP #8 decrypt test: keystore2 crash-loop (no framework VINTF -> HIDL IServiceManager null); after live fix keystore2 OK + shared secret OK, metadata key begin -> KM -8 (unclean state); qseecom-service missing impl
