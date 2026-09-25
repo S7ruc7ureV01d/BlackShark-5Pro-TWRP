@@ -21,3 +21,5 @@
 2026-09-25T00:35:58-03:00 decrypt: RR asymmetry found (stock-made RR keys fail in TWRP; TWRP-made RR keys work in stock). Blocked in TZ.
 2026-09-25T01:06:54-03:00 flashed out/twrp-katyusha-20260925-0105.img (v1.1 candidate) to recovery_a (readback ea8ad7e3 OK)
 2026-09-25T01:10:27-03:00 v1.0 release candidate (20260925-0105) tested by user: all works incl. LED animation
+2026-09-25T16:34:20-03:00 fastboot flash out/twrp-katyusha-20260925-1632.img to recovery_a (bootloader)
+2026-09-25T16:35:46-03:00 TWRP 20260925-1632: TWRP Reboot->Fastboot -> fastbootd detected (is-userspace yes, super, battery-voltage 8463); fastboot reboot recovery OK
