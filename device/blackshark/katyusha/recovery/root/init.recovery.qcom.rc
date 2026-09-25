@@ -27,6 +27,9 @@ on property:ro.boot.usbcontroller=*
 # the controller to host mode when an OTG drive is attached (same path as Android).
 
 on fs
+    # TWRP only searches /system/lib64 (+ /vendor/lib64/hw). Vendor blobs in this ramdisk
+    # (boot control HAL deps, touch daemon libs) live in /vendor/lib64.
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
@@ -37,6 +40,28 @@ on fs
     wait /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
     wait /sys/class/power_supply/battery
+
+# Touch: hbp_touch is a FocalTech "host-based processing" panel. The kernel driver only
+# exposes raw frames (/dev/ht_ft); Black Shark's htd daemon computes touch points and
+# injects them through /dev/ht_input ("ht,input" event device). Android starts it after
+# boot_completed (vendor/etc/init/com.blackshark.htd@1.0-service.rc); it registers a HIDL
+# service, so hwservicemanager must be running.
+service vendor.htd /vendor/bin/hw/com.blackshark.htd@1.0-service
+    user root
+    group root system
+    capabilities SYS_NICE
+    disabled
+    setenv LD_LIBRARY_PATH /system/lib64:/vendor/lib64
+    seclabel u:r:recovery:s0
+
+on boot
+    mkdir /data/vendor 0771 root root
+    mkdir /data/vendor/syna 0770 system system
+    start hwservicemanager
+    wait /dev/ht_input 10
+    chmod 0666 /dev/ht_input
+    chown system system /dev/ht_input
+    start vendor.htd
 
 # DEBUG ONLY (remove when touch/USB work): persist diagnostics to the rescue partition
 service twrp_dbg /system/bin/sh /system/bin/twrp_dbg.sh

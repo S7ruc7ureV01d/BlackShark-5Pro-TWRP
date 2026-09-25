@@ -1,0 +1,827 @@
+[    0.000000][    T0] Linux version 5.10.66-android12-9-g4453ce7ccd32 (build-user@build-host) (Android (7284624, based on r416183b) clang version 12.0.5 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee), LLD 12.0.5 (/buildbot/src/android/llvm-toolchain/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)) #1 SMP PREEMPT Mon Jun 20 19:53:52 CST 2022
+[    0.000000][    T0] CPU features: SYS_ID_AA64MMFR1_EL1[11:8]: forced to 0
+[    0.000000][    T0] Kernel command line: stack_depot_disable=on kasan.stacktrace=off kvm-arm.mode=protected cgroup_disable=pressure cgroup.memory=nokmem console=ttyMSM0,115200n8 kpti=0 kernel.panic_on_rcu_stall=1 swiotlb=noforce loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat service_locator.enable=1 msm_rtb.filter=0x237 allow_mismatched_32bit_el0 cpufreq.default_governor=performance pelt=8 kasan=off rcupdate.rcu_expedited=1 rcu_nocbs=0-7 irqaffinity=0-3 ftrace_dump_on_oops pstore.compress=none fsa4480_i2c.async_probe=1 can.stats_timer=0 video=vfb:640x400,bpp=32,memsize=3072000 bootconfig buildvariant=user  bootinfo.pureason=0x80001 bootinfo.pdreason=0x2 hwid.hwid_value=1638400 hwid.project=3 hwid.build_adc=39191 hwid.project_adc=4462 msm_drm.dsi_display0=qcom,mdss_dsi_k3_38_08_0a_mp_dsc_cmd: msm_drm.oled_wp=01f402090903010401d0020e024c027d rootwait ro init=/init block2mtd.block2mtd=/dev/block/sda16,2097152 mtdoops.mtddev=0 mtdoops.record_size=2097152 mtdoops.dum
+[    0.000000][    T0] random: get_random_u64 called from kmem_cache_open+0x2c/0x388 with crng_init=0
+[    0.000000][    T0] ITS@0x0000000017140000: Devices Table too large, reduce ids 32->19
+[    0.000000][    T0] ITS@0x0000000017140000: Devices too large, reduce ITS pages 1024->256
+[    0.017011][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU4: 0x00000010212122
+[    0.017019][    T0] CPU features: Unsupported CPU feature variation detected.
+[    0.018103][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU5: 0x00000010212122
+[    0.019202][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU6: 0x00000010212122
+[    0.022281][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU7: 0x00000010212122
+[    0.170115][    T1] Registered cp15_barrier emulation handler
+[    0.170127][    T1] Registered setend emulation handler
+[    0.173029][   T70] audit: type=2000 audit(0.144:1): state=initialized audit_enabled=0 res=1
+[    0.175701][    T1] ramoops reserved-memory:ramoops_region: failed to locate DT /reserved-memory resource
+[    0.175706][    T1] ramoops: probe of reserved-memory:ramoops_region failed with error -22
+[    0.182784][    T1] OF: /soc/spf_core_platform/lpass-cdc/va-macro@33F0000: could not get #gpio-cells for /soc/interrupt-controller@17100000
+[    0.204685][    T1] SCSI subsystem initialized
+[    0.215973][    T1] VFS: Disk quotas dquot_6.6.0
+[    0.317536][    T1] Initialise system trusted keyrings
+[    0.329131][    T1] Key type asymmetric registered
+[    0.329138][    T1] Asymmetric key parser 'x509' registered
+[    0.340450][    T1] Loading compiled-in X.509 certificates
+[    0.340638][    T1] Key type ._fscrypt registered
+[    0.340641][    T1] Key type .fscrypt registered
+[    0.340643][    T1] Key type fscrypt-provisioning registered
+[    0.342826][    T1] Warning: unable to open an initial console.
+[    0.364865][    T1] magiskinit: Ramdisk is recovery, abort
+[    0.433864][    T1] Failed to get pstore mem
+[    0.438725][    T1] qtee shmbridge registered default bridge with size 4194304 bytes
+[    0.439500][    T1] shmbridge is enabled
+[    0.443675][    T1] (NULL device *): wdog bark_time 20000
+[    0.443676][    T1] (NULL device *): wdog pet_time 15000
+[    0.480891][    T1] rpmh_regulator_probe: ldof1: could not find RPMh address for resource
+[    0.480906][    T1] rpmh_regulator_probe: ldof2: could not find RPMh address for resource
+[    0.480916][    T1] rpmh_regulator_probe: ldof4: could not find RPMh address for resource
+[    0.480926][    T1] rpmh_regulator_probe: ldof5: could not find RPMh address for resource
+[    0.480936][    T1] rpmh_regulator_probe: ldof6: could not find RPMh address for resource
+[    0.490513][    T1] in mi_sched_init
+[    0.491771][    T1] turbo-sched: turbo_sched turbo_sched_init: inited!
+[    0.501817][    T1] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    0.502369][    T1] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    0.502440][   T65] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    0.512980][    T1] disp_cc_pll0 PLL is already enabled
+[    0.596091][    T7] qcom-bwmon: Zone thres larger than hw limit: hi:267 med:400 lo:0
+[    0.640901][    T1] Could not create tracefs 'ufshcd_auto_bkops_state' directory
+[    0.640911][    T1] Could not create tracefs 'ufshcd_clk_gating' directory
+[    0.640914][    T1] Could not create tracefs 'ufshcd_clk_scaling' directory
+[    0.640917][    T1] Could not create tracefs 'ufshcd_command' directory
+[    0.640920][    T1] Could not create tracefs 'ufshcd_init' directory
+[    0.640923][    T1] Could not create tracefs 'ufshcd_profile_clk_gating' directory
+[    0.640926][    T1] Could not create tracefs 'ufshcd_profile_clk_scaling' directory
+[    0.640929][    T1] Could not create tracefs 'ufshcd_profile_hibern8' directory
+[    0.640931][    T1] Could not create tracefs 'ufshcd_runtime_resume' directory
+[    0.640934][    T1] Could not create tracefs 'ufshcd_runtime_suspend' directory
+[    0.640937][    T1] Could not create tracefs 'ufshcd_system_resume' directory
+[    0.640939][    T1] Could not create tracefs 'ufshcd_system_suspend' directory
+[    0.640942][    T1] Could not create tracefs 'ufshcd_uic_command' directory
+[    0.640945][    T1] Could not create tracefs 'ufshcd_upiu' directory
+[    0.645211][    T1] arm-smmu 15000000.apps-smmu: 	coherent table walk
+[    0.645214][    T1] arm-smmu 15000000.apps-smmu: 	stream matching with 113 register groups
+[    0.659834][  T155] arm-scmi soc:qcom,scmi: SCMI protocol 128 not implemented
+[    0.660943][  T155] msm_geni_serial 99c000.qcom,qup_uart: IRQ index 1 not found
+[    0.669421][  T155] arm-scmi soc:qcom,scmi: version 1.0
+[    0.671125][    T9] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[1, 1], lane[1, 1], pwr[SLOWAUTO_MODE, SLOWAUTO_MODE], rate = 0
+[    0.692718][    T1] pcie:pcie_init.
+[    0.694023][    T1] msm_pcie_get_reg: PCIe: RC0: no tcsr resource found.
+[    0.694029][    T1] msm_pcie_get_reg: PCIe: RC0: no rumi resource found.
+[    0.694615][    T1] msm_pcie_get_reg: PCIe: RC1: no tcsr resource found.
+[    0.694619][    T1] msm_pcie_get_reg: PCIe: RC1: no rumi resource found.
+[    0.712748][    T1] spmi spmi-0: pmic_arb_wait_for_done: transaction failed (0x3)
+[    0.712755][    T1] qcom-spmi-gpio c42d000.qcom,spmi:qcom,pmr735b@5:pinctrl@8800: read 0x4 failed
+[    0.712759][    T1] qcom-spmi-gpio: probe of c42d000.qcom,spmi:qcom,pmr735b@5:pinctrl@8800 failed with error -5
+[    0.729331][  T198] arm-smmu 3da0000.kgsl-smmu: 	coherent table walk
+[    0.729339][  T198] arm-smmu 3da0000.kgsl-smmu: 	stream matching with 24 register groups
+[    0.742974][    T1] qcom_cpuss_sleep_stats: probe of 17800054.cpuss-sleep-stats failed with error -22
+[    0.748782][    T1] memshare soc:qcom,memshare: memshare: unable to create memshare ramdump device
+[    0.748787][    T1] memshare soc:qcom,memshare: memshare_child: cannot create ramdump for client with id: 0
+[    0.748839][    T1] memshare soc:qcom,memshare: memshare: unable to create memshare ramdump device
+[    0.748842][    T1] memshare soc:qcom,memshare: memshare_child: cannot create ramdump for client with id: 2
+[    0.748886][    T1] memshare soc:qcom,memshare: memshare: unable to create memshare ramdump device
+[    0.748889][    T1] memshare soc:qcom,memshare: memshare_child: cannot create ramdump for client with id: 1
+[    0.773190][    T1] msm-dcc 100ff000.dcc_v2: DCC list passed 4
+[    0.773451][    T1] msm-dcc 100ff000.dcc_v2: DCC list passed 6
+[    0.778250][    T1] QSEECOM: qseecom_retrieve_ce_data: Device does not support PFE/FDE
+[    0.782124][    T1] init: LoadWithAliases was unable to load llcc_perfmon
+[    0.785652][    T9] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[4, 4], lane[2, 2], pwr[FAST MODE, FAST MODE], rate = 2
+[    0.786153][    T9] ufshcd-qcom 1d84000.ufshc: ufshcd_find_max_sup_active_icc_level: Regulator capability was not set, actvIccLevel=0
+[    0.786879][    T9] scsi 0:0:0:49488: Well-known LUN    SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.788284][    T9] scsi 0:0:0:49476: Well-known LUN    SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.789843][    T9] scsi 0:0:0:49456: Well-known LUN    SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.791603][    T9] scsi 0:0:0:0: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.792139][    C6] sd 0:0:0:0: Power-on or device reset occurred
+[    0.792260][    T9] scsi 0:0:0:1: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.792490][    C5] sd 0:0:0:1: Power-on or device reset occurred
+[    0.792519][  T198] sd 0:0:0:0: [sda] 61528064 4096-byte logical blocks: (252 GB/235 GiB)
+[    0.792549][    T9] scsi 0:0:0:2: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.792568][  T198] sd 0:0:0:0: [sda] Write Protect is off
+[    0.792659][  T198] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.792811][    C4] sd 0:0:0:2: Power-on or device reset occurred
+[    0.792875][  T155] sd 0:0:0:1: [sdb] 4096 4096-byte logical blocks: (16.8 MB/16.0 MiB)
+[    0.792934][  T155] sd 0:0:0:1: [sdb] Write Protect is off
+[    0.792935][    T9] scsi 0:0:0:3: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.793187][  T155] sd 0:0:0:1: [sdb] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.793779][    C6] sd 0:0:0:3: Power-on or device reset occurred
+[    0.793839][  T224] sd 0:0:0:2: [sdc] 4096 4096-byte logical blocks: (16.8 MB/16.0 MiB)
+[    0.794140][    T9] scsi 0:0:0:4: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.795178][  T224] sd 0:0:0:2: [sdc] Write Protect is off
+[    0.795267][  T224] sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.795279][    T9] scsi 0:0:0:5: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.795572][    C4] sd 0:0:0:4: Power-on or device reset occurred
+[    0.795764][    C6] sd 0:0:0:5: Power-on or device reset occurred
+[    0.796320][    C0] random: fast init done
+[    0.796377][  T225] sd 0:0:0:3: [sdd] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    0.796438][  T225] sd 0:0:0:3: [sdd] Write Protect is off
+[    0.796517][    T9] sd 0:0:0:4: [sde] 917504 4096-byte logical blocks: (3.76 GB/3.50 GiB)
+[    0.796585][    T9] sd 0:0:0:4: [sde] Write Protect is off
+[    0.796611][  T229] sd 0:0:0:5: [sdf] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    0.796642][  T225] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.796661][  T155] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    0.796679][  T229] sd 0:0:0:5: [sdf] Write Protect is off
+[    0.796721][    T9] sd 0:0:0:4: [sde] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.796802][  T229] sd 0:0:0:5: [sdf] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.796850][  T198] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.797172][  T224] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    0.800343][  T225] sd 0:0:0:3: [sdd] Attached SCSI disk
+[    0.800522][  T229] sd 0:0:0:5: [sdf] Attached SCSI disk
+[    0.801488][    T9] sd 0:0:0:4: [sde] Attached SCSI disk
+[    0.802697][    T1] guestvm_loader_probe: no isolation needed for cpusys_vm
+[    0.853908][    T1] msm-dwc3 a600000.ssusb: USB core frequency = 200000000
+[    0.853930][    T1] msm-dwc3 a600000.ssusb: setting lpm_to_suspend_delay to zero.
+[    0.853933][    T1] msm-dwc3 a600000.ssusb: IRQ hs_phy_irq not found
+[    0.854378][    T1] msm-dwc3 a600000.ssusb: assume cable is not connected
+[    0.874978][  T246] random: crng init done
+[    0.894177][    T1] scsi 0:0:0:49488: Attached scsi generic sg0 type 30
+[    0.894194][    T1] scsi 0:0:0:49476: Attached scsi generic sg1 type 30
+[    0.894208][    T1] scsi 0:0:0:49456: Attached scsi generic sg2 type 30
+[    0.894221][    T1] sd 0:0:0:0: Attached scsi generic sg3 type 0
+[    0.894234][    T1] sd 0:0:0:1: Attached scsi generic sg4 type 0
+[    0.894246][    T1] sd 0:0:0:2: Attached scsi generic sg5 type 0
+[    0.894259][    T1] sd 0:0:0:3: Attached scsi generic sg6 type 0
+[    0.894269][    T1] sd 0:0:0:4: Attached scsi generic sg7 type 0
+[    0.894292][    T1] sd 0:0:0:5: Attached scsi generic sg8 type 0
+[    0.897501][    T1] BS_NVME bs_nvme_init, enter
+[    0.916933][    T1] BS_NVME power on cost 18ms (2.5v-0ms 1.2v-1ms 0.9v-1ms delay-16ms) ret 0.
+[    0.989524][   T58] ufs_ffu Start
+[    0.989530][   T58] [ufs_ffu] partion: sda start 6400(block) size 2048(block)
+[    0.989535][   T58] [ufs_ffu] check ffu_arry, vendor:SAMSUNG , product:KLUEG8UHGC-B0E1 , fw_rev:0700
+[    0.992047][   T58] sd 0:0:0:0: sense key:0x0; asc:0x0; ascq:0x0
+[    0.992050][   T58] [ufs_ffu] ufs_flag is not FFU 
+[    0.992053][   T58] ufs_ffu do not match the rev
+[    0.992056][   T58] ufs_ffu do not match the rev
+[    1.043717][    T1] msm_pcie_link_train: PCIe RC1 link initialization failed
+[    1.044647][    T1] msm_pcie_enumerate: PCIe: RC1: failed to enable
+[    1.044651][    T1] BS_NVME soc:blackshark_nvme: pcie enumeration failed...
+[    1.044661][    T1] BS_NVME power off cost 0ms (2.5v-0ms 1.2v-0ms 0.9v-0ms delay-0ms) ret 0.
+[    1.069988][    T1] BS_NVME: probe of soc:blackshark_nvme failed with error -1
+[    1.070053][    T1] BS_NVME bs_nvme_init, exit ret = 0
+[    1.073853][    T1] spmi_pmic_arb_debug 10b14000.qcom,spmi-debug: SPMI PMIC arbiter debug bus disabled by fuse
+[    1.083742][    T1] cnss: cnss_probe!
+[    1.084255][    T1] cnss: start create cnss link
+[    1.247051][   T64] msm_pcie_enumerate: PCIe: RC0: has already been enumerated.
+[    1.408968][    T1] [cs_press] [cs_init: 4062] start.
+[    1.649649][    T1] [FTS_TS][TEST]fts_test_init: Enter
+[    1.649654][    T1] [FTS_TS][TEST]fts_tp_differ_proc: Enter
+[    1.649658][    T1] [FTS_TS/I][TEST]fts_test_func_init:init test function
+[    1.649660][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:88
+[    1.649663][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:0
+[    1.649665][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:0
+[    1.649667][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:0
+[    1.649670][    T1] [FTS_TS][TEST]fts_test_init:sysfs(test) create successfully
+[    1.649674][    T1] [FTS_TS][TEST]fts_test_init: Exit(2620)
+[    1.650426][  T229] fts_ht spi0.0: Direct firmware load for focaltech_ts_fw_hbp_k3.bin failed with error -2
+[    1.650433][  T229] [FTS_HT/E]fts_fw_auto_upgrade:FW/len(0) is invalid
+[    1.650436][  T229] [FTS_HT/E]fts_fwupg_work:FW auto upgrade fails
+[    1.651942][    T1] [STS][warning] syna_dev_module_init: INIT START
+[    1.651948][    T1] [STS][warning] syna_dev_module_init: product = katyusha,not init syna_tcm driver
+[    1.747513][    T1] i2c_geni 994000.i2c: i2c error :-107
+[    1.747518][    T1] PM8008: pm8008_read: failed to read 0x0950
+[    1.747521][    T1] PM8008: _pm8008_chip_is_enabled: qcom,pm8008-chip-en: failed to get chip state rc=-107
+[    1.747523][    T1] PM8008: pm8008_chip_probe: Failed to register chip enable regulator rc=-107
+[    1.747527][    T1] qcom,pm8008-chip: probe of 994000.i2c:pm8008j@c:pm8008-chip@900 failed with error -107
+[    1.749171][    T1] [cs_press] [cs_probe: 3768]  probe start
+[    1.802771][    T1] [cs_press] [parse_dt: 3691] parse device tree success
+[    1.802781][    T1] [cs_press] [cs_rst_set: 448] rst set 1
+[    1.817535][    T1] [cs_press] [cs_rst_set: 451] rst set 0
+[    1.899094][    T1] [cs_press] [cs_get_mcu_type: 1459] mcu type id is ca
+[    1.899182][    T1] [cs_press] [cs_probe: 3861] probe end!
+[    1.899353][    T1] aw8680x_sensor 6-005c: [aw8680x_i2c_probe:3137] enter
+[    1.899356][    T1] cs press probe success ,no need probe aw8680x
+[    1.899360][    T1] aw8680x_sensor: probe of 6-005c failed with error -1
+[    1.900476][    T1] [haptic_hv]aw_parse_dt: reset gpio provided ok
+[    1.900480][    T1] [haptic_hv]aw_parse_dt: irq gpio provided ok.
+[    1.900503][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_interrupt_high'
+[    1.900506][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_interrupt_high'
+[    1.900513][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_interrupt_high'
+[    1.900522][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_reset_high'
+[    1.906035][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_reset_low'
+[    1.911545][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_reset_high'
+[    2.020545][    T1] [haptic_hv]aw86907_haptic_misc_para_init aw86907->info.brk_bst_md = 0!
+[    2.033811][    T1] [haptic_hv]aw86907_haptic_misc_para_init aw86907->info.cont_brk_time = 0!
+[    2.164651][    T1] rtc6226: rtc6226_parse_dt unable to request gpio 345 (-16)
+[    2.164659][    T1] rtc6226: rtc6226_i2c_probe: Parsing DT failed(-16)
+[    2.164716][    T1] rtc6226: probe of 0-0064 failed with error -16
+[    2.174032][    T1] spmi spmi-0: pmic_arb_wait_for_done: transaction failed (0x3)
+[    2.174037][    T1] spmi-temp-alarm c42d000.qcom,spmi:qcom,pmr735b@5:qcom,temp-alarm@a00: could not read type
+[    2.174041][    T1] spmi-temp-alarm: probe of c42d000.qcom,spmi:qcom,pmr735b@5:qcom,temp-alarm@a00 failed with error -5
+[    2.184263][    T1] bcl_soc:bcl_soc_probe soc TZ register failed. err:-19
+[    2.192477][    T1] thermal thermal_zone57: binding zone ddr with cdev ddr-cdev failed:-22
+[    2.198058][    T1] cpu_thermal_init cpu=0
+[    2.198063][    T1] cpu_thermal_init cpu=1
+[    2.198065][    T1] cpu_thermal_init cpu=2
+[    2.198067][    T1] cpu_thermal_init cpu=3
+[    2.198070][    T1] cpu_thermal_init cpu=4
+[    2.198072][    T1] cpu_thermal_init cpu=5
+[    2.198075][    T1] cpu_thermal_init cpu=6
+[    2.198077][    T1] cpu_thermal_init cpu=7
+[    2.198312][    T1] mi_thermal_interface_init:Thermal: Can not parse thermal message node, return -22
+[    2.202090][  T217] cs_press 6-0050: Direct firmware load for pressure_f61.nfw failed with error -2
+[    2.202095][  T217] [cs_press] [cs_press_fw_update: 764] Failed to request firmware
+[    2.202097][  T217] [cs_press] [cs_press_fw_work_update: 3592] update fw fail!retry:3
+[    2.302126][  T217] cs_press 6-0050: Direct firmware load for pressure_f61.nfw failed with error -2
+[    2.302129][  T217] [cs_press] [cs_press_fw_update: 764] Failed to request firmware
+[    2.302132][  T217] [cs_press] [cs_press_fw_work_update: 3592] update fw fail!retry:2
+[    2.402158][  T217] cs_press 6-0050: Direct firmware load for pressure_f61.nfw failed with error -2
+[    2.402161][  T217] [cs_press] [cs_press_fw_update: 764] Failed to request firmware
+[    2.402163][  T217] [cs_press] [cs_press_fw_work_update: 3592] update fw fail!retry:1
+[    2.502181][  T217] hawkeye report forcetouch cs update firmware : <-2>
+[    2.502229][    T1] raid0_init
+[    2.511923][    T1] bt-debug-gpio not provided in devicetree
+[    2.577594][    T1] aw2023_led 5-0045: supply vdd not found, using dummy regulator
+[    2.577622][    T1] aw2023_led 5-0045: supply vcc not found, using dummy regulator
+[    2.585710][    T1] aw2023_led 5-0045: aw2023 chip id 9
+[    2.597556][    T1] aw2023 probe end
+[    2.597719][    T1] aw2023_led 4-0045: supply vdd not found, using dummy regulator
+[    2.597740][    T1] aw2023_led 4-0045: supply vcc not found, using dummy regulator
+[    2.605949][    T1] aw2023_led 4-0045: aw2023 chip id 9
+[    2.617521][    T1] aw2023 aw2023_client.client0 != NULL
+[    2.620067][    T1] aw2023 aw2023_led_brightness_on_probe end
+[    2.620083][    T1] aw2023 probe end
+[    2.620825][    T9] tz diag version is 2404000
+[    2.620834][    T9] tz_log 146aa720.tz-log: RM log address is not defined
+[    2.620863][    T9] encrypted qseelog enabled is 0
+[    2.624810][    T1] extend_reclaim: module is from the staging directory, the quality is unknown, you have been warned.
+[    2.626159][    T1] ep_pcie_init
+[    2.629659][    T1] qcom_q6v5_pas 3000000.remoteproc-adsp: adsp_init_bus_scaling: No bus client
+[    2.630230][    T1] ------------[ cut here ]------------
+[    2.630233][    T1] proc_dir_entry '/proc/last_mcrash' already registered
+[    2.630248][    T1] WARNING: CPU: 7 PID: 1 at fs/proc/generic.c:382 proc_register+0x1bc/0x328
+[    2.630250][    T1] Modules linked in: qcom_q6v5_pas(+) qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl
+[    2.630279][    T1]  cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge
+[    2.630309][    T1]  sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3 phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing
+[    2.630338][    T1]  qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.630373][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S       C        5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.630375][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.630378][    T1] pstate: 62400005 (nZCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.630380][    T1] pc : proc_register+0x1bc/0x328
+[    2.630383][    T1] lr : proc_register+0x1b4/0x328
+[    2.630385][    T1] sp : ffffffc01005b620
+[    2.630387][    T1] x29: ffffffc01005b620 x28: 0000000000000020 
+[    2.630390][    T1] x27: ffffff879e748588 x26: ffffff879e4bfc88 
+[    2.630393][    T1] x25: ffffff8782089e18 x24: ffffff8780358000 
+[    2.630395][    T1] x23: 000000000000000b x22: ffffff879e5ce52c 
+[    2.630398][    T1] x21: ffffffd62f46fcd8 x20: ffffffd62f46fc58 
+[    2.630400][    T1] x19: ffffff879e5ce480 x18: ffffffc01005d0a0 
+[    2.630403][    T1] x17: 0000000000000000 x16: 00000000000000d8 
+[    2.630405][    T1] x15: 0000000000000004 x14: 000000000000ffff 
+[    2.630408][    T1] x13: ffffff89eb5fffe8 x12: 0000000000000003 
+[    2.630410][    T1] x11: 00000000ffffffff x10: c0000000fffeffff 
+[    2.630413][    T1] x9 : ffffffd62f64a000 x8 : 0000000000000000 
+[    2.630415][    T1] x7 : 362e32202020205b x6 : ffffffd62f5c3e3c 
+[    2.630417][    T1] x5 : ffffffffffffffff x4 : 0000000000000000 
+[    2.630420][    T1] x3 : ffffffd62ecce4d5 x2 : 0000000000000000 
+[    2.630422][    T1] x1 : 0000000000000001 x0 : 0000000000000035 
+[    2.630425][    T1] Call trace:
+[    2.630428][    T1]  proc_register+0x1bc/0x328
+[    2.630430][    T1]  proc_create+0xa4/0xe0
+[    2.630435][    T1]  qcom_q6v5_init+0x4c/0x2f8 [qcom_q6v5]
+[    2.630440][    T1]  adsp_probe+0x4fc/0x6a0 [qcom_q6v5_pas]
+[    2.630444][    T1]  platform_drv_probe+0x60/0x180
+[    2.630447][    T1]  really_probe+0x508/0xb24
+[    2.630449][    T1]  driver_probe_device+0x1b0/0x230
+[    2.630451][    T1]  device_driver_attach+0x158/0x228
+[    2.630454][    T1]  __driver_attach+0x284/0x3d8
+[    2.630456][    T1]  bus_add_driver+0x1c8/0x484
+[    2.630459][    T1]  driver_register+0x84/0x178
+[    2.630461][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.630465][    T1]  init_module+0x24/0xfe8 [qcom_q6v5_pas]
+[    2.630469][    T1]  do_one_initcall+0x114/0x44c
+[    2.630472][    T1]  do_init_module+0x78/0x9c4
+[    2.630475][    T1]  load_module+0x3994/0x46b0
+[    2.630477][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.630480][    T1]  el0_svc_common+0xc0/0x24c
+[    2.630484][    T1]  el0_svc+0x28/0x88
+[    2.630486][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.630488][    T1]  el0_sync+0x1b4/0x1c0
+[    2.630490][    T1] ---[ end trace a9fb335896294b67 ]---
+[    2.630493][    T1] pil: cannot create proc entry last_mcrash
+[    2.630996][    T1] qcom_q6v5_pas 2400000.remoteproc-slpi: adsp_init_bus_scaling: No bus client
+[    2.631003][    T1] ------------[ cut here ]------------
+[    2.631005][    T1] proc_dir_entry '/proc/last_mcrash' already registered
+[    2.631013][    T1] WARNING: CPU: 7 PID: 1 at fs/proc/generic.c:382 proc_register+0x1bc/0x328
+[    2.631015][    T1] Modules linked in: qcom_q6v5_pas(+) qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl
+[    2.631038][    T1]  cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge
+[    2.631063][    T1]  sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3 phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing
+[    2.631086][    T1]  qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.631111][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC        5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.631113][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.631115][    T1] pstate: 62400005 (nZCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.631118][    T1] pc : proc_register+0x1bc/0x328
+[    2.631120][    T1] lr : proc_register+0x1b4/0x328
+[    2.631122][    T1] sp : ffffffc01005b620
+[    2.631124][    T1] x29: ffffffc01005b620 x28: 0000000000000020 
+[    2.631127][    T1] x27: ffffff879e74a588 x26: ffffff879e4bfc88 
+[    2.631129][    T1] x25: ffffff8782089e18 x24: ffffff8780358000 
+[    2.631132][    T1] x23: 000000000000000b x22: ffffff879e5dc3ac 
+[    2.631134][    T1] x21: ffffffd62f46fcd8 x20: ffffffd62f46fc58 
+[    2.631136][    T1] x19: ffffff879e5dc300 x18: ffffffc01005d0a0 
+[    2.631139][    T1] x17: 0000000000000000 x16: 00000000000000d8 
+[    2.631141][    T1] x15: 0000000000000004 x14: 000000000000ffff 
+[    2.631144][    T1] x13: ffffff89eb5fffe8 x12: 0000000000000003 
+[    2.631146][    T1] x11: 00000000ffffffff x10: c0000000fffeffff 
+[    2.631148][    T1] x9 : ffffffd62f64a000 x8 : 0000000000000000 
+[    2.631151][    T1] x7 : 362e32202020205b x6 : ffffffd62f5c3e3c 
+[    2.631153][    T1] x5 : ffffffffffffffff x4 : 0000000000000000 
+[    2.631156][    T1] x3 : ffffffd62ecce4d5 x2 : 0000000000000000 
+[    2.631159][    T1] x1 : 0000000000000001 x0 : 0000000000000035 
+[    2.631161][    T1] Call trace:
+[    2.631163][    T1]  proc_register+0x1bc/0x328
+[    2.631166][    T1]  proc_create+0xa4/0xe0
+[    2.631169][    T1]  qcom_q6v5_init+0x4c/0x2f8 [qcom_q6v5]
+[    2.631173][    T1]  adsp_probe+0x4fc/0x6a0 [qcom_q6v5_pas]
+[    2.631176][    T1]  platform_drv_probe+0x60/0x180
+[    2.631178][    T1]  really_probe+0x508/0xb24
+[    2.631180][    T1]  driver_probe_device+0x1b0/0x230
+[    2.631183][    T1]  device_driver_attach+0x158/0x228
+[    2.631185][    T1]  __driver_attach+0x284/0x3d8
+[    2.631187][    T1]  bus_add_driver+0x1c8/0x484
+[    2.631190][    T1]  driver_register+0x84/0x178
+[    2.631192][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.631196][    T1]  init_module+0x24/0xfe8 [qcom_q6v5_pas]
+[    2.631199][    T1]  do_one_initcall+0x114/0x44c
+[    2.631201][    T1]  do_init_module+0x78/0x9c4
+[    2.631203][    T1]  load_module+0x3994/0x46b0
+[    2.631205][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.631208][    T1]  el0_svc_common+0xc0/0x24c
+[    2.631210][    T1]  el0_svc+0x28/0x88
+[    2.631212][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.631214][    T1]  el0_sync+0x1b4/0x1c0
+[    2.631216][    T1] ---[ end trace a9fb335896294b68 ]---
+[    2.631218][    T1] pil: cannot create proc entry last_mcrash
+[    2.631665][    T1] ------------[ cut here ]------------
+[    2.631667][    T1] proc_dir_entry '/proc/last_mcrash' already registered
+[    2.631675][    T1] WARNING: CPU: 7 PID: 1 at fs/proc/generic.c:382 proc_register+0x1bc/0x328
+[    2.631677][    T1] Modules linked in: qcom_q6v5_pas(+) qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl
+[    2.631701][    T1]  cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge
+[    2.631725][    T1]  sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3 phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing
+[    2.631749][    T1]  qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.631774][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC        5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.631776][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.631778][    T1] pstate: 62400005 (nZCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.631781][    T1] pc : proc_register+0x1bc/0x328
+[    2.631783][    T1] lr : proc_register+0x1b4/0x328
+[    2.631785][    T1] sp : ffffffc01005b620
+[    2.631787][    T1] x29: ffffffc01005b620 x28: 0000000000000020 
+[    2.631789][    T1] x27: ffffff879e7de588 x26: ffffff879e4bfc88 
+[    2.631792][    T1] x25: ffffff8782089e18 x24: ffffff8780358000 
+[    2.631795][    T1] x23: 000000000000000b x22: ffffff879e5e952c 
+[    2.631797][    T1] x21: ffffffd62f46fcd8 x20: ffffffd62f46fc58 
+[    2.631800][    T1] x19: ffffff879e5e9480 x18: ffffffc01005d0a0 
+[    2.631802][    T1] x17: 0000000000000000 x16: 00000000000000d8 
+[    2.631805][    T1] x15: 0000000000000004 x14: 000000000000ffff 
+[    2.631807][    T1] x13: ffffff89eb5fffe8 x12: 0000000000000003 
+[    2.631809][    T1] x11: 00000000ffffffff x10: c0000000fffeffff 
+[    2.631811][    T1] x9 : ffffffd62f64a000 x8 : 0000000000000000 
+[    2.631814][    T1] x7 : 362e32202020205b x6 : ffffffd62f5c3e3c 
+[    2.631816][    T1] x5 : ffffffffffffffff x4 : 0000000000000000 
+[    2.631818][    T1] x3 : ffffffd62ecce4d5 x2 : 0000000000000000 
+[    2.631821][    T1] x1 : 0000000000000001 x0 : 0000000000000035 
+[    2.631823][    T1] Call trace:
+[    2.631826][    T1]  proc_register+0x1bc/0x328
+[    2.631828][    T1]  proc_create+0xa4/0xe0
+[    2.631831][    T1]  qcom_q6v5_init+0x4c/0x2f8 [qcom_q6v5]
+[    2.631836][    T1]  adsp_probe+0x4fc/0x6a0 [qcom_q6v5_pas]
+[    2.631838][    T1]  platform_drv_probe+0x60/0x180
+[    2.631840][    T1]  really_probe+0x508/0xb24
+[    2.631843][    T1]  driver_probe_device+0x1b0/0x230
+[    2.631845][    T1]  device_driver_attach+0x158/0x228
+[    2.631847][    T1]  __driver_attach+0x284/0x3d8
+[    2.631849][    T1]  bus_add_driver+0x1c8/0x484
+[    2.631852][    T1]  driver_register+0x84/0x178
+[    2.631854][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.631858][    T1]  init_module+0x24/0xfe8 [qcom_q6v5_pas]
+[    2.631860][    T1]  do_one_initcall+0x114/0x44c
+[    2.631863][    T1]  do_init_module+0x78/0x9c4
+[    2.631865][    T1]  load_module+0x3994/0x46b0
+[    2.631867][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.631870][    T1]  el0_svc_common+0xc0/0x24c
+[    2.631872][    T1]  el0_svc+0x28/0x88
+[    2.631874][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.631876][    T1]  el0_sync+0x1b4/0x1c0
+[    2.631878][    T1] ---[ end trace a9fb335896294b69 ]---
+[    2.631880][    T1] pil: cannot create proc entry last_mcrash
+[    2.636372][    T1] millet-binder_gki: enter init_binder_gki func!
+[    2.636680][    T1] millet_millet-core: enter millet_init func!
+[    2.636872][    T1] millet-millet_pkg: enter millet_pkg_init func!
+[    2.636878][    T1] millet-millet_pkg: nf_register_hooks(millet hooks) success
+[    2.637031][    T1] millet-millet_hs: enter millet_hs_init func!
+[    2.637369][    T1] millet_millet-binder: enter init_millet_binder_drv func!
+[    2.637801][    T1] millet_millet-sig: enter sig_mod_init func!
+[    2.638061][    T1] millet-oem_cgroup: enter oem_cgrp_init func!
+[    2.639100][    T1] glk: game load init success
+[    2.640321][    T1] btfm_slim_probe: is_laddr_valid is true
+[    2.640326][    T1] btfmslim-driver btfmslim_slave: 
+[    2.646202][    T1] tmc_etr_usb_init: ETR usb property is not configured!
+[    2.668220][    T1] msm_mmrm: loading out-of-tree module taints kernel.
+[    2.683039][    T1] dsi_phy ae94400.qcom,mdss_dsi_phy0: supply gdsc not found, using dummy regulator
+[    2.683607][    T1] dsi_phy ae96400.qcom,mdss_dsi_phy1: supply gdsc not found, using dummy regulator
+[    2.685007][    T1] OF: graph: no port node found in /soc/qcom,dsi-display-primary
+[    2.726654][    T1] [drm] [msm-dsi-warn]: secondary default panel not found
+[    2.729291][    T1] [drm:msm_smmu_new [msm_drm]] *ERROR* unable to find domain 1 compat: qcom,smmu_sde_nrt_unsec
+[    2.729374][    T1] [drm:msm_smmu_new [msm_drm]] *ERROR* unable to find domain 3 compat: qcom,smmu_sde_nrt_sec
+[    2.729808][    T1] ------------[ cut here ]------------
+[    2.729815][    T1] WARNING: CPU: 7 PID: 1 at mm/page_alloc.c:5090 __alloc_pages_nodemask+0x1c0/0x3dc
+[    2.729817][    T1] Modules linked in: msm_drm(O+) msm_mmrm(O) qrtr_gunyah qrtr_mhi qrtr_smd xt_IPR snd_usb_audio_qmi stm_ftrace stm_console stm_p_ost stm_p_basic coresight_hwevent coresight_tgu coresight_remote_etm coresight_dummy coresight_tpdm coresight_tpda coresight_cti coresight_stm stm_core coresight_replicator coresight_funnel coresight_tmc coresight_csr coresight qti_amoled_ecm hwmon slim_qcom_ngd_ctrl sharkutil migt millet_oem_cgroup millet_sig millet_binder millet_hs millet_pkg millet_core binder_gki icc_test goodix_health qcom_spmi_adc5 qcom_vadc_common gh_virtio_backend gh_mem_notifier gh_irq_lend qcom_q6v5_pas qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev
+[    2.729852][    T1]  qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss
+[    2.729890][    T1]  usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3
+[    2.729926][    T1]  phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv
+[    2.729961][    T1]  gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.729986][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC O      5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.729989][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.729991][    T1] pstate: 22400005 (nzCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.729994][    T1] pc : __alloc_pages_nodemask+0x1c0/0x3dc
+[    2.729997][    T1] lr : kmalloc_order+0x54/0x358
+[    2.730000][    T1] sp : ffffffc01005af50
+[    2.730002][    T1] x29: ffffffc01005af90 x28: ffffff879ee2a000 
+[    2.730005][    T1] x27: ffffff879ecd4028 x26: ffffff879ecd5000 
+[    2.730007][    T1] x25: 0000000000000010 x24: ffffff879ee3b018 
+[    2.730010][    T1] x23: 0000000000000000 x22: 000000000000000d 
+[    2.730012][    T1] x21: 000000000000000d x20: 0000000001004030 
+[    2.730015][    T1] x19: 0000000001004030 x18: ffffffc01005d0f8 
+[    2.730017][    T1] x17: 0000000000000000 x16: 0000000000000118 
+[    2.730020][    T1] x15: ffffffd62d4b1424 x14: ffffffd62ecf3bf4 
+[    2.730022][    T1] x13: 0000000000000000 x12: 0000000000007ffb 
+[    2.730025][    T1] x11: 000000000000ffff x10: 0000000000000033 
+[    2.730027][    T1] x9 : 8880ddd1c39c4a00 x8 : 8880ddd1c39c4a00 
+[    2.730030][    T1] x7 : 622d306c656e6170 x6 : ffffff879ee3b014 
+[    2.730032][    T1] x5 : 8080808080808080 x4 : 0000000000000000 
+[    2.730035][    T1] x3 : 0000000000000000 x2 : 0000000000000000 
+[    2.730037][    T1] x1 : 000000000000000d x0 : 0000000000040dc0 
+[    2.730040][    T1] Call trace:
+[    2.730042][    T1]  __alloc_pages_nodemask+0x1c0/0x3dc
+[    2.730045][    T1]  kmalloc_order+0x54/0x358
+[    2.730047][    T1]  kmalloc_order_trace+0x34/0x1bc
+[    2.730050][    T1]  __kmalloc+0x5cc/0x9c8
+[    2.730054][    T1]  thermal_cooling_device_setup_sysfs+0x90/0x200
+[    2.730057][    T1]  __thermal_cooling_device_register+0x140/0x784
+[    2.730059][    T1]  thermal_of_cooling_device_register+0x14/0x24
+[    2.730143][    T1]  backlight_cdev_register+0x8c/0x104 [msm_drm]
+[    2.730225][    T1]  sde_connector_init+0x310/0xfac [msm_drm]
+[    2.730305][    T1]  sde_kms_hw_init+0x1c74/0x2a14 [msm_drm]
+[    2.730384][    T1]  msm_drm_bind+0x228/0x8dc [msm_drm]
+[    2.730387][    T1]  try_to_bring_up_master+0x1f4/0x25c
+[    2.730390][    T1]  __component_add+0xf0/0x290
+[    2.730392][    T1]  component_add+0x18/0x28
+[    2.730472][    T1]  dp_display_probe+0x330/0x43c [msm_drm]
+[    2.730475][    T1]  platform_drv_probe+0x60/0x180
+[    2.730477][    T1]  really_probe+0x508/0xb24
+[    2.730480][    T1]  driver_probe_device+0x1b0/0x230
+[    2.730482][    T1]  device_driver_attach+0x158/0x228
+[    2.730484][    T1]  __driver_attach+0x284/0x3d8
+[    2.730487][    T1]  bus_add_driver+0x1c8/0x484
+[    2.730489][    T1]  driver_register+0x84/0x178
+[    2.730492][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.730572][    T1]  init_module+0xb8/0xc0 [msm_drm]
+[    2.730576][    T1]  do_one_initcall+0x114/0x44c
+[    2.730579][    T1]  do_init_module+0x78/0x9c4
+[    2.730582][    T1]  load_module+0x3994/0x46b0
+[    2.730584][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.730587][    T1]  el0_svc_common+0xc0/0x24c
+[    2.730590][    T1]  el0_svc+0x28/0x88
+[    2.730592][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.730595][    T1]  el0_sync+0x1b4/0x1c0
+[    2.730597][    T1] ---[ end trace a9fb335896294b6a ]---
+[    2.733341][    T1] ------------[ cut here ]------------
+[    2.733347][    T1] WARNING: CPU: 7 PID: 1 at kernel/kthread.c:853 kthread_queue_work+0x194/0x254
+[    2.733350][    T1] Modules linked in: msm_drm(O+) msm_mmrm(O) qrtr_gunyah qrtr_mhi qrtr_smd xt_IPR snd_usb_audio_qmi stm_ftrace stm_console stm_p_ost stm_p_basic coresight_hwevent coresight_tgu coresight_remote_etm coresight_dummy coresight_tpdm coresight_tpda coresight_cti coresight_stm stm_core coresight_replicator coresight_funnel coresight_tmc coresight_csr coresight qti_amoled_ecm hwmon slim_qcom_ngd_ctrl sharkutil migt millet_oem_cgroup millet_sig millet_binder millet_hs millet_pkg millet_core binder_gki icc_test goodix_health qcom_spmi_adc5 qcom_vadc_common gh_virtio_backend gh_mem_notifier gh_irq_lend qcom_q6v5_pas qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev
+[    2.733375][    T1]  qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss
+[    2.733400][    T1]  usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3
+[    2.733423][    T1]  phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv
+[    2.733447][    T1]  gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.733465][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC O      5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.733467][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.733470][    T1] pstate: 82400085 (Nzcv daIf +PAN -UAO +TCO BTYPE=--)
+[    2.733473][    T1] pc : kthread_queue_work+0x194/0x254
+[    2.733568][    T1] lr : msm_drm_bind+0x468/0x8dc [msm_drm]
+[    2.733570][    T1] sp : ffffffc01005b5a0
+[    2.733572][    T1] x29: ffffffc01005b5a0 x28: 0000000000000000 
+[    2.733575][    T1] x27: ffffffd629e3e938 x26: ffffff879ea15c80 
+[    2.733577][    T1] x25: ffffff879ee2a8b8 x24: ffffff879ee2ade0 
+[    2.733580][    T1] x23: 0000000000000000 x22: ffffff8780358000 
+[    2.733583][    T1] x21: ffffff879ee2a8b8 x20: ffffff879ee2ade0 
+[    2.733585][    T1] x19: ffffff879ee2a8bc x18: ffffffc01005d0b0 
+[    2.733587][    T1] x17: 0000000000040000 x16: 0000000000000008 
+[    2.733590][    T1] x15: 0000000000000000 x14: 0000000000000020 
+[    2.733593][    T1] x13: 00ff00ff00000000 x12: 0000000000000325 
+[    2.733595][    T1] x11: 00000000000c9400 x10: 0000000100000001 
+[    2.733598][    T1] x9 : 0000000100000000 x8 : ffffff879ee2a3b8 
+[    2.733600][    T1] x7 : feff32343039736d x6 : ffffff879ea1641e 
+[    2.733603][    T1] x5 : ffffffffffffffe0 x4 : 0000000000000000 
+[    2.733606][    T1] x3 : ffffff879ee2a8c0 x2 : 0000000000000001 
+[    2.733608][    T1] x1 : 0000000000000000 x0 : 0000000000000000 
+[    2.733611][    T1] Call trace:
+[    2.733614][    T1]  kthread_queue_work+0x194/0x254
+[    2.733692][    T1]  msm_drm_bind+0x468/0x8dc [msm_drm]
+[    2.733696][    T1]  try_to_bring_up_master+0x1f4/0x25c
+[    2.733698][    T1]  __component_add+0xf0/0x290
+[    2.733701][    T1]  component_add+0x18/0x28
+[    2.733779][    T1]  dp_display_probe+0x330/0x43c [msm_drm]
+[    2.733782][    T1]  platform_drv_probe+0x60/0x180
+[    2.733785][    T1]  really_probe+0x508/0xb24
+[    2.733787][    T1]  driver_probe_device+0x1b0/0x230
+[    2.733789][    T1]  device_driver_attach+0x158/0x228
+[    2.733792][    T1]  __driver_attach+0x284/0x3d8
+[    2.733794][    T1]  bus_add_driver+0x1c8/0x484
+[    2.733796][    T1]  driver_register+0x84/0x178
+[    2.733799][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.733877][    T1]  init_module+0xb8/0xc0 [msm_drm]
+[    2.733880][    T1]  do_one_initcall+0x114/0x44c
+[    2.733882][    T1]  do_init_module+0x78/0x9c4
+[    2.733884][    T1]  load_module+0x3994/0x46b0
+[    2.733886][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.733889][    T1]  el0_svc_common+0xc0/0x24c
+[    2.733891][    T1]  el0_svc+0x28/0x88
+[    2.733894][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.733896][    T1]  el0_sync+0x1b4/0x1c0
+[    2.733898][    T1] ---[ end trace a9fb335896294b6b ]---
+[    2.736415][    T1] init: Raid: Default fstab path is '/etc/recovery.fstab'
+[    2.736622][    T1] init: Raid: Default fstab path is '/etc/recovery.fstab'
+[    3.738298][    T1] init: [libfs_avb]Device path not found: /dev/block/by-name/vbmeta_a
+[    3.738347][    T1] init: Raid: Default fstab path is '/etc/recovery.fstab'
+[    4.345532][  T122] sd 0:0:0:1: [sdb] Synchronizing SCSI cache
+[    4.549548][  T156] sd 0:0:0:3: [sdd] Synchronizing SCSI cache
+[    4.549570][   T67] sd 0:0:0:5: [sdf] Synchronizing SCSI cache
+[    4.549580][  T171] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[    4.557546][   T39] sd 0:0:0:4: [sde] Synchronizing SCSI cache
+[    4.557571][   T66] sd 0:0:0:2: [sdc] Synchronizing SCSI cache
+[    4.739857][    T1] init: [libfs_avb]Device path not found: /dev/block/by-name/boot_a
+[    4.739895][    T1] init: [libfs_avb]avb_slot_verify failed, result: 2
+[    4.739900][    T1] init: Failed to open AvbHandle for INIT_AVB_VERSION: No such file or directory
+[    4.748411][    T1] init: Could not find mount entry for /system
+[    4.786049][   T70] audit: type=1403 audit(9487859.651:2): auid=4294967295 ses=4294967295 lsm=selinux res=1
+[    4.786206][   T70] audit: type=1404 audit(9487859.651:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295 enabled=1 old-enabled=1 lsm=selinux res=1
+[    4.801035][    T1] init: Overriding previous property 'persist.sys.usb.config':'adb' with new value 'none'
+[    4.801202][    T1] init: Couldn't load property file '/system/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801210][    T1] init: Couldn't load property file '/system_ext/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801217][    T1] init: Couldn't load property file '/system_ext/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.801223][    T1] init: Couldn't load property file '/system_ext/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801229][    T1] init: Couldn't load property file '/system_ext/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.801235][    T1] init: Couldn't load property file '/system_ext/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801241][    T1] init: Couldn't load property file '/vendor/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.801247][    T1] init: Couldn't load property file '/vendor/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801255][    T1] init: Couldn't load property file '/vendor_dlkm/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801262][    T1] init: Couldn't load property file '/odm_dlkm/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801269][    T1] init: Couldn't load property file '/odm/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801275][    T1] init: Couldn't load property file '/odm/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.801281][    T1] init: Couldn't load property file '/odm/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801287][    T1] init: Couldn't load property file '/odm/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.801292][    T1] init: Couldn't load property file '/odm/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801297][    T1] init: Couldn't load property file '/product/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801303][    T1] init: Couldn't load property file '/product/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.801308][    T1] init: Couldn't load property file '/product/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.801313][    T1] init: Couldn't load property file '/product/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.801319][    T1] init: Couldn't load property file '/product/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.802746][    T1] selinux: SELinux:  Could not stat /dev/block: No such file or directory.
+[    4.802751][    T1] selinux: 
+[    4.802870][    T1] selinux: SELinux: Could not get canonical path for /metadata/ota/rollback-indicator restorecon: No such file or directory.
+[    4.802873][    T1] selinux: 
+[    4.802883][    T1] selinux: SELinux:  Could not stat /metadata/gsi: No such file or directory.
+[    4.802886][    T1] selinux: 
+[    4.805390][    T1] cgroup: Unknown subsys name 'schedtune'
+[    4.805402][    T1] libprocessgroup: Failed to mount schedtune cgroup: Invalid argument
+[    4.805407][    T1] libprocessgroup: Failed to setup schedtune cgroup
+[    4.806680][   T70] audit: type=1400 audit(9487859.671:4): avc:  denied  { sys_module } for  pid=1 comm="init" capability=16  scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[    4.806688][   T70] audit: type=1400 audit(9487859.671:5): avc:  denied  { module_load } for  pid=1 comm="init" path="/vendor/lib/modules/q6_pdr_dlkm.ko" dev="rootfs" ino=3911 scontext=u:r:init:s0 tcontext=u:object_r:rootfs:s0 tclass=system permissive=1
+[    4.809283][    T1] 
+[    4.809288][    T1] **********************************************************
+[    4.809290][    T1] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    4.809292][    T1] **                                                      **
+[    4.809294][    T1] ** trace_printk() being used. Allocating extra memory.  **
+[    4.809296][    T1] **                                                      **
+[    4.809298][    T1] ** This means that this is a DEBUG kernel and it is     **
+[    4.809301][    T1] ** unsafe for production use.                           **
+[    4.809302][    T1] **                                                      **
+[    4.809305][    T1] ** If you see this message and you are not debugging    **
+[    4.809307][    T1] ** the kernel, report this immediately to your vendor!  **
+[    4.809309][    T1] **                                                      **
+[    4.809311][    T1] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    4.809312][    T1] **********************************************************
+[    4.810566][    T1] spf_core_platform_driver_probe
+[    4.816331][   T70] audit: type=1400 audit(9487859.679:6): avc:  denied  { sys_nice } for  pid=453 comm="ueventd" capability=23  scontext=u:r:ueventd:s0 tcontext=u:r:ueventd:s0 tclass=capability permissive=1
+[    4.912779][   T70] audit: type=1400 audit(9487859.775:7): avc:  denied  { entrypoint } for  pid=463 comm="init" path="/system/bin/logd" dev="rootfs" ino=632 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.913187][   T70] audit: type=1400 audit(9487859.775:8): avc:  denied  { map } for  pid=463 comm="logd" path="/system/bin/logd" dev="rootfs" ino=632 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.913194][   T70] audit: type=1400 audit(9487859.775:9): avc:  denied  { read } for  pid=463 comm="logd" path="/system/bin/logd" dev="rootfs" ino=632 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.913198][   T70] audit: type=1400 audit(9487859.775:10): avc:  denied  { execute } for  pid=463 comm="logd" path="/system/bin/logd" dev="rootfs" ino=632 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.915155][  T465] init: failed to write pid to files: couldn't write 465 to /dev/cpuset/system-background/tasks: No such file or directory
+[    4.916126][  T463] logd: libprocessgroup: Failed to read task profiles from /etc/task_profiles.json
+[    4.916139][  T463] logd: libprocessgroup: Loading /etc/task_profiles.json for [463] failed
+[    4.916169][  T463] logd: libprocessgroup: Failed to find SCHED_SP_BACKGROUNDtask profile: No such file or directory
+[    4.916183][  T463] logd: Cannot read /system/etc/event-log-tags
+[    4.921764][    T1] SELinux: security_context_str_to_sid(u:object_r:firmware_file:s0) failed for (dev sde7, type vfat) errno=-22
+[    4.922579][    T1] SELinux: security_context_str_to_sid(u:object_r:firmware_file:s0) failed for (dev sde7, type vfat) errno=-22
+[    4.922660][  T451] init: Unable to set property 'ro.boottime.init.mount.firmware_mnt' from uid:0 gid:0 pid:1: Read-only property was already set
+[    4.925268][    T1] init: [libfs_mgr]Failed to mount an un-encryptable or wiped partition on /dev/block/bootdevice/by-name/modem_a at /vendor/firmware_mnt options: shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0: Invalid argument
+[    4.925499][  T122] remoteproc remoteproc1: Direct firmware load for adsp.mdt failed with error -2
+[    4.925503][  T122] remoteproc remoteproc1: Falling back to sysfs fallback for: adsp.mdt
+[    6.905532][  T160] [cs_press] [cs_check_dt: 174] active_panel = ffffff879ecd5408
+[    6.905536][  T160] [cs_press] [cs_register_panel_init_work: 223] registered for panel notifications panel: 0x9ecd5408
+[    7.161549][  T160] awinic_haptic 3-005a: Direct firmware load for aw8697_haptic.bin failed with error -2
+[    7.161554][  T160] awinic_haptic 3-005a: Falling back to sysfs fallback for: aw8697_haptic.bin
+[    7.417856][  T225] screen_state_check ERROR: Cannot find node with panel!
+[    8.669640][   T62] sd 0:0:0:4: [sde] Synchronizing SCSI cache
+[    9.927550][    T1] init: wait for '/sys/class/power_supply/battery' timed out and took 5001ms
+[    9.930309][    T9] msm-dwc3 a600000.ssusb: undefined state, mdwc->inputs is 3
+[    9.930318][    T9] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[    9.930327][    T9] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[    9.930455][    T9] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[    9.931208][  T469] ueventd: firmware: could not find firmware for adsp.mdt
+[    9.931216][  T469] ueventd: firmware: attempted /etc/firmware/adsp.mdt, open failed: No such file or directory
+[    9.931221][  T469] ueventd: firmware: attempted /odm/firmware/adsp.mdt, open failed: No such file or directory
+[    9.931227][  T469] ueventd: firmware: attempted /vendor/firmware/adsp.mdt, open failed: No such file or directory
+[    9.931232][  T469] ueventd: firmware: attempted /firmware/image/adsp.mdt, open failed: No such file or directory
+[    9.931283][  T122] remoteproc remoteproc1: request_firmware failed: -11
+[    9.931289][  T122] adsp-loader soc:qcom,msm-adsp-loader: adsp_load_fw: pil get failed,
+[    9.931292][  T122] adsp-loader soc:qcom,msm-adsp-loader: adsp_load_fw: Q6 image loading failed
+[    9.931709][    T9] msm-dwc3 a600000.ssusb: dwc3_msm_resume: set core clk rate 133333333
+[    9.931722][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[    9.931725][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[    9.931729][    T9] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:0 on:1
+[    9.931732][    T9] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[    9.931748][    T9] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[    9.932356][    T9] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[    9.932361][    T9] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:0
+[    9.932499][    T9] msm_hsphy_enable_power(): HSUSB PHY's regulators are turned ON.
+[    9.932502][    T9] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[    9.932679][    T9] Seq count:6
+[    9.932681][    T9] write 0xe6 to 0x6c
+[    9.932684][    T9] write 0xcf to 0x70
+[    9.932687][    T9] write 0x0c to 0x74
+[    9.932691][    T9] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[    9.932703][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[    9.932706][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[    9.932738][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: min_vol:912000 max_vol:912000
+[    9.932797][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:0 on:1
+[    9.932802][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[    9.957545][    T9] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[    9.957552][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[    9.957555][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[    9.958746][    T9] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_ALLOC
+[    9.958767][    T9] msm-dwc3 a600000.ssusb: b_sess_vld
+[    9.958771][    T9] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget
+[    9.965175][  T472] ueventd: firmware: could not find firmware for aw8697_haptic.bin
+[    9.965183][  T472] ueventd: firmware: attempted /etc/firmware/aw8697_haptic.bin, open failed: No such file or directory
+[    9.965187][  T472] ueventd: firmware: attempted /odm/firmware/aw8697_haptic.bin, open failed: No such file or directory
+[    9.965190][  T472] ueventd: firmware: attempted /vendor/firmware/aw8697_haptic.bin, open failed: No such file or directory
+[    9.965194][  T472] ueventd: firmware: attempted /firmware/image/aw8697_haptic.bin, open failed: No such file or directory
+[    9.965505][  T160] [haptic_hv]aw86907_ram_loaded: failed to read aw8697_haptic.bin
+[    9.971505][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    9.981738][  T473] erofs: Unknown parameter 'barrier'
+[    9.992010][  T473] erofs: Unknown parameter 'barrier'
+[    9.992449][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.003635][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.009889][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.024031][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.027393][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.061547][  T122] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[   10.061555][  T122] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:1
+[   10.061559][  T122] msm-usb-hsphy 88e3000.hsphy: PHYs' regulators are already ON.
+[   10.061563][  T122] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[   10.061764][  T122] Seq count:6
+[   10.061767][  T122] write 0xe6 to 0x6c
+[   10.061770][  T122] write 0xcf to 0x70
+[   10.061772][  T122] write 0x0c to 0x74
+[   10.061777][  T122] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[   10.061789][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[   10.061792][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[   10.061795][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: PHYs' regulators status 1
+[   10.061798][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:1
+[   10.061801][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[   10.079132][  T435] tag mismatch entry->tag:1 tag:2
+[   10.079135][  T435] tag mismatch entry->tag:1 tag:2
+[   10.079137][  T435] tag mismatch entry->tag:1 tag:2
+[   10.086300][    T9] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[   10.086305][    T9] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[   10.086311][    T9] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[   10.086316][    T9] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[   10.086324][    T9] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy connect notification
+[   10.086885][  T435] [cs_press] [cs_panel_notifier_callback: 3163] Notification type:2, early_trigger:0
+[   10.087580][    T9] msm_dwc3_perf_vote_update: latency updated to: 2
+[   10.087594][    T9] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 3
+[   10.116911][    T1] configfs-gadget a600000.dwc3: failed to start g1: -19
+[   10.143873][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.143996][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.144136][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.144255][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.152815][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.152936][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.153074][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.153193][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.160925][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.180714][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.190279][  T473] erofs: Unknown parameter 'barrier'
+[   10.197301][  T473] erofs: Unknown parameter 'barrier'
+[   10.197602][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.201135][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.204181][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.219896][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.220002][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.220122][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.220225][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.222441][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.222550][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.222672][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.222777][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.528872][  T473] audit_log_start: 8 callbacks suppressed
+[   10.528874][  T473] audit: audit_backlog=64 > audit_backlog_limit=64
+[   10.528881][  T473] audit: audit_lost=1 audit_rate_limit=0 audit_backlog_limit=64
+[   10.528884][  T473] audit: backlog limit exceeded
+[   10.528907][  T473] audit: audit_backlog=65 > audit_backlog_limit=64
+[   10.528911][  T473] audit: audit_lost=2 audit_rate_limit=0 audit_backlog_limit=64
+[   10.528913][  T473] audit: backlog limit exceeded
+[   10.528926][  T473] audit: audit_backlog=65 > audit_backlog_limit=64
+[   10.528928][  T473] audit: audit_lost=3 audit_rate_limit=0 audit_backlog_limit=64
+[   10.528930][  T473] audit: backlog limit exceeded
+[   10.528933][  T473] audit: audit_backlog=65 > audit_backlog_limit=64
+[   10.540538][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.543885][  T473] erofs: Unknown parameter 'barrier'
+[   10.547791][  T473] erofs: Unknown parameter 'barrier'
+[   10.548059][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.551664][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.554757][  T473] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[   10.568397][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.568504][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.568625][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.568730][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.571177][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.571287][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.571413][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.571522][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.572661][  T473] request_module fs-auto succeeded, but still no fs?
+[   10.574997][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.575106][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.575228][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.575335][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.584871][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.584989][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.585124][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.585252][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.587947][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.588061][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.588213][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.588330][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.590842][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.590953][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.591092][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.591200][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.593747][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.593859][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.593986][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.594095][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.606793][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.606903][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   10.607025][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[   10.607132][  T473] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[   12.089527][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   12.089541][  T211] msm_dwc3_perf_vote_update: latency updated to: -1
+[   13.690931][  T122] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[   13.884521][  T122] sd 0:0:0:4: [sde] Synchronizing SCSI cache
+[   14.105526][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   16.121525][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   18.137524][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   20.153527][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   22.169523][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   24.185525][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   26.201525][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   28.217525][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   28.332236][  T283] PMIC input: code[116]=PWKEY, sts[128]=[DWN]
+[   28.348784][  T284] PMIC input: code[114]=VOLDWN, sts[64]=[DWN]
+[   28.951546][  T284] PMIC input: code[114]=VOLDWN, sts[0]=[UP]
+[   28.960145][  T283] PMIC input: code[116]=PWKEY, sts[0]=[UP]
+[   29.470850][  T283] PMIC input: code[116]=PWKEY, sts[128]=[DWN]
+[   29.476965][  T284] PMIC input: code[114]=VOLDWN, sts[64]=[DWN]
+[   30.233529][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   31.737605][  T122] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_dpdm_regulator_is_enabled dpdm_enable:0
+[   32.249526][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   34.024565][  T286] pm8941-pwrkey c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey-resin-bark: pwrkey_resin_bark_irq trigger, start D&R task info
+[   34.024571][  T286] ------ collect D&R-state processes info before long comb key ------
+[   34.024573][  T286]   task 					   PC stack   pid father
+[   34.024601][  T286] task:hdcp_2x         state:D stack:    0 pid:  433 ppid:     2 flags:0x00000008
+[   34.024606][  T286] Call trace:
+[   34.024612][  T286]  __switch_to+0x24c/0x5f4
+[   34.024617][  T286]  __schedule+0x5b0/0xbe4
+[   34.024620][  T286]  schedule+0x80/0x1ac
+[   34.024711][  T286]  sde_hdcp_2x_main+0xcc/0x9ac [msm_drm]
+[   34.024715][  T286]  kthread+0x150/0x200
+[   34.024718][  T286]  ret_from_fork+0x10/0x30
+[   34.024721][  T286] task:dp_hdcp2p2      state:D stack:    0 pid:  434 ppid:     2 flags:0x00000008
+[   34.024723][  T286] Call trace:
+[   34.024726][  T286]  __switch_to+0x24c/0x5f4
+[   34.024729][  T286]  __schedule+0x5b0/0xbe4
+[   34.024731][  T286]  schedule+0x80/0x1ac
+[   34.024809][  T286]  dp_hdcp2p2_main+0xe0/0x724 [msm_drm]
+[   34.024811][  T286]  kthread+0x150/0x200
+[   34.024814][  T286]  ret_from_fork+0x10/0x30
+[   34.024818][  T286]   task 					   PC stack   pid father
+[   34.024824][  T286] task:irq/351-pmic_pw state:R  running task     stack:    0 pid:  286 ppid:     2 flags:0x00000008
+[   34.024827][  T286] Call trace:
+[   34.024831][  T286]  dump_backtrace.cfi_jt+0x0/0x8
+[   34.024834][  T286]  sched_show_task+0x198/0x214
+[   34.024839][  T286]  pm8941_pwrkey_irq+0x31c/0x35c [pm8941_pwrkey]
+[   34.024842][  T286]  irq_thread_fn+0x48/0xd4
+[   34.024845][  T286]  irq_thread+0x3ac/0x76c
+[   34.024847][  T286]  kthread+0x150/0x200
+[   34.024849][  T286]  ret_from_fork+0x10/0x30
+[   34.024852][  T286] ------ end collecting D&R-state processes info ------
+[   34.024875][  T286] PMIC input: code[116]=PWKEY, sts[128]=[DWN]
+[   34.265530][  T211] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0 

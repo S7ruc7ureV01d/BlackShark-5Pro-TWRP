@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1 \
     android.hardware.boot@1.2 \
     bootctl \
+    libutilscallstack \
     libion
 
 # Needed by the QTI boot control HAL at runtime in recovery
@@ -24,9 +25,11 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     android.hardware.boot@1.0 \
     android.hardware.boot@1.1 \
     android.hardware.boot@1.2 \
-    libion
+    libion \
+    libutilscallstack
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libutilscallstack.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.0.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.1.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.boot@1.2.so \

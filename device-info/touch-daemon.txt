@@ -1,0 +1,95 @@
+### exe
+lrwxrwxrwx 1 root root 0 2026-09-24 20:59 /proc/1875/exe -> /vendor/bin/hw/com.blackshark.htd@1.0-service
+### cmdline
+/vendor/bin/hw/com.blackshark.htd@1.0-service 
+### rc
+--- /vendor/etc/init/com.blackshark.htd@1.0-service.rc
+#on init && property:persist.vendor.hbp_touch=enable
+#    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ hbp_touch
+
+#on init && property:persist.vendor.hbp_touch=disable
+#    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ focaltech_touch
+
+#on boot
+#    chmod 0666 /dev/ht_input
+#    chown system system /dev/ht_input
+
+on boot
+    chmod 0666 /dev/tcm0
+    chown system system /dev/tcm0
+
+on post-fs-data
+    mkdir /data/vendor/syna 0770 system system
+
+on property:sys.boot_completed=1
+    chmod 0666 /dev/ht_input
+    chown system system /dev/ht_input
+    start htd
+
+service htd /vendor/bin/hw/com.blackshark.htd@1.0-service
+    class hal
+    user root
+    group root system
+    capabilities SYS_NICE
+oneshot
+### maps (libs)
+/apex/com.android.runtime/lib64/bionic/libc.so
+/apex/com.android.runtime/lib64/bionic/libdl.so
+/apex/com.android.runtime/lib64/bionic/libdl_android.so
+/apex/com.android.runtime/lib64/bionic/libm.so
+/apex/com.android.vndk.v31/lib64/libbacktrace.so
+/apex/com.android.vndk.v31/lib64/libbase.so
+/apex/com.android.vndk.v31/lib64/libbinder.so
+/apex/com.android.vndk.v31/lib64/libc++.so
+/apex/com.android.vndk.v31/lib64/libcutils.so
+/apex/com.android.vndk.v31/lib64/libhardware.so
+/apex/com.android.vndk.v31/lib64/libhidlbase.so
+/apex/com.android.vndk.v31/lib64/liblzma.so
+/apex/com.android.vndk.v31/lib64/libprocessgroup.so
+/apex/com.android.vndk.v31/lib64/libunwindstack.so
+/apex/com.android.vndk.v31/lib64/libutils.so
+/apex/com.android.vndk.v31/lib64/libutilscallstack.so
+/system/lib64/libbase.so
+/system/lib64/libc++.so
+/system/lib64/libcgrouprc.so
+/system/lib64/liblog.so
+/system/lib64/libnetd_client.so
+/system/lib64/libvndksupport.so
+/vendor/lib64/com.blackshark.htd@1.0.so
+/vendor/lib64/libhidltransport.so
+/vendor/lib64/libhthal.so
+/vendor/lib64/libta.so
+### open fds
+/dev/binderfs/hwbinder
+/dev/ht_ft
+/dev/ht_input
+/dev/null
+/dev/pmsg0
+/sys/devices/virtual/touch/touch_dev/charge_state
+/sys/devices/virtual/touch/touch_dev/palm_switch
+/sys/devices/virtual/touch/touch_dev/ready_state
+/sys/devices/virtual/touch/touch_dev/suspend_state
+/sys/kernel/tracing/trace_marker
+0
+socket:[48938]
+### files
+-rwxr-xr-x 1 root shell 18536 2008-12-31 22:00 /vendor/bin/htdFocal
+-rwxr-xr-x 1 root shell 15448 2008-12-31 22:00 /vendor/bin/htd_debug
+-rwxr-xr-x 1 root shell 67176 2008-12-31 22:00 /vendor/bin/hw/com.blackshark.htd@1.0-service
+lrwxr-xr-x 1 root shell    13 2008-12-31 22:00 /vendor/bin/touch -> toybox_vendor
+### htd configs
+/vendor/etc/camera/resources/render/Configure/20_BrightEye/res/right_eye.bin
+/vendor/etc/camera/resources/render/Shaders/binShaders32/shader_GLPROGRAM_BRIGHT_EYE.bin
+/vendor/etc/camera/resources/render/Shaders/binShaders32/shader_GLPROGRAM_BRIGHT_EYEV3_Define_USE_EYE_PUPIL.bin
+/vendor/etc/camera/resources/render/Shaders/binShaders64/shader_GLPROGRAM_BRIGHT_EYE.bin
+/vendor/etc/camera/resources/render/Shaders/binShaders64/shader_GLPROGRAM_BRIGHT_EYEV3_Define_USE_EYE_PUPIL.bin
+/vendor/etc/display/backlight_calib_blackshark_38_08_0b_cmd_mode_dsc_dsi_panel.xml
+/vendor/etc/init/com.blackshark.htd@1.0-service.rc
+/vendor/etc/vintf/manifest/com.blackshark.htd@1.0-service.xml
+/vendor/firmware/1050_SwitchPressLight_P_RTP.bin
+/vendor/firmware/165_feedbackNegativeLight_P_RTP.bin
+/vendor/firmware/173_signalButtonHighlight_P_RTP.bin
+/vendor/firmware/182_signalListHighlight_P_RTP.bin
+/vendor/firmware/190_signalTransitionLight_P_RTP.bin
+/vendor/firmware/focaltech_ts_fw_hbp_k3.bin
+/vendor/firmware/focaltech_ts_katyusha_fw.bin

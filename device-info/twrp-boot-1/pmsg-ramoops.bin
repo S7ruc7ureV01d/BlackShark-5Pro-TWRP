@@ -1,0 +1,3325 @@
+l0
+——Û≈ê
+X"Ê.TENS	
+*21035042
+ˇˇˇˇ
+lC
+—
+—Û≈ê
+DË.SELinux
+SELinux: Loaded service_contexts from:
+lH
+—
+—Û≈ê
+n"Ë.SELinux
+    /vendor/etc/selinux/vndservice_contexts
+l¿
+—
+—Û≈ê
+ÿ!Î.SELinux
+avc:  denied  { add } for pid=465 uid=0 name=manager scontext=u:r:recovery:s0 tcontext=u:object_r:service_manager_vndservice:s0 tclass=service_manager permissive=1
+lﬂ
+–
+–Û≈ê
+Ö†I/SELinux
+avc:  denied  { add } for interface=android.hidl.base::IBase sid=u:r:recovery:s0 pid=464 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_base_hwservice:s0 tclass=hwservice_manager permissive=1
+lﬁ
+––Û≈ê
+•dJ/Î
+√
+avc:  denied  { add } for interface=android.hidl.base::IBase sid=u:r:recovery:s0 pid=464 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_base_hwservice:s0 tclass=hwservice_manager permissive=1
+lÔ
+–
+–Û≈ê
+˜K/SELinux
+avc:  denied  { add } for interface=android.hidl.manager::IServiceManager sid=u:r:recovery:s0 pid=464 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_manager_hwservice:s0 tclass=hwservice_manager permissive=1
+lÓ
+––Û≈ê
+≠:K/Î
+”
+avc:  denied  { add } for interface=android.hidl.manager::IServiceManager sid=u:r:recovery:s0 pid=464 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_manager_hwservice:s0 tclass=hwservice_manager permissive=1
+lX
+–
+–Û≈ê
+Õ√K/hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–Û≈ê
+«[L/hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–Û≈ê
+ÜìL/hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–Û≈ê
+∞¥L/hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–Û≈ê
+◊L/hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–Û≈ê
+ØîM/hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–Û≈ê
+=µM/hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+l§
+–
+–Û≈ê
+H€M/hwservicemanager
+getTransport: Cannot find entry android.hidl.manager@1.2::IServiceManager/default in either framework or device VINTF manifest.
+lÈ
+–
+–Û≈ê
+æ˘N/SELinux
+avc:  denied  { add } for interface=android.hidl.token::ITokenManager sid=u:r:recovery:s0 pid=464 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_token_hwservice:s0 tclass=hwservice_manager permissive=1
+lË
+––Û≈ê
+‹/O/Î
+Õ
+avc:  denied  { add } for interface=android.hidl.token::ITokenManager sid=u:r:recovery:s0 pid=464 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_token_hwservice:s0 tclass=hwservice_manager permissive=1
+lX
+–
+–Û≈ê
+ZpO/hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–Û≈ê
+@•O/hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–Û≈ê
+ö—O/hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–Û≈ê
+ÎÔO/hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–Û≈ê
+”P/hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–Û≈ê
+æäP/hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–Û≈ê
+™P/hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+l†
+–
+–Û≈ê
+pÀP/hwservicemanager
+getTransport: Cannot find entry android.hidl.token@1.0::ITokenManager/default in either framework or device VINTF manifest.
+lC
+–
+–Û≈ê
+öU/hwservicemanager
+hwservicemanager is ready now.
+l7
+⁄
+⁄¯≈ê
+.0adbd
+persist.adb.watchdog set to ''
+l;
+⁄
+⁄¯≈ê
+å¡æ0adbd
+persist.sys.test_harness set to ''
+l@
+⁄
+⁄¯≈ê
+µ∂ø0adbd
+adb watchdog timeout set to 600 seconds
+l%
+⁄
+⁄¯≈ê
+ √0adbd
+adbd started
+lD
+⁄
+›¯≈ê
+Mù¬0adbd
+Waiting for persist.adb.tls_server.enable=1
+lF
+⁄
+ﬂ¯≈ê
+d?ƒ0adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+⁄
+ﬂ¯≈ê
+/d»0adbd
+UsbFfsConnection constructed
+l6
+⁄
+‡¯≈ê
+¸Ï 0adbd
+UsbFfs-monitor thread spawned
+lZ
+Ÿ
+Ÿ¯≈ê
+Ã0recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+l8
+Ÿ
+Ÿ¯≈ê
+√Z
+*recovery
+Boot command: boot-recovery
+lZ
+Ÿ
+Ÿ¯≈ê
+ ó1recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+lZ
+Ÿ
+Ÿ¯≈ê
+å‰1recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+la
+Ÿ
+Ÿ¯≈ê
+ö≠c1recovery
+[libfs_mgr]Created logical partition odm_a on device /dev/block/dm-0
+lU
+Ÿ
+Ÿ¯≈ê
+ıÂc1recovery
+[libfs_mgr]Skipping zero-length logical partition: odm_b
+le
+Ÿ
+Ÿ¯≈ê
+–Qg1recovery
+[libfs_mgr]Created logical partition product_a on device /dev/block/dm-1
+lY
+Ÿ
+Ÿ¯≈ê
+Ég1recovery
+[libfs_mgr]Skipping zero-length logical partition: product_b
+ld
+Ÿ
+Ÿ¯≈ê
+≤Ój1recovery
+[libfs_mgr]Created logical partition system_a on device /dev/block/dm-2
+lX
+Ÿ
+Ÿ¯≈ê
+∫k1recovery
+[libfs_mgr]Skipping zero-length logical partition: system_b
+lh
+Ÿ
+Ÿ¯≈ê
+∞Ïm1recovery
+[libfs_mgr]Created logical partition system_ext_a on device /dev/block/dm-3
+l\
+Ÿ
+Ÿ¯≈ê
+rn1recovery
+[libfs_mgr]Skipping zero-length logical partition: system_ext_b
+ld
+Ÿ
+Ÿ¯≈ê
+Èp1recovery
+[libfs_mgr]Created logical partition vendor_a on device /dev/block/dm-4
+lX
+Ÿ
+Ÿ¯≈ê
+–q1recovery
+[libfs_mgr]Skipping zero-length logical partition: vendor_b
+li
+Ÿ
+Ÿ¯≈ê
+’Dt1recovery
+[libfs_mgr]Created logical partition vendor_dlkm_a on device /dev/block/dm-5
+l]
+Ÿ
+Ÿ¯≈ê
+qtt1recovery
+[libfs_mgr]Skipping zero-length logical partition: vendor_dlkm_b
+lû
+Ÿ
+Ÿ=∏µj´jArmToArm64Assembler
+generated scanline__00000077:03010101_00008001_00000000 [195 ipp] (241 ins) at [0x73c672f3c0:0x73c672f784] in 23386ns
+lû
+Ÿ
+Ÿ=∏µjF˝ArmToArm64Assembler
+generated scanline__00000077:03545401_00000A01_00000000 [ 69 ipp] (113 ins) at [0x73c672f790:0x73c672f954] in 22812ns
+lû
+Ÿ
+Ÿ=∏µj{ËArmToArm64Assembler
+generated scanline__00000077:03545401_00000A08_00000000 [ 69 ipp] (116 ins) at [0x73c672f960:0x73c672fb30] in 12969ns
+lZ
+Ÿ
+Ÿ=∏µjœ’A#recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+lX
+Ÿ
+Ù=∏µjÅLD#cutils-trace
+Error opening trace file: No such file or directory (2)
+lX
+–
+–=∏µjLG#cutils-trace
+Error opening trace file: No such file or directory (2)
+lÈ
+–
+–=∏µjYI#SELinux
+avc:  denied  { find } for interface=android.hardware.health::IHealth sid=u:r:recovery:s0 pid=473 scontext=u:r:recovery:s0 tcontext=u:object_r:hal_health_hwservice:s0 tclass=hwservice_manager permissive=1
+lË
+––=∏µjÙK#Î
+Õ
+avc:  denied  { find } for interface=android.hardware.health::IHealth sid=u:r:recovery:s0 pid=473 scontext=u:r:recovery:s0 tcontext=u:object_r:hal_health_hwservice:s0 tclass=hwservice_manager permissive=1
+lX
+–
+–=∏µj⁄ÑK#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–=∏µj…K#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–=∏µj÷˘K#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–=∏µjÂL#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–=∏µjï1L#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–=∏µjw¨L#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–=∏µj∂∆L#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–=∏µjÁL#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+Ù=∏µj;∏P#HealthHalUtils
+health: cannot get default service
+lX
+–
+–=∏µjü“Q#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–=∏µjÚR#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–=∏µj?R#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–=∏µj#[R#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–=∏µj”wR#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–=∏µj™ÃR#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–=∏µjÖÁR#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–=∏µjhS#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+Ù=∏µjôeT#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+Ù=∏µj◊ÈT#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+Ù=∏µj`sU#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+l7
+˚
+˚=∏µj®w˘'adbd
+persist.adb.watchdog set to ''
+l;
+˚
+˚=∏µj™ ˚'adbd
+persist.sys.test_harness set to ''
+l@
+˚
+˚=∏µjı÷˚'adbd
+adb watchdog timeout set to 600 seconds
+lD
+˚
+˝=∏µjt˛'l%
+˚
+˚=∏µjN“˛'adbd
+adbd
+Waiting for persist.adb.tls_server.enable=1
+adbd started
+lF
+˚
+ˇ=∏µjƒWˇ'adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇ=∏µj¥ú(adbd
+UsbFfsConnection constructed
+l6
+˚
+=∏µjX©(adbd
+UsbFfs-monitor thread spawned
+lù
+Ÿ
+Ÿ=∏µjëÀ)ArmToArm64Assembler
+generated scanline__00000077:03545401_00000000_00000000 [ 65 ipp] (94 ins) at [0x73c672fb40:0x73c672fcb8] in 27447ns
+lX
+–
+–>∏µjnY#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–>∏µjˇ•Y#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–>∏µjI⁄Y#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–>∏µj(ˆY#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–>∏µjZ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–>∏µjdëZ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–>∏µj:´Z#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–>∏µj√ Z#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+Ù>∏µjD¥\#HealthHalUtils
+health: cannot get default service
+lX
+–
+–>∏µjµ]#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–>∏µjë¯]#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–>∏µj• ^#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–>∏µjL;^#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–>∏µj#U^#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–>∏µjj¨^#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–>∏µj•≈^#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–>∏µjT‚^#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+Ù>∏µj`#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+Ù>∏µj›W`#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+Ù>∏µj'å`#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+>∏µj‘(adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+>∏µj:[(adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚>∏µj∆ä(adbd
+UsbFfs: already offline
+l4
+˚
+˚>∏µj˘≠(adbd
+destroying transport UsbFfs
+l9
+˚
+˚>∏µj2ˆ(adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇ>∏µj±êâ(adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇ>∏µjºqç(adbd
+UsbFfsConnection constructed
+l6
+˚
+>∏µj¶,è(adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–?∏µj5gb#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–?∏µj˚√b#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–?∏µj|Ìb#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–?∏µjÛc#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–?∏µjf#c#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–?∏µjzc#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–?∏µjîc#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–?∏µjò∞c#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+Ù?∏µjx.e#HealthHalUtils
+health: cannot get default service
+lX
+–
+–?∏µj&f#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–?∏µj¬Nf#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–?∏µjftf#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–?∏µjpéf#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–?∏µj©f#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–?∏µj∫˝f#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–?∏µj]g#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–?∏µjl2g#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+Ù?∏µjœõg#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+Ù?∏µjr¡g#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+Ù?∏µjıg#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+?∏µj´5ü(adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+?∏µjŒì†(adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚?∏µjÖK°(adbd
+UsbFfs: already offline
+l4
+˚
+˚?∏µjñ~°(adbd
+destroying transport UsbFfs
+l9
+˚
+˚?∏µj‡≤°(adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇ?∏µjâ¢@)adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇ?∏µjö∞C)adbd
+UsbFfsConnection constructed
+l6
+˚
+?∏µj	,E)adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–@∏µjÎ¿i#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–@∏µjÿj#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–@∏µjíEj#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–@∏µj	aj#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–@∏µj‰{j#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–@∏µjm÷j#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–@∏µj¨j#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–@∏µjøk#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+Ù@∏µj4ïl#HealthHalUtils
+health: cannot get default service
+lX
+–
+–@∏µjxúm#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–@∏µjŸm#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–@∏µj ˛m#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–@∏µj_n#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–@∏µjù2n#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–@∏µjœÑn#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–@∏µj⁄ûn#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–@∏µjZºn#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+Ù@∏µjπ$o#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+Ù@∏µj¿Io#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+Ù@∏µj–po#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+@∏µj~fU)adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+@∏µj~FV)adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚@∏µjï¸V)adbd
+UsbFfs: already offline
+l4
+˚
+˚@∏µj=/W)adbd
+destroying transport UsbFfs
+l9
+˚
+˚@∏µj≤aW)adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇ@∏µjxì4*adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇ@∏µjÛä7*adbd
+UsbFfsConnection constructed
+l6
+˚
+	@∏µj•P9*adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–A∏µjÑq#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–A∏µj~q#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–A∏µj™q#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–A∏µjº≈q#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–A∏µj∆ﬂq#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–A∏µj“@r#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–A∏µjE[r#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–A∏µjvr#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙA∏µjs”s#HealthHalUtils
+health: cannot get default service
+lX
+–
+–A∏µj¢·t#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–A∏µjØu#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–A∏µj¯Gu#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–A∏µj6bu#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–A∏µjŸ{u#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–A∏µjŒu#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–A∏µjIËu#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–A∏µj≈v#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙA∏µj˘nv#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙA∏µjúîv#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙA∏µjºv#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+	A∏µjäÅI*adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+	A∏µjﬂªJ*adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚A∏µj*rK*adbd
+UsbFfs: already offline
+l4
+˚
+˚A∏µj?¶K*adbd
+destroying transport UsbFfs
+l9
+˚
+˚A∏µjÑŸK*adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇA∏µjAì(+adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇA∏µjÁ++adbd
+UsbFfsConnection constructed
+l6
+˚
+
+A∏µjÌÅ,+adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–B∏µj∏~x#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–B∏µj	ÿx#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–B∏µjÓ
+y#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–B∏µj˝y#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–B∏µj;6y#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–B∏µjrây#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–B∏µj£y#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–B∏µjWæy#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙB∏µj}@{#HealthHalUtils
+health: cannot get default service
+lX
+–
+–B∏µjO|#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–B∏µj&é|#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–B∏µj?∑|#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–B∏µj≤—|#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–B∏µjçÏ|#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–B∏µj‹9}#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–B∏µjS}#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–B∏µjäm}#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙB∏µj%ÿ}#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙB∏µj…˝}#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙB∏µj›%~#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+
+B∏µjÍ√<+adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+
+B∏µj;ü=+adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚B∏µjq\>+adbd
+UsbFfs: already offline
+l4
+˚
+˚B∏µjÜê>+adbd
+destroying transport UsbFfs
+l9
+˚
+˚B∏µjÀ√>+adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇB∏µj.Ÿﬂ+adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇB∏µjïm‚+adbd
+UsbFfsConnection constructed
+l6
+˚
+B∏µj”›„+adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–C∏µj˘‘#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–C∏µj,Ä#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–C∏µjZUÄ#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–C∏µjpÄ#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–C∏µjäÄ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–C∏µj€Ä#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–C∏µjsÙÄ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–C∏µjÇÅ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙC∏µjæ[Ç#HealthHalUtils
+health: cannot get default service
+lX
+–
+–C∏µjLhÉ#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–C∏µjˇ®É#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–C∏µj>œÉ#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–C∏µjIÈÉ#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–C∏µj Ñ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–C∏µjPÑ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–C∏µjviÑ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–C∏µjπÑÑ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙC∏µjÄÌÑ#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙC∏µjªÖ#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙC∏µjU6Ö#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+C∏µjÑÙ+adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+C∏µj√rı+adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚C∏µjƒ/ˆ+adbd
+UsbFfs: already offline
+l4
+˚
+˚C∏µj™dˆ+adbd
+destroying transport UsbFfs
+l9
+˚
+˚C∏µjÔóˆ+adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇC∏µjå!ó,adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇC∏µjTÃô,adbd
+UsbFfsConnection constructed
+l6
+˚
+C∏µjD6õ,adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–D∏µj‹Sà#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–D∏µjÖ¸à#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–D∏µj;2â#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–D∏µj≤Mâ#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–D∏µj jâ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–D∏µjÂÊâ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–D∏µj$ä#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–D∏µj®ä#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙD∏µj¢wå#HealthHalUtils
+health: cannot get default service
+lX
+–
+–D∏µjzç#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–D∏µj∂∫ç#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–D∏µj˙·ç#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–D∏µj9¸ç#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–D∏µjDé#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–D∏µjlé#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–D∏µj¡Öé#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–D∏µj°°é#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙD∏µjøè#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙD∏µj<;è#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙD∏µjıeè#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+D∏µj˛£´,adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+D∏µj`ı´,adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚D∏µjÜ≠,adbd
+UsbFfs: already offline
+l4
+˚
+˚D∏µj%≠,adbd
+destroying transport UsbFfs
+l9
+˚
+˚D∏µjco≠,adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇD∏µj‚^-adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇD∏µjïÕ-adbd
+UsbFfsConnection constructed
+l6
+˚
+D∏µjñ‘-adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–E∏µj.3ë#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–E∏µj¿èë#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–E∏µjuπë#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–E∏µj‘ë#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–E∏µjéÓë#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–E∏µjûDí#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–E∏µj^í#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–E∏µjTzí#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙE∏µjÃì#HealthHalUtils
+health: cannot get default service
+lX
+–
+–E∏µj=⁄î#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–E∏µj∑ï#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–E∏µj/Aï#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–E∏µj:[ï#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–E∏µjvï#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–E∏µjiƒï#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–E∏µjsﬁï#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–E∏µjS˙ï#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙE∏µj≠añ#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙE∏µj∞Öñ#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙE∏µj´ñ#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+E∏µjv¯&-adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+E∏µjÙS(-adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚E∏µj˘)-adbd
+UsbFfs: already offline
+l4
+˚
+˚E∏µj≠R)-adbd
+destroying transport UsbFfs
+l9
+˚
+˚E∏µjÿã)-adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇE∏µj˛˚.adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇE∏µj§{.adbd
+UsbFfsConnection constructed
+l6
+˚
+E∏µj∏˘.adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–F∏µj(yò#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–F∏µj®—ò#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–F∏µjÏ¯ò#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–F∏µj/ô#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–F∏µjû-ô#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–F∏µj≤Ñô#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–F∏µjTûô#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–F∏µjˇπô#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙF∏µj[Hõ#HealthHalUtils
+health: cannot get default service
+lX
+–
+–F∏µjÿ\ú#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–F∏µj∂õú#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–F∏µj7≈ú#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–F∏µjz‡ú#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–F∏µj!˚ú#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–F∏µjMù#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–F∏µjçfù#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–F∏µjÉù#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙF∏µjcÍù#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙF∏µj“û#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙF∏µj7û#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+F∏µjΩ1.adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+F∏µjsS.adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚F∏µjÒ˝.adbd
+UsbFfs: already offline
+l4
+˚
+˚F∏µjË*.adbd
+destroying transport UsbFfs
+l9
+˚
+˚F∏µj¿\.adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇF∏µjP˘.adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇF∏µj?œ˚.adbd
+UsbFfsConnection constructed
+l6
+˚
+F∏µjTM˝.adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–G∏µj Âü#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–G∏µjeD†#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–G∏µjRo†#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–G∏µj≈â†#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–G∏µj§†#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–G∏µj?°#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–G∏µj°#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–G∏µj%9°#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙG∏µj§¢#HealthHalUtils
+health: cannot get default service
+lX
+–
+–G∏µjØ£#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–G∏µj‡Ï£#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–G∏µjY§#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–G∏µjó.§#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–G∏µj:H§#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–G∏µj˚£§#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–G∏µjnæ§#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–G∏µjN⁄§#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙG∏µjC•#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙG∏µjÑh•#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙG∏µj0ê•#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+G∏µj
+ë/adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+G∏µjzÎ/adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚G∏µjù/adbd
+UsbFfs: already offline
+l4
+˚
+˚G∏µjªŒ/adbd
+destroying transport UsbFfs
+l9
+˚
+˚G∏µjú/adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇG∏µj¨Ü∞/adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇG∏µj≥/adbd
+UsbFfsConnection constructed
+l6
+˚
+G∏µjõÑ¥/adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–H∏µj∑cß#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–H∏µjÿΩß#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–H∏µjçÁß#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–H∏µj–®#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–H∏µj€®#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–H∏µj‚p®#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–H∏µjÑä®#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–H∏µjhß®#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙH∏µjàK™#HealthHalUtils
+health: cannot get default service
+lX
+–
+–H∏µjx?´#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–H∏µjZ´#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–H∏µj:ß´#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–H∏µj≠¡´#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–H∏µjP€´#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–H∏µj,¨#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–H∏µjOE¨#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–H∏µj/a¨#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙH∏µj2Ã¨#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙH∏µj÷Ò¨#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙH∏µjÇ≠#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+H∏µjOûƒ/adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+H∏µj8y≈/adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚H∏µj¿1∆/adbd
+UsbFfs: already offline
+l4
+˚
+˚H∏µjÛ`∆/adbd
+destroying transport UsbFfs
+l9
+˚
+˚H∏µjlî∆/adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇH∏µj‚~g0adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇH∏µj«Èi0adbd
+UsbFfsConnection constructed
+l6
+˚
+H∏µjT`k0adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–I∏µjj»Æ#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–I∏µjØ#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–I∏µjÀHØ#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–I∏µj¶cØ#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–I∏µj|}Ø#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–I∏µj“Ø#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–I∏µj¡ÎØ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–I∏µj	∞#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙI∏µj#X±#HealthHalUtils
+health: cannot get default service
+lX
+–
+–I∏µj£a≤#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–I∏µj}ü≤#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–I∏µj]«≤#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–I∏µj8‚≤#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–I∏µjr˚≤#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–I∏µjL≥#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–I∏µj>e≥#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–I∏µjÅ≥#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙI∏µj∞È≥#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙI∏µjÉ¥#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙI∏µj«5¥#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+I∏µjÕÀq0adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+I∏µj4s0adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚I∏µj®·s0adbd
+UsbFfs: already offline
+l4
+˚
+˚I∏µjt0adbd
+destroying transport UsbFfs
+l9
+˚
+˚I∏µj≈Ft0adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇI∏µj©”1adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇI∏µjÏ_!1adbd
+UsbFfsConnection constructed
+l6
+˚
+I∏µj«"1adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–J∏µj=∂#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–J∏µj^_∂#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–J∏µjà∂#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–J∏µjµ¢∂#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–J∏µj(Ω∂#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–J∏µjQ∑#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–J∏µj''∑#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–J∏µj;C∑#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙJ∏µj–ﬁ∏#HealthHalUtils
+health: cannot get default service
+lX
+–
+–J∏µjtπ#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–J∏µj&1∫#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–J∏µjŒW∫#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–J∏µjr∫#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–J∏µj¥å∫#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–J∏µjgŸ∫#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–J∏µj°Ú∫#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–J∏µjÅª#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙJ∏µjÒzª#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙJ∏µjï†ª#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙJ∏µj<«ª#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+J∏µjÁﬂ21adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+J∏µj\√31adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚J∏µj¢x41adbd
+UsbFfs: already offline
+l4
+˚
+˚J∏µj≥´41adbd
+destroying transport UsbFfs
+l9
+˚
+˚J∏µj(ﬁ41adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇJ∏µj#ƒ’1adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇJ∏µj˛Oÿ1adbd
+UsbFfsConnection constructed
+l6
+˚
+J∏µjÂ∑Ÿ1adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–K∏µj>pΩ#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–K∏µjä»Ω#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–K∏µj£ÒΩ#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–K∏µjæ#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–K∏µjΩ&æ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–K∏µjÔxæ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–K∏µjëíæ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–K∏µj©Øæ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙK∏µj∫˝ø#HealthHalUtils
+health: cannot get default service
+lX
+–
+–K∏µjÄ¡#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–K∏µj^J¡#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–K∏µj€r¡#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–K∏µjMç¡#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–K∏µjXß¡#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–K∏µjˆ¡#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–K∏µjÎ¬#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–K∏µj +¬#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙK∏µjê¬#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙK∏µjSµ¬#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙK∏µjc‹¬#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+K∏µjj“È1adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+K∏µj0Î1adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚K∏µj`ÀÎ1adbd
+UsbFfs: already offline
+l4
+˚
+˚K∏µj¯˘Î1adbd
+destroying transport UsbFfs
+l9
+˚
+˚K∏µj,Ï1adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇK∏µj÷æ…2adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇK∏µjèÃ2adbd
+UsbFfsConnection constructed
+l6
+˚
+K∏µjVﬁÕ2adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–L∏µjw–ƒ#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–L∏µj√(≈#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–L∏µjQ≈#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–L∏µjÁk≈#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–L∏µjÚÖ≈#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–L∏µjøÿ≈#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–L∏µjñÚ≈#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–L∏µj™∆#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙL∏µj-≤«#HealthHalUtils
+health: cannot get default service
+lX
+–
+–L∏µjUõ»#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–L∏µjg⁄»#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–L∏µj…#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–L∏µjä…#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–L∏µj…7…#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–L∏µj¨É…#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–L∏µj≤ú…#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–L∏µj*∏…#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙL∏µjY! #HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙL∏µj0G #recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙL∏µj®n #recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+L∏µjlﬁ2adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+L∏µj˚ﬁ2adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚L∏µj±ﬂ2adbd
+UsbFfs: already offline
+l4
+˚
+˚L∏µj+„ﬂ2adbd
+destroying transport UsbFfs
+l9
+˚
+˚L∏µj‘‡2adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇL∏µj—ÿÄ3adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇL∏µj3lÉ3adbd
+UsbFfsConnection constructed
+l6
+˚
+L∏µj¸ÿÑ3adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–M∏µjiÃ#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–M∏µj£hÃ#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–M∏µj≥èÃ#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–M∏µjä©Ã#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–M∏µjî√Ã#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–M∏µjÌÕ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–M∏µjè,Õ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–M∏µj;HÕ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙM∏µjx†Œ#HealthHalUtils
+health: cannot get default service
+lX
+–
+–M∏µjßœ#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–M∏µj≈‰œ#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–M∏µjì–#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–M∏µj"–#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–M∏µj<–#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–M∏µjáá–#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–M∏µj*°–#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–M∏µj=Ω–#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙM∏µjc$—#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙM∏µj”I—#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙM∏µjq—#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+M∏µj–ï3adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+M∏µjs:ñ3adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚M∏µj!ñ3adbd
+UsbFfs: already offline
+l4
+˚
+˚M∏µj$ó3adbd
+destroying transport UsbFfs
+l9
+˚
+˚M∏µjWó3adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇM∏µjÑ84adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇM∏µjç:4adbd
+UsbFfsConnection constructed
+l6
+˚
+M∏µj{<4adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–N∏µjQV”#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–N∏µjG≤”#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–N∏µjè⁄”#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–N∏µj6ı”#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–N∏µjŸ‘#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–N∏µj`‘#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–N∏µj@y‘#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–N∏µjàï‘#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙN∏µj‰Ù’#HealthHalUtils
+health: cannot get default service
+lX
+–
+–N∏µj3"◊#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–N∏µj`◊#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–N∏µj'°◊#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–N∏µj”º◊#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–N∏µj◊◊#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–N∏µje%ÿ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–N∏µjyAÿ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–N∏µjX]ÿ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙN∏µjô ÿ#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙN∏µjÔÿ#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙN∏µjßŸ#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+N∏µj~%L4adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+N∏µjä¸L4adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚N∏µj
+±M4adbd
+UsbFfs: already offline
+l4
+˚
+˚N∏µj·M4adbd
+destroying transport UsbFfs
+l9
+˚
+˚N∏µj®N4adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇN∏µjæ,5adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇN∏µjPk.5adbd
+UsbFfsConnection constructed
+l6
+˚
+N∏µjV⁄/5adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–O∏µj’‚€#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–O∏µj+≥‹#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–O∏µjDË‹#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–O∏µjº›#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–O∏µj<!›#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–O∏µjú°›#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–O∏µjßª›#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–O∏µjò€›#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙO∏µjãﬂﬂ#HealthHalUtils
+health: cannot get default service
+lX
+–
+–O∏µjkÁ‡#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–O∏µjú-·#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–O∏µj_Z·#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–O∏µjnu·#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–O∏µjxè·#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–O∏µj2ı·#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–O∏µj	‚#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–O∏µj ,‚#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙO∏µj‰ü‚#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙO∏µjê«‚#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙO∏µjÔÙ‚#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+O∏µjh@5adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+O∏µj≠æ@5adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚O∏µj◊A5adbd
+UsbFfs: already offline
+l4
+˚
+˚O∏µjs˚A5adbd
+destroying transport UsbFfs
+l9
+˚
+˚O∏µjMEB5adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇO∏µj¶{„5adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇO∏µjH\Á5adbd
+UsbFfsConnection constructed
+l6
+˚
+O∏µj6éÈ5adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–P∏µjõ>Ê#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–P∏µj#2Á#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–P∏µjxÁ#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–P∏µj?∫Á#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–P∏µjﬁﬁÁ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–P∏µj,äË#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–P∏µjlºË#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–P∏µjÅ‰Ë#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙP∏µjÊ†È#HealthHalUtils
+health: cannot get default service
+lX
+–
+–P∏µjC›Í#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–P∏µjﬂÇÎ#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–P∏µjÀ–Î#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–P∏µj$ÒÎ#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–P∏µjÏ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–P∏µj†Ï#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–P∏µjOœÏ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–P∏µjèıÏ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙP∏µj
+ùÌ#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙP∏µjLıÌ#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙP∏µjH/Ó#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+P∏µjπA˙5adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+P∏µjT€˙5adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚P∏µj_¸5adbd
+UsbFfs: already offline
+l4
+˚
+˚P∏µjj6¸5adbd
+destroying transport UsbFfs
+l9
+˚
+˚P∏µjƒë¸5adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇP∏µj&¿ö6adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇP∏µj*∑û6adbd
+UsbFfsConnection constructed
+l6
+˚
+P∏µj`°6adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–Q∏µj?Ò#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–Q∏µjRöÒ#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–Q∏µjp–Ò#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–Q∏µjOÏÒ#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–Q∏µjœ	Ú#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–Q∏µj«}Ú#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–Q∏µj5óÚ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–Q∏µj&∑Ú#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙQ∏µjxrÙ#HealthHalUtils
+health: cannot get default service
+lX
+–
+–Q∏µjƒoı#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–Q∏µj∞ı#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–Q∏µjd€ı#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–Q∏µjˆı#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–Q∏µj·ˆ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–Q∏µjguˆ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–Q∏µjvêˆ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–Q∏µjÌ´ˆ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙQ∏µjCÚ˜#HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙQ∏µj%¯#recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙQ∏µj∑S¯#recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+Q∏µj6±6adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+Q∏µjÁô≤6adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚Q∏µjwT≥6adbd
+UsbFfs: already offline
+l4
+˚
+˚Q∏µjÁÖ≥6adbd
+destroying transport UsbFfs
+l9
+˚
+˚Q∏µjj«≥6adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇQ∏µjoQ7adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇQ∏µj˝6T7adbd
+UsbFfsConnection constructed
+l6
+˚
+Q∏µjòÎU7adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–R∏µj1_˙#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–R∏µj›¡˙#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–R∏µjõÌ˙#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–R∏µjﬁ˚#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–R∏µjÖ#˚#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–R∏µj˘Ñ˚#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–R∏µjü˚#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–R∏µj¥ª˚#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙR∏µj{˝#HealthHalUtils
+health: cannot get default service
+lX
+–
+–R∏µjâu˛#hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–R∏µjt∑˛#hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–R∏µjñ‚˛#hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–R∏µj	˝˛#hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–R∏µjHˇ#hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–R∏µjiqˇ#hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–R∏µjsãˇ#hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–R∏µjßˇ#hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙR∏µjÃ
+$HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙR∏µjo;
+$recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙR∏µj d
+$recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+R∏µjf7adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+R∏µjÅÒf7adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚R∏µj≠g7adbd
+UsbFfs: already offline
+l4
+˚
+˚R∏µjÚﬂg7adbd
+destroying transport UsbFfs
+l9
+˚
+˚R∏µjõh7adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇR∏µjπ~8adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇR∏µj¡ 8adbd
+UsbFfsConnection constructed
+l6
+˚
+R∏µjÙ€8adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–S∏µj[ê$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–S∏µjË$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–S∏µj$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–S∏µjó+$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–S∏µj™G$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–S∏µjÂõ$hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–S∏µjáµ$hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–S∏µj7“$hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙS∏µjé$$HealthHalUtils
+health: cannot get default service
+lX
+–
+–S∏µjë4$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–S∏µjkr$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–S∏µjö$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–S∏µjæ¥$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–S∏µj1œ$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–S∏µjË$hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–S∏µj#6$hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–S∏µj2Q$hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙS∏µj
+æ$HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙS∏µj~‰$recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙS∏µj˚$recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+S∏µj 8adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+S∏µjÄ 8adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚S∏µjZª 8adbd
+UsbFfs: already offline
+l4
+˚
+˚S∏µj Ï 8adbd
+destroying transport UsbFfs
+l9
+˚
+˚S∏µjß!8adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇS∏µjØø8adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇS∏µjgV¬8adbd
+UsbFfsConnection constructed
+l6
+˚
+S∏µjã¿√8adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–T∏µjJÎ	$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–T∏µjÒ@
+$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–T∏µjÕg
+$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–T∏µjtÇ
+$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–T∏µjKú
+$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–T∏µjÌ
+$hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–T∏µjJ$hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–T∏µj^"$hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙT∏µjÄØ$HealthHalUtils
+health: cannot get default service
+lX
+–
+–T∏µj<£$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–T∏µj≠‡$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–T∏µj¬$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–T∏µji#$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–T∏µj◊<$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–T∏µj˜ä$hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–T∏µj1§$hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–T∏µjy¿$hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙT∏µj+$HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙT∏µjPP$recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙT∏µjWu$recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+T∏µj*K‘8adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+T∏µjê©‘8adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚T∏µjµâ÷8adbd
+UsbFfs: already offline
+l4
+˚
+˚T∏µjÅƒ÷8adbd
+destroying transport UsbFfs
+l9
+˚
+˚T∏µj◊8adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇT∏µj‡99adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇT∏µjN–=9adbd
+UsbFfsConnection constructed
+l6
+˚
+T∏µjnØ?9adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–U∏µj®K$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–U∏µjÙ$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–U∏µjx,$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–U∏µjåH$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–U∏µjf$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–U∏µjiÒ$hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–U∏µj@$hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–U∏µjî*$hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙU∏µjA„$HealthHalUtils
+health: cannot get default service
+lX
+–
+–U∏µjÃ$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–U∏µj…L$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–U∏µjøy$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–U∏µj”ï$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–U∏µjz∞$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–U∏µj˜$hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–U∏µj5.$hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–U∏µj·I$hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙU∏µj¬∏$HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙU∏µj“ﬂ$recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙU∏µjê$recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+U∏µjÎIP9adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+U∏µjÉøP9adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚U∏µjÕﬂQ9adbd
+UsbFfs: already offline
+l4
+˚
+˚U∏µjqR9adbd
+destroying transport UsbFfs
+l9
+˚
+˚U∏µj QR9adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇU∏µj™-Ò9adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇU∏µjëı9adbd
+UsbFfsConnection constructed
+l6
+˚
+U∏µjÂ ˜9adbd
+UsbFfs-monitor thread spawned
+lX
+–
+–V∏µj$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–V∏µjW{$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–V∏µj<§$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–V∏µj„æ$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–V∏µj"Ÿ$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–V∏µj
+2$hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–V∏µjL$hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lü
+–
+–V∏µjêh$hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/default in either framework or device VINTF manifest.
+lE
+Ÿ
+ÙV∏µjv.$HealthHalUtils
+health: cannot get default service
+lX
+–
+–V∏µj1$hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+ló
+–
+–V∏µjGV$hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+–
+–V∏µjÙ}$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+–
+–V∏µjô$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+–
+–V∏µjq≤$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+–
+–V∏µj $hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+–
+–V∏µj≠ $hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+–
+–V∏µjç: $hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+Ÿ
+ÙV∏µj˝¶ $HealthHalUtils
+health: cannot get backup service
+lQ
+Ÿ
+ÙV∏µjÃ $recovery
+No health implementation is found; assuming defaults
+ld
+Ÿ
+ÙV∏µjÂÛ $recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+˚
+V∏µj&O:adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+˚
+V∏µj±7:adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+˚
+˚V∏µj'Ï:adbd
+UsbFfs: already offline
+l4
+˚
+˚V∏µjì	:adbd
+destroying transport UsbFfs
+l9
+˚
+˚V∏µj@P	:adbd
+UsbFfsConnection being destroyed
+lF
+˚
+ˇV∏µjÓß:adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+˚
+ˇV∏µj©π™:adbd
+UsbFfsConnection constructed
+l6
+˚
+V∏µjK¨:adbd
+UsbFfs-monitor thread spawned
+hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+lh
+
+
+–
+–V∏µjÙ}$hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+lè
+
+
+–
+–V∏µjô$hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+lU
+
+
+–
+–V∏µjq≤$hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+le
+
+
+–
+–V∏µj $hwservicemanager
+getDeviceHalManifest: status from fetching VINTF information: -2
+lå
+
+
+–
+–V∏µj≠ $hwservicemanager
+getDeviceHalManifest: -2 VINTF parse error: Cannot read /vendor/manifest.xml: No such file or directory
+lû
+
+
+–
+–V∏µjç: $hwservicemanager
+getTransport: Cannot find entry android.hardware.health@2.0::IHealth/backup in either framework or device VINTF manifest.
+lD
+
+
+Ÿ
+ÙV∏µj˝¶ $HealthHalUtils
+health: cannot get backup service
+lQ
+
+
+Ÿ
+ÙV∏µjÃ $recovery
+No health implementation is found; assuming defaults
+ld
+
+
+Ÿ
+ÙV∏µjÂÛ $recovery
+charge_status UNKNOWN, charging 1, status UNKNOWN, capacity -2147483648
+lR
+
+
+˚
+V∏µj&O:adbd
+timed out while waiting for FUNCTIONFS_BIND, trying again
+lO
+
+
+˚
+V∏µj±7:adbd
+UsbFfs: connection terminated: monitor thread finished
+l0
+
+
+˚
+˚V∏µj'Ï:adbd
+UsbFfs: already offline
+l4
+
+
+˚
+˚V∏µjì	:adbd
+destroying transport UsbFfs
+l9
+
+
+˚
+˚V∏µj@P	:adbd
+UsbFfsConnection being destroyed
+lF
+
+
+˚
+ˇV∏µjÓß:adbd
+opening control endpoint /dev/usb-ffs/adb/ep0
+l5
+
+
+˚
+ˇV∏µj©π™:adbd
+UsbFfsConnection constructed
+l6
+
+
+˚
+V∏µjK¨:adbd
+UsbFfs-monitor thread spawned
