@@ -5,3 +5,5 @@
 2026-09-24T21:22:35-03:00 flashed out/twrp-katyusha-20260924-2121.img to recovery_a (readback 698213ba OK)
 2026-09-24T21:23:18-03:00 TWRP #4 (2121) result: adb+MTP OK over USB, battery 71% correct, htd running and processing frames; touch: awaiting user confirmation
 2026-09-24T21:26:41-03:00 TWRP #4: touch confirmed working by user; vibration fixed live (aw8697_haptic.bin + /sys/class/leds overlay), confirmed by user
+2026-09-24T21:34:25-03:00 flashed out/twrp-katyusha-20260924-2132.img to recovery_a from TWRP adb (readback e34543c0 OK)
+2026-09-24T21:34:57-03:00 TWRP #6 (2132) result: boots; adb+MTP, battery, htd, haptics RAM auto-loaded, back light sky blue (auto)

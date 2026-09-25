@@ -62,4 +62,5 @@ so normal Android boot is unaffected even if TWRP fails to start.
 | #2 | 20260924-2056-debug | not flashed (superseded) | added rescue-partition log dumper |
 | #3 | 20260924-2108-debug | same symptoms | modem fw mount failed on SELinux `context=` → ADSP down; touch needs htd daemon; vendor libs not in linker path |
 | #4 | 20260924-2121 | **touch, USB adb+MTP, battery OK** | htd needed main VINTF manifest; adbd root-restart race on `ffs.ready`; no `mtp,adb` configfs rules; health HAL absent → 100% |
-| #5 | pending | + vibration | aw86907 RAM waveform missing; vibrator not at `/sys/class/leds/vibrator` |
+| #5 | 20260924-2129 | not flashed (superseded by #6) | aw86907 RAM waveform missing; vibrator not at `/sys/class/leds/vibrator` |
+| #6 | 20260924-2132 | **touch, USB, battery, vibration, blue back light** | back light: green must be cleared first |
