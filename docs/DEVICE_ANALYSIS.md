@@ -106,3 +106,7 @@ See `docs/BACKUPS.md`.
 * **Haptics:** Awinic aw86907 (`aw8697-haptic.ko`, i2c `3-005a`) with duration/activate
   sysfs attributes; needs RAM waveform `aw8697_haptic.bin` from `/vendor/firmware`.
 * **Battery:** read from `/sys/class/power_supply/battery/capacity` (no health HAL in recovery).
+* **Back RGB light:** two Awinic aw2023 controllers (`i2c-4/4-0045` → `red1/green1/blue1`,
+  `i2c-5/5-0045` → `red2/green2/blue2`). It powers up green; green must be written
+  (to 0) before other colours take effect. TWRP sets B=255, G=100 (sky blue).
+  The PMIC tri-LED (`red/green/blue`, pm8350c) is a separate light.

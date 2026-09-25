@@ -72,3 +72,15 @@ on boot
 on boot
     mount tmpfs tmpfs /sys/class/leds mode=0755
     symlink /sys/devices/platform/soc/884000.i2c/i2c-3/3-005a /sys/class/leds/vibrator
+
+# Back RGB light (two Awinic aw2023 controllers, i2c-4 and i2c-5). It comes up green;
+# the green channels must be written first to switch it off, then it is set to a
+# TWRP-style sky blue (B 255, G 100, chosen on-device) to show TWRP is running.
+# Direct device paths (/sys/class/leds is overlaid above).
+on boot
+    write /sys/devices/platform/soc/890000.i2c/i2c-4/4-0045/leds/green1/brightness 0
+    write /sys/devices/platform/soc/988000.i2c/i2c-5/5-0045/leds/green2/brightness 0
+    write /sys/devices/platform/soc/890000.i2c/i2c-4/4-0045/leds/blue1/brightness 255
+    write /sys/devices/platform/soc/988000.i2c/i2c-5/5-0045/leds/blue2/brightness 255
+    write /sys/devices/platform/soc/890000.i2c/i2c-4/4-0045/leds/green1/brightness 100
+    write /sys/devices/platform/soc/988000.i2c/i2c-5/5-0045/leds/green2/brightness 100
