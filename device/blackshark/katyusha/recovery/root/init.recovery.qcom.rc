@@ -105,6 +105,16 @@ on init
 on fs
     chmod 0666 /dev/smcinvoke
     chown system drmrpc /dev/smcinvoke
+    # Stock vendor ueventd.rc: /dev/dma_heap/qcom,* 0444 system system. TWRP's ueventd
+    # leaves them 0600 root, so qseecomd (drops to system) cannot allocate listener
+    # buffers ("MapDmabufHeapNameToIonHeap() failed, name [qcom,qseecom]") and the RPMB /
+    # secure-storage listeners never start. Verified live on build #9.
+    chown system system /dev/dma_heap/qcom,qseecom
+    chmod 0444 /dev/dma_heap/qcom,qseecom
+    chown system system /dev/dma_heap/qcom,qseecom-ta
+    chmod 0444 /dev/dma_heap/qcom,qseecom-ta
+    chown system system /dev/dma_heap/qcom,system
+    chmod 0444 /dev/dma_heap/qcom,system
 
 service vendor.keymint-qti /system/bin/android.hardware.security.keymint-service-qti
     user root

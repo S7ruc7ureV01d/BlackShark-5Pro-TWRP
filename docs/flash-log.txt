@@ -14,3 +14,5 @@
 2026-09-24T22:42:13-03:00 TWRP #7: screen timeout OK, OTG backup+restore OK (byte-identical), MTP protocol OK / no storage without /data
 2026-09-24T23:41:49-03:00 flashed out/twrp-katyusha-20260924-2337.img to recovery_a (readback 735bb36a OK) - phase 2 decrypt test on stock MP2
 2026-09-24T23:47:15-03:00 TWRP #8 decrypt test: keystore2 crash-loop (no framework VINTF -> HIDL IServiceManager null); after live fix keystore2 OK + shared secret OK, metadata key begin -> KM -8 (unclean state); qseecom-service missing impl
+2026-09-24T23:51:39-03:00 flashed out/twrp-katyusha-20260924-2350.img to recovery_a (readback ede67a97 OK)
+2026-09-24T23:55:42-03:00 TWRP #9: all security services up after live dma_heap perm fix; metadata KEK begin -> KeyMint -33 INVALID_KEY_BLOB (no write; TWRP upgrades go to /tmp)
