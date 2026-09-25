@@ -1,0 +1,2103 @@
+30TENS
+*21035042
+SELinux
+SELinux: Loaded service_contexts from:
+SELinux
+    /vendor/etc/selinux/vndservice_contexts
+SELinux
+avc:  denied  { add } for pid=449 uid=0 name=manager scontext=u:r:recovery:s0 tcontext=u:object_r:service_manager_vndservice:s0 tclass=service_manager permissive=1
+SELinux
+avc:  denied  { add } for interface=android.hidl.base::IBase sid=u:r:recovery:s0 pid=448 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_base_hwservice:s0 tclass=hwservice_manager permissive=1
+avc:  denied  { add } for interface=android.hidl.base::IBase sid=u:r:recovery:s0 pid=448 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_base_hwservice:s0 tclass=hwservice_manager permissive=1
+SELinux
+avc:  denied  { add } for interface=android.hidl.manager::IServiceManager sid=u:r:recovery:s0 pid=448 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_manager_hwservice:s0 tclass=hwservice_manager permissive=1
+avc:  denied  { add } for interface=android.hidl.manager::IServiceManager sid=u:r:recovery:s0 pid=448 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_manager_hwservice:s0 tclass=hwservice_manager permissive=1
+hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+hwservicemanager
+getDeviceHalManifest: Reading VINTF information.
+hwservicemanager
+getDeviceHalManifest: Successfully processed VINTF information
+hwservicemanager
+getTransport: Cannot find entry android.hidl.manager@1.2::IServiceManager/default in either framework or device VINTF manifest.
+SELinux
+avc:  denied  { add } for interface=android.hidl.token::ITokenManager sid=u:r:recovery:s0 pid=448 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_token_hwservice:s0 tclass=hwservice_manager permissive=1
+avc:  denied  { add } for interface=android.hidl.token::ITokenManager sid=u:r:recovery:s0 pid=448 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_token_hwservice:s0 tclass=hwservice_manager permissive=1
+hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+hwservicemanager
+getTransport: Cannot find entry android.hidl.token@1.0::ITokenManager/default in either framework or device VINTF manifest.
+hwservicemanager
+hwservicemanager is ready now.
+persist.adb.watchdog set to ''
+persist.sys.test_harness set to ''
+adb watchdog timeout set to 600 seconds
+Waiting for persist.adb.tls_server.enable=1
+opening control endpoint /dev/usb-ffs/adb/ep0
+adbd started
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+old sched policy 0
+TouchReport
+new sched policy 1
+TouchReport
+HW HostTouchDaemon create
+TouchReport
+isHostTouch 1
+TouchReport
+initHostTouch
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/suspend_state, val:0
+TouchReport
+receive suspend state change val:0
+TouchReport
+HostTouch driver is not ready, suspend fail
+cutils-trace
+Error opening trace file: No such file or directory (2)
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/ready_state, val:1
+TouchReport
+receive ready state change val:1
+TouchReport
+[init_rawdata_thread] raw data pthread_create success
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:0
+TouchReport
+receive charge state change val:0
+TouchReport
+[raw_data_thread] raw data handler thread started
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 0
+TouchReport
+tid=499, orig_prio=0
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/palm_switch, val:0
+TouchReport
+TouchReport
+tid=499, after_prio=-20
+receive palm state change val:0
+TouchReport
+[HTD]notifyFocalPalmState:notifyPalmState 0
+TouchReport
+HostTouchDaemon contruct version=HTD_K3_V01_20220309
+TouchReport
+![HTD]ht_daemon_init:isbeta 0
+cutils-trace
+Error opening trace file: No such file or directory (2)
+TouchReport
+[HTD]ht_hal_funcs_init:call
+TouchReport
+set log level to 3
+TouchReport
+set trace callback
+TouchReport
+set message callback
+TouchReport
+[HTD]ht_algo_funcs_init:call
+SELinux
+avc:  denied  { find } for interface=com.blackshark.htd::IHostTouchDaemon sid=u:r:recovery:s0 pid=486 scontext=u:r:recovery:s0 tcontext=u:object_r:default_android_hwservice:s0 tclass=hwservice_manager permissive=1
+avc:  denied  { find } for interface=com.blackshark.htd::IHostTouchDaemon sid=u:r:recovery:s0 pid=486 scontext=u:r:recovery:s0 tcontext=u:object_r:default_android_hwservice:s0 tclass=hwservice_manager permissive=1
+[TouchReport][HTA]
+set log level to 3(is not beta version)
+[TouchReport][HTA]
+set trace callback
+hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+[TouchReport][HTA]
+set message callback
+hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+TouchReport
+[HTD]htd_input_fops_init:input config, x_max:17280, y_max:38400
+TouchReport
+[HAL]ht_fops_open:call.
+TouchReport
+[HAL]ht_frame_init:call.
+TouchReport
+[HAL]ht_hal_get_hw_info:call in
+TouchReport
+frame thread enter
+TouchReport
+frame thread linux id:501
+SELinux
+avc:  denied  { add } for interface=com.blackshark.htd::IHostTouchDaemon sid=u:r:recovery:s0 pid=486 scontext=u:r:recovery:s0 tcontext=u:object_r:default_android_hwservice:s0 tclass=hwservice_manager permissive=1
+avc:  denied  { add } for interface=com.blackshark.htd::IHostTouchDaemon sid=u:r:recovery:s0 pid=486 scontext=u:r:recovery:s0 tcontext=u:object_r:default_android_hwservice:s0 tclass=hwservice_manager permissive=1
+hwservicemanager
+getFrameworkHalManifest: Reading VINTF information.
+hwservicemanager
+Cannot fetch /system/etc/vintf/manifest.xml: Cannot read /system/etc/vintf/manifest.xml: No such file or directory
+hwservicemanager
+getFrameworkHalManifest: status from fetching VINTF information: -2
+hwservicemanager
+getFrameworkHalManifest: -2 VINTF parse error: Cannot read /system/manifest.xml: No such file or directory
+HidlServiceManagement
+Registered com.blackshark.htd@1.0::IHostTouchDaemon/default
+HidlServiceManagement
+Removing namespace from process name com.blackshark.htd@1.0-service to htd@1.0-service.
+TouchReport
+[HAL]ht_hal_get_hw_info:call out
+TouchReport
+[HTD]ht_daemon_main_loop:FW V75_D01
+TouchReport
+[HTD]ht_daemon_main_loop:row_num = 16,col_num = 36,scap1_num = 52,scap2_num = 52
+TouchReport
+[HTD]ht_daemon_main_loop:HAL_K3_0.1.1_20220120
+TouchReport
+[HTD]ht_daemon_main_loop:ALGO_K3_0.4.0_20220402
+!TouchReport
+[HTD]dumpParameterInfo:ALGO HT_PARAM_INFO
+TouchReport
+HostTouchDaemon HAL Ready
+TouchReport
+[HTD]dumpParameterInfo:charger_state = 0x0, pocket_en = 0x0, special_area_en = 0x0, edge_palm_state = 0x0, edge_palm_level = 0x0, touch_level = 0x3, stable_distance_after_n = 0x0, stable_distance = 0x0, stable_frame = 0x28, draw_alpha = 0x50, stable_alpha = 0x8
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HAL]ht_start:ht_start,fw version(0x75_0x1)
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HTD]ht_daemon_main_loop:frame poll thread id 501
+recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+recovery
+[libfs_mgr]Created logical partition odm_a on device /dev/block/dm-0
+recovery
+[libfs_mgr]Skipping zero-length logical partition: odm_b
+recovery
+[libfs_mgr]Created logical partition product_a on device /dev/block/dm-1
+recovery
+[libfs_mgr]Skipping zero-length logical partition: product_b
+recovery
+[libfs_mgr]Created logical partition system_a on device /dev/block/dm-2
+recovery
+[libfs_mgr]Skipping zero-length logical partition: system_b
+recovery
+[libfs_mgr]Created logical partition system_ext_a on device /dev/block/dm-3
+recovery
+[libfs_mgr]Skipping zero-length logical partition: system_ext_b
+recovery
+[libfs_mgr]Created logical partition vendor_a on device /dev/block/dm-4
+recovery
+[libfs_mgr]Skipping zero-length logical partition: vendor_b
+recovery
+[libfs_mgr]Created logical partition vendor_dlkm_a on device /dev/block/dm-5
+recovery
+[libfs_mgr]Skipping zero-length logical partition: vendor_dlkm_b
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:9491643598~~~====
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297856147===
+ArmToArm64Assembler
+generated scanline__00000077:03010101_00008001_00000000 [195 ipp] (241 ins) at [0x7b0fb703c0:0x7b0fb70784] in 23698ns
+ArmToArm64Assembler
+generated scanline__00000077:03545401_00000A01_00000000 [ 69 ipp] (113 ins) at [0x7b0fb70790:0x7b0fb70954] in 23959ns
+ArmToArm64Assembler
+generated scanline__00000077:03545401_00000A08_00000000 [ 69 ipp] (116 ins) at [0x7b0fb70960:0x7b0fb70b30] in 14375ns
+recovery
+[libfs_mgr]dt_fstab: Skip disabled entry for partition vendor
+persist.adb.watchdog set to ''
+persist.sys.test_harness set to ''
+adb watchdog timeout set to 600 seconds
+Waiting for persist.adb.tls_server.enable=1
+adbd started
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+ArmToArm64Assembler
+generated scanline__00000077:03545401_00000000_00000000 [ 65 ipp] (94 ins) at [0x7b0fb70b40:0x7b0fb70cb8] in 22813ns
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:1
+TouchReport
+receive charge state change val:1
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 1
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297857148===
+USB event: FUNCTIONFS_BIND
+USB event: FUNCTIONFS_ENABLE
+UsbFfs-worker thread spawned
+UsbFfs: already offline
+authentication not required
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297892934===
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297908015===
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790297913944~~~====
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297914945===
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790297915111~~~====
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297916112===
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790297917033~~~====
+USB event: FUNCTIONFS_DISABLE
+UsbFfs: connection terminated: read 10 failed with error Cannot send after transport endpoint shutdown
+UsbFfs: offline
+destroying transport UsbFfs
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297918034===
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297919035===
+recovery
+i: 0: Success
+recovery
+i: 1: No such file or directory
+recovery
+Command 0 finished with 1
+recovery
+Socket has been closed
+persist.adb.watchdog set to ''
+persist.sys.test_harness set to ''
+adb watchdog timeout set to 600 seconds
+Waiting for persist.adb.tls_server.enable=1
+adbd started
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790297977448~~~====
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297978449===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297984954===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297996159===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790297997160===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298004275===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298005277===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298022970===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298028867===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298031655===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298035450===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298037731===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298038732===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790298055108~~~====
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790298056202~~~====
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298057203===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:0
+TouchReport
+receive charge state change val:0
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 0
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:1
+TouchReport
+receive charge state change val:1
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 1
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790298060687~~~====
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298061688===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:0
+TouchReport
+receive charge state change val:0
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 0
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:1
+TouchReport
+receive charge state change val:1
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 1
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:0
+TouchReport
+receive charge state change val:0
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 0
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298068468===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298069470===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298077312===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298081425===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298083444===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:1
+TouchReport
+receive charge state change val:1
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 1
+TouchReport
+[HTD]FlowWork:Start Cal IDLE time:thread time:1790298106777~~~====
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298107778===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+param_thread param:/sys/class/touch/touch_dev/charge_state, val:0
+TouchReport
+receive charge state change val:0
+TouchReport
+[HTD]notifyFocalChargerState:notifyChargerState 0
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298108779===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298111223===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298112225===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298116255===
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298111223===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298112225===
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_exit_idle:ht_exit_idle
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:200ms
+timed out while waiting for FUNCTIONFS_BIND, trying again
+UsbFfs: connection terminated: monitor thread finished
+UsbFfs: already offline
+destroying transport UsbFfs
+UsbFfsConnection being destroyed
+opening control endpoint /dev/usb-ffs/adb/ep0
+UsbFfsConnection constructed
+UsbFfs-monitor thread spawned
+TouchReport
+[HAL]ht_frame_set_timeout:set timeout:2000ms
+TouchReport
+[HAL]ht_enter_idle:ht_enter_idle
+TouchReport
+[HTD]FlowWork:Enter IDLE Mode=======2 !!!thread time:1790298116255===

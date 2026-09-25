@@ -21,11 +21,24 @@ on property:sys.usb.config=none && property:sys.usb.configfs=1
     rm /config/usb_gadget/g1/configs/b.1/f2
     setprop sys.usb.ffs.mtp.ready 0
 
+# TWRP's sideload code (twrpinstall/adb_install.cpp SetUsbConfig) sets sys.usb.config
+# and then blocks, with no timeout, until sys.usb.state reports the same value. After a
+# sideload it restores "mtp,adb", but MTP only becomes ready (sys.usb.ffs.mtp.ready=1)
+# when TWRP restarts its MTP server, which it does only after that wait returns. If the
+# state were reported only after binding the UDC, TWRP deadlocks on "sideload" /
+# "cancelling sideload" with USB dead (seen on build #6, device-info/twrp-sideload-hang).
+# So report the requested state immediately; the UDC is bound separately below once
+# the FunctionFS instances are actually ready.
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     rm /config/usb_gadget/g1/configs/b.1/f2
+    setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mtp,adb && property:sys.usb.configfs=1
     start adbd
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mtp && property:sys.usb.configfs=1
+    setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mtp,adb && property:sys.usb.ffs.ready=1 && property:sys.usb.ffs.mtp.ready=1 && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC "none"

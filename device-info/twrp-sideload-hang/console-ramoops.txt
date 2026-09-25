@@ -1,0 +1,1787 @@
+[    0.000000][    T0] Linux version 5.10.66-android12-9-g4453ce7ccd32 (build-user@build-host) (Android (7284624, based on r416183b) clang version 12.0.5 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee), LLD 12.0.5 (/buildbot/src/android/llvm-toolchain/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)) #1 SMP PREEMPT Mon Jun 20 19:53:52 CST 2022
+[    0.000000][    T0] CPU features: SYS_ID_AA64MMFR1_EL1[11:8]: forced to 0
+[    0.000000][    T0] Kernel command line: stack_depot_disable=on kasan.stacktrace=off kvm-arm.mode=protected cgroup_disable=pressure cgroup.memory=nokmem console=ttyMSM0,115200n8 kpti=0 kernel.panic_on_rcu_stall=1 swiotlb=noforce loop.max_part=7 cgroup.memory=nokmem,nosocket pcie_ports=compat service_locator.enable=1 msm_rtb.filter=0x237 allow_mismatched_32bit_el0 cpufreq.default_governor=performance pelt=8 kasan=off rcupdate.rcu_expedited=1 rcu_nocbs=0-7 irqaffinity=0-3 ftrace_dump_on_oops pstore.compress=none fsa4480_i2c.async_probe=1 can.stats_timer=0 video=vfb:640x400,bpp=32,memsize=3072000 bootconfig buildvariant=user  bootinfo.pureason=0x1 bootinfo.pdreason=0x2 hwid.hwid_value=1638400 hwid.project=3 hwid.build_adc=39189 hwid.project_adc=4464 msm_drm.dsi_display0=qcom,mdss_dsi_k3_38_08_0a_mp_dsc_cmd: msm_drm.oled_wp=01f402090903010401d0020e024c027d rootwait ro init=/init block2mtd.block2mtd=/dev/block/sda16,2097152 mtdoops.mtddev=0 mtdoops.record_size=2097152 mtdoops.dump_oo
+[    0.000000][    T0] random: get_random_u64 called from kmem_cache_open+0x2c/0x388 with crng_init=0
+[    0.000000][    T0] ITS@0x0000000017140000: Devices Table too large, reduce ids 32->19
+[    0.000000][    T0] ITS@0x0000000017140000: Devices too large, reduce ITS pages 1024->256
+[    0.017237][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU4: 0x00000010212122
+[    0.017244][    T0] CPU features: Unsupported CPU feature variation detected.
+[    0.018324][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU5: 0x00000010212122
+[    0.019426][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU6: 0x00000010212122
+[    0.022516][    T0] CPU features: SANITY CHECK: Unexpected variation in SYS_ID_AA64MMFR1_EL1. Boot CPU: 0x00000011212122, CPU7: 0x00000010212122
+[    0.172298][    T1] Registered cp15_barrier emulation handler
+[    0.172311][    T1] Registered setend emulation handler
+[    0.175214][   T70] audit: type=2000 audit(0.148:1): state=initialized audit_enabled=0 res=1
+[    0.177835][    T1] ramoops reserved-memory:ramoops_region: failed to locate DT /reserved-memory resource
+[    0.177841][    T1] ramoops: probe of reserved-memory:ramoops_region failed with error -22
+[    0.185732][    T1] OF: /soc/spf_core_platform/lpass-cdc/va-macro@33F0000: could not get #gpio-cells for /soc/interrupt-controller@17100000
+[    0.207886][    T1] SCSI subsystem initialized
+[    0.219135][    T1] VFS: Disk quotas dquot_6.6.0
+[    0.298679][    T1] Initialise system trusted keyrings
+[    0.310118][    T1] Key type asymmetric registered
+[    0.310126][    T1] Asymmetric key parser 'x509' registered
+[    0.321368][    T1] Loading compiled-in X.509 certificates
+[    0.321540][    T1] Key type ._fscrypt registered
+[    0.321543][    T1] Key type .fscrypt registered
+[    0.321545][    T1] Key type fscrypt-provisioning registered
+[    0.323695][    T1] Warning: unable to open an initial console.
+[    0.356531][    T1] magiskinit: Ramdisk is recovery, abort
+[    0.425362][    T1] Failed to get pstore mem
+[    0.430206][    T1] qtee shmbridge registered default bridge with size 4194304 bytes
+[    0.430987][    T1] shmbridge is enabled
+[    0.435108][    T1] (NULL device *): wdog bark_time 20000
+[    0.435109][    T1] (NULL device *): wdog pet_time 15000
+[    0.469617][    T1] rpmh_regulator_probe: ldof1: could not find RPMh address for resource
+[    0.469633][    T1] rpmh_regulator_probe: ldof2: could not find RPMh address for resource
+[    0.469643][    T1] rpmh_regulator_probe: ldof4: could not find RPMh address for resource
+[    0.469652][    T1] rpmh_regulator_probe: ldof5: could not find RPMh address for resource
+[    0.469662][    T1] rpmh_regulator_probe: ldof6: could not find RPMh address for resource
+[    0.479499][    T1] in mi_sched_init
+[    0.480751][    T1] turbo-sched: turbo_sched turbo_sched_init: inited!
+[    0.488847][    T1] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    0.491765][    T1] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    0.491818][  T122] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    0.505032][    T1] disp_cc_pll0 PLL is already enabled
+[    0.592092][  T155] qcom-bwmon: Zone thres larger than hw limit: hi:267 med:400 lo:0
+[    0.636869][    T1] Could not create tracefs 'ufshcd_auto_bkops_state' directory
+[    0.636879][    T1] Could not create tracefs 'ufshcd_clk_gating' directory
+[    0.636882][    T1] Could not create tracefs 'ufshcd_clk_scaling' directory
+[    0.636885][    T1] Could not create tracefs 'ufshcd_command' directory
+[    0.636888][    T1] Could not create tracefs 'ufshcd_init' directory
+[    0.636891][    T1] Could not create tracefs 'ufshcd_profile_clk_gating' directory
+[    0.636897][    T1] Could not create tracefs 'ufshcd_profile_clk_scaling' directory
+[    0.636899][    T1] Could not create tracefs 'ufshcd_profile_hibern8' directory
+[    0.636902][    T1] Could not create tracefs 'ufshcd_runtime_resume' directory
+[    0.636905][    T1] Could not create tracefs 'ufshcd_runtime_suspend' directory
+[    0.636908][    T1] Could not create tracefs 'ufshcd_system_resume' directory
+[    0.636910][    T1] Could not create tracefs 'ufshcd_system_suspend' directory
+[    0.636913][    T1] Could not create tracefs 'ufshcd_uic_command' directory
+[    0.636916][    T1] Could not create tracefs 'ufshcd_upiu' directory
+[    0.641060][    T1] arm-smmu 15000000.apps-smmu: 	coherent table walk
+[    0.641064][    T1] arm-smmu 15000000.apps-smmu: 	stream matching with 113 register groups
+[    0.659681][    T9] arm-scmi soc:qcom,scmi: SCMI protocol 128 not implemented
+[    0.661824][    T9] msm_geni_serial 99c000.qcom,qup_uart: IRQ index 1 not found
+[    0.665498][    T9] arm-scmi soc:qcom,scmi: version 1.0
+[    0.671247][  T175] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[1, 1], lane[1, 1], pwr[SLOWAUTO_MODE, SLOWAUTO_MODE], rate = 0
+[    0.686863][    T1] pcie:pcie_init.
+[    0.687638][    T1] msm_pcie_get_reg: PCIe: RC0: no tcsr resource found.
+[    0.687643][    T1] msm_pcie_get_reg: PCIe: RC0: no rumi resource found.
+[    0.688216][    T1] msm_pcie_get_reg: PCIe: RC1: no tcsr resource found.
+[    0.688220][    T1] msm_pcie_get_reg: PCIe: RC1: no rumi resource found.
+[    0.706734][    T1] spmi spmi-0: pmic_arb_wait_for_done: transaction failed (0x3)
+[    0.706739][    T1] qcom-spmi-gpio c42d000.qcom,spmi:qcom,pmr735b@5:pinctrl@8800: read 0x4 failed
+[    0.706744][    T1] qcom-spmi-gpio: probe of c42d000.qcom,spmi:qcom,pmr735b@5:pinctrl@8800 failed with error -5
+[    0.723192][    T9] arm-smmu 3da0000.kgsl-smmu: 	coherent table walk
+[    0.723200][    T9] arm-smmu 3da0000.kgsl-smmu: 	stream matching with 24 register groups
+[    0.735910][    T1] qcom_cpuss_sleep_stats: probe of 17800054.cpuss-sleep-stats failed with error -22
+[    0.741389][    T1] memshare soc:qcom,memshare: memshare: unable to create memshare ramdump device
+[    0.741392][    T1] memshare soc:qcom,memshare: memshare_child: cannot create ramdump for client with id: 0
+[    0.741432][    T1] memshare soc:qcom,memshare: memshare: unable to create memshare ramdump device
+[    0.741434][    T1] memshare soc:qcom,memshare: memshare_child: cannot create ramdump for client with id: 2
+[    0.741469][    T1] memshare soc:qcom,memshare: memshare: unable to create memshare ramdump device
+[    0.741471][    T1] memshare soc:qcom,memshare: memshare_child: cannot create ramdump for client with id: 1
+[    0.764391][    T1] msm-dcc 100ff000.dcc_v2: DCC list passed 4
+[    0.764648][    T1] msm-dcc 100ff000.dcc_v2: DCC list passed 6
+[    0.768738][    T1] QSEECOM: qseecom_retrieve_ce_data: Device does not support PFE/FDE
+[    0.772837][    T1] init: LoadWithAliases was unable to load llcc_perfmon
+[    0.792553][  T175] ufshcd-qcom 1d84000.ufshc: ufshcd_print_pwr_info:[RX, TX]: gear=[4, 4], lane[2, 2], pwr[FAST MODE, FAST MODE], rate = 2
+[    0.792613][  T175] ufshcd-qcom 1d84000.ufshc: ufshcd_find_max_sup_active_icc_level: Regulator capability was not set, actvIccLevel=0
+[    0.793098][  T175] scsi 0:0:0:49488: Well-known LUN    SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.793450][  T175] scsi 0:0:0:49476: Well-known LUN    SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.793708][  T175] scsi 0:0:0:49456: Well-known LUN    SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.794224][  T175] scsi 0:0:0:0: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.794483][    C5] sd 0:0:0:0: Power-on or device reset occurred
+[    0.794597][  T175] scsi 0:0:0:1: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.794829][    C5] sd 0:0:0:1: Power-on or device reset occurred
+[    0.794886][    T7] sd 0:0:0:0: [sda] 61528064 4096-byte logical blocks: (252 GB/235 GiB)
+[    0.794960][    T7] sd 0:0:0:0: [sda] Write Protect is off
+[    0.794961][  T175] scsi 0:0:0:2: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.795058][    T7] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.795244][    T9] sd 0:0:0:1: [sdb] 4096 4096-byte logical blocks: (16.8 MB/16.0 MiB)
+[    0.795294][    C4] sd 0:0:0:2: Power-on or device reset occurred
+[    0.795295][    T9] sd 0:0:0:1: [sdb] Write Protect is off
+[    0.795327][  T175] scsi 0:0:0:3: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.795551][    T9] sd 0:0:0:1: [sdb] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.796260][    C6] sd 0:0:0:3: Power-on or device reset occurred
+[    0.796467][  T175] scsi 0:0:0:4: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.797191][    T1] guestvm_loader_probe: no isolation needed for cpusys_vm
+[    0.797628][  T227] sd 0:0:0:2: [sdc] 4096 4096-byte logical blocks: (16.8 MB/16.0 MiB)
+[    0.797759][    C5] sd 0:0:0:4: Power-on or device reset occurred
+[    0.797765][  T227] sd 0:0:0:2: [sdc] Write Protect is off
+[    0.798167][  T175] scsi 0:0:0:5: Direct-Access     SAMSUNG  KLUEG8UHGC-B0E1  0700 PQ: 0 ANSI: 6
+[    0.798206][  T227] sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.798558][  T229] sd 0:0:0:3: [sdd] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    0.798775][  T229] sd 0:0:0:3: [sdd] Write Protect is off
+[    0.798874][    C6] sd 0:0:0:5: Power-on or device reset occurred
+[    0.798876][  T229] sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.798899][    C0] random: fast init done
+[    0.798914][  T232] sd 0:0:0:4: [sde] 917504 4096-byte logical blocks: (3.76 GB/3.50 GiB)
+[    0.799035][  T232] sd 0:0:0:4: [sde] Write Protect is off
+[    0.799715][    T7] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.799744][  T232] sd 0:0:0:4: [sde] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.799963][  T175] sd 0:0:0:5: [sdf] 8192 4096-byte logical blocks: (33.6 MB/32.0 MiB)
+[    0.800582][  T175] sd 0:0:0:5: [sdf] Write Protect is off
+[    0.800677][  T175] sd 0:0:0:5: [sdf] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.800773][    T9] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    0.802517][  T227] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    0.802548][  T229] sd 0:0:0:3: [sdd] Attached SCSI disk
+[    0.802957][  T175] sd 0:0:0:5: [sdf] Attached SCSI disk
+[    0.803848][  T232] sd 0:0:0:4: [sde] Attached SCSI disk
+[    0.845319][    T1] msm-dwc3 a600000.ssusb: USB core frequency = 200000000
+[    0.845342][    T1] msm-dwc3 a600000.ssusb: setting lpm_to_suspend_delay to zero.
+[    0.845346][    T1] msm-dwc3 a600000.ssusb: IRQ hs_phy_irq not found
+[    0.845824][    T1] msm-dwc3 a600000.ssusb: assume cable is not connected
+[    0.869240][  T246] random: crng init done
+[    0.888587][    T1] scsi 0:0:0:49488: Attached scsi generic sg0 type 30
+[    0.888604][    T1] scsi 0:0:0:49476: Attached scsi generic sg1 type 30
+[    0.888616][    T1] scsi 0:0:0:49456: Attached scsi generic sg2 type 30
+[    0.888629][    T1] sd 0:0:0:0: Attached scsi generic sg3 type 0
+[    0.888641][    T1] sd 0:0:0:1: Attached scsi generic sg4 type 0
+[    0.888653][    T1] sd 0:0:0:2: Attached scsi generic sg5 type 0
+[    0.888665][    T1] sd 0:0:0:3: Attached scsi generic sg6 type 0
+[    0.888677][    T1] sd 0:0:0:4: Attached scsi generic sg7 type 0
+[    0.888702][    T1] sd 0:0:0:5: Attached scsi generic sg8 type 0
+[    0.892203][    T1] BS_NVME bs_nvme_init, enter
+[    0.911291][    T1] BS_NVME power on cost 18ms (2.5v-0ms 1.2v-1ms 0.9v-1ms delay-16ms) ret 0.
+[    0.993091][  T171] ufs_ffu Start
+[    0.993104][  T171] [ufs_ffu] partion: sda start 6400(block) size 2048(block)
+[    0.993111][  T171] [ufs_ffu] check ffu_arry, vendor:SAMSUNG , product:KLUEG8UHGC-B0E1 , fw_rev:0700
+[    0.995694][  T171] sd 0:0:0:0: sense key:0x0; asc:0x0; ascq:0x0
+[    0.995698][  T171] [ufs_ffu] ufs_flag is not FFU 
+[    0.995702][  T171] ufs_ffu do not match the rev
+[    0.995706][  T171] ufs_ffu do not match the rev
+[    1.042260][    T1] msm_pcie_link_train: PCIe RC1 link initialization failed
+[    1.043196][    T1] msm_pcie_enumerate: PCIe: RC1: failed to enable
+[    1.043200][    T1] BS_NVME soc:blackshark_nvme: pcie enumeration failed...
+[    1.043211][    T1] BS_NVME power off cost 0ms (2.5v-0ms 1.2v-0ms 0.9v-0ms delay-0ms) ret 0.
+[    1.069041][    T1] BS_NVME: probe of soc:blackshark_nvme failed with error -1
+[    1.069104][    T1] BS_NVME bs_nvme_init, exit ret = 0
+[    1.072191][    T1] spmi_pmic_arb_debug 10b14000.qcom,spmi-debug: SPMI PMIC arbiter debug bus disabled by fuse
+[    1.082471][    T1] cnss: cnss_probe!
+[    1.082980][    T1] cnss: start create cnss link
+[    1.249151][  T166] msm_pcie_enumerate: PCIe: RC0: has already been enumerated.
+[    1.417763][    T1] [cs_press] [cs_init: 4062] start.
+[    1.671606][    T1] [FTS_TS][TEST]fts_test_init: Enter
+[    1.671613][    T1] [FTS_TS][TEST]fts_tp_differ_proc: Enter
+[    1.671618][    T1] [FTS_TS/I][TEST]fts_test_func_init:init test function
+[    1.671620][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:88
+[    1.671622][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:0
+[    1.671624][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:0
+[    1.671626][    T1] [FTS_TS/I][TEST]fts_test_func_init:match test function,type:0
+[    1.671629][    T1] [FTS_TS][TEST]fts_test_init:sysfs(test) create successfully
+[    1.671633][    T1] [FTS_TS][TEST]fts_test_init: Exit(2620)
+[    1.672076][  T232] fts_ht spi0.0: Direct firmware load for focaltech_ts_fw_hbp_k3.bin failed with error -2
+[    1.672085][  T232] [FTS_HT/E]fts_fw_auto_upgrade:FW/len(0) is invalid
+[    1.672088][  T232] [FTS_HT/E]fts_fwupg_work:FW auto upgrade fails
+[    1.673404][    T1] [STS][warning] syna_dev_module_init: INIT START
+[    1.673411][    T1] [STS][warning] syna_dev_module_init: product = katyusha,not init syna_tcm driver
+[    1.766053][    T1] i2c_geni 994000.i2c: i2c error :-107
+[    1.766059][    T1] PM8008: pm8008_read: failed to read 0x0950
+[    1.766061][    T1] PM8008: _pm8008_chip_is_enabled: qcom,pm8008-chip-en: failed to get chip state rc=-107
+[    1.766063][    T1] PM8008: pm8008_chip_probe: Failed to register chip enable regulator rc=-107
+[    1.766066][    T1] qcom,pm8008-chip: probe of 994000.i2c:pm8008j@c:pm8008-chip@900 failed with error -107
+[    1.767706][    T1] [cs_press] [cs_probe: 3768]  probe start
+[    1.822112][    T1] [cs_press] [parse_dt: 3691] parse device tree success
+[    1.822123][    T1] [cs_press] [cs_rst_set: 448] rst set 1
+[    1.836766][    T1] [cs_press] [cs_rst_set: 451] rst set 0
+[    1.920047][    T1] [cs_press] [cs_get_mcu_type: 1459] mcu type id is ca
+[    1.920157][    T1] [cs_press] [cs_probe: 3861] probe end!
+[    1.920315][    T1] aw8680x_sensor 6-005c: [aw8680x_i2c_probe:3137] enter
+[    1.920318][    T1] cs press probe success ,no need probe aw8680x
+[    1.920322][    T1] aw8680x_sensor: probe of 6-005c failed with error -1
+[    1.924080][    T1] [haptic_hv]aw_parse_dt: reset gpio provided ok
+[    1.924085][    T1] [haptic_hv]aw_parse_dt: irq gpio provided ok.
+[    1.924110][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_interrupt_high'
+[    1.924112][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_interrupt_high'
+[    1.924119][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_interrupt_high'
+[    1.924128][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_reset_high'
+[    1.929670][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_reset_low'
+[    1.935204][    T1] [haptic_hv]aw_select_pin_ctl: Selected 'awinic_reset_high'
+[    2.035863][    T1] [haptic_hv]aw86907_haptic_misc_para_init aw86907->info.brk_bst_md = 0!
+[    2.040606][    T1] [haptic_hv]aw86907_haptic_misc_para_init aw86907->info.cont_brk_time = 0!
+[    2.190225][    T1] rtc6226: rtc6226_parse_dt unable to request gpio 345 (-16)
+[    2.190233][    T1] rtc6226: rtc6226_i2c_probe: Parsing DT failed(-16)
+[    2.190290][    T1] rtc6226: probe of 0-0064 failed with error -16
+[    2.199548][    T1] spmi spmi-0: pmic_arb_wait_for_done: transaction failed (0x3)
+[    2.199553][    T1] spmi-temp-alarm c42d000.qcom,spmi:qcom,pmr735b@5:qcom,temp-alarm@a00: could not read type
+[    2.199556][    T1] spmi-temp-alarm: probe of c42d000.qcom,spmi:qcom,pmr735b@5:qcom,temp-alarm@a00 failed with error -5
+[    2.213506][    T1] bcl_soc:bcl_soc_probe soc TZ register failed. err:-19
+[    2.220226][    T1] thermal thermal_zone57: binding zone ddr with cdev ddr-cdev failed:-22
+[    2.226175][    T1] cpu_thermal_init cpu=0
+[    2.226180][    T1] cpu_thermal_init cpu=1
+[    2.226183][    T1] cpu_thermal_init cpu=2
+[    2.226185][    T1] cpu_thermal_init cpu=3
+[    2.226187][    T1] cpu_thermal_init cpu=4
+[    2.226189][    T1] cpu_thermal_init cpu=5
+[    2.226192][    T1] cpu_thermal_init cpu=6
+[    2.226194][    T1] cpu_thermal_init cpu=7
+[    2.226431][    T1] mi_thermal_interface_init:Thermal: Can not parse thermal message node, return -22
+[    2.230441][    T1] raid0_init
+[    2.232792][  T122] cs_press 6-0050: Direct firmware load for pressure_f61.nfw failed with error -2
+[    2.232797][  T122] [cs_press] [cs_press_fw_update: 764] Failed to request firmware
+[    2.232800][  T122] [cs_press] [cs_press_fw_work_update: 3592] update fw fail!retry:3
+[    2.332829][  T122] cs_press 6-0050: Direct firmware load for pressure_f61.nfw failed with error -2
+[    2.332832][  T122] [cs_press] [cs_press_fw_update: 764] Failed to request firmware
+[    2.332834][  T122] [cs_press] [cs_press_fw_work_update: 3592] update fw fail!retry:2
+[    2.432855][  T122] cs_press 6-0050: Direct firmware load for pressure_f61.nfw failed with error -2
+[    2.432857][  T122] [cs_press] [cs_press_fw_update: 764] Failed to request firmware
+[    2.432859][  T122] [cs_press] [cs_press_fw_work_update: 3592] update fw fail!retry:1
+[    2.532873][  T122] hawkeye report forcetouch cs update firmware : <-2>
+[    2.538556][    T1] bt-debug-gpio not provided in devicetree
+[    2.600808][    T1] aw2023_led 5-0045: supply vdd not found, using dummy regulator
+[    2.600835][    T1] aw2023_led 5-0045: supply vcc not found, using dummy regulator
+[    2.608916][    T1] aw2023_led 5-0045: aw2023 chip id 9
+[    2.620732][    T1] aw2023 probe end
+[    2.621026][    T1] aw2023_led 4-0045: supply vdd not found, using dummy regulator
+[    2.621048][    T1] aw2023_led 4-0045: supply vcc not found, using dummy regulator
+[    2.629133][    T1] aw2023_led 4-0045: aw2023 chip id 9
+[    2.640735][    T1] aw2023 aw2023_client.client0 != NULL
+[    2.643290][    T1] aw2023 aw2023_led_brightness_on_probe end
+[    2.643305][    T1] aw2023 probe end
+[    2.644044][  T229] tz diag version is 2404000
+[    2.644054][  T229] tz_log 146aa720.tz-log: RM log address is not defined
+[    2.644082][  T229] encrypted qseelog enabled is 0
+[    2.648073][    T1] extend_reclaim: module is from the staging directory, the quality is unknown, you have been warned.
+[    2.649422][    T1] ep_pcie_init
+[    2.652913][    T1] qcom_q6v5_pas 3000000.remoteproc-adsp: adsp_init_bus_scaling: No bus client
+[    2.653528][    T1] ------------[ cut here ]------------
+[    2.653531][    T1] proc_dir_entry '/proc/last_mcrash' already registered
+[    2.653546][    T1] WARNING: CPU: 7 PID: 1 at fs/proc/generic.c:382 proc_register+0x1bc/0x328
+[    2.653548][    T1] Modules linked in: qcom_q6v5_pas(+) qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl
+[    2.653578][    T1]  cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge
+[    2.653608][    T1]  sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3 phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing
+[    2.653639][    T1]  qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.653674][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S       C        5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.653677][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.653680][    T1] pstate: 62400005 (nZCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.653682][    T1] pc : proc_register+0x1bc/0x328
+[    2.653685][    T1] lr : proc_register+0x1b4/0x328
+[    2.653687][    T1] sp : ffffffc01005b620
+[    2.653689][    T1] x29: ffffffc01005b620 x28: 0000000000000020 
+[    2.653692][    T1] x27: ffffff879d861588 x26: ffffff879d5d02c8 
+[    2.653695][    T1] x25: ffffff878211a458 x24: ffffff8780358000 
+[    2.653697][    T1] x23: 000000000000000b x22: ffffff879d5a776c 
+[    2.653700][    T1] x21: ffffffd2c6c6fcd8 x20: ffffffd2c6c6fc58 
+[    2.653702][    T1] x19: ffffff879d5a76c0 x18: ffffffc01005d0a0 
+[    2.653705][    T1] x17: 0000000000000000 x16: 00000000000000d8 
+[    2.653707][    T1] x15: 0000000000000004 x14: 000000000000ffff 
+[    2.653709][    T1] x13: ffffff89eb5fffe8 x12: 0000000000000003 
+[    2.653712][    T1] x11: 00000000ffffffff x10: c0000000fffeffff 
+[    2.653714][    T1] x9 : ffffffd2c6e4a000 x8 : 0000000000000000 
+[    2.653717][    T1] x7 : 362e32202020205b x6 : ffffffd2c6dc3e3c 
+[    2.653719][    T1] x5 : ffffffffffffffff x4 : 0000000000000000 
+[    2.653721][    T1] x3 : ffffffd2c64ce4d5 x2 : 0000000000000000 
+[    2.653724][    T1] x1 : 0000000000000001 x0 : 0000000000000035 
+[    2.653726][    T1] Call trace:
+[    2.653729][    T1]  proc_register+0x1bc/0x328
+[    2.653731][    T1]  proc_create+0xa4/0xe0
+[    2.653736][    T1]  qcom_q6v5_init+0x4c/0x2f8 [qcom_q6v5]
+[    2.653741][    T1]  adsp_probe+0x4fc/0x6a0 [qcom_q6v5_pas]
+[    2.653745][    T1]  platform_drv_probe+0x60/0x180
+[    2.653748][    T1]  really_probe+0x508/0xb24
+[    2.653750][    T1]  driver_probe_device+0x1b0/0x230
+[    2.653752][    T1]  device_driver_attach+0x158/0x228
+[    2.653755][    T1]  __driver_attach+0x284/0x3d8
+[    2.653757][    T1]  bus_add_driver+0x1c8/0x484
+[    2.653760][    T1]  driver_register+0x84/0x178
+[    2.653762][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.653766][    T1]  init_module+0x24/0xfe8 [qcom_q6v5_pas]
+[    2.653770][    T1]  do_one_initcall+0x114/0x44c
+[    2.653774][    T1]  do_init_module+0x78/0x9c4
+[    2.653776][    T1]  load_module+0x3994/0x46b0
+[    2.653779][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.653782][    T1]  el0_svc_common+0xc0/0x24c
+[    2.653786][    T1]  el0_svc+0x28/0x88
+[    2.653788][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.653790][    T1]  el0_sync+0x1b4/0x1c0
+[    2.653793][    T1] ---[ end trace 5156f7969052397a ]---
+[    2.653795][    T1] pil: cannot create proc entry last_mcrash
+[    2.654133][    T1] qcom_q6v5_pas 2400000.remoteproc-slpi: adsp_init_bus_scaling: No bus client
+[    2.654140][    T1] ------------[ cut here ]------------
+[    2.654142][    T1] proc_dir_entry '/proc/last_mcrash' already registered
+[    2.654155][    T1] WARNING: CPU: 7 PID: 1 at fs/proc/generic.c:382 proc_register+0x1bc/0x328
+[    2.654157][    T1] Modules linked in: qcom_q6v5_pas(+) qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl
+[    2.654180][    T1]  cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge
+[    2.654204][    T1]  sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3 phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing
+[    2.654226][    T1]  qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.654252][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC        5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.654254][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.654256][    T1] pstate: 62400005 (nZCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.654259][    T1] pc : proc_register+0x1bc/0x328
+[    2.654261][    T1] lr : proc_register+0x1b4/0x328
+[    2.654263][    T1] sp : ffffffc01005b620
+[    2.654265][    T1] x29: ffffffc01005b620 x28: 0000000000000020 
+[    2.654267][    T1] x27: ffffff879d860588 x26: ffffff879d5d02c8 
+[    2.654270][    T1] x25: ffffff878211a458 x24: ffffff8780358000 
+[    2.654272][    T1] x23: 000000000000000b x22: ffffff879d5b2cac 
+[    2.654275][    T1] x21: ffffffd2c6c6fcd8 x20: ffffffd2c6c6fc58 
+[    2.654277][    T1] x19: ffffff879d5b2c00 x18: ffffffc01005d0a0 
+[    2.654280][    T1] x17: 0000000000000000 x16: 00000000000000d8 
+[    2.654282][    T1] x15: 0000000000000004 x14: 000000000000ffff 
+[    2.654284][    T1] x13: ffffff89eb5fffe8 x12: 0000000000000003 
+[    2.654287][    T1] x11: 00000000ffffffff x10: c0000000fffeffff 
+[    2.654289][    T1] x9 : ffffffd2c6e4a000 x8 : 0000000000000000 
+[    2.654292][    T1] x7 : 362e32202020205b x6 : ffffffd2c6dc3e3c 
+[    2.654294][    T1] x5 : ffffffffffffffff x4 : 0000000000000000 
+[    2.654297][    T1] x3 : ffffffd2c64ce4d5 x2 : 0000000000000000 
+[    2.654299][    T1] x1 : 0000000000000001 x0 : 0000000000000035 
+[    2.654302][    T1] Call trace:
+[    2.654304][    T1]  proc_register+0x1bc/0x328
+[    2.654306][    T1]  proc_create+0xa4/0xe0
+[    2.654310][    T1]  qcom_q6v5_init+0x4c/0x2f8 [qcom_q6v5]
+[    2.654314][    T1]  adsp_probe+0x4fc/0x6a0 [qcom_q6v5_pas]
+[    2.654317][    T1]  platform_drv_probe+0x60/0x180
+[    2.654319][    T1]  really_probe+0x508/0xb24
+[    2.654321][    T1]  driver_probe_device+0x1b0/0x230
+[    2.654323][    T1]  device_driver_attach+0x158/0x228
+[    2.654326][    T1]  __driver_attach+0x284/0x3d8
+[    2.654328][    T1]  bus_add_driver+0x1c8/0x484
+[    2.654330][    T1]  driver_register+0x84/0x178
+[    2.654333][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.654337][    T1]  init_module+0x24/0xfe8 [qcom_q6v5_pas]
+[    2.654339][    T1]  do_one_initcall+0x114/0x44c
+[    2.654342][    T1]  do_init_module+0x78/0x9c4
+[    2.654344][    T1]  load_module+0x3994/0x46b0
+[    2.654346][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.654348][    T1]  el0_svc_common+0xc0/0x24c
+[    2.654350][    T1]  el0_svc+0x28/0x88
+[    2.654353][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.654355][    T1]  el0_sync+0x1b4/0x1c0
+[    2.654357][    T1] ---[ end trace 5156f7969052397b ]---
+[    2.654359][    T1] pil: cannot create proc entry last_mcrash
+[    2.654681][    T1] ------------[ cut here ]------------
+[    2.654683][    T1] proc_dir_entry '/proc/last_mcrash' already registered
+[    2.654695][    T1] WARNING: CPU: 7 PID: 1 at fs/proc/generic.c:382 proc_register+0x1bc/0x328
+[    2.654697][    T1] Modules linked in: qcom_q6v5_pas(+) qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl
+[    2.654719][    T1]  cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge
+[    2.654742][    T1]  sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3 phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing
+[    2.654765][    T1]  qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.654790][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC        5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.654792][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.654794][    T1] pstate: 62400005 (nZCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.654796][    T1] pc : proc_register+0x1bc/0x328
+[    2.654798][    T1] lr : proc_register+0x1b4/0x328
+[    2.654800][    T1] sp : ffffffc01005b620
+[    2.654802][    T1] x29: ffffffc01005b620 x28: 0000000000000020 
+[    2.654805][    T1] x27: ffffff879d865588 x26: ffffff879d5d02c8 
+[    2.654807][    T1] x25: ffffff878211a458 x24: ffffff8780358000 
+[    2.654809][    T1] x23: 000000000000000b x22: ffffff879d5aa2ec 
+[    2.654812][    T1] x21: ffffffd2c6c6fcd8 x20: ffffffd2c6c6fc58 
+[    2.654814][    T1] x19: ffffff879d5aa240 x18: ffffffc01005d0a0 
+[    2.654817][    T1] x17: 0000000000000000 x16: 00000000000000d8 
+[    2.654820][    T1] x15: 0000000000000004 x14: 000000000000ffff 
+[    2.654823][    T1] x13: ffffff89eb5fffe8 x12: 0000000000000003 
+[    2.654825][    T1] x11: 00000000ffffffff x10: c0000000fffeffff 
+[    2.654828][    T1] x9 : ffffffd2c6e4a000 x8 : 0000000000000000 
+[    2.654831][    T1] x7 : 362e32202020205b x6 : ffffffd2c6dc3e3c 
+[    2.654834][    T1] x5 : ffffffffffffffff x4 : 0000000000000000 
+[    2.654837][    T1] x3 : ffffffd2c64ce4d5 x2 : 0000000000000000 
+[    2.654839][    T1] x1 : 0000000000000001 x0 : 0000000000000035 
+[    2.654842][    T1] Call trace:
+[    2.654844][    T1]  proc_register+0x1bc/0x328
+[    2.654847][    T1]  proc_create+0xa4/0xe0
+[    2.654850][    T1]  qcom_q6v5_init+0x4c/0x2f8 [qcom_q6v5]
+[    2.654855][    T1]  adsp_probe+0x4fc/0x6a0 [qcom_q6v5_pas]
+[    2.654857][    T1]  platform_drv_probe+0x60/0x180
+[    2.654860][    T1]  really_probe+0x508/0xb24
+[    2.654862][    T1]  driver_probe_device+0x1b0/0x230
+[    2.654865][    T1]  device_driver_attach+0x158/0x228
+[    2.654867][    T1]  __driver_attach+0x284/0x3d8
+[    2.654869][    T1]  bus_add_driver+0x1c8/0x484
+[    2.654871][    T1]  driver_register+0x84/0x178
+[    2.654874][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.654878][    T1]  init_module+0x24/0xfe8 [qcom_q6v5_pas]
+[    2.654881][    T1]  do_one_initcall+0x114/0x44c
+[    2.654883][    T1]  do_init_module+0x78/0x9c4
+[    2.654885][    T1]  load_module+0x3994/0x46b0
+[    2.654887][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.654890][    T1]  el0_svc_common+0xc0/0x24c
+[    2.654892][    T1]  el0_svc+0x28/0x88
+[    2.654894][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.654896][    T1]  el0_sync+0x1b4/0x1c0
+[    2.654898][    T1] ---[ end trace 5156f7969052397c ]---
+[    2.654900][    T1] pil: cannot create proc entry last_mcrash
+[    2.659660][    T1] millet-binder_gki: enter init_binder_gki func!
+[    2.659979][    T1] millet_millet-core: enter millet_init func!
+[    2.660169][    T1] millet-millet_pkg: enter millet_pkg_init func!
+[    2.660177][    T1] millet-millet_pkg: nf_register_hooks(millet hooks) success
+[    2.660395][    T1] millet-millet_hs: enter millet_hs_init func!
+[    2.660691][    T1] millet_millet-binder: enter init_millet_binder_drv func!
+[    2.660959][    T1] millet_millet-sig: enter sig_mod_init func!
+[    2.661122][    T1] millet-oem_cgroup: enter oem_cgrp_init func!
+[    2.661874][    T1] glk: game load init success
+[    2.663139][    T1] btfm_slim_probe: is_laddr_valid is true
+[    2.663142][    T1] btfmslim-driver btfmslim_slave: 
+[    2.669181][    T1] tmc_etr_usb_init: ETR usb property is not configured!
+[    2.689572][    T1] msm_mmrm: loading out-of-tree module taints kernel.
+[    2.705779][    T1] dsi_phy ae94400.qcom,mdss_dsi_phy0: supply gdsc not found, using dummy regulator
+[    2.706345][    T1] dsi_phy ae96400.qcom,mdss_dsi_phy1: supply gdsc not found, using dummy regulator
+[    2.707795][    T1] OF: graph: no port node found in /soc/qcom,dsi-display-primary
+[    2.749440][    T1] [drm] [msm-dsi-warn]: secondary default panel not found
+[    2.752100][    T1] [drm:msm_smmu_new [msm_drm]] *ERROR* unable to find domain 1 compat: qcom,smmu_sde_nrt_unsec
+[    2.752184][    T1] [drm:msm_smmu_new [msm_drm]] *ERROR* unable to find domain 3 compat: qcom,smmu_sde_nrt_sec
+[    2.752573][    T1] ------------[ cut here ]------------
+[    2.752580][    T1] WARNING: CPU: 7 PID: 1 at mm/page_alloc.c:5090 __alloc_pages_nodemask+0x1c0/0x3dc
+[    2.752582][    T1] Modules linked in: msm_drm(O+) msm_mmrm(O) qrtr_gunyah qrtr_mhi qrtr_smd xt_IPR snd_usb_audio_qmi stm_ftrace stm_console stm_p_ost stm_p_basic coresight_hwevent coresight_tgu coresight_remote_etm coresight_dummy coresight_tpdm coresight_tpda coresight_cti coresight_stm stm_core coresight_replicator coresight_funnel coresight_tmc coresight_csr coresight qti_amoled_ecm hwmon slim_qcom_ngd_ctrl sharkutil migt millet_oem_cgroup millet_sig millet_binder millet_hs millet_pkg millet_core binder_gki icc_test goodix_health qcom_spmi_adc5 qcom_vadc_common gh_virtio_backend gh_mem_notifier gh_irq_lend qcom_q6v5_pas qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev
+[    2.752621][    T1]  qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss
+[    2.752662][    T1]  usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3
+[    2.752700][    T1]  phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv
+[    2.752738][    T1]  gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.752761][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC O      5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.752763][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.752766][    T1] pstate: 22400005 (nzCv daif +PAN -UAO +TCO BTYPE=--)
+[    2.752769][    T1] pc : __alloc_pages_nodemask+0x1c0/0x3dc
+[    2.752772][    T1] lr : kmalloc_order+0x54/0x358
+[    2.752774][    T1] sp : ffffffc01005af50
+[    2.752777][    T1] x29: ffffffc01005af90 x28: ffffff879d8fa000 
+[    2.752780][    T1] x27: ffffff879de5c028 x26: ffffff879de58000 
+[    2.752782][    T1] x25: 0000000000000010 x24: ffffff8781d66018 
+[    2.752785][    T1] x23: 0000000000000000 x22: 000000000000000d 
+[    2.752787][    T1] x21: 000000000000000d x20: 0000000001004030 
+[    2.752790][    T1] x19: 0000000001004030 x18: ffffffc01005d0f8 
+[    2.752793][    T1] x17: 0000000000000000 x16: 0000000000000118 
+[    2.752795][    T1] x15: ffffffd2c4cb1424 x14: ffffffd2c64f3bf4 
+[    2.752797][    T1] x13: 0000000000000000 x12: 0000000000007ffb 
+[    2.752800][    T1] x11: 000000000000ffff x10: 0000000000000033 
+[    2.752803][    T1] x9 : c40ea8f78ddef900 x8 : c40ea8f78ddef900 
+[    2.752805][    T1] x7 : 622d306c656e6170 x6 : ffffff8781d66014 
+[    2.752808][    T1] x5 : 8080808080808080 x4 : 0000000000000000 
+[    2.752811][    T1] x3 : 0000000000000000 x2 : 0000000000000000 
+[    2.752813][    T1] x1 : 000000000000000d x0 : 0000000000040dc0 
+[    2.752816][    T1] Call trace:
+[    2.752819][    T1]  __alloc_pages_nodemask+0x1c0/0x3dc
+[    2.752821][    T1]  kmalloc_order+0x54/0x358
+[    2.752824][    T1]  kmalloc_order_trace+0x34/0x1bc
+[    2.752827][    T1]  __kmalloc+0x5cc/0x9c8
+[    2.752831][    T1]  thermal_cooling_device_setup_sysfs+0x90/0x200
+[    2.752834][    T1]  __thermal_cooling_device_register+0x140/0x784
+[    2.752836][    T1]  thermal_of_cooling_device_register+0x14/0x24
+[    2.752921][    T1]  backlight_cdev_register+0x8c/0x104 [msm_drm]
+[    2.753002][    T1]  sde_connector_init+0x310/0xfac [msm_drm]
+[    2.753081][    T1]  sde_kms_hw_init+0x1c74/0x2a14 [msm_drm]
+[    2.753165][    T1]  msm_drm_bind+0x228/0x8dc [msm_drm]
+[    2.753169][    T1]  try_to_bring_up_master+0x1f4/0x25c
+[    2.753172][    T1]  __component_add+0xf0/0x290
+[    2.753174][    T1]  component_add+0x18/0x28
+[    2.753254][    T1]  dp_display_probe+0x330/0x43c [msm_drm]
+[    2.753257][    T1]  platform_drv_probe+0x60/0x180
+[    2.753260][    T1]  really_probe+0x508/0xb24
+[    2.753262][    T1]  driver_probe_device+0x1b0/0x230
+[    2.753264][    T1]  device_driver_attach+0x158/0x228
+[    2.753266][    T1]  __driver_attach+0x284/0x3d8
+[    2.753269][    T1]  bus_add_driver+0x1c8/0x484
+[    2.753271][    T1]  driver_register+0x84/0x178
+[    2.753273][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.753355][    T1]  init_module+0xb8/0xc0 [msm_drm]
+[    2.753359][    T1]  do_one_initcall+0x114/0x44c
+[    2.753362][    T1]  do_init_module+0x78/0x9c4
+[    2.753364][    T1]  load_module+0x3994/0x46b0
+[    2.753366][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.753369][    T1]  el0_svc_common+0xc0/0x24c
+[    2.753372][    T1]  el0_svc+0x28/0x88
+[    2.753374][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.753377][    T1]  el0_sync+0x1b4/0x1c0
+[    2.753379][    T1] ---[ end trace 5156f7969052397d ]---
+[    2.756198][    T1] ------------[ cut here ]------------
+[    2.756206][    T1] WARNING: CPU: 7 PID: 1 at kernel/kthread.c:853 kthread_queue_work+0x194/0x254
+[    2.756208][    T1] Modules linked in: msm_drm(O+) msm_mmrm(O) qrtr_gunyah qrtr_mhi qrtr_smd xt_IPR snd_usb_audio_qmi stm_ftrace stm_console stm_p_ost stm_p_basic coresight_hwevent coresight_tgu coresight_remote_etm coresight_dummy coresight_tpdm coresight_tpda coresight_cti coresight_stm stm_core coresight_replicator coresight_funnel coresight_tmc coresight_csr coresight qti_amoled_ecm hwmon slim_qcom_ngd_ctrl sharkutil migt millet_oem_cgroup millet_sig millet_binder millet_hs millet_pkg millet_core binder_gki icc_test goodix_health qcom_spmi_adc5 qcom_vadc_common gh_virtio_backend gh_mem_notifier gh_irq_lend qcom_q6v5_pas qcom_pil_info mhi_dev_drv mhi_dev_net ep_pcie_drv extend_reclaim(C) qcedev_mod qce50 tz_log leds_aw2023 leds_qti_tri_led leds_qti_flash sdhci_msm qcom_lpm qcom_cpufreq_hw_debug qcom_edac bt_fm_slim slimbus btpower dm_cache_smq dm_cache dm_cache_brd dm_persistent_data dm_bio_prison raid0 md_mod mi_thermal_interface qti_devfreq_cdev qti_cpufreq_cdev
+[    2.756236][    T1]  qti_userspace_cdev ddr_cdev sdpm_clk policy_engine cpu_voltage_cooling msm_lmh_dcvs bcl_soc bcl_pmic5 cpu_hotplug qti_qmi_cdev qti_qmi_sensor_v2 qcom_spmi_temp_alarm qcom_tsens qti_battery_charger qcom_pon radio_i2c_rtc6226_qca synx_driver qcom_ipc_lite ir_spi i3c_master_msm_geni i2c_msm_geni fpc1552 goodix_fod aw8697_haptic pm8941_pwrkey synaptics_tcm2 hbp_touch xiaomi_touch focaltech_touch pressure touch_aw8680x cs_press atmel_mxt_ts f_fs_ipc_log usb_f_gsi ipa_fmwk usb_f_cdev usb_f_ccid usb_f_diag lvstest ehset phy_qcom_emu msm_sharedmem ax88179_178a asix cnss_prealloc cnss_nl cnss_utils cnss2 cnss_plat_ipc_qmi_svc qcom_q6v5 heye spmi_glink_debug spmi_pmic_arb_debug spi_msm_geni nvme nvme_core sg nfc_i2c qcom_i2c_pmic perf_helper hdcp_qseecom zram lt9611uxc qcom_iommu_debug rdbg frpc_adsprpc msm_rng hvc_gunyah qpnp_amoled_regulator qcom_pm8008_regulator hung_task_enh qcom_sync_file panel_event_notifier qcom_logbuf_vendor_hooks memlat qdss_bridge usb_f_qdss
+[    2.756264][    T1]  usb_bam sps_drv dwc3_msm phy_msm_ssusb_qmp phy_msm_snps_hs ssusb_redriver_nb7vpq904m plh_scmi plh_vendor rimps_log icnss2 wlan_firmware_service qti_adc_tm msm_ext_display sys_pm_vx qcom_soc_wdt hyp_core_ctl thermal_pause guestvm_loader eud msm_show_epoch fsa4480_i2c ucsi_glink cdsprm spcom spss_utils qcom_spss pmic_pon_log altmode_glink charger_ulog_glink qti_battery_debug pmic_glink glink_probe qcom_glink_spss glink_pkt sensors_ssc smp2p_sleepstate microdump_collector smcinvoke_mod qseecom_mod dcc_v2 rq_stats soc_sleep_stats core_hang_detect qsee_ipc_irq_bridge sysmon_subsystem_stats adsp_sleepmon subsystem_sleep_stats smp2p boot_stats msm_memshare heap_mem_ext_v01 pdr_interface qcom_ramdump cdsp_loader qcom_cpuss_sleep_stats pci_edma gpi bam_dma videocc_diwali gpucc_diwali debugcc_waipio gpucc_waipio videocc_waipio camcc_diwali camcc_waipio pwm_qti_lpg qpnp_pbs pinctrl_spmi_mpp pinctrl_spmi_gpio phy_qcom_ufs_qmp_14nm phy_qcom_ufs_qmp_v3
+[    2.756289][    T1]  phy_qcom_ufs_qmp_v4_lahaina mhi_dev_netdev mhi_dev_uci mhi_dev_dtr mhi_cntrl_qcom qcom_esoc qcom_sysmon qmi_helpers mhi pci_msm_drv rproc_qcom_common qcom_smd qcom_glink_smem qcom_glink msm_show_resume_irq lzo_rle lzo zsmalloc msm_sysstats msm_kgsl nvmem_qfprom msm_performance mdt_loader c1dcvs_scmi c1dcvs_vendor qcom_rimps mi_power msm_qmp qcom_aoss mi_memory hwid arm_smmu ufs_qcom ufshcd_crypto_qti stub_regulator socinfo rtc_pm8xxx qrtr qnoc_diwali spmi_pmic_arb qcom_spmi_pmic regmap_spmi qti_regmap_debugfs qcom_pmu_lib qcom_llcc_pmu qcom_iommu_util qcom_gic_intr_routing qcom_dload_mode pinctrl_diwali pinctrl_cape phy_qcom_ufs_qmp_v4_waipio phy_qcom_ufs phy_generic nvmem_qcom_spmi_sdam ns msm_rtb msm_geni_serial msm_geni_se reboot_mode qti_fixed_regulator qnoc_waipio qnoc_qos pinctrl_waipio pinctrl_msm memory_dump_v2 mem_hooks mem_buf qcom_dma_heaps msm_dma_iommu_mapping mem_buf_dev secure_buffer mac80211 llcc_qcom kryo_arm64_edac iommu_logger gh_rm_drv
+[    2.756314][    T1]  gh_msgq gh_dbl gh_ctrl gh_arm_drv gcc_diwali dispcc_waipio dispcc_diwali cqhci crypto_qti_common crypto_qti_hwkm hwkm tmecom_intf cfg80211 sched_walt turbo_sched mi_schedule qcom_cpufreq_hw bwmon qcom_dcvs dcvs_fp rpmh_regulator qcom_pdc qcom_ipcc icc_rpmh icc_debug icc_bcm_voter gcc_waipio clk_dummy clk_qcom gdsc_regulator proxy_consumer debug_regulator clk_rpmh qcom_rpmh cmd_db qcom_ipc_logging qcom_cpu_vendor_hooks gh_virt_wdt qcom_wdt_core qcom_reboot_reason qcom_scm minidump smem qcom_hwspinlock
+[    2.756331][    T1] CPU: 7 PID: 1 Comm: init Tainted: G S      WC O      5.10.66-android12-9-g4453ce7ccd32 #1
+[    2.756333][    T1] Hardware name: Qualcomm Technologies, Inc. 8450 katyusha os (DT)
+[    2.756336][    T1] pstate: 82400085 (Nzcv daIf +PAN -UAO +TCO BTYPE=--)
+[    2.756338][    T1] pc : kthread_queue_work+0x194/0x254
+[    2.756429][    T1] lr : msm_drm_bind+0x468/0x8dc [msm_drm]
+[    2.756431][    T1] sp : ffffffc01005b5a0
+[    2.756433][    T1] x29: ffffffc01005b5a0 x28: 0000000000000000 
+[    2.756436][    T1] x27: ffffffd2c157c938 x26: ffffff879da6ca00 
+[    2.756439][    T1] x25: ffffff879d8fa8b8 x24: ffffff879d8fade0 
+[    2.756441][    T1] x23: 0000000000000000 x22: ffffff8780358000 
+[    2.756444][    T1] x21: ffffff879d8fa8b8 x20: ffffff879d8fade0 
+[    2.756446][    T1] x19: ffffff879d8fa8bc x18: ffffffc01005d0b0 
+[    2.756449][    T1] x17: 0000000000060000 x16: 0000000000000008 
+[    2.756452][    T1] x15: 0000000000000000 x14: 0000000000000020 
+[    2.756454][    T1] x13: 00ff00ff00000000 x12: 0000000000000325 
+[    2.756457][    T1] x11: 00000000000c9400 x10: 0000000100000001 
+[    2.756460][    T1] x9 : 0000000100000000 x8 : ffffff879d8fa3b8 
+[    2.756463][    T1] x7 : feff32343039736d x6 : ffffff879da6d19e 
+[    2.756465][    T1] x5 : ffffffffffffff80 x4 : 0000000000000000 
+[    2.756468][    T1] x3 : ffffff879d8fa8c0 x2 : 0000000000000001 
+[    2.756471][    T1] x1 : 0000000000000000 x0 : 0000000000000000 
+[    2.756473][    T1] Call trace:
+[    2.756477][    T1]  kthread_queue_work+0x194/0x254
+[    2.756556][    T1]  msm_drm_bind+0x468/0x8dc [msm_drm]
+[    2.756560][    T1]  try_to_bring_up_master+0x1f4/0x25c
+[    2.756563][    T1]  __component_add+0xf0/0x290
+[    2.756565][    T1]  component_add+0x18/0x28
+[    2.756647][    T1]  dp_display_probe+0x330/0x43c [msm_drm]
+[    2.756650][    T1]  platform_drv_probe+0x60/0x180
+[    2.756652][    T1]  really_probe+0x508/0xb24
+[    2.756655][    T1]  driver_probe_device+0x1b0/0x230
+[    2.756657][    T1]  device_driver_attach+0x158/0x228
+[    2.756660][    T1]  __driver_attach+0x284/0x3d8
+[    2.756662][    T1]  bus_add_driver+0x1c8/0x484
+[    2.756664][    T1]  driver_register+0x84/0x178
+[    2.756667][    T1]  __platform_driver_register+0x4c/0x5c
+[    2.756748][    T1]  init_module+0xb8/0xc0 [msm_drm]
+[    2.756751][    T1]  do_one_initcall+0x114/0x44c
+[    2.756753][    T1]  do_init_module+0x78/0x9c4
+[    2.756755][    T1]  load_module+0x3994/0x46b0
+[    2.756758][    T1]  __arm64_sys_finit_module+0x150/0x198
+[    2.756760][    T1]  el0_svc_common+0xc0/0x24c
+[    2.756763][    T1]  el0_svc+0x28/0x88
+[    2.756765][    T1]  el0_sync_handler+0x8c/0xf0
+[    2.756767][    T1]  el0_sync+0x1b4/0x1c0
+[    2.756769][    T1] ---[ end trace 5156f7969052397e ]---
+[    2.759267][    T1] init: Raid: Default fstab path is '/etc/recovery.fstab'
+[    2.759478][    T1] init: Raid: Default fstab path is '/etc/recovery.fstab'
+[    3.761193][    T1] init: [libfs_avb]Device path not found: /dev/block/by-name/vbmeta_a
+[    3.761239][    T1] init: Raid: Default fstab path is '/etc/recovery.fstab'
+[    4.368727][  T269] sd 0:0:0:4: [sde] Synchronizing SCSI cache
+[    4.556754][   T39] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[    4.556775][  T273] sd 0:0:0:5: [sdf] Synchronizing SCSI cache
+[    4.556785][   T66] sd 0:0:0:1: [sdb] Synchronizing SCSI cache
+[    4.564731][   T46] sd 0:0:0:3: [sdd] Synchronizing SCSI cache
+[    4.564756][  T177] sd 0:0:0:2: [sdc] Synchronizing SCSI cache
+[    4.762729][    T1] init: [libfs_avb]Device path not found: /dev/block/by-name/boot_a
+[    4.762771][    T1] init: [libfs_avb]avb_slot_verify failed, result: 2
+[    4.762776][    T1] init: Failed to open AvbHandle for INIT_AVB_VERSION: No such file or directory
+[    4.771397][    T1] init: Could not find mount entry for /system
+[    4.807828][   T70] audit: type=1403 audit(9491639.675:2): auid=4294967295 ses=4294967295 lsm=selinux res=1
+[    4.807984][   T70] audit: type=1404 audit(9491639.675:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295 enabled=1 old-enabled=1 lsm=selinux res=1
+[    4.822787][    T1] init: Overriding previous property 'persist.sys.usb.config':'adb' with new value 'none'
+[    4.822951][    T1] init: Couldn't load property file '/system/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.822959][    T1] init: Couldn't load property file '/system_ext/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.822966][    T1] init: Couldn't load property file '/system_ext/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.822973][    T1] init: Couldn't load property file '/system_ext/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.822980][    T1] init: Couldn't load property file '/system_ext/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.822986][    T1] init: Couldn't load property file '/system_ext/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.822992][    T1] init: Couldn't load property file '/vendor/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.822998][    T1] init: Couldn't load property file '/vendor/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823006][    T1] init: Couldn't load property file '/vendor_dlkm/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823014][    T1] init: Couldn't load property file '/odm_dlkm/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823021][    T1] init: Couldn't load property file '/odm/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823027][    T1] init: Couldn't load property file '/odm/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.823033][    T1] init: Couldn't load property file '/odm/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823038][    T1] init: Couldn't load property file '/odm/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.823044][    T1] init: Couldn't load property file '/odm/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823050][    T1] init: Couldn't load property file '/product/etc/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823056][    T1] init: Couldn't load property file '/product/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.823061][    T1] init: Couldn't load property file '/product/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.823067][    T1] init: Couldn't load property file '/product/default.prop': open() failed: No such file or directory: No such file or directory
+[    4.823072][    T1] init: Couldn't load property file '/product/build.prop': open() failed: No such file or directory: No such file or directory
+[    4.824478][    T1] selinux: SELinux:  Could not stat /dev/block: No such file or directory.
+[    4.824483][    T1] selinux: 
+[    4.824600][    T1] selinux: SELinux: Could not get canonical path for /metadata/ota/rollback-indicator restorecon: No such file or directory.
+[    4.824604][    T1] selinux: 
+[    4.824615][    T1] selinux: SELinux:  Could not stat /metadata/gsi: No such file or directory.
+[    4.824617][    T1] selinux: 
+[    4.827158][    T1] cgroup: Unknown subsys name 'schedtune'
+[    4.827169][    T1] libprocessgroup: Failed to mount schedtune cgroup: Invalid argument
+[    4.827175][    T1] libprocessgroup: Failed to setup schedtune cgroup
+[    4.828388][   T70] audit: type=1400 audit(9491639.695:4): avc:  denied  { sys_module } for  pid=1 comm="init" capability=16  scontext=u:r:init:s0 tcontext=u:r:init:s0 tclass=capability permissive=1
+[    4.828394][   T70] audit: type=1400 audit(9491639.695:5): avc:  denied  { module_load } for  pid=1 comm="init" path="/vendor/lib/modules/q6_pdr_dlkm.ko" dev="rootfs" ino=1038 scontext=u:r:init:s0 tcontext=u:object_r:rootfs:s0 tclass=system permissive=1
+[    4.831041][    T1] 
+[    4.831046][    T1] **********************************************************
+[    4.831049][    T1] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    4.831051][    T1] **                                                      **
+[    4.831054][    T1] ** trace_printk() being used. Allocating extra memory.  **
+[    4.831056][    T1] **                                                      **
+[    4.831059][    T1] ** This means that this is a DEBUG kernel and it is     **
+[    4.831061][    T1] ** unsafe for production use.                           **
+[    4.831064][    T1] **                                                      **
+[    4.831066][    T1] ** If you see this message and you are not debugging    **
+[    4.831068][    T1] ** the kernel, report this immediately to your vendor!  **
+[    4.831071][    T1] **                                                      **
+[    4.831073][    T1] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    4.831076][    T1] **********************************************************
+[    4.832313][    T1] spf_core_platform_driver_probe
+[    4.838221][   T70] audit: type=1400 audit(9491639.707:6): avc:  denied  { sys_nice } for  pid=437 comm="ueventd" capability=23  scontext=u:r:ueventd:s0 tcontext=u:r:ueventd:s0 tclass=capability permissive=1
+[    4.930968][   T70] audit: type=1400 audit(9491639.799:7): avc:  denied  { entrypoint } for  pid=447 comm="init" path="/system/bin/logd" dev="rootfs" ino=630 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.931351][   T70] audit: type=1400 audit(9491639.799:8): avc:  denied  { map } for  pid=447 comm="logd" path="/system/bin/logd" dev="rootfs" ino=630 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.931358][   T70] audit: type=1400 audit(9491639.799:9): avc:  denied  { read } for  pid=447 comm="logd" path="/system/bin/logd" dev="rootfs" ino=630 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.931362][   T70] audit: type=1400 audit(9491639.799:10): avc:  denied  { execute } for  pid=447 comm="logd" path="/system/bin/logd" dev="rootfs" ino=630 scontext=u:r:logd:s0 tcontext=u:object_r:rootfs:s0 tclass=file permissive=1
+[    4.933546][  T449] init: failed to write pid to files: couldn't write 449 to /dev/cpuset/system-background/tasks: No such file or directory
+[    4.933918][  T447] logd: libprocessgroup: Failed to read task profiles from /etc/task_profiles.json
+[    4.933929][  T447] logd: libprocessgroup: Loading /etc/task_profiles.json for [447] failed
+[    4.933961][  T447] logd: libprocessgroup: Failed to find SCHED_SP_BACKGROUNDtask profile: No such file or directory
+[    4.933976][  T447] logd: Cannot read /system/etc/event-log-tags
+[    4.944461][   T46] remoteproc remoteproc1: Direct firmware load for adsp.mdt failed with error -2
+[    4.944468][   T46] remoteproc remoteproc1: Falling back to sysfs fallback for: adsp.mdt
+[    4.945905][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b24 failed with error -2
+[    4.945911][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b24
+[    4.949622][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b01 failed with error -2
+[    4.949628][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b01
+[    4.950656][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b02 failed with error -2
+[    4.950660][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b02
+[    4.971285][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b03 failed with error -2
+[    4.971291][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b03
+[    4.972420][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b04 failed with error -2
+[    4.972425][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b04
+[    4.973593][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b05 failed with error -2
+[    4.973600][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b05
+[    4.976588][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b06 failed with error -2
+[    4.976593][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b06
+[    4.977502][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b07 failed with error -2
+[    4.977506][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b07
+[    4.978449][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b08 failed with error -2
+[    4.978454][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b08
+[    4.987428][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b09 failed with error -2
+[    4.987437][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b09
+[    4.989165][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b10 failed with error -2
+[    4.989170][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b10
+[    4.990333][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b11 failed with error -2
+[    4.990336][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b11
+[    4.991980][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b12 failed with error -2
+[    4.991984][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b12
+[    4.993163][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b13 failed with error -2
+[    4.993167][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b13
+[    5.003811][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b14 failed with error -2
+[    5.003817][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b14
+[    5.005182][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b15 failed with error -2
+[    5.005186][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b15
+[    5.006080][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b16 failed with error -2
+[    5.006084][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b16
+[    5.008660][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b17 failed with error -2
+[    5.008664][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b17
+[    5.039533][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b18 failed with error -2
+[    5.039540][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b18
+[    5.042407][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b19 failed with error -2
+[    5.042412][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b19
+[    5.043136][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b20 failed with error -2
+[    5.043140][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b20
+[    5.047685][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b21 failed with error -2
+[    5.047689][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b21
+[    5.048745][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Direct firmware load for adsp.b22 failed with error -2
+[    5.048749][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Falling back to sysfs fallback for: adsp.b22
+[    5.053156][   T46] qcom_q6v5_pas 3000000.remoteproc-adsp: Bus scaling not setup for 3000000.remoteproc-adsp
+[    5.180864][  T213] qcom_q6v5_pas 3000000.remoteproc-adsp: Bus scaling not setup for 3000000.remoteproc-adsp
+[    5.190254][  T166] spf_core_probe
+[    5.190510][  T166] spf_core_add_child_devices:enumarate machine driver
+[    5.190521][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.190530][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.240616][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.240627][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.290711][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.290722][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.340806][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.340817][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.390901][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.390912][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.440996][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.441007][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.491091][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.491102][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.541187][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.541199][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.591283][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.591294][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.641378][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.641389][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.691475][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.691486][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.741571][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.741581][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.791665][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.791676][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.841761][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.841772][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.891857][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.891868][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.941952][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.941963][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    5.992047][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    5.992058][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.042140][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.042151][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.092235][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.092246][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.142330][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.142341][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.192457][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.192469][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.242556][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.242568][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.292655][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.292666][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.342750][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.342761][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.392847][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.392859][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.442943][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.442954][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.493071][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.493082][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.543166][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.543177][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.593263][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.593274][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.643359][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.643370][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.693456][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.693467][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.743550][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.743561][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.793647][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.793658][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.843741][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.843752][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.893867][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.893878][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.943961][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.943972][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    6.994059][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    6.994070][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.044154][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.044166][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.094253][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.094264][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.144347][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.144357][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.160731][  T269] [cs_press] [cs_check_dt: 174] active_panel = ffffff879de58408
+[    7.160735][  T269] [cs_press] [cs_register_panel_init_work: 223] registered for panel notifications panel: 0x9de58408
+[    7.194441][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.194456][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.244539][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.244550][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.294634][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.294644][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.344730][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.344741][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.394825][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.394836][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.417051][  T229] screen_state_check ERROR: Cannot find node with panel!
+[    7.417080][  T269] awinic_haptic 3-005a: Direct firmware load for aw8697_haptic.bin failed with error -2
+[    7.417082][  T269] awinic_haptic 3-005a: Falling back to sysfs fallback for: aw8697_haptic.bin
+[    7.444922][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.444936][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.495021][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.495032][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.545115][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.545125][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.595209][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.595221][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.645306][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.645318][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.695402][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.695413][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.745497][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.745508][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.795593][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.795604][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.845687][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.845698][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.895782][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.895793][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.945877][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.945888][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    7.995972][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    7.995982][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.046066][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.046077][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.096161][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.096172][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.146255][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.146265][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.196349][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.196360][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.246444][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.246455][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.296539][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.296549][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.346632][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.346643][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.396730][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.396740][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.446824][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.446835][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.496920][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.496930][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.547016][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.547026][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.597111][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.597122][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.617892][   T64] qti_battery_charger soc:qcom,pmic_glink:qcom,battery_charger: battery_chg_probe start
+[    8.647212][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.647223][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.673891][   T64] battery_chg_gpio_ctrl in
+[    8.673972][   T64] qti_battery_charger soc:qcom,pmic_glink:qcom,battery_charger: battery_chg_probe done
+[    8.679266][    T1] init: Top-level directory needs encryption action, eg mkdir /data/vendor <mode> <uid> <gid> encryption=Require
+[    8.682799][  T175] msm-dwc3 a600000.ssusb: undefined state, mdwc->inputs is 3
+[    8.682809][  T175] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[    8.682816][  T175] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[    8.682960][  T175] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[    8.684214][  T175] msm-dwc3 a600000.ssusb: dwc3_msm_resume: set core clk rate 133333333
+[    8.684225][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[    8.684228][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[    8.684233][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:0 on:1
+[    8.684236][  T175] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[    8.684254][  T175] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[    8.685021][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[    8.685027][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:0
+[    8.685231][  T175] msm_hsphy_enable_power(): HSUSB PHY's regulators are turned ON.
+[    8.685237][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[    8.685413][  T175] Seq count:6
+[    8.685416][  T175] write 0xe6 to 0x6c
+[    8.685419][  T175] write 0xcf to 0x70
+[    8.685422][  T175] write 0x0c to 0x74
+[    8.685426][  T175] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[    8.685439][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[    8.685442][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[    8.685477][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: min_vol:912000 max_vol:912000
+[    8.685567][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:0 on:1
+[    8.685571][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[    8.691623][  T171] sd 0:0:0:4: [sde] Synchronizing SCSI cache
+[    8.697330][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.697350][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.712735][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[    8.712741][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[    8.712744][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[    8.713295][  T175] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_ALLOC
+[    8.713320][  T175] msm-dwc3 a600000.ssusb: b_sess_vld
+[    8.713326][  T175] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget
+[    8.722730][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.732958][  T485] erofs: Unknown parameter 'barrier'
+[    8.744561][  T485] erofs: Unknown parameter 'barrier'
+[    8.745058][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.747438][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.747453][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.757776][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.764337][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.773707][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.776931][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.797540][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.797557][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.820730][  T159] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[    8.820741][  T159] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:1
+[    8.820746][  T159] msm-usb-hsphy 88e3000.hsphy: PHYs' regulators are already ON.
+[    8.820751][  T159] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[    8.820929][  T159] Seq count:6
+[    8.820934][  T159] write 0xe6 to 0x6c
+[    8.820938][  T159] write 0xcf to 0x70
+[    8.820942][  T159] write 0x0c to 0x74
+[    8.820949][  T159] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[    8.820963][  T159] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[    8.820969][  T159] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[    8.820973][  T159] msm-usb-ssphy-qmp 88e8000.ssphy: PHYs' regulators status 1
+[    8.820976][  T159] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:1
+[    8.820979][  T159] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[    8.831293][  T419] tag mismatch entry->tag:1 tag:2
+[    8.831296][  T419] tag mismatch entry->tag:1 tag:2
+[    8.831298][  T419] tag mismatch entry->tag:1 tag:2
+[    8.839406][  T419] [cs_press] [cs_panel_notifier_callback: 3163] Notification type:2, early_trigger:0
+[    8.846200][  T175] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[    8.846207][  T175] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[    8.846213][  T175] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[    8.846219][  T175] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[    8.846228][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy connect notification
+[    8.847492][  T175] msm_dwc3_perf_vote_update: latency updated to: 2
+[    8.847503][  T175] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 3
+[    8.847645][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.847659][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.888526][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.888696][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.888873][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.889047][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.891191][    T1] configfs-gadget a600000.dwc3: failed to start g1: -19
+[    8.892416][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.892684][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.892961][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.893229][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.897766][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.897781][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.901360][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.915693][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.919161][  T485] erofs: Unknown parameter 'barrier'
+[    8.922984][  T485] erofs: Unknown parameter 'barrier'
+[    8.923235][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.926693][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.929707][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    8.941890][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.941995][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.942113][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.942214][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.944547][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.944650][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.944867][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    8.944992][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    8.947870][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.947883][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    8.997973][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    8.997992][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.048088][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.048112][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.098209][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.098233][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.148324][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.148346][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.198438][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.198459][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.243281][  T485] audit_log_start: 8 callbacks suppressed
+[    9.243283][  T485] audit: audit_backlog=65 > audit_backlog_limit=64
+[    9.243292][  T485] audit: audit_lost=1 audit_rate_limit=0 audit_backlog_limit=64
+[    9.243294][  T485] audit: backlog limit exceeded
+[    9.243297][  T485] audit: audit_backlog=65 > audit_backlog_limit=64
+[    9.243300][  T485] audit: audit_lost=2 audit_rate_limit=0 audit_backlog_limit=64
+[    9.243302][  T485] audit: backlog limit exceeded
+[    9.243318][  T485] audit: audit_backlog=65 > audit_backlog_limit=64
+[    9.243321][  T485] audit: audit_lost=3 audit_rate_limit=0 audit_backlog_limit=64
+[    9.243323][  T485] audit: backlog limit exceeded
+[    9.243325][  T485] audit: audit_backlog=65 > audit_backlog_limit=64
+[    9.248598][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.248611][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.254002][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    9.268695][  T485] erofs: Unknown parameter 'barrier'
+[    9.278797][  T485] erofs: Unknown parameter 'barrier'
+[    9.279105][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    9.288964][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    9.295175][  T485] ufshcd-qcom 1d84000.ufshc: ufs_qcom_ioctl: User buffer is NULL!
+[    9.298714][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.298726][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.309919][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.310030][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.310158][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.310267][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.312648][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.312815][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.312956][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.313069][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.314266][  T485] request_module fs-auto succeeded, but still no fs?
+[    9.316645][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.316842][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.316978][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.317079][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.323836][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.323959][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.324113][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.324236][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.327001][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.327121][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.327278][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.327393][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.330001][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.330116][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.330256][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.330370][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.332865][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.333000][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.333149][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.333275][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.346736][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.346847][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.346968][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 1th superblock
+[    9.347076][  T485] F2FS-fs (sda41): Can't find valid F2FS filesystem in 2th superblock
+[    9.348819][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.348836][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.398927][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.398945][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.449032][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.449046][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.499131][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.499142][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.549251][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.549262][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.599346][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.599358][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.649444][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.649456][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.670557][  T229] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 1
+[    9.670563][  T229] msm-dwc3 a600000.ssusb: !id || !bsv
+[    9.670568][  T229] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn off gadget
+[    9.670578][  T229] msm_dwc3_perf_vote_update: latency updated to: -1
+[    9.670585][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy disconnect notification
+[    9.670589][  T229] msm-usb-ssphy-qmp 88e8000.ssphy:  cable_connected=1
+[    9.670594][  T229] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[    9.670612][  T229] msm-usb-hsphy 88e3000.hsphy: phy->flags:0x0
+[    9.670615][  T229] msm-usb-hsphy 88e3000.hsphy: turning off clocks/ldo
+[    9.670619][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:0
+[    9.670623][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn off regulators. power_enabled:1
+[    9.670670][  T229] msm-usb-hsphy 88e3000.hsphy: HSUSB PHY's regulators are turned OFF.
+[    9.670674][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[    9.670679][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:0
+[    9.670692][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (LPM)
+[    9.670719][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is suspend
+[    9.670763][  T229] msm-dwc3 a600000.ssusb: DWC3-msm runtime suspend
+[    9.670805][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_set_suspend: USB PHY is already suspended
+[    9.670809][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[    9.670811][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already suspended.
+[    9.670825][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_suspend: power collapse
+[    9.671202][  T229] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[    9.671234][  T229] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 1
+[    9.671242][  T229] msm-dwc3 a600000.ssusb: Cable disconnected
+[    9.671252][   T62] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[    9.675956][   T62] msm-usb-hsphy 88e3000.hsphy: Error (-22) setting input current limit
+[    9.699542][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.699554][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.749641][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.749653][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.799857][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.799869][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.849954][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.849966][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.900052][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.900064][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[    9.950181][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[    9.950192][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.000310][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.000321][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.050438][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.050449][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.100533][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.100545][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.122399][    T1] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_PULLUP 1
+[   10.122406][    T1] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[   10.122411][    T1] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[   10.122544][    T1] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[   10.123788][    T1] msm-dwc3 a600000.ssusb: dwc3_msm_resume: set core clk rate 133333333
+[   10.123810][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[   10.123814][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[   10.123819][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: min_vol:912000 max_vol:912000
+[   10.124191][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:0 on:1
+[   10.124199][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is resumed
+[   10.124204][    T1] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:0 on:1
+[   10.124207][    T1] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[   10.125221][    T1] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[   10.125226][    T1] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=1000
+[   10.125230][    T1] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=1000
+[   10.125240][    T1] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[   10.125244][    T1] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:0
+[   10.125487][    T1] msm_hsphy_enable_power(): HSUSB PHY's regulators are turned ON.
+[   10.125493][    T1] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[   10.125669][    T1] Seq count:6
+[   10.125673][    T1] write 0xe6 to 0x6c
+[   10.125676][    T1] write 0xcf to 0x70
+[   10.125680][    T1] write 0x0c to 0x74
+[   10.125686][    T1] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[   10.125698][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[   10.125702][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[   10.125705][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: PHYs' regulators status 1
+[   10.125709][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:1
+[   10.125713][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[   10.143888][  T229] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 11
+[   10.148737][    T1] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[   10.148743][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[   10.148747][    T1] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[   10.148752][    C0] msm-dwc3 a600000.ssusb: msm_dwc3_pwr_irq received
+[   10.148761][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=201004
+[   10.148771][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=201000
+[   10.150630][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.150640][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.153587][  T122] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[   10.153598][  T122] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   10.153850][  T122] msm-usb-hsphy 88e3000.hsphy: phy->flags:0x0
+[   10.153854][  T122] msm-usb-hsphy 88e3000.hsphy: turning off clocks/ldo
+[   10.153858][  T122] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:0
+[   10.153863][  T122] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn off regulators. power_enabled:1
+[   10.153897][  T122] msm-usb-hsphy 88e3000.hsphy: HSUSB PHY's regulators are turned OFF.
+[   10.153900][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[   10.153904][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:0
+[   10.153909][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: reg (LPM)
+[   10.153930][  T122] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is suspend
+[   10.153973][  T122] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[   10.153982][   T62] msm-dwc3 a600000.ssusb: DWC3-msm runtime idle
+[   10.200727][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.200738][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.250857][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.250868][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.300987][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.300998][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.351115][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.351126][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.401242][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.401253][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.451372][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.451383][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.501468][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.501479][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.551564][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.551576][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.552722][  T177] altmode-glink: altmode_write: Error in sending message: -110
+[   10.552729][  T177] altmode-glink: altmode_send_ack: port 0: Failed to send PAN ACK: -110
+[   10.601661][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.601673][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.620726][  T229] msm-dwc3 a600000.ssusb: Not in LPM after disconnect, forcing suspend...
+[   10.620734][  T229] msm-dwc3 a600000.ssusb: DWC3-msm runtime suspend
+[   10.620781][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_set_suspend: USB PHY is already suspended
+[   10.620787][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[   10.620791][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already suspended.
+[   10.620806][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_suspend: power collapse
+[   10.621089][  T229] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[   10.621108][  T229] msm-dwc3 a600000.ssusb: b_sess_vld
+[   10.621112][  T229] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[   10.621115][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[   10.621228][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[   10.622460][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: set core clk rate 133333333
+[   10.622488][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[   10.622492][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[   10.622497][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: min_vol:912000 max_vol:912000
+[   10.622885][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:0 on:1
+[   10.622895][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is resumed
+[   10.622900][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:0 on:1
+[   10.622904][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[   10.623895][  T229] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[   10.623900][  T229] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=1000
+[   10.623903][  T229] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=1000
+[   10.623911][  T229] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget
+[   10.623920][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[   10.623923][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:0
+[   10.624044][  T229] msm_hsphy_enable_power(): HSUSB PHY's regulators are turned ON.
+[   10.624047][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[   10.624220][  T229] Seq count:6
+[   10.624223][  T229] write 0xe6 to 0x6c
+[   10.624226][  T229] write 0xcf to 0x70
+[   10.624228][  T229] write 0x0c to 0x74
+[   10.624233][  T229] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[   10.624245][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[   10.624248][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[   10.624250][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: PHYs' regulators status 1
+[   10.624253][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:1
+[   10.624256][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[   10.648728][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[   10.648733][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[   10.648736][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[   10.648744][    C0] msm-dwc3 a600000.ssusb: msm_dwc3_pwr_irq received
+[   10.648758][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=201004
+[   10.648767][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=201000
+[   10.651763][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.651775][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.653445][  T229] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[   10.653451][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[   10.653456][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[   10.653460][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[   10.653468][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy connect notification
+[   10.654739][  T229] msm_dwc3_perf_vote_update: latency updated to: 2
+[   10.654745][  T229] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 3
+[   10.701861][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.701873][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.751958][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.751969][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.802093][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.802104][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.852188][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.852199][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.866629][  T541] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   10.902285][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.902296][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.921604][  T541] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[   10.952381][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   10.952392][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   10.982376][  T541] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   10.982415][   T64] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 100
+[   11.002475][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.002486][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.033814][  T541] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[   11.052572][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.052583][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.102701][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.102791][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.103746][   T64] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 2
+[   11.152911][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.152923][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.203006][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.203017][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.253103][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.253114][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.303201][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.303211][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.353295][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.353307][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.403391][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.403402][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.453487][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.453498][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.503615][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.503626][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.553712][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.553723][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.603808][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.603818][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.653903][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.653914][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.703999][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.704011][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.754097][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.754107][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.804192][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.804203][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.854322][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.854333][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.904417][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.904428][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   11.954515][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   11.954526][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.004612][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.004624][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.054710][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.054722][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.104807][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.104818][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.154901][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.154912][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.205029][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.205040][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.255156][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.255167][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.305284][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.305295][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.355379][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.355391][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.405476][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.405487][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.442956][  T269] sd 0:0:0:0: [sda] Synchronizing SCSI cache
+[   12.455576][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.455589][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.505723][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.505748][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.555834][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.555846][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.605930][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.605942][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.620371][  T269] sd 0:0:0:4: [sde] Synchronizing SCSI cache
+[   12.656060][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.656073][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.664725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:52
+[   12.664737][  T171] msm_dwc3_perf_vote_update: latency updated to: -1
+[   12.706159][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.706172][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.756259][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.756271][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.806354][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.806365][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.856449][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.856460][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.906546][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.906558][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   12.956645][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   12.956656][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.006773][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.006785][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.056870][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.056882][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.106965][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.106976][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.157062][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.157073][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.207160][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.207171][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.257256][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.257267][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.307351][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.307363][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.357479][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.357490][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.407608][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.407619][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.457736][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.457747][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.507830][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.507842][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.557927][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.557938][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.608021][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.608033][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.658119][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.658130][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.708216][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.708227][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.758315][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.758326][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.808411][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.808422][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.818379][   T64] BATTERY_CHG: qti_battery_register_panel_notifier_work: qti_battery_register_panel_notifier_work ERROR: Cannot find node with panel!
+[   13.819144][   T64] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 1
+[   13.832081][   T64] BATTERY_CHG: xm_charger_debug_info_print_work: chg_type=Unknown tl:=0  ffc:=0, pd_verifed:=0
+[   13.832745][   T64] BATTERY_CHG: xm_charger_debug_info_print_work: vbus_vol_uv: 5101000, ibus_ua: 100000
+[   13.858511][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.858521][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.908607][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.908618][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   13.958705][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   13.958716][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.008801][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.008812][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.058900][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.058911][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.109028][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.109039][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.159156][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.159167][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.209250][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.209261][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.259344][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.259355][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.309440][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.309452][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.359538][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.359550][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.409635][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.409645][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.459730][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.459741][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.509856][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.509867][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.559980][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.559991][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.610076][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.610088][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.660205][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.660216][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.680729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   14.710302][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.710314][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.760397][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.760407][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.810492][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.810503][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.860588][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.860599][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.910698][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.910718][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   14.960805][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   14.960817][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   15.010901][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   15.010913][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   15.060996][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   15.061007][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   15.111089][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   15.111100][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   15.161183][  T166] spf-core-platform soc:spf_core_platform: __spf_core_is_apm_ready: send_command ret
+[   15.161194][  T166] qcom,gpr 3000000.remoteproc-adsp:glink-edge.adsp_apps.-1.-1: gpr_send_pkt: domain_id[2], Still Dsp is not Up
+[   15.211280][  T166] spf-core-platform soc:spf_core_platform: spf_core_add_child_devices: apm is not up
+[   16.696732][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   18.712729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   20.728729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   22.744724][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   24.760726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   26.776727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   28.792735][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   30.808728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   31.736791][  T269] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_dpdm_regulator_is_enabled dpdm_enable:0
+[   32.824727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   34.840743][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   36.856742][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:19
+[   38.872728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   40.888727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   42.904728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   44.025519][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 1
+[   44.037814][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: chg_type=Unknown tl:=0  ffc:=0, pd_verifed:=0
+[   44.038440][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: vbus_vol_uv: 5098000, ibus_ua: 100000
+[   44.920730][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   46.936731][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   48.952729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   50.968728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   52.984727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   55.000729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   57.016725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   59.032727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   61.048732][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   63.064729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   65.080728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   67.096732][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   69.112726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   69.705822][    T1] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_PULLUP 0
+[   69.705919][    T1] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[   69.705928][    T1] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   69.705997][  T177] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[   69.770866][    T1] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_PULLUP 1
+[   69.986506][  T553] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   69.986571][  T166] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 100
+[   70.041481][  T553] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[   70.102517][  T553] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   70.102579][  T166] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 100
+[   70.153821][  T553] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_CONNDONE_EVENT received
+[   70.225481][  T166] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 2
+[   71.128726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:52
+[   73.144725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   74.745569][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 1
+[   74.754432][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: chg_type=Unknown tl:=0  ffc:=0, pd_verifed:=0
+[   74.755044][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: vbus_vol_uv: 5099000, ibus_ua: 100000
+[   75.160728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   77.176724][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   79.192727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   81.208736][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   83.224748][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:3
+[   84.497192][  T549] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_PULLUP 0
+[   84.497224][  T549] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[   84.497232][  T549] msm-dwc3 a600000.ssusb: DWC3_CONTROLLER_NOTIFY_CLEAR_DB
+[   84.497526][  T269] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[   85.240729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:12
+[   87.256731][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   89.272730][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   91.288726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   93.304727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   95.320742][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   97.340740][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[   99.352728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  101.368733][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  103.384734][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  105.400735][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  105.465618][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 1
+[  105.480575][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: chg_type=Unknown tl:=0  ffc:=0, pd_verifed:=0
+[  105.481135][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: vbus_vol_uv: 5099000, ibus_ua: 100000
+[  107.416726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  109.436742][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  111.448742][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  113.468741][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  115.480739][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  117.496732][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  119.516737][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  121.528728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  123.544725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  125.564744][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  127.576723][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  129.592727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  131.608742][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  133.624727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  135.640727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  136.193024][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 1
+[  136.245599][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: chg_type=Unknown tl:=0  ffc:=0, pd_verifed:=0
+[  136.265652][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: vbus_vol_uv: 5102000, ibus_ua: 100000
+[  137.656725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  139.672730][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  141.692742][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  143.704725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  145.720725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  147.736725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  149.752728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  151.768728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  153.784730][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  155.800727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  157.816731][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  159.832726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  161.848765][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  163.864732][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  165.880726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  166.971052][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 1
+[  167.043734][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: chg_type=Unknown tl:=0  ffc:=0, pd_verifed:=0
+[  167.063672][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: vbus_vol_uv: 5099000, ibus_ua: 100000
+[  167.896735][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  169.912726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  171.928727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  173.944729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  175.960730][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  177.976727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  179.992725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  182.008728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  184.024739][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  186.040726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  188.056725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  190.072788][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  192.088733][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  194.104729][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  196.120727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  197.633237][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 1
+[  197.680607][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: chg_type=Unknown tl:=0  ffc:=0, pd_verifed:=0
+[  197.700685][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: vbus_vol_uv: 5096000, ibus_ua: 100000
+[  198.136728][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  200.152727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  202.168726][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  204.184725][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  206.200727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  208.216727][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  210.232723][  T171] msm_dwc3_perf_vote_work: in_perf_mode:0, interrupts in last sample:0
+[  211.379870][  T175] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 1
+[  211.379882][  T175] msm-dwc3 a600000.ssusb: !id || !bsv
+[  211.379888][  T175] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn off gadget
+[  211.379898][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy disconnect notification
+[  211.379902][  T175] msm-usb-ssphy-qmp 88e8000.ssphy:  cable_connected=1
+[  211.379908][  T175] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[  211.379930][  T175] msm-usb-hsphy 88e3000.hsphy: phy->flags:0x0
+[  211.379933][  T175] msm-usb-hsphy 88e3000.hsphy: turning off clocks/ldo
+[  211.379936][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:0
+[  211.379941][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn off regulators. power_enabled:1
+[  211.379999][  T175] msm-usb-hsphy 88e3000.hsphy: HSUSB PHY's regulators are turned OFF.
+[  211.380003][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  211.380008][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:0
+[  211.380021][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: reg (LPM)
+[  211.380052][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is suspend
+[  211.380124][  T175] msm-dwc3 a600000.ssusb: DWC3-msm runtime suspend
+[  211.380188][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_set_suspend: USB PHY is already suspended
+[  211.380193][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  211.380196][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already suspended.
+[  211.380221][  T175] msm-dwc3 a600000.ssusb: dwc3_msm_suspend: power collapse
+[  211.380413][  T175] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[  211.380427][    T7] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 1
+[  211.380435][    T7] msm-dwc3 a600000.ssusb: Cable disconnected
+[  211.380441][   T46] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[  211.381434][   T46] msm-usb-hsphy 88e3000.hsphy: Error (-22) setting input current limit
+[  213.217276][    T7] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 3
+[  213.217285][    T7] msm-dwc3 a600000.ssusb: b_sess_vld
+[  213.217290][    T7] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[  213.217294][    T7] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[  213.217433][    T7] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  213.218684][    T7] msm-dwc3 a600000.ssusb: dwc3_msm_resume: set core clk rate 133333333
+[  213.218711][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[  213.218714][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[  213.218719][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: min_vol:912000 max_vol:912000
+[  213.219150][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:0 on:1
+[  213.219161][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is resumed
+[  213.219166][    T7] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:0 on:1
+[  213.219169][    T7] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  213.220160][    T7] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[  213.220164][    T7] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=1000
+[  213.220167][    T7] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=1000
+[  213.220174][    T7] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget
+[  213.220182][    T7] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[  213.220185][    T7] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:0
+[  213.220302][    T7] msm_hsphy_enable_power(): HSUSB PHY's regulators are turned ON.
+[  213.220305][    T7] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[  213.220478][    T7] Seq count:6
+[  213.220481][    T7] write 0xe6 to 0x6c
+[  213.220484][    T7] write 0xcf to 0x70
+[  213.220486][    T7] write 0x0c to 0x74
+[  213.220491][    T7] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[  213.220503][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[  213.220506][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[  213.220509][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: PHYs' regulators status 1
+[  213.220511][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:1
+[  213.220514][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[  213.244745][    T7] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[  213.244752][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[  213.244755][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[  213.244768][    C0] msm-dwc3 a600000.ssusb: msm_dwc3_pwr_irq received
+[  213.244775][    T7] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[  213.244781][    T7] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[  213.244784][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=201004
+[  213.244789][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=201000
+[  213.244797][    T7] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[  213.244801][    T7] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[  213.244809][    T7] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy connect notification
+[  213.246059][    T7] msm_dwc3_perf_vote_update: latency updated to: 2
+[  213.246070][    T7] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 3
+[  215.145991][  T175] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 1
+[  215.146001][  T175] msm-dwc3 a600000.ssusb: !id || !bsv
+[  215.146007][  T175] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn off gadget
+[  215.146019][  T175] msm_dwc3_perf_vote_update: latency updated to: -1
+[  215.146028][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy disconnect notification
+[  215.146031][  T175] msm-usb-ssphy-qmp 88e8000.ssphy:  cable_connected=1
+[  215.146036][  T175] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[  215.146058][  T175] msm-usb-hsphy 88e3000.hsphy: phy->flags:0x0
+[  215.146061][  T175] msm-usb-hsphy 88e3000.hsphy: turning off clocks/ldo
+[  215.146064][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:0
+[  215.146069][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn off regulators. power_enabled:1
+[  215.146128][  T175] msm-usb-hsphy 88e3000.hsphy: HSUSB PHY's regulators are turned OFF.
+[  215.146132][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  215.146136][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:0
+[  215.146150][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: reg (LPM)
+[  215.146182][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is suspend
+[  215.146250][  T175] msm-dwc3 a600000.ssusb: DWC3-msm runtime suspend
+[  215.146315][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_set_suspend: USB PHY is already suspended
+[  215.146323][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  215.146327][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already suspended.
+[  215.146356][  T175] msm-dwc3 a600000.ssusb: dwc3_msm_suspend: power collapse
+[  215.146518][  T175] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[  215.146530][  T175] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 1
+[  215.146536][  T175] msm-dwc3 a600000.ssusb: Cable disconnected
+[  215.146543][   T46] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[  218.668439][  T229] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 3
+[  218.668448][  T229] msm-dwc3 a600000.ssusb: b_sess_vld
+[  218.668454][  T229] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[  218.668457][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[  218.668623][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  218.669881][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: set core clk rate 133333333
+[  218.669912][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[  218.669916][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[  218.669921][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: min_vol:912000 max_vol:912000
+[  218.670300][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:0 on:1
+[  218.670311][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is resumed
+[  218.670316][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:0 on:1
+[  218.670319][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  218.671310][  T229] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[  218.671314][  T229] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=1000
+[  218.671317][  T229] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=1000
+[  218.671325][  T229] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget
+[  218.671334][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[  218.671337][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:0
+[  218.671455][  T229] msm_hsphy_enable_power(): HSUSB PHY's regulators are turned ON.
+[  218.671459][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[  218.671634][  T229] Seq count:6
+[  218.671636][  T229] write 0xe6 to 0x6c
+[  218.671639][  T229] write 0xcf to 0x70
+[  218.671642][  T229] write 0x0c to 0x74
+[  218.671646][  T229] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[  218.671658][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[  218.671661][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[  218.671664][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: PHYs' regulators status 1
+[  218.671667][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:1
+[  218.671670][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[  218.700752][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[  218.700764][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[  218.700769][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[  218.700774][    C0] msm-dwc3 a600000.ssusb: msm_dwc3_pwr_irq received
+[  218.700784][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=201004
+[  218.700793][  T229] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[  218.700798][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=201000
+[  218.700804][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[  218.700809][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[  218.700814][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[  218.700822][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy connect notification
+[  218.702112][  T229] msm_dwc3_perf_vote_update: latency updated to: 2
+[  218.702132][  T229] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 3
+[  219.589945][  T229] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 1
+[  219.589955][  T229] msm-dwc3 a600000.ssusb: !id || !bsv
+[  219.589960][  T229] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn off gadget
+[  219.589970][  T229] msm_dwc3_perf_vote_update: latency updated to: -1
+[  219.589977][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy disconnect notification
+[  219.589981][  T229] msm-usb-ssphy-qmp 88e8000.ssphy:  cable_connected=1
+[  219.589986][  T229] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[  219.590007][  T229] msm-usb-hsphy 88e3000.hsphy: phy->flags:0x0
+[  219.590010][  T229] msm-usb-hsphy 88e3000.hsphy: turning off clocks/ldo
+[  219.590013][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:0
+[  219.590017][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn off regulators. power_enabled:1
+[  219.590070][  T229] msm-usb-hsphy 88e3000.hsphy: HSUSB PHY's regulators are turned OFF.
+[  219.590074][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  219.590079][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:0
+[  219.590089][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (LPM)
+[  219.590118][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is suspend
+[  219.590187][  T229] msm-dwc3 a600000.ssusb: DWC3-msm runtime suspend
+[  219.590250][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_set_suspend: USB PHY is already suspended
+[  219.590257][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  219.590260][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already suspended.
+[  219.590286][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_suspend: power collapse
+[  219.590437][  T229] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[  219.590449][  T229] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 1
+[  219.590455][  T229] msm-dwc3 a600000.ssusb: Cable disconnected
+[  219.590461][  T159] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[  228.352964][  T166] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 0
+[  259.829304][  T229] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 3
+[  259.829314][  T229] msm-dwc3 a600000.ssusb: b_sess_vld
+[  259.829320][  T229] msm-dwc3 a600000.ssusb: DWC3-msm runtime resume
+[  259.829324][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exiting lpm
+[  259.829499][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  259.830748][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: set core clk rate 133333333
+[  259.830773][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[  259.830776][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[  259.830781][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: min_vol:912000 max_vol:912000
+[  259.831173][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:0 on:1
+[  259.831183][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is resumed
+[  259.831187][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:0 on:1
+[  259.831190][  T229] msm-dwc3 a600000.ssusb: dwc3_msm_resume: exit power collapse
+[  259.832189][  T229] msm-dwc3 a600000.ssusb: DWC3 exited from low power mode
+[  259.832193][  T229] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=1000
+[  259.832196][  T229] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=1000
+[  259.832203][  T229] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn on gadget
+[  259.832211][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_init phy_flags:0x0
+[  259.832214][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn on regulators. power_enabled:0
+[  259.832333][  T229] msm_hsphy_enable_power(): HSUSB PHY's regulators are turned ON.
+[  259.832336][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[  259.832509][  T229] Seq count:6
+[  259.832512][  T229] write 0xe6 to 0x6c
+[  259.832514][  T229] write 0xcf to 0x70
+[  259.832517][  T229] write 0x0c to 0x74
+[  259.832522][  T229] msm-usb-hsphy 88e3000.hsphy: x0:e6e6e6e6 x1:cfcfcfcf x2:0c0c0c0c x3:03030303
+[  259.832533][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: Initializing QMP phy
+[  259.832536][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: reg (HPM)
+[  259.832538][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: PHYs' regulators status 1
+[  259.832541][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:1
+[  259.832544][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: Global reset of QMP DP combo phy
+[  259.856783][  T229] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:1
+[  259.856793][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for resume called with cable disconnected
+[  259.856797][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already resumed.
+[  259.856800][    C0] msm-dwc3 a600000.ssusb: msm_dwc3_pwr_irq received
+[  259.856810][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler irq_stat=201004
+[  259.856819][  T229] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_SETUP
+[  259.856821][    C0] msm-dwc3 a600000.ssusb: dwc3_pwr_event_handler: unexpected PWR_EVNT, irq_stat=201000
+[  259.856827][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffe000 length 4096
+[  259.856831][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffd000 length 4096
+[  259.856834][  T229] msm-dwc3 a600000.ssusb: Evt buf 0000000000000000 dma efffc000 length 4096
+[  259.856841][  T229] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy connect notification
+[  259.858118][  T229] msm_dwc3_perf_vote_update: latency updated to: 2
+[  259.858135][  T229] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 3
+[  260.746516][  T175] msm-dwc3 a600000.ssusb: peripheral state, mdwc->inputs is 1
+[  260.746527][  T175] msm-dwc3 a600000.ssusb: !id || !bsv
+[  260.746535][  T175] msm-dwc3 a600000.ssusb: dwc3_otg_start_peripheral: turn off gadget
+[  260.746548][  T175] msm_dwc3_perf_vote_update: latency updated to: -1
+[  260.746557][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP phy disconnect notification
+[  260.746561][  T175] msm-usb-ssphy-qmp 88e8000.ssphy:  cable_connected=1
+[  260.746569][  T175] msm-dwc3 a600000.ssusb: DWC3_GSI_EVT_BUF_CLEAR
+[  260.746593][  T175] msm-usb-hsphy 88e3000.hsphy: phy->flags:0x0
+[  260.746597][  T175] msm-usb-hsphy 88e3000.hsphy: turning off clocks/ldo
+[  260.746602][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_clocks(): clocks_enabled:1 on:0
+[  260.746608][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_enable_power turn off regulators. power_enabled:1
+[  260.746690][  T175] msm-usb-hsphy 88e3000.hsphy: HSUSB PHY's regulators are turned OFF.
+[  260.746694][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  260.746699][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_enable_clks(): clk_enabled:1 on:0
+[  260.746712][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: reg (LPM)
+[  260.746740][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY is suspend
+[  260.746810][  T175] msm-dwc3 a600000.ssusb: DWC3-msm runtime suspend
+[  260.746884][  T175] msm-usb-hsphy 88e3000.hsphy: msm_hsphy_set_suspend: USB PHY is already suspended
+[  260.746894][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: QMP PHY set_suspend for suspend called with cable disconnected
+[  260.746897][  T175] msm-usb-ssphy-qmp 88e8000.ssphy: msm_ssphy_qmp_set_suspend: USB PHY is already suspended.
+[  260.746925][  T175] msm-dwc3 a600000.ssusb: dwc3_msm_suspend: power collapse
+[  260.747087][  T175] msm-dwc3 a600000.ssusb: DWC3 in low power mode
+[  260.747098][  T175] msm-dwc3 a600000.ssusb: idle state, mdwc->inputs is 1
+[  260.747105][  T175] msm-dwc3 a600000.ssusb: Cable disconnected
+[  260.747111][   T66] msm-usb-hsphy 88e3000.hsphy: Avail curr from USB = 0
+[  261.052937][  T284] PMIC input: code[116]=PWKEY, sts[128]=[DWN]
+[  261.104620][  T285] PMIC input: code[114]=VOLDWN, sts[64]=[DWN]
+[  262.666703][  T285] PMIC input: code[114]=VOLDWN, sts[0]=[UP]
+[  262.688880][  T284] PMIC input: code[116]=PWKEY, sts[0]=[UP]
+[  262.790150][  T284] PMIC input: code[116]=PWKEY, sts[128]=[DWN]
+[  262.926740][  T284] PMIC input: code[116]=PWKEY, sts[0]=[UP]
+[  263.128004][  T284] PMIC input: code[116]=PWKEY, sts[128]=[DWN]
+[  263.273446][  T285] PMIC input: code[114]=VOLDWN, sts[64]=[DWN]
+[  264.449162][  T177] BATTERY_CHG: xm_charger_debug_info_print_work: usb_present: 0
+[  267.816166][  T287] pm8941-pwrkey c42d000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300:pwrkey-resin-bark: pwrkey_resin_bark_irq trigger, start D&R task info
+[  267.816178][  T287] ------ collect D&R-state processes info before long comb key ------
+[  267.816181][  T287]   task 					   PC stack   pid father
+[  267.816226][  T287] task:hdcp_2x         state:D stack:    0 pid:  417 ppid:     2 flags:0x00000008
+[  267.816231][  T287] Call trace:
+[  267.816237][  T287]  __switch_to+0x24c/0x5f4
+[  267.816242][  T287]  __schedule+0x5b0/0xbe4
+[  267.816245][  T287]  schedule+0x80/0x1ac
+[  267.816345][  T287]  sde_hdcp_2x_main+0xcc/0x9ac [msm_drm]
+[  267.816349][  T287]  kthread+0x150/0x200
+[  267.816352][  T287]  ret_from_fork+0x10/0x30
+[  267.816355][  T287] task:dp_hdcp2p2      state:D stack:    0 pid:  418 ppid:     2 flags:0x00000008
+[  267.816358][  T287] Call trace:
+[  267.816361][  T287]  __switch_to+0x24c/0x5f4
+[  267.816364][  T287]  __schedule+0x5b0/0xbe4
+[  267.816366][  T287]  schedule+0x80/0x1ac
+[  267.816445][  T287]  dp_hdcp2p2_main+0xe0/0x724 [msm_drm]
+[  267.816449][  T287]  kthread+0x150/0x200
+[  267.816451][  T287]  ret_from_fork+0x10/0x30
+[  267.816459][  T287] task:recovery        state:D stack:    0 pid:  521 ppid:     1 flags:0x04000000
+[  267.816462][  T287] Call trace:
+[  267.816464][  T287]  __switch_to+0x24c/0x5f4
+[  267.816467][  T287]  __schedule+0x5b0/0xbe4
+[  267.816469][  T287]  schedule+0x80/0x1ac
+[  267.816471][  T287]  schedule_timeout+0x98/0x144
+[  267.816474][  T287]  wait_for_common+0x114/0x320
+[  267.816476][  T287]  wait_for_completion_timeout+0x18/0x28
+[  267.816486][  T287]  battery_chg_write+0x7c/0xcc [qti_battery_charger]
+[  267.816494][  T287]  battery_psy_get_prop+0xd0/0x1c0 [qti_battery_charger]
+[  267.816498][  T287]  power_supply_show_property+0xc0/0x304
+[  267.816502][  T287]  dev_attr_show+0x4c/0xb4
+[  267.816506][  T287]  sysfs_kf_seq_show+0xbc/0x158
+[  267.816508][  T287]  kernfs_seq_show+0x54/0x9c
+[  267.816511][  T287]  seq_read_iter+0x19c/0x748
+[  267.816514][  T287]  kernfs_fop_read_iter+0x98/0x4a8
+[  267.816517][  T287]  vfs_read+0x2ec/0x368
+[  267.816519][  T287]  ksys_read+0x7c/0x150
+[  267.816522][  T287]  __arm64_sys_read+0x20/0x30
+[  267.816525][  T287]  el0_svc_common+0xc0/0x24c
+[  267.816528][  T287]  el0_svc+0x28/0x88
+[  267.816530][  T287]  el0_sync_handler+0x8c/0xf0
+[  267.816533][  T287]  el0_sync+0x1b4/0x1c0
+[  267.816539][  T287]   task 					   PC stack   pid father
+[  267.816545][  T287] task:irq/351-pmic_pw state:R  running task     stack:    0 pid:  287 ppid:     2 flags:0x00000008
+[  267.816548][  T287] Call trace:
+[  267.816551][  T287]  dump_backtrace.cfi_jt+0x0/0x8
+[  267.816554][  T287]  sched_show_task+0x198/0x214
+[  267.816559][  T287]  pm8941_pwrkey_irq+0x31c/0x35c [pm8941_pwrkey]
+[  267.816562][  T287]  irq_thread_fn+0x48/0xd4
+[  267.816564][  T287]  irq_thread+0x3ac/0x76c
+[  267.816567][  T287]  kthread+0x150/0x200
+[  267.816569][  T287]  ret_from_fork+0x10/0x30
+[  267.816573][  T287] task:recovery        state:R  running task     stack:    0 pid:  485 ppid:     1 flags:0x04000000
+[  267.816575][  T287] Call trace:
+[  267.816578][  T287]  __switch_to+0x24c/0x5f4
+[  267.816580][  T287]  __schedule+0x5b0/0xbe4
+[  267.816582][  T287]  schedule+0x80/0x1ac
+[  267.816584][  T287]  do_notify_resume+0xfc/0x264
+[  267.816587][  T287]  work_pending+0xc/0x5f0
+[  267.816589][  T287] ------ end collecting D&R-state processes info ------
+[  267.816608][  T287] PMIC input: code[116]=PWKEY, sts[128]=[DWN] 

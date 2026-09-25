@@ -1,0 +1,16 @@
+#!/sbin/sh
+# Harmless TWRP test zip: prints to the TWRP console and writes a marker to /tmp.
+# It does not mount, write or flash any partition.
+OUTFD=$2
+ZIP=$3
+ui_print() { echo "ui_print $1" > /proc/self/fd/$OUTFD; echo "ui_print" > /proc/self/fd/$OUTFD; }
+ui_print "=================================="
+ui_print " katyusha TWRP test zip"
+ui_print "=================================="
+ui_print "zip:   $ZIP"
+ui_print "slot:  $(getprop ro.boot.slot_suffix)"
+ui_print "twrp:  $(getprop ro.twrp.version)"
+echo "ok $ZIP $(date)" > /tmp/katyusha_testzip.ok
+ui_print "marker written to /tmp/katyusha_testzip.ok"
+ui_print "done - nothing was modified"
+exit 0
