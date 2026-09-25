@@ -12,7 +12,11 @@ source build/envsetup.sh
 lunch twrp_katyusha-eng || { echo 'lunch failed'; exit 1; }
 [ "${TARGET_PRODUCT:-}" = twrp_katyusha ] || { echo 'lunch did not select twrp_katyusha'; exit 1; }
 set -u
-m -j"$JOBS" recoveryimage || { echo 'build failed'; exit 1; }
+# Incremental builds keep files deleted from the tree in out/.../recovery/root and
+# do not repack recovery.img for deletions; clear them so the image matches the tree.
+P="$SRC/out/target/product/katyusha"
+rm -rf "$P/recovery/root" "$P/recovery.img" "$P"/ramdisk-recovery*
+m -j"$JOBS" recoveryimage || [ -s "$P/recovery.img" ] || { echo 'build failed'; exit 1; }  # zip-less hosts fail only on recovery-resource.dat
 mkdir -p "$ROOT/out"
 cp "$SRC/out/target/product/katyusha/recovery.img" "$ROOT/out/twrp-katyusha-$(date +%Y%m%d-%H%M).img"
 ls -la "$ROOT/out"
