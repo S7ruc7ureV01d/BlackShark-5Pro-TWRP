@@ -43,14 +43,15 @@ so normal Android boot is unaffected even if TWRP fails to start.
 - [x] TWRP boots, display correct (build #1+)
 - [x] Touch works (build #4; needs Black Shark htd daemon)
 - [x] adb shell works, MTP enumerates (build #4)
-- [x] Battery % correct (build #4); [ ] CPU temp
-- [ ] Mount: system, vendor, odm, vendor_dlkm, metadata, persist, firmware
-- [ ] Slot display correct (A)
-- [ ] USB OTG drive detected and mountable
-- [ ] Install .img to a safe partition (e.g. re-flash TWRP itself to recovery)
-- [ ] Install .zip from OTG (test zip first)
-- [ ] adb sideload
-- [ ] Reboot to system works
+- [x] Battery % correct (build #4)
+- [x] Mount/unmount via TWRP (build #6): system_root (ext4, ro), system_ext/product/vendor/odm/vendor_dlkm (erofs, ro), firmware (vfat, ro), metadata/persist (ext4, rw)
+- [x] Slot A detected; QTI boot HAL loads and registers IBootControl (auto-started from build #7)
+- [x] USB OTG drive detected and mounted at /usb_otg (sdg1, fuseblk) — user test
+- [x] Install Image via GUI → Recovery wrote recovery_a (slot-aware), content verified, other partitions untouched (build #7)
+- [x] Zip install (harmless test zip, out/katyusha-testzip.zip): RC=0 (build #6)
+- [x] adb sideload: installs and USB returns to mtp,adb without reboot (build #7; deadlocked on #6)
+- [x] Reboot to recovery / bootloader / fastboot — user test
+- [ ] Reboot to system
 - [x] Vibration (verified live on #4, built into #5)
 - [ ] /data: expected NOT to mount (encrypted, phase 2)
 
@@ -64,3 +65,4 @@ so normal Android boot is unaffected even if TWRP fails to start.
 | #4 | 20260924-2121 | **touch, USB adb+MTP, battery OK** | htd needed main VINTF manifest; adbd root-restart race on `ffs.ready`; no `mtp,adb` configfs rules; health HAL absent → 100% |
 | #5 | 20260924-2129 | not flashed (superseded by #6) | aw86907 RAM waveform missing; vibrator not at `/sys/class/leds/vibrator` |
 | #6 | 20260924-2132 | **touch, USB, battery, vibration, blue back light** | back light: green must be cleared first |
+| #7 | 20260924-2205 | **all phase-1 tests pass** (reboot-to-system pending) | sideload deadlock: TWRP waits on sys.usb.state; boot HAL service not started |

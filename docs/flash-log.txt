@@ -9,3 +9,4 @@
 2026-09-24T21:34:57-03:00 TWRP #6 (2132) result: boots; adb+MTP, battery, htd, haptics RAM auto-loaded, back light sky blue (auto)
 2026-09-24T22:06:27-03:00 flashed out/twrp-katyusha-20260924-2205.img to recovery_a from TWRP adb (readback 59fe7d28 OK)
 2026-09-24T22:06:56-03:00 TWRP #7 (2205) boot: adb+MTP, boot-hal-1-2 running + IBootControl registered, htd, LED, haptics OK
+2026-09-24T22:30:42-03:00 TWRP #7: sideload OK (USB returns), GUI Install Image -> recovery_a OK
