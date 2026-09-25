@@ -66,6 +66,10 @@ on boot
     # loads the QTI impl (/vendor/lib64/hw/android.hardware.boot@1.0-impl-1.2-qti.so)
     # via passthrough; verified live on build #6.
     start boot-hal-1-2
+    # Health HAL. The VINTF fragments declare android.hardware.health over hwbinder, so
+    # fastbootd's getService() blocks forever (it never sets up USB and is not detected)
+    # unless this service runs. TWRP itself reads battery from sysfs.
+    start health-hal-2-1
     wait /dev/ht_input 10
     chmod 0666 /dev/ht_input
     chown system system /dev/ht_input
