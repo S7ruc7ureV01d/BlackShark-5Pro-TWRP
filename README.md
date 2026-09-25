@@ -35,7 +35,7 @@ Or from a root shell in Android:
 ```
 dd if=twrp-katyusha-20260924-2205.img of=/dev/block/by-name/recovery_a bs=4M && sync
 ```
-Boot it with `adb reboot recovery`, or with Reboot → Recovery from the bootloader/fastboot menu.
+Boot it with `adb reboot recovery` (verified). Inside TWRP, Reboot → Recovery/Bootloader/Fastboot also works.
 
 **Before installing:**
 - Only install to the slot you boot from. Check it with `adb shell getprop ro.boot.slot_suffix`.
