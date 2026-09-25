@@ -110,3 +110,16 @@ See `docs/BACKUPS.md`.
   `i2c-5/5-0045` → `red2/green2/blue2`). It powers up green; green must be written
   (to 0) before other colours take effect. TWRP sets B=255, G=100 (sky blue).
   The PMIC tri-LED (`red/green/blue`, pm8350c) is a separate light.
+
+## Decryption investigation (phase 2, 2026-09-25)
+
+`ksdiag` (device/blackshark/katyusha/ksdiag, throwaway keystore2 BLOB-domain keys only):
+
+* Stock Android binds KeyMint keys to OS_VERSION 120000, OS_PATCHLEVEL 202206,
+  VENDOR_PATCHLEVEL 20220601, BOOT_PATCHLEVEL **20220501** (from vbmeta_a's MP1 props).
+* A test key generated in stock Android **is usable in TWRP** (createOperation OK), so the
+  root of trust and version bindings in recovery boot match normal boot.
+* The vold metadata KEK (`/metadata/vold/metadata_encryption/key/keymaster_key_blob`, native
+  KeyMint `KMKD` blob) is rejected in TWRP with INVALID_KEY_BLOB (-33). Since the
+  environment matches, the remaining suspect is the APPLICATION_ID vold derives
+  (SHA512 of prefix || secdiscardable) or an OEM change in stock vold.

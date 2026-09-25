@@ -1,0 +1,11 @@
+// Diagnostic tool only; not installed into the recovery image (build with `m ksdiag`).
+cc_binary {
+    name: "ksdiag",
+    srcs: ["ksdiag.cpp"],
+    shared_libs: [
+        "libbinder_ndk",
+        "android.system.keystore2-V1-ndk_platform",
+        "android.hardware.security.keymint-V1-ndk_platform",
+    ],
+    cflags: ["-Wall", "-Werror"],
+}

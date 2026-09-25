@@ -1,0 +1,4 @@
+ks2=running keymint=running
+generateKey: FAILED service-specific error -49
+--- stock blob in TWRP:
+createOperation: OK - blob from /tmp/ks_stock.blob is usable here
