@@ -72,3 +72,4 @@ so normal Android boot is unaffected even if TWRP fails to start.
 | #5 | 20260924-2129 | not flashed (superseded by #6) | aw86907 RAM waveform missing; vibrator not at `/sys/class/leds/vibrator` |
 | #6 | 20260924-2132 | **touch, USB, battery, vibration, blue back light** | back light: green must be cleared first |
 | #7 | 20260924-2205 | **all phase-1 tests pass** | sideload deadlock: TWRP waits on sys.usb.state; boot HAL service not started |
+| v1.0 | 20260925-0105 (released as `twrp-katyusha-v1.0.img`) | **all phase-1 tests + RGB light animation during operations, credit string** | decryption gated off (`KATYUSHA_DECRYPT`) |

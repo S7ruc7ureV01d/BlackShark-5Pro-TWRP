@@ -11,7 +11,7 @@ Tested on JOYUI V11.0.4.0 (Android 12) and an Android 16 GSI.
 ## Install
 Requires an unlocked bootloader and `vbmeta` with verification disabled on the active slot.
 ```
-fastboot flash recovery_a twrp-katyusha-20260924-2205.img
+fastboot flash recovery_a twrp-katyusha-v1.0.img
 ```
 Replace `_a` with your active slot. Keep a backup of your stock recovery.
 
