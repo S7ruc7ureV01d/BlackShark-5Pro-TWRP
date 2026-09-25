@@ -11,3 +11,4 @@
 2026-09-24T22:06:56-03:00 TWRP #7 (2205) boot: adb+MTP, boot-hal-1-2 running + IBootControl registered, htd, LED, haptics OK
 2026-09-24T22:30:42-03:00 TWRP #7: sideload OK (USB returns), GUI Install Image -> recovery_a OK
 2026-09-24T22:32:04-03:00 TWRP #7: reboot to system OK; recovery_a still 59fe7d28 after Android boot
+2026-09-24T22:42:13-03:00 TWRP #7: screen timeout OK, OTG backup+restore OK (byte-identical), MTP protocol OK / no storage without /data

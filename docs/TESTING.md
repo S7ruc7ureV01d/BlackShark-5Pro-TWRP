@@ -53,6 +53,12 @@ so normal Android boot is unaffected even if TWRP fails to start.
 - [x] Reboot to recovery / bootloader / fastboot — user test
 - [x] Reboot to system: Android 16 GSI boots; recovery_a still TWRP #7 afterwards (not overwritten)
 - [x] Vibration (verified live on #4, built into #5)
+- [x] Screen timeout: backlight goes to 0 and the OLED turns off by itself (TW_NO_SCREEN_BLANK only skips the fb blank ioctl) — user test, build #7
+- [x] Backup to USB OTG (Boot + Recovery) and restore (Recovery): restored recovery_a byte-identical (sha256 59fe7d28); TWRP MD5s of boot.emmc.win / recovery.emmc.win match boot_a / recovery_a (build #7)
+- [x] CPU temperature source readable (thermal_zone49 cpu-0-0)
+- [~] MTP: protocol works (host reads device info), but no storage is exposed until /data is decrypted; OTG and PC cannot be connected at the same time (single USB-C port)
+- [ ] Full ROM / OTA zip with payload.bin (not tested)
+- [ ] Actual slot switch A→B→A (HAL verified; switch not performed: slot B enforces AVB and has no system)
 - [ ] /data: expected NOT to mount (encrypted, phase 2)
 
 ## Build history
