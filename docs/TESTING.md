@@ -40,10 +40,10 @@ so normal Android boot is unaffected even if TWRP fails to start.
   or from bootloader: `fastboot flash recovery_a backups/stock/partitions/recovery_a.img`.
 
 ## Test checklist
-- [ ] TWRP boots, display correct, no tearing
-- [ ] Touch works across whole screen (corners)
-- [ ] adb shell works; `adb pull /tmp/recovery.log`
-- [ ] Battery % and CPU temp shown
+- [x] TWRP boots, display correct (build #1+)
+- [x] Touch works (build #4; needs Black Shark htd daemon)
+- [x] adb shell works, MTP enumerates (build #4)
+- [x] Battery % correct (build #4); [ ] CPU temp
 - [ ] Mount: system, vendor, odm, vendor_dlkm, metadata, persist, firmware
 - [ ] Slot display correct (A)
 - [ ] USB OTG drive detected and mountable
@@ -51,4 +51,15 @@ so normal Android boot is unaffected even if TWRP fails to start.
 - [ ] Install .zip from OTG (test zip first)
 - [ ] adb sideload
 - [ ] Reboot to system works
+- [x] Vibration (verified live on #4, built into #5)
 - [ ] /data: expected NOT to mount (encrypted, phase 2)
+
+## Build history
+
+| Build | Image | Result | Root causes found |
+|---|---|---|---|
+| #1 | 20260924-2046 | Boots, display OK; no touch, no USB, battery 100% | (pstore log, device-info/twrp-boot-1) |
+| #2 | 20260924-2056-debug | not flashed (superseded) | added rescue-partition log dumper |
+| #3 | 20260924-2108-debug | same symptoms | modem fw mount failed on SELinux `context=` → ADSP down; touch needs htd daemon; vendor libs not in linker path |
+| #4 | 20260924-2121 | **touch, USB adb+MTP, battery OK** | htd needed main VINTF manifest; adbd root-restart race on `ffs.ready`; no `mtp,adb` configfs rules; health HAL absent → 100% |
+| #5 | pending | + vibration | aw86907 RAM waveform missing; vibrator not at `/sys/class/leds/vibrator` |

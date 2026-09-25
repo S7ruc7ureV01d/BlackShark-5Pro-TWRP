@@ -87,3 +87,22 @@ Copies of key files are in `device-info/stock-recovery/`.
 ## Partition backups
 
 See `docs/BACKUPS.md`.
+
+## Findings from TWRP bring-up (2026-09-24)
+
+* **Touch is host-based processing.** `hbp_touch.ko` (FocalTech `fts_ht`, SPI) only
+  exposes raw frames on `/dev/ht_ft`. Black Shark's HIDL daemon
+  `/vendor/bin/hw/com.blackshark.htd@1.0-service` (libs `libhthal.so`, `libta.so`,
+  `com.blackshark.htd@1.0.so`) computes touch points and injects them via
+  `/dev/ht_input` → input device `ht,input`. It must register with hwservicemanager,
+  which requires a device VINTF manifest entry for `com.blackshark.htd@1.0::IHostTouchDaemon`.
+  Controller firmware is already current (tp 75 == host 75); no firmware needed.
+* **ADSP** (battery, charger, Type-C/ucsi) needs the modem partition mounted at
+  `/vendor/firmware_mnt` (vfat) so `adsp.mdt` is found; the stock mount option
+  `context=u:object_r:firmware_file:s0` fails under TWRP's SELinux policy.
+* **USB** is configfs-only (`a600000.dwc3`); dwc3 `mode` accepts `peripheral|host|none`,
+  role switching is via `a600000.ssusb-role-switch` (ucsi_glink). MTP must use
+  FunctionFS (`ffs.mtp`); the kernel has no `mtp.gs0`.
+* **Haptics:** Awinic aw86907 (`aw8697-haptic.ko`, i2c `3-005a`) with duration/activate
+  sysfs attributes; needs RAM waveform `aw8697_haptic.bin` from `/vendor/firmware`.
+* **Battery:** read from `/sys/class/power_supply/battery/capacity` (no health HAL in recovery).
