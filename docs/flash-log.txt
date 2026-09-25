@@ -4,3 +4,4 @@
 2026-09-24T21:18:35-03:00 TWRP #3 (2108-debug) result: display OK, battery shows 100 (sysfs=70), no touch, no USB; logs in device-info/twrp-boot-3
 2026-09-24T21:22:35-03:00 flashed out/twrp-katyusha-20260924-2121.img to recovery_a (readback 698213ba OK)
 2026-09-24T21:23:18-03:00 TWRP #4 (2121) result: adb+MTP OK over USB, battery 71% correct, htd running and processing frames; touch: awaiting user confirmation
+2026-09-24T21:26:41-03:00 TWRP #4: touch confirmed working by user; vibration fixed live (aw8697_haptic.bin + /sys/class/leds overlay), confirmed by user

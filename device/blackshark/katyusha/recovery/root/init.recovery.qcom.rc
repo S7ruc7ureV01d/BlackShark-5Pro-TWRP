@@ -63,13 +63,12 @@ on boot
     chown system system /dev/ht_input
     start vendor.htd
 
-# DEBUG ONLY (remove when touch/USB work): persist diagnostics to the rescue partition
-service twrp_dbg /system/bin/sh /system/bin/twrp_dbg.sh
-    user root
-    group root
-    oneshot
-    disabled
-    seclabel u:r:recovery:s0
-
+# Haptics: the Awinic aw86907 driver exposes the leds-vibrator interface (duration +
+# activate) on its i2c device, not under /sys/class/leds/vibrator where TWRP looks.
+# Overlay /sys/class/leds with a tmpfs holding a "vibrator" link to the device (TWRP
+# does not use the RGB/flash LEDs this hides). The driver also needs its RAM waveform
+# aw8697_haptic.bin (shipped in /etc/firmware, loaded into chip RAM at boot; nothing
+# is written to flash), otherwise it refuses to play ("ram init failed").
 on boot
-    start twrp_dbg
+    mount tmpfs tmpfs /sys/class/leds mode=0755
+    symlink /sys/devices/platform/soc/884000.i2c/i2c-3/3-005a /sys/class/leds/vibrator
