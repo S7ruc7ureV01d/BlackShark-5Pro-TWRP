@@ -1,0 +1,12 @@
+=== genrr in TWRP
+generateKey: OK (security level TEE)
+  TEE        ROLLBACK_RESISTANCE = true
+  TEE        BOOT_PATCHLEVEL    = 20220501
+blob (214 bytes) saved to /tmp/ks_twrp_rr.blob
+=== use it in TWRP
+createOperation: OK - blob from /tmp/ks_twrp_rr.blob is usable here
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/ 2026-09-24 22:27:46.000000000 -0500
+/mnt/vendor/persist/data/DdHdVQd1FIOARksZgXG27GJ1A5UjYCGhP-ZoGvseqsY_/ 2023-05-11 13:45:57.000000000 -0500
+/mnt/vendor/persist/data/Mlipay/ 2022-07-03 21:40:17.000000000 -0500
+/mnt/vendor/persist/data/f3-kdcO7vtq3DPXQWveXFSLY--rOiMGsotFIfOjqlTI_/ 2022-10-21 10:51:13.000000000 -0500
+/mnt/vendor/persist/data/pfm/ 2026-06-14 09:40:40.000000000 -0500

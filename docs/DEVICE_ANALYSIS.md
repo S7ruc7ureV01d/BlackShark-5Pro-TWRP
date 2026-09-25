@@ -123,12 +123,23 @@ See `docs/BACKUPS.md`.
   KeyMint `KMKD` blob) is rejected in TWRP with INVALID_KEY_BLOB (-33). Since the
   environment matches, the remaining suspect is the APPLICATION_ID vold derives
   (SHA512 of prefix || secdiscardable) or an OEM change in stock vold.
-* The vold metadata KEK has **ROLLBACK_RESISTANCE**. A throwaway rollback-resistant key
-  generated in stock is usable in stock but rejected in TWRP with INVALID_KEY_BLOB (-33),
-  while a plain key works in both. The vold APPLICATION_ID derivation is correct (stock
-  accepts it). Using an RR key in stock updates a TrustZone GP-SFS file under
-  `/mnt/vendor/persist/data/`; in TWRP the TA rejects the key before any storage write,
-  even with qseecom dma_heap perms, RPMB node owner (`/dev/0:0:0:49476`), persist mounted at
-  `/mnt/vendor/persist` and `gpfspath_oem_config.xml` all matching stock.
-  => TrustZone treats rollback-resistant keys differently in this recovery boot. Root cause
-  not yet identified (no TZ logs on production firmware).
+* The vold metadata KEK has **ROLLBACK_RESISTANCE**; the vold APPLICATION_ID derivation is
+  correct (stock accepts begin() with it).
+* Rollback-resistant (RR) keys are **asymmetric between boot modes**:
+  | key created in | used in stock | used in TWRP |
+  |---|---|---|
+  | stock (plain)  | OK | OK |
+  | stock (RR)     | OK | INVALID_KEY_BLOB (-33) |
+  | TWRP (RR)      | OK | OK |
+  TEE-enforced tags of stock and TWRP RR blobs are identical (only a keystore-level
+  CREATION_DATETIME differs). The difference is inside TrustZone's RR bookkeeping, which is
+  not observable from HLOS (no qsee_log on production firmware; no SFS/ssd file access seen
+  via inotify during RR key use in stock).
+* Stock-parity environment in TWRP (all verified, necessary but not sufficient): qseecom
+  dma_heap perms, RPMB node `/dev/0:0:0:49476` owner, persist at `/mnt/vendor/persist`,
+  `gpfspath_oem_config.xml`, framework VINTF manifest, QSEECom HAL, KeyMint/Keymaster/
+  gatekeeper/keystore2 running, shared-secret negotiation OK.
+* Correction: an earlier note claimed RR key use writes `/mnt/vendor/persist/data/DXYo7…`;
+  that write happens at stock boot and is unrelated.
+* Hypothesis: TrustZone scopes RR key state by boot path (normal vs. recovery partition).
+  Next experiment if pursued: boot the TWRP ramdisk through the *boot* partition path.

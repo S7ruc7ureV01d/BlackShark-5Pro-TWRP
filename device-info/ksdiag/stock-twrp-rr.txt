@@ -1,0 +1,14 @@
+Fri Sep 25 00:33:12 -03 2026
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_ 2026-09-25 00:32:58.000000000 -0300
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_.bak 2026-09-25 00:32:58.000000000 -0300
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/vTable 2022-07-03 23:35:59.000000000 -0300
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/vTable.bak 2022-07-03 23:35:59.000000000 -0300
+=== TWRP-made RR key in stock:
+createOperation: OK - blob from /data/local/tmp/ks_twrp_rr.blob is usable here
+=== fresh stock RR key:
+generateKey: OK (security level TEE)
+blob (200 bytes) saved to /data/local/tmp/x.blob
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_ 2026-09-25 00:32:58.000000000 -0300
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_.bak 2026-09-25 00:32:58.000000000 -0300
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/vTable 2022-07-03 23:35:59.000000000 -0300
+/mnt/vendor/persist/data/DXYo7UmVsDUcrrYSf1Qfiooe8RhQ3IoKrSSx9W71ucE_/vTable.bak 2022-07-03 23:35:59.000000000 -0300

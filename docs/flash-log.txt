@@ -18,3 +18,4 @@
 2026-09-24T23:55:42-03:00 TWRP #9: all security services up after live dma_heap perm fix; metadata KEK begin -> KeyMint -33 INVALID_KEY_BLOB (no write; TWRP upgrades go to /tmp)
 2026-09-25T00:00:33-03:00 TWRP #9 live tests: persist at /mnt/vendor/persist -> still -33; blob is native KeyMint (KMKD), not km_compat; qsee_log empty
 2026-09-25T00:30:31-03:00 decrypt: RR keys rejected in TWRP (-33) even with dma_heap+RPMB+persist+gpfs config matching stock; plain keys OK
+2026-09-25T00:35:58-03:00 decrypt: RR asymmetry found (stock-made RR keys fail in TWRP; TWRP-made RR keys work in stock). Blocked in TZ.
