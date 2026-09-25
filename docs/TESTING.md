@@ -51,7 +51,7 @@ so normal Android boot is unaffected even if TWRP fails to start.
 - [x] Zip install (harmless test zip, out/katyusha-testzip.zip): RC=0 (build #6)
 - [x] adb sideload: installs and USB returns to mtp,adb without reboot (build #7; deadlocked on #6)
 - [x] Reboot to recovery / bootloader / fastboot — user test
-- [ ] Reboot to system
+- [x] Reboot to system: Android 16 GSI boots; recovery_a still TWRP #7 afterwards (not overwritten)
 - [x] Vibration (verified live on #4, built into #5)
 - [ ] /data: expected NOT to mount (encrypted, phase 2)
 
@@ -65,4 +65,4 @@ so normal Android boot is unaffected even if TWRP fails to start.
 | #4 | 20260924-2121 | **touch, USB adb+MTP, battery OK** | htd needed main VINTF manifest; adbd root-restart race on `ffs.ready`; no `mtp,adb` configfs rules; health HAL absent → 100% |
 | #5 | 20260924-2129 | not flashed (superseded by #6) | aw86907 RAM waveform missing; vibrator not at `/sys/class/leds/vibrator` |
 | #6 | 20260924-2132 | **touch, USB, battery, vibration, blue back light** | back light: green must be cleared first |
-| #7 | 20260924-2205 | **all phase-1 tests pass** (reboot-to-system pending) | sideload deadlock: TWRP waits on sys.usb.state; boot HAL service not started |
+| #7 | 20260924-2205 | **all phase-1 tests pass** | sideload deadlock: TWRP waits on sys.usb.state; boot HAL service not started |
